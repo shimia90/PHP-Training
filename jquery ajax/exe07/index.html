@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Case 01</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+	function loadPage(keySend) {
+		$.ajax({
+			url 	:	'data.php',
+			type	:	'GET',	
+			data	:	{key : keySend},
+			success :	function(data, status) {
+				$(".tab-box").html(data);
+			},
+			complete : function(jqXHR, textStatus){
+				window.location.hash = keySend;
+				$(".tabs *").removeClass('current');
+				$("." + keySend).addClass('current');	
+			}	
+		});
+	}
+	$(document).ready(function(e) {
+		var keySend =	 (window.location.hash == '') ? '#php' : window.location.hash;
+		keySend 	=	 keySend.slice(1);
+		console.log(keySend);
+		loadPage(keySend);
+		$(".tabs a").click(function(){
+			var className 	= 	$(this).attr('class');
+			//$(".tab-box").load('data.php', {key : className});
+			
+			loadPage(className);
+		});
+    });
+</script>
+</head>
+<body>
+	<div id="tab-B">
+    	<ul class="tabs">
+    		<li><a href="#" class="php">PHP Script</a></li>
+    		<li><a href="#" class="asp">ASP Script</a></li>
+    		<li><a href="#" class="jsp">JSP Script</a></li>
+    	</ul>
+        <div class="box-wrapper">
+        	<div class="tab-box current">
+            	
+            </div>
+        </div>
+    </div>
+</body>
+</html>

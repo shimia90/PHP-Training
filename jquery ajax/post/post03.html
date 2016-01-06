@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax Post</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("#process").click(function(){
+		var url 		= 	'files/03.php?t=' + Math.random();
+		var dataSend	=	{
+								'username' : $("#login-form input[name='username']").val(),
+								'password' : $("#login-form input[name='password']").val(),
+							}
+		$.post(url, dataSend, function(data, status) {
+			console.log(data);
+			if(status == 'success') {
+				$("#login-form *").remove(".txtError").removeClass("input_error");
+				if(data.status == 'error') {
+					$("#content_load").addClass('error').text('Co loi xay ra');	
+					$.each(data.message, function(i, value){
+						//console.log(i);
+						//console.log(value);
+						var element = '#login-form [name="'+i+'"]';
+						$(element).addClass('input_error').after('<span class="txtError">'+value+'</span>');
+					});
+				} else {
+					$("#content_load").removeClass('error').addClass('success').text("Dang nhap thanh cong");
+					$("#login-form").remove();	
+				}
+			}
+		}, 'json');
+	});
+});
+</script>
+</head>
+<style>
+.error {
+
+	background-color: #f2dede;
+	
+	padding: 10px;	
+	
+}
+
+.input_error {
+
+    border: 1px solid #f2dede;
+	
+}
+
+.success {
+	
+    background-color: #fcffdf;
+	
+}
+</style>
+<body>
+    <div id="wrapper">
+        <div class="title">Ajax - Post</div>
+        <div class="list">
+        	<div id="content_load">Response</div>
+            <form action="#" method="post" name="login-form" id="login-form">
+            	<div class="row">
+                	<label for="">Username</label>
+                    <input type="text" name="username" value="" />
+                </div>
+                <div class="row">
+                	<label for="">Password</label>
+                    <input type="password" name="password" value="">
+                </div>
+                <div class="row">
+                	<input type="button" class="button" name="process" id="process" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax Get</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	$("#process").click(function(){
+		var key  = 1;
+		var url = 'files/list.php';
+		var dataSend = { 'key' : key };
+		$.get(url, dataSend, function(data, status) {
+			var result = $.parseJSON(data);
+			console.log(result);
+			$("#content").html(result.id + " --- " + result.name);
+		});
+	});
+});
+</script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="title">Ajax - Load</div>
+        <div class="list">
+            <h3>jQuery.get(url [, data] [, success(data, textStatus) [, dataType]])</h3>
+            <input type="button" name="process" id="process" value="Process" />
+            <div id="content"></div>
+        </div>
+    </div>
+</body>
+</html>
