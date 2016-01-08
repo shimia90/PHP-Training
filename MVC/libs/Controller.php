@@ -18,7 +18,7 @@ class Controller {
     }
     
     public function redirect($controller, $action) {
-        header("location: index.php?controlle={$controller}&action={$action}");
+        header("location: index.php?controller={$controller}&action={$action}");
         exit();
     }
 }
