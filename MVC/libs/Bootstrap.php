@@ -1,29 +1,59 @@
 <?php
 class Bootstrap extends Controller {
     
-    public function __construct() {
-        $controllerURL      =   (isset($_GET['controller'])) ? $_GET['controller'] : 'index';
-        $actionURL 	        =   (isset($_GET['action'])) ? $_GET['action'] : 'index';
-        
-        $controllerName     =   ucfirst($controllerURL);
-        
-        $file               =   CONTROLLER_PATH . $controllerURL .".php";
+    private $_url;
+    
+    private $_controller;
+    
+    public function init() {
+        $this->setURL();
+        if(!isset($this->_url['controller'])) {
+            $this->loadDefaultController();
+            exit();
+        }
+        $this->loadExistControler();
+        $this->callControllerMethod();
+    }
+    
+    /*
+     * SET URL
+     */
+    private function setURL() {
+        $this->_url = (isset($_GET)) ? $_GET : null;
+    }
+    
+    /**
+     * LOAD DEFAULT CONTROLLER
+     */
+    private function loadDefaultController() {
+        require_once CONTROLLER_PATH . 'index.php';
+        $this->_controller = new Index();
+        $this->_controller->index();
+    }
+    
+    /**
+     *  LOAD EXIST CONTROLLER
+     */
+    private function loadExistControler() {
+        $file               =   CONTROLLER_PATH . $this->_url['controller'] .".php";
         if(file_exists($file)) {
             require_once ($file);
-            $controller 	=	new $controllerName;
-            
-            if(method_exists($controller, $actionURL) == true) {
-                $controller->loadModel($controllerURL);
-                $controller->$actionURL();
-                
-            } else {
-                $this->error();
-            }
- 
+            $this->_controller 	       =	new $this->_url['controller'];
+            $this->_controller->loadModel($this->_url['controller']);
         }  else {
             $this->error();
         }
-        
+    }
+    
+    /**
+     *  CALL METHOD
+     */
+    private function callControllerMethod() {
+        if(method_exists($this->_controller, $this->_url['action']) == true) {
+            $this->_controller->{$this->_url['action']}();
+        } else {
+            $this->error();
+        }
     }
     
     /**

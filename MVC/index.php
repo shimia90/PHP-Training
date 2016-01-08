@@ -4,4 +4,5 @@
         require_once LIBRARY_PATH . "{$className}.php";
     }
     $bootstrap  =   new Bootstrap();
+    $bootstrap->init();
 ?>
