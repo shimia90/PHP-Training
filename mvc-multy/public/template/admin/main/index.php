@@ -1,12 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="management mvc" />
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="css/template.css"/>
-    <link rel="stylesheet" type="text/css" href="css/system.css"/>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <?php echo $this->_metaHTTP; ?>
+    <?php echo $this->_metaName; ?>
+    <?php echo $this->_title; ?>
+    <?php echo $this->_cssFiles; ?>
+    <?php echo $this->_jsFiles; ?>
 </head>
 <body>
 	<div id="border-top" class="h_blue">

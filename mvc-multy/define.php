@@ -11,6 +11,7 @@
     define	('ROOT_URL'			, './');
 	define	('PUBLIC_URL'		, ROOT_URL . 'public/');
 	define	('VIEW_URL'			, ROOT_URL . 'views/');
+	define	('TEMPLATE_URL'		, PUBLIC_URL . 'template/');
 	
 	/********************** VARIABLES *************************/
 	define	('DEFAULT_MODULE'	      , 'admin');

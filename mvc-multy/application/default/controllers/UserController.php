@@ -13,10 +13,7 @@ class UserController extends Controller {
      * 
      */
     public function indexAction() {
-        echo '<pre>';
-        print_r($this->_arrParams);
-        echo '</pre>';
-         $this->loadModel('admin', 'index');
+         $this->getModel('admin', 'index');
          $this->_view->data = array('PHP', 'Joomla');
          $this->_view->render('user/index');
     }

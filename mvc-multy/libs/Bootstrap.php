@@ -10,7 +10,7 @@ class Bootstrap {
         $this->setParams();
         
         $controllerName =   ucfirst($this->_params['controller']) . 'Controller';
-        echo $filePath = APPLICATION_PATH . $this->_params['module'] . DS . 'controllers' . DS . $controllerName . '.php';
+        $filePath = APPLICATION_PATH . $this->_params['module'] . DS . 'controllers' . DS . $controllerName . '.php';
         if(file_exists($filePath)) {
             $this->loadExistingController($filePath, $controllerName);
             $this->callMethod();
@@ -43,7 +43,7 @@ class Bootstrap {
     private function loadExistingController($filePath, $controllerName) {
             require_once $filePath;
             $this->_controllerObject       =       new $controllerName();
-            $this->_controllerObject ->loadModel($this->_params['module'], $this->_params['controller']);
+            $this->_controllerObject ->getModel($this->_params['module'], $this->_params['controller']);
             $this->_controllerObject ->setView($this->_params['module']);
             $this->_controllerObject->setTemplate($this->_params['controller']);
             $this->_controllerObject ->setParams($this->_params);
