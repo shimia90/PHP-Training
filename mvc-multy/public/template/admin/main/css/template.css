@@ -1698,7 +1698,7 @@ a.saveorder.inactive {
 /* Pagination on backend */
 .button1,
 .button1 div {
-	height: 1%;
+	/*height: 1%;*/
 	float: right;
 }
 

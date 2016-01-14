@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="border-top" class="h_blue">
-		<span class="title"><a href="index.php">Administration</a></span>
+		<span class="title"><a href="index.php">Administration 2</a></span>
 	</div>
 	<div id="content-box">
 		<!--  LOAD CONTENT -->

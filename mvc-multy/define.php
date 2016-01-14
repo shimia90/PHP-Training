@@ -12,9 +12,10 @@
 	define	('PUBLIC_URL'		, ROOT_URL . 'public/');
 	define	('VIEW_URL'			, ROOT_URL . 'views/');
 	define	('TEMPLATE_URL'		, PUBLIC_URL . 'template/');
+	define	('APPLICATION_URL'	, ROOT_URL . 'application/');
 	
 	/********************** VARIABLES *************************/
-	define	('DEFAULT_MODULE'	      , 'admin');
+	define	('DEFAULT_MODULE'	      , 'default');
 	define	('DEFAULT_CONTROLLER'     , 'index');
 	define	('DEFAULT_ACTION'		  , 'index');
     
