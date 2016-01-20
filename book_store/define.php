@@ -23,5 +23,8 @@
     define('DB_HOST'            , 'localhost');
     define('DB_USER'            , 'root');
     define('DB_PASS'            , '');
-    define('DB_NAME'            , 'management');
-    define('DB_TABLE'           , 'user');
+    define('DB_NAME'            , 'bookstore');
+    define('DB_TABLE'           , 'group');
+    
+    /********************** DATABASE TABLE *********************/
+    define('TBL_GROUP'          , 'group');

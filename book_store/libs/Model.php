@@ -14,7 +14,7 @@ class Model{
 			$params['database']	= DB_NAME;
 			$params['table']	= DB_TABLE;
 		}
-		$link = mysql_connect($params['server'], $params['username'], $params['password']);
+		$link = mysqli_connect($params['server'], $params['username'], $params['password']);
 		if(!$link){
 			die('Fail connect: ' . mysql_errno());
 		}else{
@@ -37,7 +37,7 @@ class Model{
 		if($database != null) {
 			$this->database = $database;
 		}
-		mysql_select_db($this->database, $this->connect );
+		mysqli_select_db($this->connect, $this->database);
 	}
 	
 	// SET TABLE
@@ -47,7 +47,7 @@ class Model{
 	
 	// DISCONNECT DATABASE
 	public function __destruct(){
-		mysql_close($this->connect);
+		mysqli_close($this->connect);
 	}
 	
 	// INSERT
@@ -87,7 +87,7 @@ class Model{
 	
 	// QUERY
 	public function query($query){
-		$this->resultQuery = mysql_query($query, $this->connect);
+		$this->resultQuery = mysqli_query($this->connect, $query);
 		return $this->resultQuery;
 	}
 	
@@ -155,11 +155,11 @@ class Model{
 		$result = array();
 		if(!empty($query)){
 			$resultQuery = $this->query($query);
-			if(mysql_num_rows($resultQuery) > 0){
-				while($row = mysql_fetch_assoc($resultQuery)){
+			if(mysqli_num_rows($resultQuery) > 0){
+				while($row = mysqli_fetch_assoc($resultQuery)){
 					$result[] = $row;
 				}
-				mysql_free_result($resultQuery);
+				mysqli_free_result($resultQuery);
 			}
 		}
 		return $result;
@@ -173,7 +173,7 @@ class Model{
 			if(mysql_num_rows($resultQuery) > 0){
 				$xhtml = '<select class="'.$class.'" name="'.$name.'">';
 				$xhtml .= '<option value="0">Select a value</option>';
-				while($row = mysql_fetch_assoc($resultQuery)){
+				while($row = mysqli_fetch_assoc($resultQuery)){
 					if($keySelected == $row['id'] && $keySelected != null){
 						$xhtml .= '<option value="'.$row['id'].'" selected="true">'.$row['name'].'</option>';
 					}else{
