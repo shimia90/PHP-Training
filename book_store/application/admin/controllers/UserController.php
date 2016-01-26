@@ -11,7 +11,6 @@ class UserController extends Controller{
 	
 	public function loginAction(){
 		$this->_view->setTitle('Login');
-		$this->_view->_title = 'Login';
 		$this->_view->appendCSS(array('user/css/abc.css'));
 		$this->_view->appendJS(array('user/js/test.js'));
 		$this->_view->render('user/login', true);

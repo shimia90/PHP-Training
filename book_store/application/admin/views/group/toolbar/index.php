@@ -1,57 +1,31 @@
-<?php 
-    // New Button
-    $linkNew        =   URL::createLink('admin', 'group', 'add');
-    $btnNew         =   Helper::cmsButton('New', 'toolbar-popup-new', $linkNew, 'icon-32-new');
-    
-    // Publish
-    $linkPublish    =   URL::createLink('admin', 'group', 'index');
-    $btnPublish     =   Helper::cmsButton('Publish', 'toolbar-publish', $linkPublish, 'icon-32-publish');
-    
-    // Unpublish
-    $linkUnPublish  =   URL::createLink('admin', 'group', 'index');
-    $btnUnPublish   =   Helper::cmsButton('Unpublish', 'toolbar-unpublish', $linkUnPublish, 'icon-32-unpublish');
-    
-    // Trash
-    $linkTrash      =   URL::createLink('admin', 'group', 'index');
-    $btnTrash       =   Helper::cmsButton('Trash', 'toolbar-trash', $linkTrash, 'icon-32-trash');
-    
-    // Save
-    $linkSave       =   URL::createLink('admin', 'group', 'add');
-    $btnSave        =   Helper::cmsButton('Save', 'toolbar-apply', $linkSave, 'icon-32-apply');
-    
-    // Save & Close
-    $linkSaveClose  =   URL::createLink('admin', 'group', 'add');
-    $btnSaveClose   =   Helper::cmsButton('Save & Close', 'toolbar-save', $linkSaveClose, 'icon-32-save');
-    
-    // Save & New
-    $linkSaveNew    =   URL::createLink('admin', 'group', 'add');
-    $btnSaveNew     =   Helper::cmsButton('Save & New', 'toolbar-save-new', $linkSaveNew, 'icon-32-save-new');
-    
-    // Cancel
-    $linkCancel     =   URL::createLink('admin', 'group', 'add');
-    $btnCancel      =   Helper::cmsButton('Cancel', 'toolbar-cancel', $linkSaveNew, 'icon-32-cancel');
-    
-    switch ($this->arrayParams['action']) {
-        case 'index': 
-            $strButton      =   $btnNew . $btnPublish . $btnUnPublish . $btnTrash; 
-            break;
-        case 'add':
-            $strButton      =   $btnSave . $btnSaveClose . $btnSaveNew . $btnCancel;
-            break;
-    }
-?>
 <div id="toolbar-box">
 	<div class="m">
 		<!-- TOOLBAR -->
 		<div class="toolbar-list" id="toolbar">
 			<ul>
-				<?php echo $strButton; ?>
+				<li class="button" id="toolbar-popup-new"><a class="modal" href="#"><span
+						class="icon-32-new"></span>New</a></li>
+				<li class="button" id="toolbar-edit"><a href="#"><span
+						class="icon-32-edit"></span>Edit</a></li>
+				<li class="button" id="toolbar-copy"><a href="#"><span
+						class="icon-32-copy"></span>Duplicate</a></li>
+				<li class="divider"></li>
+				<li class="button" id="toolbar-publish"><a href="#"><span
+						class="icon-32-publish"></span>Publish</a></li>
+				<li class="button" id="toolbar-unpublish"><a href="#"><span
+						class="icon-32-unpublish"></span>Unpublish</a></li>
+				<li class="divider"></li>
+				<li class="button" id="toolbar-checkin"><a href="#"><span
+						class="icon-32-checkin"></span>Check In</a></li>
+				<li class="button" id="toolbar-trash"><a href="#"><span
+						class="icon-32-trash"></span>Trash</a></li>
+				<li class="divider"></li>
 			</ul>
 			<div class="clr"></div>
 		</div>
 		<!-- TITLE -->
-		<div class="pagetitle icon-48-groups">
-			<h2><?php echo $this->_title;?></h2>
+		<div class="pagetitle icon-48-module">
+			<h2>Module Manager: Modules</h2>
 		</div>
 	</div>
 </div>

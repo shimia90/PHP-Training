@@ -70,8 +70,7 @@ class View{
 	
 	// SET TITLE
 	public function setTitle($value){
-		$this->_title = $this->createTitle($value);
-		return $this->_title;
+		$this->_title = '<title>'.$value.'</title>';
 	}
 	
 	// SET CSS

@@ -11,14 +11,6 @@ class GroupController extends Controller{
 	
 	// HIEN THI DANH SACH GROUUP
 	public function indexAction(){
-	    $this->_view->_title   =   'User Manager: User Groups';
-	    $this->_view->Items = $this->_model->listItems($this->_arrParam, null);
 		$this->_view->render('group/index', true);
-	}
-	
-	// THEM GROUP
-	public function addAction() {
-	    $this->_view->_title   =   'User Manager: User Groups : Add';
-	    $this->_view->render('group/add', true);
 	}
 }

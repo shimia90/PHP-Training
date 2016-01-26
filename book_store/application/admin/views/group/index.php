@@ -40,14 +40,14 @@
 					<tr>
 						<th width="1%"><input type="checkbox" name="checkall-toggle"
 							value="" onclick="javascipt:void(0)"></th>
-						<th class="title"><a href="#">Name</a></th>
-						<th width="10%%"><a href="#">Status</a></th>
-						<th width="10%"><a href="#">Group ACP</a></th>
+						<th class="title"><a href="#">Title</a></th>
+						<th width="5%"><a href="#">Status</a></th>
+						<th width="15%" class="left"><a href="#"></a></th>
 						<th width="10%"><a href="#">Ordering</a></th>
-						<th width="10%"><a href="#">Created</a></th>
-						<th width="10%"><a href="#">Created By</a></th>
-						<th width="10%"><a href="#">Modified</a></th>
-						<th width="10%"><a href="#">Modified by</a></th>
+						<th width="10%" class="left"><a href="#">Type</a></th>
+						<th width="10%"><a href="#">Pages</a></th>
+						<th width="10%"><a href="#">Access</a></th>
+						<th width="5%"><a href="#">Language</a></th>
 						<th width="1%" class="nowrap"><a href="#">ID</a></th>
 					</tr>
 				</thead>
@@ -88,40 +88,44 @@
 				</tfoot>
 				<!-- BODY TABLE -->
 				<tbody>
-				    <?php 
-				        if(!empty($this->Items)) :
-				            $i  = 0;
-				            foreach($this->Items as $key => $value) :
-				               $id          =   $value['id'];
-				               $ckb         =   '<input type="checkbox" name="cid[]" value="'.$id.'" />';
-				               $name        =   $value['name'];
-				               $row         =   ($i % 2 == 0) ? 'row0' : 'row1'; 
-				               
-				               $status      =   Helper::cmsStatus($value['status']);
-				               $group_acp   =   Helper::cmsStatus($value['group_acp']);
-				               $ordering    =   '<input type="text" name="order[]" size="5" value="'.$value['ordering'].'" disabled="disabled" class="text-area-order">';
-				               $created     =   Helper::formatDate('d-m-Y', $value['created']);
-				               $created_by  =   $value['created_by'];
-				               $modified    =   Helper::formatDate('d-m-Y', $value['modified']);
-				               $modified_by =   $value['modified_by'];
-				    ?>
-					<tr class="<?php echo $row; ?>">
-						<td class="center"><?php echo $ckb; ?></td>
-						<td><a href="#"><?php echo $name; ?></a></td>
-						<td class="center"><?php echo $status; ?></td>
-						<td class="center"><?php echo $group_acp; ?></td>
-						<td class="center"><?php echo $ordering; ?></td>
-						<td class="center"><?php echo $created; ?></td>
-						<td class="center"><?php echo $created_by; ?></td>
-						<td class="center"><?php echo $modified; ?></td>
-						<td class="center"><?php echo $modified_by; ?></td>
-						<td class="center"><?php echo $id; ?></td>
+					<tr class="row0">
+						<td class="center"><input type="checkbox" id="cb0" name="cid[]"
+							value="17" onclick="javascipt:void(0)"></td>
+						<td><a href="#">Breadcrumbs</a></td>
+						<td class="center"><a class="jgrid hasTip"
+							href="javascript:void(0);" onclick="#" title=""> <span
+								class="state publish"> <span class="text">Module enabled and
+										published</span>
+							</span>
+						</a></td>
+						<td class="left">position-2</td>
+						<td class="order"><input type="text" name="order[]" size="5"
+							value="1" disabled="disabled" class="text-area-order"></td>
+						<td class="left">Breadcrumbs</td>
+						<td class="center">All</td>
+						<td class="center">Public</td>
+						<td class="center">All</td>
+						<td class="center">17</td>
 					</tr>
-					<?php 
-					       $i++;
-					       endforeach;
-					   endif;
-					?>
+					<tr class="row1">
+						<td class="center"><input type="checkbox" id="cb0" name="cid[]"
+							value="17" onclick="javascipt:void(0)"></td>
+						<td><a href="#">Breadcrumbs</a></td>
+						<td class="center"><a class="jgrid hasTip"
+							href="javascript:void(0);" onclick="#" title=""> <span
+								class="state unpublish"> <span class="text">Module enabled and
+										published</span>
+							</span>
+						</a></td>
+						<td class="left">position-2</td>
+						<td class="order"><input type="text" name="order[]" size="5"
+							value="1" disabled="disabled" class="text-area-order"></td>
+						<td class="left">Breadcrumbs</td>
+						<td class="center">All</td>
+						<td class="center">Public</td>
+						<td class="center">All</td>
+						<td class="center">17</td>
+					</tr>
 				</tbody>
 			</table>
 

@@ -16,7 +16,7 @@ class Bootstrap{
 		}
 	}
 	
-	// CALL METHOD
+	// CALL METHODE
 	private function callMethod(){
 		$actionName = $this->_params['action'] . 'Action';
 		if(method_exists($this->_controllerObject, $actionName)==true){
