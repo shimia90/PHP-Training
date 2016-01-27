@@ -42,7 +42,10 @@ function submitForm(url) {
 	$("#adminForm").submit();
 }
 
-function submit() {
+//
+function sortList(column, order) {
+	$('input[name=filter_column]').val(column);
+	$('input[name=filter_column_dir]').val(order);
 	$("#adminForm").submit();
 }
 
@@ -54,4 +57,17 @@ $(document).ready(function(e) {
             this.checked = checkStatus;
         });
 	});
+    
+    $("#filter-bar button[name=submit-keyword]").click(function(){
+    	$('#adminForm').submit();
+    });
+    
+    $("#filter-bar button[name=clear-keyword]").click(function(){
+    	$("#filter-bar input[name=filter_search]").val('');
+    	$('#adminForm').submit();
+    });
+    
+    $("#filter-bar select[name=filter_state]").change(function(){
+    	$('#adminForm').submit();
+    });
 });

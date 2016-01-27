@@ -1,9 +1,23 @@
-<?php include_once 'toolbar/index.php'; ?>
-<?php include_once 'submenu/index.php'; ?>
-<?php
-	$columnPost =	$this->arrayParams['filter_column'];
-	$orderPost =	$this->arrayParams['filter_column_dir'];
-	$lblName 	=	Helper::cmsLinkSort('Name', 'name', $columnPost, $orderPost);
+<?php 
+    include_once 'toolbar/index.php';
+    include_once 'submenu/index.php';
+    
+    // COLUMN
+	@$columnPost   =	$this->arrayParams['filter_column'];
+	@$orderPost    =	$this->arrayParams['filter_column_dir'];
+	$lblName 	   =	Helper::cmsLinkSort('Name', 'name', $columnPost, $orderPost);
+	$lblStatus     =    Helper::cmsLinkSort('Status', 'status', $columnPost, $orderPost);
+	$lblGroupACP   =    Helper::cmsLinkSort('Group ACP', 'group_acp', $columnPost, $orderPost);
+	$lblOrdering   =    Helper::cmsLinkSort('Ordering', 'ordering', $columnPost, $orderPost);
+	$lblCreated    =    Helper::cmsLinkSort('Created', 'created', $columnPost, $orderPost);
+	$lblCreatedBy  =    Helper::cmsLinkSort('Created By', 'created_by', $columnPost, $orderPost);
+	$lblModified   =    Helper::cmsLinkSort('Modified', 'modified', $columnPost, $orderPost);
+	$lblModifiedBy =    Helper::cmsLinkSort('Modified By', 'modified_by', $columnPost, $orderPost);
+	$lblID         =    Helper::cmsLinkSort('ID', 'id', $columnPost, $orderPost);
+	
+	// SELECT BOX 
+	$arrStatus         =   array(2 => '- Select Status -', 0 => 'Unpublish', 1 => 'Publish');
+	$selectBoxStatus   =   Helper::cmsSelectBox('filter_state', 'inputbox', $arrStatus, @$this->arrayParams['filter_state']);
 ?>
 <div id="system-message-container"></div>
 
@@ -14,27 +28,13 @@
 			<fieldset id="filter-bar">
 				<div class="filter-search fltlft">
 					<label class="filter-search-lbl" for="filter_search">Filter:</label>
-					<input type="text" name="filter_search" id="filter_search" value=""
-						title="Search in module title.">
-					<button type="submit">Search</button>
-					<button type="button" onclick="javascipt:void(0)">Clear</button>
+					<input type="text" name="filter_search" id="filter_search" value="<?php echo @$this->arrayParams['filter_search']; ?>" />
+					<button type="submit" name="submit-keyword">Search</button>
+					<button type="button" name="clear-keyword">Clear</button>
 
 				</div>
 				<div class="filter-select fltrt">
-					<select name="filter_client_id" class="inputbox" onchange="#">
-						<option value="0" selected="selected">Site</option>
-					</select> <select name="filter_state" class="inputbox" onchange="#">
-						<option value="">- Select Status -</option>
-					</select> <select name="filter_module" class="inputbox"
-						onchange="#">
-						<option value="">- Select Type -</option>
-					</select> <select name="filter_access" class="inputbox"
-						onchange="#">
-						<option value="">- Select Access -</option>
-					</select> <select name="filter_language" class="inputbox"
-						onchange="#">
-						<option value="">- Select Language -</option>
-					</select>
+					<?php echo $selectBoxStatus; ?>
 				</div>
 			</fieldset>
 			<div class="clr"></div>
@@ -44,15 +44,15 @@
 				<thead>
 					<tr>
 						<th width="1%"><input type="checkbox" name="checkall-toggle" /></th>
-						<th class="title"><a href="#" onClick="javascript:submit();">Name</a></th>
-						<th width="10%%"><a href="#">Status</a></th>
-						<th width="10%"><a href="#">Group ACP</a></th>
-						<th width="10%"><a href="#">Ordering</a></th>
-						<th width="10%"><a href="#">Created</a></th>
-						<th width="10%"><a href="#">Created By</a></th>
-						<th width="10%"><a href="#">Modified</a></th>
-						<th width="10%"><a href="#">Modified by</a></th>
-						<th width="1%" class="nowrap"><a href="#">ID</a></th>
+						<th class="title"><?php echo $lblName; ?></th>
+						<th width="10%%"><?php echo $lblStatus; ?></th>
+						<th width="10%"><?php echo $lblGroupACP; ?></th>
+						<th width="10%"><?php echo $lblOrdering; ?></th>
+						<th width="10%"><?php echo $lblCreated; ?></th>
+						<th width="10%"><?php echo $lblCreatedBy; ?></th>
+						<th width="10%"><?php echo $lblModified; ?></th>
+						<th width="10%"><?php echo $lblModifiedBy; ?></th>
+						<th width="1%" class="nowrap"><?php echo $lblID; ?></th>
 					</tr>
 				</thead>
 				<!-- FOOTER TABLE -->

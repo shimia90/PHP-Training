@@ -11,6 +11,19 @@ class GroupModel extends Model{
 	public function listItems($arrParam, $option = null) {
 		$query[]  		=   "SELECT `id`, `name`, `group_acp`, `ordering`, `created`, `created_by`, `modified`, `modified_by`, `status`, `ordering`";
 		$query[]  		=   "FROM `$this->table`";
+		
+		// FILTER : KEYWORD
+		if(!empty($arrParam['filter_search'])) {
+		    $keyword    =   '"%' . $arrParam['filter_search'] . '%"';
+		    $query[]    =   "WHERE `name` LIKE {$keyword}";
+		}
+		
+		// FILTER : STATTUS
+		if(isset($arrParam['filter_state']) && $arrParam['filter_state'] != 2) {
+		    $query[]    =   "WHERE `status` = '{$arrParam['filter_state']}'";
+		}
+		
+		// SORT
 		if(!empty($arrParam['filter_column']) && !empty($arrParam['filter_column_dir'])) {
 			$column 	=	$arrParam['filter_column'];
 			$columnDir 	=	$arrParam['filter_column_dir'];
@@ -18,6 +31,7 @@ class GroupModel extends Model{
 		} else {
 			$query[] 	=	"ORDER BY `name` ASC";
 		}
+		
 		$query  		=   implode(" ", $query);
 		$result   		=   $this->listRecord($query);
 		return $result;

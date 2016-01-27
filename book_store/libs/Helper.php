@@ -42,12 +42,28 @@ class Helper {
 	
 	// Create Title Sort
     public static function cmsLinkSort($name, $column, $columnPost, $orderPost) {
-        // <a href="#" onclick="Joomla.tableOrder">ID<img src="" alt="" /></a>
-		$img 	=	'';
+		$img 	    =	'';
+		$order      =   ($orderPost == 'desc') ? 'asc' : 'desc';
 		if($column == $columnPost) {
 			$img 	=	'<img src="'.TEMPLATE_URL.'admin/main/images/admin/sort_'.$orderPost.'.png" alt="" />';
 		}
-		$xhtml 	=	'<a href="#" onclick="">'.$name. $img .'</a>';
+		$xhtml 	=	'<a href="#" onclick="javascript:sortList(\''. $column .'\', \''. $order .'\')">'.$name. $img .'</a>';
+		return $xhtml;
+    }
+    
+    // Create Select Box
+    public static function cmsSelectBox($name, $class, $arrValue, $keySelect = 0) {
+        $xhtml        =   '<select name="'.$name.'" class="'.$class.'">';
+    		foreach($arrValue as $key => $value) {
+    		    if($key == $keySelect) {
+    		        $xhtml    .=      '<option value="'.$key.'" selected="selected">'.$value.'</option>';
+    		    } else {
+    		        $xhtml    .=      '<option value="'.$key.'">'.$value.'</option>';
+    		    }
+    		    
+    		}				
+    	$xhtml		.=	 '</select>';
+    	return $xhtml;
     }
     
 }
