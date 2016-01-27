@@ -16,7 +16,7 @@ class View{
 	}
 	
 	public function render( $fileInclude, $loadFull = true){
-		$path = APPLICATION_PATH. $this->_moduleName . DS . 'views' . DS . $fileInclude . '.php';
+		$path = MODULE_PATH . $this->_moduleName . DS . 'views' . DS . $fileInclude . '.php';
 		if(file_exists($path)){
 			if($loadFull == true){
 				$this->_fileView = $fileInclude;
@@ -70,7 +70,8 @@ class View{
 	
 	// SET TITLE
 	public function setTitle($value){
-		$this->_title = '<title>'.$value.'</title>';
+		$this->_title = $this->createTitle($value);
+		return $this->_title;
 	}
 	
 	// SET CSS
