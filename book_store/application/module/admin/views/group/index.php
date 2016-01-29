@@ -18,6 +18,9 @@
 	// SELECT BOX 
 	$arrStatus         =   array(2 => '- Select Status -', 0 => 'Unpublish', 1 => 'Publish');
 	$selectBoxStatus   =   Helper::cmsSelectBox('filter_state', 'inputbox', $arrStatus, @$this->arrayParams['filter_state']);
+	
+	// PAGINATION
+	$paginationHTML    =   $this->pagination->showPagination(URL::createLink('admin', 'group', 'index'));
 ?>
 <div id="system-message-container"></div>
 
@@ -61,32 +64,7 @@
 						<td colspan="10">
 							<!-- PAGINATION -->
 							<div class="container">
-								<div class="pagination">
-									<div class="button2-right off">
-										<div class="start">
-											<span>Start</span>
-										</div>
-									</div>
-									<div class="button2-right off">
-										<div class="prev">
-											<span>Prev</span>
-										</div>
-									</div>
-									<div class="button2-left">
-										<div class="page">
-											<span>1</span><a href="#">2</a>
-										</div>
-									</div>
-									<div class="button2-left">
-										<div class="next">
-											<a href="#">End</a>
-										</div>
-									</div>
-									<div class="limit">Page 1 of 2</div>
-									<input type="hidden" name="limitstart" value="0">
-
-								</div>
-							</div>
+							     <?php echo $paginationHTML; ?>
 						</td>
 					</tr>
 				</tfoot>
@@ -104,7 +82,7 @@
 				               // index.php?module=admin&controller=group&action=ajaxStatus&id=2&status=0
 				               $status      =   Helper::cmsStatus($value['status'], URL::createLink('admin', 'group', 'ajaxStatus', array('id' => $id, 'status' => $value['status'])), $id);
 				               $group_acp   =   Helper::cmsGroupACP($value['group_acp'], URL::createLink('admin', 'group', 'ajaxGroupACP', array('id' => $id, 'group_acp' => $value['group_acp'])), $id);
-				               $ordering    =   '<input type="text" name="order[]" size="5" value="'.$value['ordering'].'" disabled="disabled" class="text-area-order">';
+				               $ordering    =   '<input type="text" name="order[]" size="5" value="'.$value['ordering'].'" class="text-area-order">';
 				               $created     =   Helper::formatDate('d-m-Y', $value['created']);
 				               $created_by  =   $value['created_by'];
 				               $modified    =   Helper::formatDate('d-m-Y', $value['modified']);
@@ -131,8 +109,8 @@
 
 			<div>
 				<input type="hidden" name="filter_column" value="name" />
+				<input type="hidden" name="filter_page" value="1" />
                 <input type="hidden" name="filter_column_dir" value="desc" /> 
-
 			</div>
 		</form>
 

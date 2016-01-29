@@ -11,9 +11,17 @@ class GroupController extends Controller{
 	
 	// HIEN THI DANH SACH GROUUP
 	public function indexAction(){
-	    $this->_view->_title   =   'User Manager: User Groups';
-	    $this->_view->Items = $this->_model->listItems($this->_arrParam, null);
+	    $this->_view->_title       =   'User Manager: User Groups';
+	    $totalItems = $this->_model->countItem($this->_arrParam, null);
+	    
+	    $configPagination          =   array('totalItemsPerPage'  =>  3, 'pageRange'  =>  2);
+	    $this->setPagination($configPagination);
+	    
+	    $this->_view->pagination   =   new Pagination($totalItems, $this->_pagination);    
+	    $this->_view->Items    = $this->_model->listItems($this->_arrParam, null);
 		$this->_view->render('group/index', true);
+		
+		
 	}
 	
 	// THEM GROUP

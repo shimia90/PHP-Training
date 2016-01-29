@@ -4,15 +4,15 @@ function changeStatus(url) {
 		var id 				=	data[0];
 		var status 			=	data[1];
 		var link 			=	data[2];
-		var element 		=	'a#status-'+ id;
+		var element 		=	'a#status-'+ data['id'];
 		var classRemove 	=	'publish';
 		var classAdd 		=	'unpublish';
-		if(status == 1) {
+		if(data['status'] == 1) {
 			classRemove 	= 	'unpublish';
 			classAdd 		=	'publish';	
 		}
 		
-		$(element).attr("href", "javascript:changeStatus('"+link+"')");
+		$(element).attr("href", "javascript:changeStatus('"+data['link']+"')");
 		$(element + ' span').removeClass(classRemove).addClass(classAdd);
 	}, 'json');
 }
@@ -23,15 +23,15 @@ function changeGroupACP(url) {
 		var id 				=	data[0];
 		var group_acp 		=	data[1];
 		var link 			=	data[2];
-		var element 		=	'a#group-acp-'+ id;
+		var element 		=	'a#group-acp-'+ data['id'];
 		var classRemove 	=	'publish';
 		var classAdd 		=	'unpublish';
-		if(group_acp == 1) {
+		if(data['group_acp'] == 1) {
 			classRemove 	= 	'unpublish';
 			classAdd 		=	'publish';	
 		}
 		
-		$(element).attr("href", "javascript:changeGroupACP('"+link+"')");
+		$(element).attr("href", "javascript:changeGroupACP('"+data['link']+"')");
 		$(element + ' span').removeClass(classRemove).addClass(classAdd);
 	}, 'json');
 }
@@ -46,6 +46,12 @@ function submitForm(url) {
 function sortList(column, order) {
 	$('input[name=filter_column]').val(column);
 	$('input[name=filter_column_dir]').val(order);
+	$("#adminForm").submit();
+}
+
+//
+function changePage(page) {
+	$('input[name=filter_page]').val(page);
 	$("#adminForm").submit();
 }
 
