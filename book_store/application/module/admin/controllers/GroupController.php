@@ -53,4 +53,11 @@ class GroupController extends Controller{
 		$this->_model->deleteItem($this->_arrParam);
 		URL::redirect(URL::createLink('admin', 'group', 'index'));
 	}
+	
+	// ACTION ORDERING
+	public function orderingAction() {
+	    echo '<pre>';
+	    print_r($this->_arrParam);
+	    echo '</pre>';
+	}
 }
