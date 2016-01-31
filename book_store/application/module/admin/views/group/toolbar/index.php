@@ -1,6 +1,6 @@
 <?php 
     // New Button
-    $linkNew        =   URL::createLink('admin', 'group', 'add');
+    $linkNew        =   URL::createLink('admin', 'group', 'form');
     $btnNew         =   Helper::cmsButton('New', 'toolbar-popup-new', $linkNew, 'icon-32-new');
     
     // Publish
@@ -39,7 +39,7 @@
         case 'index': 
             $strButton      =   $btnNew . $btnPublish . $btnUnPublish . $btnOrdering . $btnTrash; 
             break;
-        case 'add':
+        case 'form':
             $strButton      =   $btnSave . $btnSaveClose . $btnSaveNew . $btnCancel;
             break;
     }

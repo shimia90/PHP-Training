@@ -16,7 +16,7 @@
 	$lblID         =    Helper::cmsLinkSort('ID', 'id', $columnPost, $orderPost);
 	
 	// SELECT BOX 
-	$arrStatus         =   array(2 => '- Select Status -', 0 => 'Unpublish', 1 => 'Publish');
+	$arrStatus         =   array('default' => '- Select Status -', 'unpublish' => 'Unpublish', 'publish' => 'Publish');
 	$selectBoxStatus   =   Helper::cmsSelectBox('filter_state', 'inputbox', $arrStatus, @$this->arrayParams['filter_state']);
 	
 	// PAGINATION
@@ -82,7 +82,7 @@
 				               // index.php?module=admin&controller=group&action=ajaxStatus&id=2&status=0
 				               $status      =   Helper::cmsStatus($value['status'], URL::createLink('admin', 'group', 'ajaxStatus', array('id' => $id, 'status' => $value['status'])), $id);
 				               $group_acp   =   Helper::cmsGroupACP($value['group_acp'], URL::createLink('admin', 'group', 'ajaxGroupACP', array('id' => $id, 'group_acp' => $value['group_acp'])), $id);
-				               $ordering    =   '<input type="text" name="order[]" size="5" value="'.$value['ordering'].'" class="text-area-order">';
+				               $ordering    =   '<input type="text" name="order['.$id.']" size="5" value="'.$value['ordering'].'" class="text-area-order">';
 				               $created     =   Helper::formatDate('d-m-Y', $value['created']);
 				               $created_by  =   $value['created_by'];
 				               $modified    =   Helper::formatDate('d-m-Y', $value['modified']);

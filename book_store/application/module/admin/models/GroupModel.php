@@ -1,13 +1,20 @@
 <?php
 class GroupModel extends Model{
     
-	/**/
-    public function __construct() {
+	/**
+	 * 
+	 */
+    /*public function __construct() {
         parent::__construct();
         $this->setTable(TBL_GROUP);
-    }
+    }*/
     
-	/**/
+	/**
+	 * 
+	 * @param unknown $arrParam
+	 * @param string $option
+	 * @return multitype:unknown
+	 */
 	public function listItems($arrParam, $option = null) {
 		$query[]  		=   "SELECT `id`, `name`, `group_acp`, `ordering`, `created`, `created_by`, `modified`, `modified_by`, `status`, `ordering`";
 		$query[]  		=   "FROM `$this->table`";
@@ -21,11 +28,12 @@ class GroupModel extends Model{
 		}
 		
 		// FILTER : STATTUS
-		if(isset($arrParam['filter_state']) && $arrParam['filter_state'] != 2) {
+		if(isset($arrParam['filter_state']) && $arrParam['filter_state'] != 'default') {
+		    $status   =   ($arrParam['filter_state'] == 'unpublish') ? 0 : 1; 
 		    if($flagWhere == true) {
-		        $query[]    =   "AND `status` = '{$arrParam['filter_state']}'";
+		        $query[]    =   "AND `status` = '{$status}'";
 		    } else {
-		        $query[]    =   "WHERE `status` = '{$arrParam['filter_state']}'";
+		        $query[]    =   "WHERE `status` = '{$status}'";
 		    }
 		}
 		
@@ -92,7 +100,11 @@ class GroupModel extends Model{
 	    }
 	}
 	
-	/**/
+	/**
+	 * 
+	 * @param unknown $arrayParam
+	 * @param string $option
+	 */
 	public function deleteItem($arrayParam, $option = null) {
 		if($option == null) {
 	        if(!empty($arrayParam['cid'])) {
@@ -103,6 +115,12 @@ class GroupModel extends Model{
 	    }
 	}
 	
+	/**
+	 * 
+	 * @param unknown $arrParam
+	 * @param string $option
+	 * @return Ambigous <>
+	 */
 	public function countItem($arrParam, $option = null) {
     	 $query[]  		=   "SELECT COUNT(`id`) AS `total`";
     	 $query[]  		=   "FROM `$this->table`";
@@ -116,11 +134,12 @@ class GroupModel extends Model{
     	 }
     	
     	 // FILTER : STATTUS
-    	 if(isset($arrParam['filter_state']) && $arrParam['filter_state'] != 2) {
+    	 if(isset($arrParam['filter_state']) && $arrParam['filter_state'] != 'default') {
+    	     $status   =   ($arrParam['filter_state'] == 'unpublish') ? 0 : 1;
     	     if($flagWhere == true) {
-    	         $query[]    =   "AND `status` = '{$arrParam['filter_state']}'";
+    	         $query[]    =   "AND `status` = '{$status}'";
     	     } else {
-    	         $query[]    =   "WHERE `status` = '{$arrParam['filter_state']}'";
+    	         $query[]    =   "WHERE `status` = '{$status}'";
     	     }
     	   
     	 }
@@ -128,5 +147,17 @@ class GroupModel extends Model{
     	 $query  		=   implode(" ", $query);
     	 $result   		=   $this->singleRecord($query);
     	 return $result['total'];
+	 }
+	 
+	 public function ordering($arrParam, $option = null) {
+	     if($option == null) {
+	         if(!empty($arrParam['order'])) {
+	             foreach($arrParam['order'] as $id => $ordering) :
+	               $query     =   "UPDATE `{$this->table}` SET `ordering` = {$ordering} WHERE `id` = {$id}";
+	               $this->query($query);
+	             endforeach;
+	         }
+	     }
+	     
 	 }
 }

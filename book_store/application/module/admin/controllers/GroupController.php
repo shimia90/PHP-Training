@@ -24,10 +24,10 @@ class GroupController extends Controller{
 		
 	}
 	
-	// THEM GROUP
-	public function addAction() {
-	    $this->_view->_title   =   'User Manager: User Groups : Add';
-	    $this->_view->render('group/add', true);
+	// ACTION ADD GROUP
+	public function formAction() {
+	    $this->_view->_title   =   'User Groups : Add';
+	    $this->_view->render('group/form', true);
 	}
 	
 	// PROCESS AJAX STATUS
@@ -56,8 +56,7 @@ class GroupController extends Controller{
 	
 	// ACTION ORDERING
 	public function orderingAction() {
-	    echo '<pre>';
-	    print_r($this->_arrParam);
-	    echo '</pre>';
+	    $this->_model->ordering($this->_arrParam);
+	    URL::redirect(URL::createLink('admin', 'group', 'index'));
 	}
 }

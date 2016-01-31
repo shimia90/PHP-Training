@@ -40,7 +40,13 @@ class Helper {
         return $xhtml;
     }
 	
-	// Create Title Sort
+	/**
+	 * Sort
+	 * @param unknown $name
+	 * @param unknown $column
+	 * @param unknown $columnPost
+	 * @param unknown $orderPost
+	 */
     public static function cmsLinkSort($name, $column, $columnPost, $orderPost) {
 		$img 	    =	'';
 		$order      =   ($orderPost == 'desc') ? 'asc' : 'desc';
@@ -52,7 +58,7 @@ class Helper {
     }
     
     // Create Select Box
-    public static function cmsSelectBox($name, $class, $arrValue, $keySelect = 0) {
+    public static function cmsSelectBox($name, $class, $arrValue, $keySelect = 'default') {
         $xhtml        =   '<select name="'.$name.'" class="'.$class.'">';
     		foreach($arrValue as $key => $value) {
     		    if($key == $keySelect) {
@@ -64,6 +70,32 @@ class Helper {
     		}				
     	$xhtml		.=	 '</select>';
     	return $xhtml;
+    }
+    
+    public static function cmsRowForm($lblName, $input, $require = false) {
+        $strRequired        =       '';
+        if($require == true) {
+            $strRequired  .=  '<span class="star">&nbsp;*</span>';
+        }
+        $xhtml      =       '<li><label>'.$lblName. $strRequired .'</label>'. $input . '</li>';
+        return $xhtml;
+    }
+    
+    /**
+     * CREATE INPUT
+     * @param unknown $type
+     * @param unknown $name
+     * @param unknown $id
+     * @param unknown $value
+     * @param unknown $class
+     * @param unknown $size
+     * @return string
+     */
+    public static function cmsInput($type, $name, $id, $value, $class, $size) {
+        $xhtml      =       '<input type="'.$type.'" name="'.$name.'" id="'.$id.'" value="'.$value.'"
+							class="'.$class.'" size="'.$size.'">';
+        
+        return $xhtml;
     }
     
 }
