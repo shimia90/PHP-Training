@@ -58,10 +58,10 @@ class Helper {
     }
     
     // Create Select Box
-    public static function cmsSelectBox($name, $class, $arrValue, $keySelect = 'default') {
-        $xhtml        =   '<select name="'.$name.'" class="'.$class.'">';
+    public static function cmsSelectBox($name, $class, $arrValue, $keySelect = 'default', $style = null) {
+        $xhtml        =   '<select style="'.$style.'" name="'.$name.'" class="'.$class.'">';
     		foreach($arrValue as $key => $value) {
-    		    if($key == $keySelect) {
+    		    if($key == $keySelect && is_numeric($keySelect)) {
     		        $xhtml    .=      '<option value="'.$key.'" selected="selected">'.$value.'</option>';
     		    } else {
     		        $xhtml    .=      '<option value="'.$key.'">'.$value.'</option>';
@@ -91,10 +91,28 @@ class Helper {
      * @param unknown $size
      * @return string
      */
-    public static function cmsInput($type, $name, $id, $value, $class, $size) {
-        $xhtml      =       '<input type="'.$type.'" name="'.$name.'" id="'.$id.'" value="'.$value.'"
-							class="'.$class.'" size="'.$size.'">';
+    public static function cmsInput($type, $name, $id, $value, $class = null, $size = null) {
+        $strSize    =       ($size == null) ? '' : "size='$size'";
+        $strClass   =       ($class == null) ? '' : "class='$class'";
         
+        $xhtml      =       '<input type="'.$type.'" name="'.$name.'" id="'.$id.'" value="'.$value.'"
+							'.$strClass.' '.$strSize.'>';
+        
+        return $xhtml;
+    }
+    
+    public static function cmsMessage($message) {
+        $xhtml        =   '';
+        if(!empty($message)) {
+            $xhtml    =   '<div id="system-message">
+                                <dt class="'.$message['class'].'">'.ucfirst($message['class']).'</dt>
+                                <dd class="'.$message['class'].' message">
+                                    <ul>
+                                    	<li>'.$message['content'].'</li>
+                                    </ul>
+                                </dd>
+                            </div>';
+        }
         return $xhtml;
     }
     

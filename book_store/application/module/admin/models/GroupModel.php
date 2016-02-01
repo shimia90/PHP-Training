@@ -1,6 +1,8 @@
 <?php
 class GroupModel extends Model{
     
+    private $_columns = array('id', 'name', 'group_acp', 'created', 'created_by', 'modified', 'modiefied_by', 'status', 'ordering');
+    
 	/**
 	 * 
 	 */
@@ -29,11 +31,22 @@ class GroupModel extends Model{
 		
 		// FILTER : STATTUS
 		if(isset($arrParam['filter_state']) && $arrParam['filter_state'] != 'default') {
-		    $status   =   ($arrParam['filter_state'] == 'unpublish') ? 0 : 1; 
+		    //$status   =   ($arrParam['filter_state'] == 'unpublish') ? 0 : 1; 
 		    if($flagWhere == true) {
-		        $query[]    =   "AND `status` = '{$status}'";
+		        $query[]    =   "AND `status` = '{$arrParam['filter_state']}'";
 		    } else {
-		        $query[]    =   "WHERE `status` = '{$status}'";
+		        $query[]    =   "WHERE `status` = '{$arrParam['filter_state']}'";
+		        $flagWhere = true;
+		    }
+		}
+		
+		// FILTER : GROUP ACP
+		if(isset($arrParam['filter_group_acp']) && $arrParam['filter_group_acp'] != 'default') {
+		    //$status   =   ($arrParam['filter_state'] == 'unpublish') ? 0 : 1;
+		    if($flagWhere == true) {
+		        $query[]    =   "AND `group_acp` = '{$arrParam['filter_group_acp']}'";
+		    } else {
+		        $query[]    =   "WHERE `group_acp` = '{$arrParam['filter_group_acp']}'";
 		    }
 		}
 		
@@ -43,7 +56,7 @@ class GroupModel extends Model{
 			$columnDir 	=	$arrParam['filter_column_dir'];
 			$query[] 	=	"ORDER BY `{$column}` {$columnDir}";
 		} else {
-			$query[] 	=	"ORDER BY `name` ASC";
+			$query[] 	=	"ORDER BY `id` DESC";
 		}
 		
 		// PAGINATION
@@ -55,12 +68,12 @@ class GroupModel extends Model{
 		    $query[]	= "LIMIT $position, $totalItemsPerPage";
 		}
 		
-		$query  		=   implode(" ", $query);
+		echo $query  		=   implode(" ", $query);
 		$result   		=   $this->listRecord($query);
 		return $result;
 	}
 	
-	/**/
+	
 	public function changeStatus($arrayParam, $option = null) {
 	    if($option['task'] == 'change-ajax-status') {
 	        $status    =   ($arrayParam['status'] == 0) ? 1 : 0;
@@ -87,8 +100,9 @@ class GroupModel extends Model{
 								'group_acp'	=>		$group_acp,
 								'link'		=>		 URL::createLink('admin', 'group', 'ajaxGroupACP', array('id' => $id, 'group_acp' => $group_acp))
 							);// return array($id, $group_acp, URL::createLink('admin', 'group', 'ajaxGroupACP', array('id' => $id, 'group_acp' => $group_acp)));
-			return $result;
-	    }
+	        return $result;
+		}
+		    
 		
 		if($option['task'] == 'change-status') {
 	        $status    =   $arrayParam['type'];
@@ -96,6 +110,9 @@ class GroupModel extends Model{
 				$ids 		=	$this->createWhereDeleteSQL($arrayParam['cid']);
 				$query     	=   "UPDATE `{$this->table}` SET `status` = {$status} WHERE `id` IN ({$ids})";
 	        	$this->query($query);	
+	        	Session::set('message', array('class' => 'success', 'content' => $this->affectedRows() . ' updated successfully'));
+			} else {
+			    Session::set('message', array('class' => 'error', 'content' => 'Please choose the item that you want to change status !!'));
 			}
 	    }
 	}
@@ -111,8 +128,37 @@ class GroupModel extends Model{
 				$ids 		=	$this->createWhereDeleteSQL($arrayParam['cid']);
 				$query     	=   "DELETE FROM `{$this->table}` WHERE `id` IN ({$ids})";
 	        	$this->query($query);	
+	        	Session::set('message', array('class' => 'success', 'content' => $this->affectedRows() . ' items were deleted successfully'));
+			} else {
+			    Session::set('message', array('class' => 'error', 'content' => 'Please choose the item that you want to delete !!'));
 			}
 	    }
+	}
+	
+	/**
+	 * 
+	 * @param unknown $arrayParam
+	 * @param string $option
+	 */
+	public function saveItem($arrayParam, $option = null) {
+	    if($option['task'] == 'add') {
+	        $arrayParam['form']['created'] = date('Y-m-d', time());
+	        $arrayParam['form']['created_by'] = 1;
+	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
+	        $this->insert($data);
+	        Session::set('message', array('class' => 'success', 'content' => 'Data was inserted successfully'));
+	        return $this->lastID();
+	    }
+	    
+	    if($option['task'] == 'edit') {
+	        $arrayParam['form']['modified']        = date('Y-m-d', time());
+	        $arrayParam['form']['modified_by']     = 10;
+	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
+	        $this->update($data, array(array('id', $arrayParam['form']['id'])));
+	        Session::set('message', array('class' => 'success', 'content' => 'Data was inserted successfully'));
+	        return $arrayParam['form']['id'];
+	    }
+	    
 	}
 	
 	/**
@@ -135,13 +181,25 @@ class GroupModel extends Model{
     	
     	 // FILTER : STATTUS
     	 if(isset($arrParam['filter_state']) && $arrParam['filter_state'] != 'default') {
-    	     $status   =   ($arrParam['filter_state'] == 'unpublish') ? 0 : 1;
+    	     //$status   =   ($arrParam['filter_state'] == 'unpublish') ? 0 : 1;
     	     if($flagWhere == true) {
-    	         $query[]    =   "AND `status` = '{$status}'";
+    	         $query[]    =   "AND `status` = '{$arrParam['filter_state']}'";
     	     } else {
-    	         $query[]    =   "WHERE `status` = '{$status}'";
+    	         $query[]    =   "WHERE `status` = '{$arrParam['filter_state']}'";
+    	         $flagWhere = true;
     	     }
     	   
+    	 }
+    	 
+    	 // FILTER : GROUP ACP
+    	 if(isset($arrParam['filter_group_acp']) && $arrParam['filter_group_acp'] != 'default') {
+    	     //$status   =   ($arrParam['filter_state'] == 'unpublish') ? 0 : 1;
+    	     if($flagWhere == true) {
+    	         $query[]    =   "AND `group_acp` = '{$arrParam['filter_group_acp']}'";
+    	     } else {
+    	         $query[]    =   "WHERE `group_acp` = '{$arrParam['filter_group_acp']}'";
+    	     }
+    	 
     	 }
     	
     	 $query  		=   implode(" ", $query);
@@ -149,15 +207,40 @@ class GroupModel extends Model{
     	 return $result['total'];
 	 }
 	 
+	 /**
+	  * 
+	  * @param unknown $arrParam
+	  * @param string $option
+	  */
 	 public function ordering($arrParam, $option = null) {
+	     $query = '';
 	     if($option == null) {
 	         if(!empty($arrParam['order'])) {
+	             $i = 0;
 	             foreach($arrParam['order'] as $id => $ordering) :
+	               $i++;
 	               $query     =   "UPDATE `{$this->table}` SET `ordering` = {$ordering} WHERE `id` = {$id}";
-	               $this->query($query);
+	             $this->query($query);
 	             endforeach;
+	             Session::set('message', array('class' => 'success', 'content' => $i . ' items were deleted successfully'));
 	         }
 	     }
 	     
+	 }
+	 
+	 /**
+	  *
+	  * @param unknown $arrayParam
+	  * @param string $option
+	  */
+	 public function infoItem($arrayParam, $option = null) {
+	     if($option == null) {
+	         $query[]  =   "SELECT `id`, `name`, `group_acp`, `status`, `ordering`";
+	         $query[]  =   "FROM `$this->table`";
+	         $query[]  =   "WHERE `id` = '{$arrayParam['id']}'";
+	         $query    =   implode(' ', $query);
+	         $result   =   $this->singleRecord($query);
+	         return $result;
+	     }
 	 }
 }

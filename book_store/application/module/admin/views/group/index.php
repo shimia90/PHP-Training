@@ -16,13 +16,23 @@
 	$lblID         =    Helper::cmsLinkSort('ID', 'id', $columnPost, $orderPost);
 	
 	// SELECT BOX 
-	$arrStatus         =   array('default' => '- Select Status -', 'unpublish' => 'Unpublish', 'publish' => 'Publish');
+	$arrStatus         =   array('default' => '- Select Status -', '1' => 'Publish', '0' => 'Unpublish' );
 	$selectBoxStatus   =   Helper::cmsSelectBox('filter_state', 'inputbox', $arrStatus, @$this->arrayParams['filter_state']);
+	
+	// SELECT GROUP ACP
+	$arrGroupACP         =   array('default' => '- Select Group ACP -', '1' => 'Yes', '0' => 'No' );
+	$selectGroupACP   =   Helper::cmsSelectBox('filter_group_acp', 'inputbox', $arrGroupACP, @$this->arrayParams['filter_group_acp']);
 	
 	// PAGINATION
 	$paginationHTML    =   $this->pagination->showPagination(URL::createLink('admin', 'group', 'index'));
+	
+	// MESSAGE
+	$message           =   Session::get('message');
+	Session::delete('message');
+	$strMessage        =   Helper::cmsMessage($message);
+	
 ?>
-<div id="system-message-container"></div>
+<div id="system-message-container"><?php echo $strMessage; ?></div>
 
 <div id="element-box">
 	<div class="m">
@@ -37,7 +47,7 @@
 
 				</div>
 				<div class="filter-select fltrt">
-					<?php echo $selectBoxStatus; ?>
+					<?php echo $selectBoxStatus . $selectGroupACP; ?>
 				</div>
 			</fieldset>
 			<div class="clr"></div>
@@ -87,10 +97,11 @@
 				               $created_by  =   $value['created_by'];
 				               $modified    =   Helper::formatDate('d-m-Y', $value['modified']);
 				               $modified_by =   $value['modified_by'];
+				               $linkEdit    =   URL::createLink('admin', 'group', 'form', array('id' => $id));
 							   
 							echo '<tr class="'.$row.'">
 									<td class="center">'.$ckb.'</td>
-									<td><a href="#">'.$name.'</a></td>
+									<td><a href="'.$linkEdit.'">'.$name.'</a></td>
 									<td class="center">'.$status.'</td>
 									<td class="center">'.$group_acp.'</td>
 									<td class="center">'.$ordering.'</td>

@@ -76,4 +76,8 @@ $(document).ready(function(e) {
     $("#filter-bar select[name=filter_state]").change(function(){
     	$('#adminForm').submit();
     });
+    
+    $("#filter-bar select[name=filter_group_acp]").change(function(){
+    	$('#adminForm').submit();
+    });
 });

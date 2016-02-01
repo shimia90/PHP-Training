@@ -20,20 +20,20 @@
     $btnTrash       =   Helper::cmsButton('Trash', 'toolbar-trash', $linkTrash, 'icon-32-trash', 'submit');
     
     // Save
-    $linkSave       =   URL::createLink('admin', 'group', 'add');
-    $btnSave        =   Helper::cmsButton('Save', 'toolbar-apply', $linkSave, 'icon-32-apply');
+    $linkSave       =   URL::createLink('admin', 'group', 'form', array('type' => 'save'));
+    $btnSave        =   Helper::cmsButton('Save', 'toolbar-apply', $linkSave, 'icon-32-apply', 'submit');
     
     // Save & Close
-    $linkSaveClose  =   URL::createLink('admin', 'group', 'add');
-    $btnSaveClose   =   Helper::cmsButton('Save & Close', 'toolbar-save', $linkSaveClose, 'icon-32-save');
+    $linkSaveClose  =   URL::createLink('admin', 'group', 'form', array('type' => 'save-close'));
+    $btnSaveClose   =   Helper::cmsButton('Save & Close', 'toolbar-save', $linkSaveClose, 'icon-32-save', 'submit');
     
     // Save & New
-    $linkSaveNew    =   URL::createLink('admin', 'group', 'add');
-    $btnSaveNew     =   Helper::cmsButton('Save & New', 'toolbar-save-new', $linkSaveNew, 'icon-32-save-new');
+    $linkSaveNew    =   URL::createLink('admin', 'group', 'form', array('type' => 'save-new'));
+    $btnSaveNew     =   Helper::cmsButton('Save & New', 'toolbar-save-new', $linkSaveNew, 'icon-32-save-new', 'submit');
     
     // Cancel
-    $linkCancel     =   URL::createLink('admin', 'group', 'add');
-    $btnCancel      =   Helper::cmsButton('Cancel', 'toolbar-cancel', $linkSaveNew, 'icon-32-cancel');
+    $linkCancel     =   URL::createLink('admin', 'group', 'index');
+    $btnCancel      =   Helper::cmsButton('Cancel', 'toolbar-cancel', $linkCancel, 'icon-32-cancel');
     
     switch ($this->arrayParams['action']) {
         case 'index': 

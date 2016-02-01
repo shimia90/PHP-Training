@@ -68,6 +68,8 @@ class Model{
 	
 	// CREATE INSERT SQL
 	public function createInsertSQL($data){
+	    $cols = '';
+	    $vals = '';
 		$newQuery = array();
 		if(!empty($data)){
 			foreach($data as $key=> $value){
