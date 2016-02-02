@@ -80,4 +80,8 @@ $(document).ready(function(e) {
     $("#filter-bar select[name=filter_group_acp]").change(function(){
     	$('#adminForm').submit();
     });
+    
+    $("#filter-bar select[name=filter_group_id]").change(function(){
+    	$('#adminForm').submit();
+    });
 });

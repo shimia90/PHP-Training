@@ -55,7 +55,8 @@ class Model {
 	public function insert($data, $type = 'single'){
 		if($type == 'single'){
 			$newQuery 	= $this->createInsertSQL($data);
-			$query 		= "INSERT INTO `$this->table`(".$newQuery['cols'].") VALUES (".$newQuery['vals'].")";
+			echo $query 		= "INSERT INTO `$this->table`(".$newQuery['cols'].") VALUES (".$newQuery['vals'].")";
+			die();
 			$this->query($query);
 		}else{
 			foreach($data as $value){

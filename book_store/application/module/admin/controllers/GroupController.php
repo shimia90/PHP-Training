@@ -11,7 +11,7 @@ class GroupController extends Controller{
 	
 	// HIEN THI DANH SACH GROUUP
 	public function indexAction(){
-	    $this->_view->_title       =   'User Manager: User Groups';
+	    $this->_view->_title       =   'User Manager: List';
 	    $totalItems = $this->_model->countItem($this->_arrParam, null);
 	    
 	    $configPagination          =   array('totalItemsPerPage'  =>  5, 'pageRange'  =>  2);

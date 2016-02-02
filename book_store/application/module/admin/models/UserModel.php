@@ -1,15 +1,15 @@
 <?php
-class GroupModel extends Model{
+class UserModel extends Model{
     
-    private $_columns = array('id', 'name', 'group_acp', 'created', 'created_by', 'modified', 'modiefied_by', 'status', 'ordering');
+    private $_columns = array('id', 'username', 'email', 'fullname', 'password', 'created', 'created_by', 'modified', 'modified_by', 'status', 'ordering', 'group_id');
     
 	/**
 	 * 
 	 */
-    /*public function __construct() {
+    public function __construct() {
         parent::__construct();
-        $this->setTable(TBL_GROUP);
-    }*/
+        $this->setTable(TBL_USER);
+    }
     
 	/**
 	 * 
@@ -18,33 +18,33 @@ class GroupModel extends Model{
 	 * @return multitype:unknown
 	 */
 	public function listItems($arrParam, $option = null) {
-		$query[]  		=   "SELECT `id`, `name`, `group_acp`, `ordering`, `created`, `created_by`, `modified`, `modified_by`, `status`, `ordering`";
-		$query[]  		=   "FROM `$this->table`";
-		$query[]        =   "WHERE `id` > 0";
+		$query[]  		=   "SELECT `u`.`id`, `u`.`username`, `u`.`email`, `u`.`fullname`, `u`.`created`, `u`.`created_by`, `u`.`modified`, `u`.`modified_by`, `u`.`status`, `u`.`ordering`, `g`.`name` AS `group_name`";
+		$query[]  		=   "FROM `$this->table` AS `u`, `".TBL_GROUP."` AS `g`";
+		$query[]        =   "WHERE `u`.`group_id` = `g`.`id`";
 		
 		// FILTER : KEYWORD
 		if(!empty($arrParam['filter_search'])) {
 		    $keyword    =   '"%' . $arrParam['filter_search'] . '%"';
-		    $query[]    =   "WHERE `name` LIKE {$keyword}";
+		    $query[]     =   "AND (`username` LIKE {$keyword} OR `email` LIKE {$keyword})";
 		}
 		
-		// FILTER : STATTUS
+		// FILTER : STATUS
 		if(isset($arrParam['filter_state']) && $arrParam['filter_state'] != 'default') {
-		    $query[]    =   "AND `status` = '{$arrParam['filter_state']}'";
+		    $query[]    =   "AND `u`.`status` = '{$arrParam['filter_state']}'";
 		}
 		
-		// FILTER : GROUP ACP
-		if(isset($arrParam['filter_group_acp']) && $arrParam['filter_group_acp'] != 'default') {
-		    $query[]    =   "AND `group_acp` = '{$arrParam['filter_group_acp']}'";
+		// FILTER : GROUP ID
+		if(isset($arrParam['filter_group_id']) && $arrParam['filter_group_id'] != 'default') {
+		    $query[]    =   "AND `u`.`group_id` = '{$arrParam['filter_group_id']}'";
 		}
 		
 		// SORT
 		if(!empty($arrParam['filter_column']) && !empty($arrParam['filter_column_dir'])) {
 			$column 	=	$arrParam['filter_column'];
 			$columnDir 	=	$arrParam['filter_column_dir'];
-			$query[] 	=	"ORDER BY `{$column}` {$columnDir}";
+			$query[] 	=	"ORDER BY `u`.`{$column}` {$columnDir}";
 		} else {
-			$query[] 	=	"ORDER BY `id` DESC";
+			$query[] 	=	"ORDER BY `u`.`id` DESC";
 		}
 		
 		// PAGINATION
@@ -61,7 +61,12 @@ class GroupModel extends Model{
 		return $result;
 	}
 	
-	
+	/**
+	 * 
+	 * @param unknown $arrayParam
+	 * @param string $option
+	 * @return multitype:number unknown string
+	 */
 	public function changeStatus($arrayParam, $option = null) {
 	    if($option['task'] == 'change-ajax-status') {
 	        $status    =   ($arrayParam['status'] == 0) ? 1 : 0;
@@ -72,25 +77,10 @@ class GroupModel extends Model{
 			$result 	=	array(
 								'id'		=>		$id,
 								'status'	=>		$status,
-								'link' 		=>		URL::createLink('admin', 'group', 'ajaxStatus', array('id' => $id, 'status' => $status))
+								'link' 		=>		URL::createLink('admin', 'user', 'ajaxStatus', array('id' => $id, 'status' => $status))
 							); //array($id, $status, URL::createLink('admin', 'group', 'ajaxStatus', array('id' => $id, 'status' => $status)));
 	        return $result;
 	    }
-		
-		if($option['task'] == 'change-ajax-group-acp') {
-	        $group_acp    =   ($arrayParam['group_acp'] == 0) ? 1 : 0;
-	        $id        =   $arrayParam['id'];
-	        $query     =   "UPDATE `{$this->table}` SET `group_acp` = {$group_acp} WHERE `id` = {$id}";
-	        $this->query($query);
-	        
-	        $result 	=	array(
-								'id'		=>		$id,
-								'group_acp'	=>		$group_acp,
-								'link'		=>		 URL::createLink('admin', 'group', 'ajaxGroupACP', array('id' => $id, 'group_acp' => $group_acp))
-							);// return array($id, $group_acp, URL::createLink('admin', 'group', 'ajaxGroupACP', array('id' => $id, 'group_acp' => $group_acp)));
-	        return $result;
-		}
-		    
 		
 		if($option['task'] == 'change-status') {
 	        $status    =   $arrayParam['type'];
@@ -132,6 +122,7 @@ class GroupModel extends Model{
 	    if($option['task'] == 'add') {
 	        $arrayParam['form']['created'] = date('Y-m-d', time());
 	        $arrayParam['form']['created_by'] = 1;
+	        $arrayParam['form']['password'] = md5($arrayParam['form']['password']);
 	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
 	        $this->insert($data);
 	        Session::set('message', array('class' => 'success', 'content' => 'Data was inserted successfully'));
@@ -141,6 +132,11 @@ class GroupModel extends Model{
 	    if($option['task'] == 'edit') {
 	        $arrayParam['form']['modified']        = date('Y-m-d', time());
 	        $arrayParam['form']['modified_by']     = 10;
+	        if($arrayParam['form']['password'] != null) {
+	            $arrayParam['form']['password'] = md5($arrayParam['form']['password']);
+	        } else {
+	            unset($arrayParam['form']['password']);
+	        }
 	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
 	        $this->update($data, array(array('id', $arrayParam['form']['id'])));
 	        Session::set('message', array('class' => 'success', 'content' => 'Data was inserted successfully'));
@@ -163,19 +159,21 @@ class GroupModel extends Model{
     	 // FILTER : KEYWORD
     	 if(!empty($arrParam['filter_search'])) {
     	   $keyword     =   '"%' . $arrParam['filter_search'] . '%"';
-    	   $query[]     =   "AND `name` LIKE {$keyword}";
+    	   $query[]     =   "AND (`username` LIKE {$keyword} OR `email` LIKE {$keyword})";
+    	 }
+    	 
+    	 // FILTER : GROUP ID
+    	 if(isset($arrParam['filter_group_id']) && $arrParam['filter_group_id'] != 'default') {
+    	     $query[]    =   "AND `group_id` = '{$arrParam['filter_group_id']}'";
     	 }
     	
     	 // FILTER : STATTUS
     	 if(isset($arrParam['filter_state']) && $arrParam['filter_state'] != 'default') {
+    	     //$status   =   ($arrParam['filter_state'] == 'unpublish') ? 0 : 1;
     	     $query[]    =   "AND `status` = '{$arrParam['filter_state']}'";
+    	   
     	 }
     	 
-    	 // FILTER : GROUP ACP
-    	 if(isset($arrParam['filter_group_acp']) && $arrParam['filter_group_acp'] != 'default') {
-    	     $query[]    =   "AND `group_acp` = '{$arrParam['filter_group_acp']}'";
-    	 }
-    	
     	 $query  		=   implode(" ", $query);
     	 $result   		=   $this->fetchRow($query);
     	 return $result['total'];
@@ -209,12 +207,23 @@ class GroupModel extends Model{
 	  */
 	 public function infoItem($arrayParam, $option = null) {
 	     if($option == null) {
-	         $query[]  =   "SELECT `id`, `name`, `group_acp`, `status`, `ordering`";
-	         $query[]  =   "FROM `$this->table`";
-	         $query[]  =   "WHERE `id` = '{$arrayParam['id']}'";
-	         $query    =   implode(' ', $query);
-	         $result   =   $this->fetchRow($query);
+	         $query[]              =   "SELECT `id`, `username`, `email`, `fullname`, `group_id`, `status`, `ordering`";
+	         $query[]              =   "FROM `$this->table`";
+	         $query[]              =   "WHERE `id` = '{$arrayParam['id']}'";
+	         $query                =   implode(' ', $query);
+	         $result               =   $this->fetchRow($query);
 	         return $result;
 	     }
+	 }
+	 
+	 public function itemInSelectBox($arrayParam, $option = null) {
+	     $result       =   array();
+	     if($option == null) {
+	         $query    =   "SELECT `id`, `name` FROM `".TBL_GROUP."`";
+	         $result   =   $this->fetchPairs($query);
+	         $result['default']    =   '- Select Group -';
+	         ksort($result);
+	     }
+	     return $result;
 	 }
 }
