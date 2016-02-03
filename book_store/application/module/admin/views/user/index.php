@@ -1,5 +1,5 @@
 <?php 
-    include_once 'toolbar/index.php';
+    include_once (MODULE_PATH . 'admin/views/toolbar.php');
     include_once 'submenu/index.php';
     
     // COLUMN
@@ -31,8 +31,6 @@
 	$message             =   Session::get('message');
 	Session::delete('message');
 	$strMessage          =   Helper::cmsMessage($message);
-	
-	
 	
 ?>
 <div id="system-message-container"><?php echo $strMessage; ?></div>
