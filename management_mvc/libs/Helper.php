@@ -2,9 +2,14 @@
 class Helper {
     
     // Create Button
-    public static function cmsButton($name, $id, $link, $icon) {
-        $xhtml = '<li class="button" id="'.$id.'"><a class="modal" href="'.$link.'"><span
-						class="'.$icon.'"></span>'.$name.'</a></li>';
+    public static function cmsButton($name, $id, $link, $icon, $type = 'new') {
+		$xhtml 	= 	'<li class="button" id="'.$id.'">';
+		if($type == 'new') {
+			$xhtml .=	'<a class="modal" href="'.$link.'"><span class="'.$icon.'"></span>'.$name.'</a>';
+		} else if($type == 'submit') {
+			$xhtml .=	'<a class="modal" href="#" onClick="javascript:submitForm(\''.$link.'\');"><span class="'.$icon.'"></span>'.$name.'</a>';
+		}
+		$xhtml .=	'</li>';
         return $xhtml;
     }
     
@@ -18,150 +23,97 @@ class Helper {
     }
     
     // Create Icon Status
-    public static function cmsStatus($statusValue) {
+    public static function cmsStatus($statusValue, $link, $id) {
         $strStatus  =   ($statusValue == 0) ? 'unpublish' : 'publish';
-        $xhtml      =   '<a href="javascript:void(0);" class="jgrid">
+        $xhtml      =   '<a href="javascript:changeStatus(\''.$link.'\');" class="jgrid" id="status-'.$id.'">
                         	<span class="state '.$strStatus.'"></span>
                         </a>';
         return $xhtml;
     }
+	
+	// Create Icon Group ACP
+    public static function cmsGroupACP($groupAcpValue, $link, $id) {
+        $strGroupACP  	=   ($groupAcpValue == 0) ? 'unpublish' : 'publish';
+        $xhtml      	=   '<a href="javascript:changeGroupACP(\''.$link.'\');" class="jgrid" id="group-acp-'.$id.'">
+                        	<span class="state '.$strGroupACP.'"></span>
+                        </a>';
+        return $xhtml;
+    }
+	
+	/**
+	 * Sort
+	 * @param unknown $name
+	 * @param unknown $column
+	 * @param unknown $columnPost
+	 * @param unknown $orderPost
+	 */
+    public static function cmsLinkSort($name, $column, $columnPost, $orderPost) {
+		$img 	    =	'';
+		$order      =   ($orderPost == 'desc') ? 'asc' : 'desc';
+		if($column == $columnPost) {
+			$img 	=	'<img src="'.TEMPLATE_URL.'admin/main/images/admin/sort_'.$orderPost.'.png" alt="" />';
+		}
+		$xhtml 	=	'<a href="#" onclick="javascript:sortList(\''. $column .'\', \''. $order .'\')">'.$name. $img .'</a>';
+		return $xhtml;
+    }
+    
+    // Create Select Box
+    public static function cmsSelectBox($name, $class, $arrValue, $keySelect = 'default', $style = null) {
+        $xhtml        =   '<select style="'.$style.'" name="'.$name.'" class="'.$class.'">';
+    		foreach($arrValue as $key => $value) {
+    		    if($key == $keySelect && is_numeric($keySelect)) {
+    		        $xhtml    .=      '<option value="'.$key.'" selected="selected">'.$value.'</option>';
+    		    } else {
+    		        $xhtml    .=      '<option value="'.$key.'">'.$value.'</option>';
+    		    }
+    		    
+    		}				
+    	$xhtml		.=	 '</select>';
+    	return $xhtml;
+    }
+    
+    public static function cmsRowForm($lblName, $input, $require = false) {
+        $strRequired        =       '';
+        if($require == true) {
+            $strRequired  .=  '<span class="star">&nbsp;*</span>';
+        }
+        $xhtml      =       '<li><label>'.$lblName. $strRequired .'</label>'. $input . '</li>';
+        return $xhtml;
+    }
     
     /**
-     * Create Function Select
-     * @param unknown $arrayUsers
+     * CREATE INPUT
+     * @param unknown $type
+     * @param unknown $name
      * @param unknown $id
+     * @param unknown $value
      * @param unknown $class
-     * @param string $firstText
-     * @param string $selected
+     * @param unknown $size
      * @return string
      */
-    public static function createUserSelect($arrayUsers, $id, $class, $firstText = null, $selected = null) {
-        $xhtml  =   '';
-        if(!empty($arrayUsers)) :
-            $xhtml      .=       '<select id="'.$id.'" size="1" name="'.$id.'" class="'.$class.'" aria-controls="example">';
-                $xhtml  .=       '<option value="">'.$firstText.'</option>';
-            foreach($arrayUsers as $key => $value) :
-                $xhtml  .=       '<option value="'.$value['id'].'">'.$value['fullname'].'</option>';
-            endforeach;
-            $xhtml      .=       '</select>';
-        endif;
+    public static function cmsInput($type, $name, $id, $value, $class = null, $size = null) {
+        $strSize    =       ($size == null) ? '' : "size='$size'";
+        $strClass   =       ($class == null) ? '' : "class='$class'";
+        
+        $xhtml      =       '<input type="'.$type.'" name="'.$name.'" id="'.$id.'" value="'.$value.'"
+							'.$strClass.' '.$strSize.'>';
+        
         return $xhtml;
     }
     
-    /**
-     * 
-     * @param unknown $messageStrong
-     * @param unknown $messageNormal
-     * @return string
-     */
-    public static function createAlert($messageStrong, $messageNormal) {
-        $xhtml      =       '';
-        if(trim($messageStrong != '' || trim($messageNormal) != '')) {
-            $xhtml      .=      '<div class="alert alert-error">
-                                  <button type="button" class="close" data-dismiss="alert">×</button>
-                                  <strong>'.$messageStrong.' </strong> '.$messageNormal.'
-                                </div>';
+    public static function cmsMessage($message) {
+        $xhtml        =   '';
+        if(!empty($message)) {
+            $xhtml    =   '<div id="system-message">
+                                <dt class="'.$message['class'].'">'.ucfirst($message['class']).'</dt>
+                                <dd class="'.$message['class'].' message">
+                                    <ul>
+                                    	<li>'.$message['content'].'</li>
+                                    </ul>
+                                </dd>
+                            </div>';
         }
         return $xhtml;
     }
     
-    /**
-     * 
-     * @param unknown $url
-     * @return Ambigous <multitype:, multitype:multitype: >
-     */
-    public static function getData($url) {
-        $array_data = array();
-        if(!ini_set('default_socket_timeout', 15)) echo "<!-- unable to change socket timeout -->";
-    
-        if (($handle = @fopen($url, "r")) !== FALSE) {
-            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                $array_data[]=$data;
-            }
-            fclose($handle);
-        }
-        else {
-            $array_data = array();
-        }
-        return $array_data;
-    }
-    
-    /**
-     * 
-     * @param unknown $data
-     * @return string
-     */
-    public static function projectTypeBg($data) {
-        $class  = "";
-        if(trim($data) == "Maintenance") {
-            $class = "success";
-        } elseif (trim($data) == "Newton") {
-            $class = "info";
-        }
-        return $class;
-    }
-    
-    /**
-     * 
-     * @param unknown $arrayRemove
-     * @param unknown $arraySource
-     * @return unknown
-     */
-    public static function removeArrayItem($arrayRemove = array(), $arraySource = array()) {
-        foreach($arrayRemove as $key => $value) {
-            if(array_key_exists($value, $arraySource)) {
-                unset($arraySource[$value]);
-            }
-        }
-        return $arraySource;
-    }
-    
-    /**
-     * 
-     * @param unknown $str
-     * @return unknown
-     */
-    public static function convertMonth($str) {
-        $month = '';
-        $arrayDate = explode('/', $str);
-        $month = $arrayDate[1];
-        return $month;
-    }
-    
-    /**
-     * 
-     * @param unknown $str
-     * @return string
-     */
-    public static function emptyReturn($str) {
-        if(trim($str) == '') {
-            $str = '-';
-        }
-        return $str;
-    }
-    
-    /**
-     * 
-     * @param unknown $date
-     * @return boolean
-     */
-    public static function isWeekend($date) {
-        //$inputDate = DateTime::createFromFormat("d-m-Y", $date, new DateTimeZone("Europe/Amsterdam"));
-        $inputDate = DateTime::createFromFormat('d/m/Y', $date, new DateTimeZone("Asia/Ho_Chi_Minh"));
-        return $inputDate->format('N') >= 6;
-    }
-    
-    /**
-     * 
-     * @param unknown $date
-     * @return boolean
-     */
-    public static function checkWeekend($date) {
-        if(date('w', strtotime($date)) == 6 || date('w', strtotime($date)) == 0) {
-            return true;
-        } else {
-            return false;
-        }
-        return false;
-    }
 }

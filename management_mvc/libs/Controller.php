@@ -13,10 +13,20 @@ class Controller{
 	// Params (GET - POST)
 	protected $_arrParam;
 	
+	// Pagination
+	protected $_pagination = array(
+	                           'totalItemsPerPage' =>  3,
+	                           'pageRange'         =>  2
+	                         );
+	
 	public function __construct($arrParams){
 		$this->setModel($arrParams['module'], $arrParams['controller']);
 		$this->setTemplate($this);
 		$this->setView($arrParams['module']);
+		
+		$this->_pagination['currentPage']     =   (isset($arrParams['filter_page'])) ? $arrParams['filter_page'] : 1;
+		$arrParams['pagination']              =   $this->_pagination;
+		
 		$this->setParams($arrParams);
 		
 		$this->_view->arrayParams = $arrParams;
@@ -25,7 +35,7 @@ class Controller{
 	// SET MODEL
 	public function setModel($moduleName, $modelName){
 		$modelName = ucfirst($modelName) . 'Model';
-		$path = APPLICATION_PATH . $moduleName . DS . 'models' .  DS . $modelName . '.php';
+		$path = MODULE_PATH . $moduleName . DS . 'models' .  DS . $modelName . '.php';
 		if(file_exists($path)){
 			require_once $path;
 			$this->_model	= new $modelName();
@@ -66,4 +76,13 @@ class Controller{
 	public function getParams($arrParam){
 		$this->_arrParam= $arrParam;
 	}
+	
+    // SET PAGINATION
+	public function setPagination($config){
+		$this->_pagination['totalItemsPerPage']    =   $config['totalItemsPerPage'];
+		$this->_pagination['pageRange']            =   $config['pageRange'];
+		$this->_arrParam['pagination']             =   $this->_pagination;
+		$this->_view->arrayParams                  =   $this->_arrParam;
+	}
+	
 }
