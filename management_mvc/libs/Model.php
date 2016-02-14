@@ -157,7 +157,7 @@ class Model{
 		$result = array();
 		if(!empty($query)){
 			$resultQuery = $this->query($query);
-			if(mysqli_num_rows($resultQuery) > 0){
+			if(@mysqli_num_rows($resultQuery) > 0){
 				while($row = mysqli_fetch_assoc($resultQuery)){
 					$result[] = $row;
 				}

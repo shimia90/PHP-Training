@@ -116,4 +116,20 @@ class Helper {
         return $xhtml;
     }
     
+    public static function getData($url) {
+        $array_data = array();
+        if(!ini_set('default_socket_timeout', 15)) echo "<!-- unable to change socket timeout -->";
+        
+        if (($handle = @fopen($url, "r")) !== FALSE) {
+            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                $array_data[]=$data;
+            }
+            fclose($handle);
+        }
+        else {
+            $array_data = array();
+        }
+        return $array_data;
+    }
+    
 }
