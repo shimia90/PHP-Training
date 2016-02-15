@@ -229,4 +229,34 @@ class Model{
 		if(mysqli_num_rows($this->resultQuery ) > 0) return true;
 		return false;
 	}
+	
+	public function returnID($data, $table) {
+	    $whereSelect = $this->createSelectSQL($data);
+	    $newQuery = "SELECT `id` FROM `".$table."` WHERE " . $whereSelect;
+	    return $this->fetchAll($newQuery);
+	}
+	
+	public function createSelectSQL($data) {
+	    $newQuery = '';
+	    if(!empty($data)) {
+	        foreach($data as $key => $value) {
+	           if(trim($value) == '') {
+	               $newQuery .= '`'.$key.'` = "" AND ';
+	           } else {
+	               $newQuery .= '`'.$key.'` = "'.$value.'" AND ';
+	           }
+	        }
+	        $newQuery = substr($newQuery, 0, -5);
+	    }
+	    return $newQuery;
+	}
+	
+	public function checkExistRow($data, $table) {
+	    $whereSelect = $this->createSelectSQL($data);
+	    $newQuery = "SELECT * FROM `".$table."` WHERE " . $whereSelect;
+	    if(mysqli_num_rows($this->query($newQuery)) > 0) {
+	        return true;
+	    }
+	    return false;
+	}
 }

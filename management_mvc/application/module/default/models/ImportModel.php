@@ -61,6 +61,19 @@ class ImportModel extends Model {
 		return $result;
 	}
 	
+	// Return Array User
+	public function listUser() {
+		$query 			=		"SELECT * FROM `".TBL_USER."`";
+		$arrayUser 		=		$this->fetchAll($query);
+		return $arrayUser;
+	}
+	
+	// Return Array Project
+	public function listProject() {
+		$query 				=		"SELECT * FROM `".TBL_PROJECT."`";
+		$arrayProject 		=		$this->fetchAll($query);
+		return $arrayProject;
+	}
 	
 	public function changeStatus($arrayParam, $option = null) {
 	    if($option['task'] == 'change-ajax-status') {
@@ -267,4 +280,501 @@ class ImportModel extends Model {
 	     }
 	     return $arrayData;
 	 }
+	 
+	 public function processMaintenance() {
+		$arrayData 			= 	$this->getDataGoogle();
+		$arrayMaintenance 	= 	array();
+		array_shift($arrayData['maintenance']);
+		for ($i = 0; $i < count($arrayData['maintenance']) - 1; $i ++) {
+			if (trim($arrayData['maintenance'][$i][15]) != '' && trim($arrayData['maintenance'][$i][16]) != '' && trim($arrayData['maintenance'][$i][13]) != '') {
+				if ($arrayData['maintenance'][$i][6] == '') {
+					unset($arrayData['maintenance'][$i][6]);
+					continue;
+				} else {
+					$arrayData['maintenance'][$i][8] = str_replace(',', '.', $arrayData['maintenance'][$i][8]);
+					$arrayData['maintenance'][$i][19] = str_replace(',', '.', $arrayData['maintenance'][$i][19]);
+					$arrayMaintenance['Maintenance'][$i]['PROJECT_NO'] = $arrayData['maintenance'][$i][1];
+					$arrayMaintenance['Maintenance'][$i]['PROJECT_TYPE'] = 'Maintenance';
+					$arrayMaintenance['Maintenance'][$i]['ORDER_DATE'] = $arrayData['maintenance'][$i][2];
+					$arrayMaintenance['Maintenance'][$i]['WORK_DATE'] = $arrayData['maintenance'][$i][13];
+					$arrayMaintenance['Maintenance'][$i]['PROJECT_NAME'] = $arrayData['maintenance'][$i][4];
+					$arrayMaintenance['Maintenance'][$i]['STATUS'] = $arrayData['maintenance'][$i][5];
+					$arrayMaintenance['Maintenance'][$i]['STANDARD_DURATION'] = $arrayData['maintenance'][$i][8];
+					$arrayMaintenance['Maintenance'][$i]['DELIVERY_DATE'] = $arrayData['maintenance'][$i][12];
+					$arrayMaintenance['Maintenance'][$i]['DELIVERY_BEFORE'] = $arrayData['maintenance'][$i][10];
+					$arrayMaintenance['Maintenance'][$i]['USER'] = $arrayData['maintenance'][$i][6];
+					$arrayMaintenance['Maintenance'][$i]['START'] = $arrayData['maintenance'][$i][15];
+					$arrayMaintenance['Maintenance'][$i]['END'] = $arrayData['maintenance'][$i][16];
+					$arrayMaintenance['Maintenance'][$i]['REAL_DURATION'] = $arrayData['maintenance'][$i][19];
+					$arrayMaintenance['Maintenance'][$i]['PERFORMANCE'] = ($arrayData['maintenance'][$i][19] > 0) ? (round($arrayData['maintenance'][$i][8] / $arrayData['maintenance'][$i][19], 2)) : 0;
+					$arrayMaintenance['Maintenance'][$i]['NOTE'] = $arrayData['maintenance'][$i][21];
+					$arrayMaintenance['Maintenance'][$i]['PAGE_NAME'] = '';
+					$arrayMaintenance['Maintenance'][$i]['PAGE_NUMBER'] = '';
+					$arrayMaintenance['Maintenance'][$i]['TYPE'] = '';
+					$arrayMaintenance['Maintenance'][$i]['WORK_CONTENT'] = '';
+				}
+			}
+		}
+		foreach($arrayMaintenance as $key => $value) {
+			$value = array_values($value);
+			$arrayMaintenance[$key] = $value;
+		}
+		return $arrayMaintenance;
+	 }
+	 
+	 public function processNewtonDetail() {
+		 $arrayData 				= 		$this->getDataGoogle();
+		 $arrayNewtonDetail 	    = 		array();
+		 array_shift($arrayData['newton_detail']);
+		 for ($i = 0; $i < count($arrayData['newton_detail']) - 1; $i ++) {
+			if (trim($arrayData['newton_detail'][$i][11]) != '' && trim($arrayData['newton_detail'][$i][12]) != '' && trim($arrayData['newton_detail'][$i][13]) != '') {
+				if ($arrayData['newton_detail'][$i][6] == '') {
+					unset($arrayData['newton_detail'][$i][6]);
+					continue;
+				} else {
+					$arrayData['newton_detail'][$i][8] = str_replace(',', '.', $arrayData['newton_detail'][$i][8]);
+					//$arrayData['newton_detail'][$i][5] = str_replace(',', '.', $arrayData['newton_detail'][$i][5]);
+					$arrayNewtonDetail['Newton'][$i]['PROJECT_NO'] = $arrayData['newton_detail'][$i][1];
+					$arrayNewtonDetail['Newton'][$i]['PROJECT_TYPE'] = 'Newton';
+					$arrayNewtonDetail['Newton'][$i]['ORDER_DATE'] = $arrayData['newton_detail'][$i][11];
+					$arrayNewtonDetail['Newton'][$i]['WORK_DATE'] = $arrayData['newton_detail'][$i][13];
+					$arrayNewtonDetail['Newton'][$i]['PROJECT_NAME'] = $arrayData['newton_detail'][$i][4];
+					$arrayNewtonDetail['Newton'][$i]['STATUS'] = $arrayData['newton_detail'][$i][5];
+					$arrayNewtonDetail['Newton'][$i]['STANDARD_DURATION'] = $arrayData['newton_detail'][$i][8];
+					$arrayNewtonDetail['Newton'][$i]['DELIVERY_DATE'] = $arrayData['newton_detail'][$i][12];
+					$arrayNewtonDetail['Newton'][$i]['DELIVERY_BEFORE'] = $arrayData['newton_detail'][$i][10];
+					$arrayNewtonDetail['Newton'][$i]['USER'] = $arrayData['newton_detail'][$i][6];
+					$arrayNewtonDetail['Newton'][$i]['START'] = $arrayData['newton_detail'][$i][15];
+					$arrayNewtonDetail['Newton'][$i]['END'] = $arrayData['newton_detail'][$i][16];
+					$arrayNewtonDetail['Newton'][$i]['REAL_DURATION'] = $arrayData['newton_detail'][$i][19];
+					$arrayNewtonDetail['Newton'][$i]['PERFORMANCE'] = '';
+					$arrayNewtonDetail['Newton'][$i]['NOTE'] = $arrayData['newton_detail'][$i][21];
+					$arrayNewtonDetail['Newton'][$i]['PAGE_NAME'] = '';
+					$arrayNewtonDetail['Newton'][$i]['PAGE_NUMBER'] = '';
+					$arrayNewtonDetail['Newton'][$i]['TYPE'] = $arrayData['newton_detail'][$i][2];
+					$arrayNewtonDetail['Newton'][$i]['WORK_CONTENT'] = '';
+				}
+			}
+		}
+		return $arrayNewtonDetail;
+	 }
+	 
+	 public function processNewton() {
+		 $arrayData 				= 		$this->getDataGoogle();
+		 $arrayNewtonDetail 		=		$this->processNewtonDetail();
+		 $arrayNewton 				= 		array();
+		 array_shift($arrayData['newton']);
+		 for ($i = 0; $i < count($arrayData['newton']) - 1; $i ++) {
+			if (trim($arrayData['newton'][$i][9]) != '' && trim($arrayData['newton'][$i][10]) != '' && trim($arrayData['newton'][$i][0]) != '') {
+				if ($arrayData['newton'][$i][7] == '') {
+					unset($arrayData['newton'][$i][7]);
+					continue;
+				} else {
+					$arrayData['newton'][$i][4] = str_replace(',', '.', $arrayData['newton'][$i][4]);
+					$arrayData['newton'][$i][5] = str_replace(',', '.', $arrayData['newton'][$i][5]);
+					$arrayNewton['Newton'][$i]['PROJECT_NO'] = $arrayData['newton'][$i][1];
+					$arrayNewton['Newton'][$i]['PROJECT_TYPE'] = 'Newton';
+					$arrayNewton['Newton'][$i]['ORDER_DATE'] = '';
+					$arrayNewton['Newton'][$i]['DELIVERY_DATE'] = '';
+					$arrayNewton['Newton'][$i]['DELIVERY_BEFORE'] = '';
+					foreach($arrayNewtonDetail['Newton'] as $a => $b) {
+						
+						if($arrayNewtonDetail['Newton'][$a]['PROJECT_NO'] == $arrayData['newton'][$i][1] && $arrayNewtonDetail['Newton'][$a]['PROJECT_NAME'] == $arrayData['newton'][$i][2] && $arrayNewtonDetail['Newton'][$a]['USER'] == $arrayData['newton'][$i][7]) {
+							$arrayNewton['Newton'][$i]['ORDER_DATE']            = $b['ORDER_DATE'];
+							$arrayNewton['Newton'][$i]['DELIVERY_DATE']         = $b['DELIVERY_DATE'];
+							$arrayNewton['Newton'][$i]['DELIVERY_BEFORE']       = $b['DELIVERY_BEFORE'];
+						}
+					}
+					   
+					
+					$arrayNewton['Newton'][$i]['WORK_DATE'] = $arrayData['newton'][$i][0];
+					$arrayNewton['Newton'][$i]['PROJECT_NAME'] = $arrayData['newton'][$i][2];
+					$arrayNewton['Newton'][$i]['STATUS'] = $arrayData['newton'][$i][8];
+					$arrayNewton['Newton'][$i]['STANDARD_DURATION'] = $arrayData['newton'][$i][4];
+					
+					$arrayNewton['Newton'][$i]['DELIVERY_BEFORE'] = '';
+					$arrayNewton['Newton'][$i]['USER'] = $arrayData['newton'][$i][7];
+					$arrayNewton['Newton'][$i]['START'] = $arrayData['newton'][$i][9];
+					$arrayNewton['Newton'][$i]['END'] = $arrayData['newton'][$i][10];
+					$arrayNewton['Newton'][$i]['REAL_DURATION'] = $arrayData['newton'][$i][5];
+					$arrayNewton['Newton'][$i]['PERFORMANCE'] = ($arrayData['newton'][$i][4] > 0 && $arrayData['newton'][$i][5] > 0) ? (round($arrayData['newton'][$i][5] / $arrayData['newton'][$i][4], 2)) : 0;
+					$arrayNewton['Newton'][$i]['NOTE'] = $arrayData['newton'][$i][12];
+					$arrayNewton['Newton'][$i]['PAGE_NAME'] = $arrayData['newton'][$i][6];
+					$arrayNewton['Newton'][$i]['PAGE_NUMBER'] = '';
+					$arrayNewton['Newton'][$i]['TYPE'] = $arrayData['newton'][$i][3];
+					$arrayNewton['Newton'][$i]['WORK_CONTENT'] = '';
+				}
+			}
+		}
+		return $arrayNewton;
+	 }
+	 
+	 public function processNewCodingDetail() {
+		 $arrayData 				= 		$this->getDataGoogle();
+		 $arrayNewCodingDetail 		=		array();
+		 array_shift($arrayData['new_coding_detail']);
+		 for ($i = 0; $i < count($arrayData['new_coding_detail']) - 1; $i ++) {
+			if (trim($arrayData['new_coding_detail'][$i][7]) != '' && trim($arrayData['new_coding_detail'][$i][7]) != '-' && trim($arrayData['new_coding_detail'][$i][9]) != '') {
+				$arrayNewCodingDetail['NewCoding'][$i]['PROJECT_NO'] = $arrayData['new_coding_detail'][$i][3];
+				$arrayNewCodingDetail['NewCoding'][$i]['PROJECT_TYPE'] = 'New Coding';
+				$arrayNewCodingDetail['NewCoding'][$i]['ORDER_DATE'] = $arrayData['new_coding_detail'][$i][9];
+				$arrayNewCodingDetail['NewCoding'][$i]['WORK_DATE'] = '';
+				$arrayNewCodingDetail['NewCoding'][$i]['PROJECT_NAME'] = $arrayData['new_coding_detail'][$i][5];
+				$arrayNewCodingDetail['NewCoding'][$i]['STATUS'] = '';
+				$arrayNewCodingDetail['NewCoding'][$i]['STANDARD_DURATION'] = $arrayData['new_coding_detail'][$i][12];
+				$arrayNewCodingDetail['NewCoding'][$i]['DELIVERY_DATE'] = $arrayData['new_coding_detail'][$i][10];;
+				$arrayNewCodingDetail['NewCoding'][$i]['DELIVERY_BEFORE'] = $arrayData['new_coding_detail'][$i][8];
+				$arrayNewCodingDetail['NewCoding'][$i]['USER'] = $arrayData['new_coding_detail'][$i][7];
+				$arrayNewCodingDetail['NewCoding'][$i]['START'] = '';
+				$arrayNewCodingDetail['NewCoding'][$i]['END'] = '';
+				$arrayNewCodingDetail['NewCoding'][$i]['REAL_DURATION'] = 0;
+				$arrayNewCodingDetail['NewCoding'][$i]['PERFORMANCE'] = 0;
+				$arrayNewCodingDetail['NewCoding'][$i]['NOTE'] = $arrayData['new_coding_detail'][$i][20];
+				$arrayNewCodingDetail['NewCoding'][$i]['PAGE_NAME'] = '';
+				$arrayNewCodingDetail['NewCoding'][$i]['PAGE_NUMBER'] = $arrayData['new_coding_detail'][$i][11];
+				$arrayNewCodingDetail['NewCoding'][$i]['TYPE'] = $arrayData['new_coding_detail'][$i][4];
+				$arrayNewCodingDetail['NewCoding'][$i]['WORK_CONTENT'] = '';
+			}
+		}
+		foreach($arrayNewCodingDetail as $key => $value) {
+			$value = array_values($value);
+			$arrayNewCodingDetail[$key] = $value;
+		}
+		return $arrayNewCodingDetail;
+	 }
+	 
+	 public function processNewCoding() {
+		 $arrayData 				= 		$this->getDataGoogle();
+		 $arrayNewCoding 			=		array();
+		 $arrayNewCodingDetail 		=		$this->processNewCodingDetail();
+		 array_shift($arrayData['new_coding']);
+		 for ($i = 0; $i < count($arrayData['new_coding']) - 1; $i ++) {
+			if (trim($arrayData['new_coding'][$i][9]) != '' && trim($arrayData['new_coding'][$i][11]) != '' && trim($arrayData['new_coding'][$i][12]) != '') {
+					$arrayData['new_coding'][$i][5] = str_replace(',', '.', $arrayData['new_coding'][$i][5]);
+					$arrayData['new_coding'][$i][6] = str_replace(',', '.', $arrayData['new_coding'][$i][6]);
+					$arrayNewCoding['NewCoding'][$i]['PROJECT_NO'] = $arrayData['new_coding'][$i][1];
+					$arrayNewCoding['NewCoding'][$i]['PROJECT_TYPE'] = 'New Coding';
+					$arrayNewCoding['NewCoding'][$i]['ORDER_DATE'] = '';
+					$arrayNewCoding['NewCoding'][$i]['DELIVERY_DATE'] = '';
+					$arrayNewCoding['NewCoding'][$i]['DELIVERY_BEFORE'] = '';
+					if($arrayData['new_coding'][$i][3] == 'Option') {
+						$arrayData['new_coding'][$i][3] = 'New';
+					}
+					foreach($arrayNewCodingDetail['NewCoding'] as $a => $b) {
+						if(trim($arrayNewCodingDetail['NewCoding'][$a]['PROJECT_NO']) == trim($arrayData['new_coding'][$i][1]) && trim($arrayNewCodingDetail['NewCoding'][$a]['PROJECT_NAME']) == trim($arrayData['new_coding'][$i][2]) && trim($arrayNewCodingDetail['NewCoding'][$a]['TYPE']) == trim($arrayData['new_coding'][$i][3])) {
+							$arrayNewCoding['NewCoding'][$i]['ORDER_DATE']            = $b['ORDER_DATE'];
+							$arrayNewCoding['NewCoding'][$i]['DELIVERY_DATE']         = $b['DELIVERY_DATE'];
+							$arrayNewCoding['NewCoding'][$i]['DELIVERY_BEFORE']       = $b['DELIVERY_BEFORE'];
+						}
+					}
+					$arrayNewCoding['NewCoding'][$i]['WORK_DATE'] = $arrayData['new_coding'][$i][0];
+					$arrayNewCoding['NewCoding'][$i]['PROJECT_NAME'] = $arrayData['new_coding'][$i][2];
+					$arrayNewCoding['NewCoding'][$i]['STATUS'] = $arrayData['new_coding'][$i][10];
+					$arrayNewCoding['NewCoding'][$i]['STANDARD_DURATION'] = $arrayData['new_coding'][$i][5];
+					$arrayNewCoding['NewCoding'][$i]['USER'] = $arrayData['new_coding'][$i][9];
+					$arrayNewCoding['NewCoding'][$i]['START'] = $arrayData['new_coding'][$i][11];
+					$arrayNewCoding['NewCoding'][$i]['END'] = $arrayData['new_coding'][$i][12];
+					$arrayNewCoding['NewCoding'][$i]['REAL_DURATION'] = $arrayData['new_coding'][$i][6];
+					$arrayNewCoding['NewCoding'][$i]['PERFORMANCE'] = ($arrayData['new_coding'][$i][5] > 0 && $arrayData['new_coding'][$i][6] > 0) ? (round($arrayData['new_coding'][$i][6] / $arrayData['new_coding'][$i][5], 2)) : 0;
+					$arrayNewCoding['NewCoding'][$i]['NOTE'] = $arrayData['new_coding'][$i][14];
+					$arrayNewCoding['NewCoding'][$i]['PAGE_NAME'] = $arrayData['new_coding'][$i][8];
+					$arrayNewCoding['NewCoding'][$i]['PAGE_NUMBER'] = $arrayData['new_coding'][$i][4];
+					$arrayNewCoding['NewCoding'][$i]['TYPE'] = $arrayData['new_coding'][$i][3];
+					$arrayNewCoding['NewCoding'][$i]['WORK_CONTENT'] = $arrayData['new_coding'][$i][7];
+					
+			}
+		}
+		foreach($arrayNewCoding as $key => $value) {
+			$value = array_values($value);
+			$arrayNewCoding[$key] = $value; 
+		}
+		return $arrayNewCoding;
+	 }
+	 
+	 public function processDomestic() {
+		$arrayData 				= 		$this->getDataGoogle();
+		$arrayDomestic 			=		array();
+		array_shift($arrayData['domestic']);
+
+		for ($i = 0; $i < count($arrayData['domestic']) - 1; $i ++) {
+			if (trim($arrayData['domestic'][$i][9]) != '' && trim($arrayData['domestic'][$i][10]) != '' && trim($arrayData['domestic'][$i][0]) != '') {
+				if ($arrayData['domestic'][$i][7] == '') {
+					unset($arrayData['domestic'][$i][7]);
+					continue;
+				} else {
+					$arrayData['domestic'][$i][4] = str_replace(',', '.', $arrayData['domestic'][$i][4]);
+					$arrayData['domestic'][$i][5] = str_replace(',', '.', $arrayData['domestic'][$i][5]);
+					$arrayDomestic['Domestic'][$i]['PROJECT_NO'] = '';
+					$arrayDomestic['Domestic'][$i]['PROJECT_TYPE'] = 'Domestic';
+					$arrayDomestic['Domestic'][$i]['ORDER_DATE'] = '';
+					$arrayDomestic['Domestic'][$i]['WORK_DATE'] = $arrayData['domestic'][$i][0];
+					$arrayDomestic['Domestic'][$i]['PROJECT_NAME'] = $arrayData['domestic'][$i][1];
+					$arrayDomestic['Domestic'][$i]['STATUS'] = $arrayData['domestic'][$i][8];
+					$arrayDomestic['Domestic'][$i]['STANDARD_DURATION'] = $arrayData['domestic'][$i][4];
+					$arrayDomestic['Domestic'][$i]['DELIVERY_DATE'] = '';
+					$arrayDomestic['Domestic'][$i]['DELIVERY_BEFORE'] = '';
+					$arrayDomestic['Domestic'][$i]['USER'] = $arrayData['domestic'][$i][7];
+					$arrayDomestic['Domestic'][$i]['START'] = $arrayData['domestic'][$i][9];
+					$arrayDomestic['Domestic'][$i]['END'] = $arrayData['domestic'][$i][10];
+					$arrayDomestic['Domestic'][$i]['REAL_DURATION'] = $arrayData['domestic'][$i][5];
+					$arrayDomestic['Domestic'][$i]['PERFORMANCE'] = ($arrayData['domestic'][$i][4] > 0 && $arrayData['domestic'][$i][5] > 0) ? (round($arrayData['domestic'][$i][5] / $arrayData['domestic'][$i][4], 2)) : 0;
+					$arrayDomestic['Domestic'][$i]['NOTE'] = $arrayData['domestic'][$i][12];
+					$arrayDomestic['Domestic'][$i]['PAGE_NAME'] = '';
+					$arrayDomestic['Domestic'][$i]['PAGE_NUMBER'] = $arrayData['domestic'][$i][3];
+					$arrayDomestic['Domestic'][$i]['TYPE'] = $arrayData['domestic'][$i][2];
+					$arrayDomestic['Domestic'][$i]['WORK_CONTENT'] = $arrayData['domestic'][$i][6];
+				}
+			}
+		}
+		
+		return $arrayDomestic;
+	 }
+	 
+	 public function processFcDetail() {
+		$arrayData 				= 		$this->getDataGoogle();
+		$arrayFcDetail 			=		array();
+		array_shift($arrayData['fc_detail']);
+		
+		for ($i = 0; $i < count($arrayData['fc_detail']) - 1; $i ++) {
+			if (trim($arrayData['fc_detail'][$i][6]) != '' && trim($arrayData['fc_detail'][$i][7]) != '' && trim($arrayData['fc_detail'][$i][9]) != '') {
+				if ($arrayData['fc_detail'][$i][8] == '') {
+					unset($arrayData['fc_detail'][$i][8]);
+					continue;
+				} else {
+					$arrayFcDetail['FC'][$i]['PROJECT_NO'] = $arrayData['fc_detail'][$i][0];
+					$arrayFcDetail['FC'][$i]['PROJECT_TYPE'] = 'FC';
+					$arrayFcDetail['FC'][$i]['ORDER_DATE'] = $arrayData['fc_detail'][$i][6];
+					$arrayFcDetail['FC'][$i]['WORK_DATE'] = '';
+					$arrayFcDetail['FC'][$i]['PROJECT_NAME'] = $arrayData['fc_detail'][$i][3];
+					$arrayFcDetail['FC'][$i]['STATUS'] = trim($arrayData['fc_detail'][$i][9]);
+					$arrayFcDetail['FC'][$i]['STANDARD_DURATION'] = '';
+					$arrayFcDetail['FC'][$i]['DELIVERY_DATE'] = $arrayData['fc_detail'][$i][7];;
+					$arrayFcDetail['FC'][$i]['DELIVERY_BEFORE'] = '';
+					$arrayFcDetail['FC'][$i]['USER'] = $arrayData['fc_detail'][$i][8];
+					$arrayFcDetail['FC'][$i]['START'] = '';
+					$arrayFcDetail['FC'][$i]['END'] = '';
+					$arrayFcDetail['FC'][$i]['REAL_DURATION'] = '';
+					$arrayFcDetail['FC'][$i]['PERFORMANCE'] = 0;
+					$arrayFcDetail['FC'][$i]['NOTE'] = $arrayData['fc_detail'][$i][13];
+					$arrayFcDetail['FC'][$i]['PAGE_NAME'] = '';
+					$arrayFcDetail['FC'][$i]['PAGE_NUMBER'] = $arrayData['fc_detail'][$i][4];
+					$arrayFcDetail['FC'][$i]['TYPE'] = '';
+					$arrayFcDetail['FC'][$i]['WORK_CONTENT'] = '';
+				}
+			}
+		}
+		return $arrayFcDetail;
+	 }
+	 
+	 public function processFc() {
+		$arrayData 				= 		$this->getDataGoogle();
+		$arrayFcDetail 			=		$this->processFcDetail();
+		$arrayFc 				=		array();
+		array_shift($arrayData['fc']);
+		
+		for ($i = 0; $i < count($arrayData['fc']) - 1; $i ++) {
+			if (trim($arrayData['fc'][$i][10]) != '' && trim($arrayData['fc'][$i][11]) != '' && trim($arrayData['fc'][$i][0]) != '') {
+				if ($arrayData['fc'][$i][8] == '') {
+					unset($arrayData['fc'][$i][8]);
+					continue;
+				} else {
+					$arrayData['fc'][$i][5] = str_replace(',', '.', $arrayData['fc'][$i][5]);
+					$arrayData['fc'][$i][6] = str_replace(',', '.', $arrayData['fc'][$i][6]);
+					$arrayFc['FC'][$i]['PROJECT_NO'] = $arrayData['fc'][$i][1];
+					$arrayFc['FC'][$i]['PROJECT_TYPE'] = 'FC';
+					$arrayFc['FC'][$i]['ORDER_DATE'] = '';
+					$arrayFc['FC'][$i]['DELIVERY_DATE'] = '';
+					$arrayFc['FC'][$i]['DELIVERY_BEFORE'] = '';
+					foreach($arrayFcDetail['FC'] as $a => $b) {
+					
+						if($arrayFcDetail['FC'][$a]['PROJECT_NO'] == $arrayData['fc'][$i][1] && $arrayFcDetail['FC'][$a]['PROJECT_NAME'] == $arrayData['fc'][$i][2]) {
+							$arrayFc['FC'][$i]['ORDER_DATE']            = $b['ORDER_DATE'];
+							$arrayFc['FC'][$i]['DELIVERY_DATE']         = $b['DELIVERY_DATE'];
+							$arrayFc['FC'][$i]['DELIVERY_BEFORE']       = $b['DELIVERY_BEFORE'];
+						}
+					}
+					$arrayFc['FC'][$i]['WORK_DATE'] = $arrayData['fc'][$i][0];
+					$arrayFc['FC'][$i]['PROJECT_NAME'] = $arrayData['fc'][$i][2];
+					$arrayFc['FC'][$i]['STATUS'] = $arrayData['fc'][$i][9];
+					$arrayFc['FC'][$i]['STANDARD_DURATION'] = $arrayData['fc'][$i][5];
+					$arrayFc['FC'][$i]['USER'] = $arrayData['fc'][$i][8];
+					$arrayFc['FC'][$i]['START'] = $arrayData['fc'][$i][10];
+					$arrayFc['FC'][$i]['END'] = $arrayData['fc'][$i][11];
+					$arrayFc['FC'][$i]['REAL_DURATION'] = $arrayData['fc'][$i][6];
+					$arrayFc['FC'][$i]['PERFORMANCE'] = ($arrayData['fc'][$i][5] > 0 && $arrayData['fc'][$i][6] > 0) ? (round($arrayData['fc'][$i][6] / $arrayData['fc'][$i][5], 2)) : 0;
+					$arrayFc['FC'][$i]['NOTE'] = $arrayData['fc'][$i][13];
+					$arrayFc['FC'][$i]['PAGE_NAME'] = $arrayData['fc'][$i][7];
+					$arrayFc['FC'][$i]['PAGE_NUMBER'] = $arrayData['fc'][$i][4];
+					$arrayFc['FC'][$i]['TYPE'] = $arrayData['fc'][$i][3];
+					$arrayFc['FC'][$i]['WORK_CONTENT'] = '';
+				}
+			}
+		} 
+		return $arrayFc;
+	 }
+	 
+	 public function processOther() {
+		$arrayData 				= 		$this->getDataGoogle();
+		$arrayOther 			=		array();
+		array_shift($arrayData['other']);
+		
+		for ($i = 0; $i < count($arrayData['other']) - 1; $i ++) {
+			if (trim($arrayData['other'][$i][4]) != '' && trim($arrayData['other'][$i][5]) != '' && trim($arrayData['other'][$i][0]) != '') {
+				if ($arrayData['other'][$i][3] == '') {
+					unset($arrayData['other'][$i][3]);
+					continue;
+				} else {
+					$arrayData['other'][$i][7] = str_replace(',', '.', $arrayData['other'][$i][7]);
+					$arrayOther['Other'][$i]['PROJECT_NO'] = '';
+					$arrayOther['Other'][$i]['PROJECT_TYPE'] = 'Other';
+					$arrayOther['Other'][$i]['ORDER_DATE'] = '';
+					$arrayOther['Other'][$i]['WORK_DATE'] = $arrayData['other'][$i][0];
+					$arrayOther['Other'][$i]['PROJECT_NAME'] = $arrayData['other'][$i][1];
+					$arrayOther['Other'][$i]['STATUS'] = '';
+					$arrayOther['Other'][$i]['STANDARD_DURATION'] = '';
+					$arrayOther['Other'][$i]['DELIVERY_DATE'] = '';
+					$arrayOther['Other'][$i]['DELIVERY_BEFORE'] = '';
+					$arrayOther['Other'][$i]['USER'] = $arrayData['other'][$i][3];
+					$arrayOther['Other'][$i]['START'] = $arrayData['other'][$i][4];
+					$arrayOther['Other'][$i]['END'] = $arrayData['other'][$i][5];
+					$arrayOther['Other'][$i]['REAL_DURATION'] = $arrayData['other'][$i][7];
+					$arrayOther['Other'][$i]['PERFORMANCE'] = '';
+					$arrayOther['Other'][$i]['NOTE'] = $arrayData['other'][$i][8];
+					$arrayOther['Other'][$i]['PAGE_NAME'] = '';
+					$arrayOther['Other'][$i]['PAGE_NUMBER'] = '';
+					$arrayOther['Other'][$i]['TYPE'] = '';
+					$arrayOther['Other'][$i]['WORK_CONTENT'] = $arrayData['other'][$i][2];
+				}
+			}
+		}
+		return $arrayOther;
+	 }
+	 
+	 public function processResearch() {
+		$arrayData 			=		$this->getDataGoogle();
+		$arrayResearch 		=		array();
+		
+		for($i = 0; $i < 4; $i++) {
+			array_shift($arrayData['research']);
+		}
+		
+		for ($i = 0; $i < count($arrayData['research']) - 1; $i ++) {
+			if (trim($arrayData['research'][$i][6]) != '' && trim($arrayData['research'][$i][7]) != '' && trim($arrayData['research'][$i][1]) != '') {
+				if ($arrayData['research'][$i][3] == '') {
+					unset($arrayData['research'][$i][3]);
+					continue;
+				} else {
+					$arrayData['research'][$i][4] = str_replace(',', '.', $arrayData['research'][$i][4]);
+					$arrayData['research'][$i][5] = str_replace(',', '.', $arrayData['research'][$i][5]);
+					$arrayResearch['Research'][$i]['PROJECT_NO'] = '';
+					$arrayResearch['Research'][$i]['PROJECT_TYPE'] = 'Research';
+					$arrayResearch['Research'][$i]['ORDER_DATE'] = '';
+					$arrayResearch['Research'][$i]['WORK_DATE'] = $arrayData['research'][$i][1];
+					$arrayResearch['Research'][$i]['PROJECT_NAME'] = $arrayData['research'][$i][0];
+					$arrayResearch['Research'][$i]['STATUS'] = '';
+					$arrayResearch['Research'][$i]['STANDARD_DURATION'] = $arrayData['research'][$i][4];
+					$arrayResearch['Research'][$i]['DELIVERY_DATE'] = '';
+					$arrayResearch['Research'][$i]['DELIVERY_BEFORE'] = '';
+					$arrayResearch['Research'][$i]['USER'] = $arrayData['research'][$i][3];
+					$arrayResearch['Research'][$i]['START'] = $arrayData['research'][$i][6];
+					$arrayResearch['Research'][$i]['END'] = $arrayData['research'][$i][7];
+					$arrayResearch['Research'][$i]['REAL_DURATION'] = $arrayData['research'][$i][5];
+					//$arrayResearch['Research'][$i]['PERFORMANCE'] = ($arrayData['research'][$i][4] > 0 && $arrayData['research'][$i][5] > 0) ? (round($arrayData['research'][$i][5] / $arrayData['research'][$i][4], 2)) : 0;
+					$arrayResearch['Research'][$i]['PERFORMANCE'] = '';
+					$arrayResearch['Research'][$i]['NOTE'] = $arrayData['research'][$i][9]. '-' . $arrayData['research'][$i][10] . '-' . $arrayData['research'][$i][11];
+					$arrayResearch['Research'][$i]['PAGE_NAME'] = '';
+					$arrayResearch['Research'][$i]['PAGE_NUMBER'] = '';
+					$arrayResearch['Research'][$i]['TYPE'] = '';
+					$arrayResearch['Research'][$i]['WORK_CONTENT'] = $arrayData['research'][$i][2];;
+				}
+			}
+		} 
+		return $arrayResearch;
+	 }
+	 
+	 public function importMaintenance() {
+		 $arrayUser 			=		$this->listUser();
+		 $arrayProject 			=		$this->listProject();
+		 $arrayMaintenance 		=		$this->processMaintenance();
+		 if(!empty($arrayMaintenance)) {
+			foreach($arrayMaintenance['Maintenance'] as $key => $value) {
+				if(empty($arrayMaintenance['Maintenance'][$key])) {
+					unset($arrayMaintenance['Maintenance'][$key]);
+				} else {
+					$arrayMaintenance['Maintenance'][$key] = array_change_key_case($arrayMaintenance['Maintenance'][$key], CASE_LOWER);
+					foreach($arrayUser as $k => $v) {
+						if($arrayMaintenance['Maintenance'][$key]['user'] == $arrayUser[$k]['nickname']) {
+							$arrayMaintenance['Maintenance'][$key]['user'] = $arrayUser[$k]['id'];
+						}
+					}
+					foreach($arrayProject as $e => $q) {
+						if($arrayMaintenance['Maintenance'][$key]['project_type'] == $arrayProject[$e]['project_type']) {
+							$arrayMaintenance['Maintenance'][$key]['project_type'] = $arrayProject[$e]['id'];
+						}
+					}
+					//echo $databaseWork->checkExistRow($arrayMaintenance['Maintenance'][$key]) . '<br />';
+					$arrayToSelect['project_no']    = $arrayMaintenance['Maintenance'][$key]['project_no'];
+					$arrayToSelect['project_type']  = $arrayMaintenance['Maintenance'][$key]['project_type'];
+					$arrayToSelect['project_name']  = $arrayMaintenance['Maintenance'][$key]['project_name'];
+					$arrayToSelect['work_date']  = $arrayMaintenance['Maintenance'][$key]['work_date'];
+					//$arrayToSelect['user']  = $arrayMaintenance['Maintenance'][$key]['user'];
+					if($this->checkExistRow($arrayToSelect, TBL_WORK) == 1) {
+						$arrayIdMaintenance = $this->returnID($arrayToSelect, TBL_WORK);
+						if(!empty($arrayIdMaintenance)) {
+							$this->update($arrayMaintenance['Maintenance'][$key], array(array('id', $arrayIdMaintenance[0]['id'], null)));
+						}    
+					} else {
+						$this->insert($arrayMaintenance['Maintenance'][$key]);
+					}
+				}
+			}
+		}
+	 }
+	 
+	 //Import Newton Data
+	 public function importNewton() {
+		$arrayUser 				=		$this->listUser();
+		$arrayProject 			=		$this->listProject();
+		$arrayNewton 			=		$this->processNewton();
+		if(!empty($arrayNewton)) {
+			foreach($arrayNewton['Newton'] as $key => $value) {
+				if(empty($arrayNewton['Newton'][$key])) {
+					unset($arrayNewton['Newton'][$key]);
+				} else {
+					$arrayNewton['Newton'][$key] = array_change_key_case($arrayNewton['Newton'][$key], CASE_LOWER);
+					foreach($arrayUser as $k => $v) {
+						if($arrayNewton['Newton'][$key]['user'] == $arrayUser[$k]['nickname']) {
+							$arrayNewton['Newton'][$key]['user'] = $arrayUser[$k]['id'];
+						}
+					}
+					foreach($arrayProject as $e => $q) {
+						if($arrayNewton['Newton'][$key]['project_type'] == $arrayProject[$e]['project_type']) {
+							$arrayNewton['Newton'][$key]['project_type'] = $arrayProject[$e]['id'];
+						}
+					}
+				   //$databaseWork->insert($arrayNewton['Newton'][$key]);
+				   $arrayNewtonToSelect['project_no']   =   $arrayNewton['Newton'][$key]['project_no'];
+				   $arrayNewtonToSelect['project_type']   =   $arrayNewton['Newton'][$key]['project_type'];
+				   $arrayNewtonToSelect['project_name']   =   $arrayNewton['Newton'][$key]['project_name'];
+				   $arrayNewtonToSelect['work_date']   =   $arrayNewton['Newton'][$key]['work_date'];
+				   //$arrayNewtonToSelect['user']   =   $arrayNewton['Newton'][$key]['user'];
+				   $arrayNewtonToSelect['type']   =   $arrayNewton['Newton'][$key]['type'];
+					if($this->checkExistRow($arrayNewtonToSelect, TBL_WORK) == 1) {
+						
+						$arrayIdNewton = $this->returnID($arrayNewtonToSelect, TBL_WORK);
+						if(!empty($arrayIdNewton)) {
+							$this->update($arrayNewton['Newton'][$key], array(array('id', $arrayIdNewton[0]['id'], null)));
+						}
+					} else {
+						$this->insert($arrayNewton['Newton'][$key]);
+					}
+				}
+			}
+		}
+	 }
+	 
+	 public function importDomestic() {
+		 
+	 }
+	 
 }

@@ -27,4 +27,4 @@
 	define ('TBL_WORKTIME'      , 'work_time');
 	define ('TBL_USER'          , 'user');
 	define ('TBL_LINK'          , 'source_link');
-	define ('TBL_PROJECT'       , 'project_type');	
+	define ('TBL_PROJECT'       , 'project_type');

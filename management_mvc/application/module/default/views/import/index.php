@@ -1,2 +1,4 @@
 <?php
-echo __FILE__ . '<br />';
+		 echo '<pre>';
+		 print_r($this->arrayResearch);
+		 echo '</pre>';
