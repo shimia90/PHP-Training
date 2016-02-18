@@ -44,6 +44,9 @@ class ImportController extends Controller{
 		// Process Research
 		$this->_view->arrayResearch 			=		$this->_model->processResearch();
 		
+		// Process Worktime
+		$this->_view->arrayWorktime 			=		$this->_model->processWorkTime();
+		
 		//$this->_view->arrayUser 				=		$this->_model->importMaintenance();
 		//$this->_model->importNewton();
 		

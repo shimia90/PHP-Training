@@ -692,6 +692,63 @@ class ImportModel extends Model {
 		return $arrayResearch;
 	 }
 	 
+	 public function processWorkTime() {
+		 $finalArray 		 = 	 array();
+		 $arrayDate  		 =   array();
+		 $arrayData 		 =	 $this->getDataGoogle();
+		 $query 			 =	 "SELECT * FROM `".TBL_LINK."` WHERE `project_link` = '8'";
+		 $arrayQueryDate     =   $this->fetchAll($query); 
+		 $currentWorkMonth   =   $arrayQueryDate[0]['link_month'];
+		 $currentWorkYear    =   $arrayQueryDate[0]['link_year'];
+		 $currentMonth   	 =   date('m');
+		 
+		 foreach($arrayData['working'] as $key => $value) {
+			array_pop($arrayData['working'][$key]);
+			$arrayData['working'][$key] = array_values($arrayData['working'][$key]);
+		 }
+		 
+		 foreach($arrayData['working'][0] as $key => $value) {
+			if(is_numeric($value) == 1 && trim($value) != '' ) {
+				if($value > 0 && $value <= 9) {
+					$arrayDate[] = '0'.$value.'/'.$currentMonth.'/'.$currentWorkYear;
+				} else {
+					$arrayDate[] = $value.'/'.$currentMonth.'/'.$currentWorkYear;
+				}
+			} else {
+				continue;
+			}
+		 }
+		 
+		 $arrayDate = array_unique($arrayDate);
+		 
+		 unset($arrayData['working'][0]);
+		 unset($arrayData['working'][1]);
+		 $arrayData['working'] = array_values($arrayData['working']);
+		 for($i = 0 ; $i < count($arrayData['working']) ; $i++) {
+			foreach($arrayDate as $key => $value) {
+				if($arrayData['working'][$i][$key+6] == '') {
+					$arrayData['working'][$i][$key+6] = 0;
+				}
+				$finalArray[$value][$arrayData['working'][$i][0]][] = $arrayData['working'][$i][$key+6];
+			}
+		 }
+		 $arrayKey = array(
+			'Overtime',
+			'Delay',
+			'Unpaid',
+			'Special Paid',
+			'Paid',
+			'Others'
+		);
+		foreach($finalArray as $key => $value) {
+			foreach($value as $k => $v) {
+				$finalArray[$key][$k] = array_combine($arrayKey, $v);
+			}
+		}
+		
+		return $finalArray;
+	 }
+	 
 	 public function importMaintenance() {
 		 $arrayUser 			=		$this->listUser();
 		 $arrayProject 			=		$this->listProject();

@@ -1,4 +1,4 @@
 <?php
 		 echo '<pre>';
-		 print_r($this->arrayResearch);
+		 print_r($this->arrayWorktime);
 		 echo '</pre>';
