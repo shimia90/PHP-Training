@@ -1,5 +1,5 @@
 <?php
-class ImportModel extends Model {
+class GoogleModel extends Model {
     
     private $_columns = array('id', 'name', 'group_acp', 'created', 'created_by', 'modified', 'modiefied_by', 'status', 'ordering');
     

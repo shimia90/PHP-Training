@@ -42,13 +42,19 @@ class ImportController extends Controller{
 		//$this->_view->arrayOther 				=		$this->_model->processOther();
 		
 		// Process Research
-		$this->_view->arrayResearch 			=		$this->_model->processResearch();
+		//$this->_view->arrayResearch 			=		$this->_model->processResearch();
 		
 		// Process Worktime
-		$this->_view->arrayWorktime 			=		$this->_model->processWorkTime();
+		//$this->_view->arrayWorktime 			=		$this->_model->processWorkTime();
 		
-		//$this->_view->arrayUser 				=		$this->_model->importMaintenance();
-		//$this->_model->importNewton();
+		$this->_model->importMaintenance();
+		$this->_model->importNewton();
+		$this->_model->importDomestic();
+		$this->_model->importFC();
+		$this->_model->importOther();
+		$this->_model->importResearch();
+		$this->_model->importNewCoding();
+		$this->_model->importWorkTime(); 
 		
 		$this->_view->render('import/index', true);
 	}
