@@ -11,8 +11,8 @@
     <!-- End App Logo -->
 
     <!-- Start Sidebar Show Hide Button -->
-    <a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
-    <a href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a>
+    <!-- <a href="#" class="sidebar-open-button"><i class="fa fa-bars"></i></a>
+    <a href="#" class="sidebar-open-button-mobile"><i class="fa fa-bars"></i></a> -->
     <!-- End Sidebar Show Hide Button -->
 
     <!-- Start Searchbox -->

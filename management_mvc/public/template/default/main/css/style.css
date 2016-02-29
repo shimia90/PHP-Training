@@ -305,7 +305,7 @@ App Logo
   color: #fff;
   font-size: 30px;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
 }
 /* =================================================================================
 Sidebar Open Button - Show or Hide Sidebar
@@ -495,7 +495,7 @@ Sidebar
   position: absolute;
   top: 60px;
   left: 0;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   background: #3d464d;
   z-index: 0;
   font-size: 13px;
@@ -731,7 +731,7 @@ Sidepanel
 }
 .sidepanel-m-title {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   font-size: 14px;
   color: #37363e;
   padding: 16px 0;
@@ -771,7 +771,7 @@ Sidepanel
   margin: 0px -20px;
 }
 .list-w-title .label {
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   font-size: 11px;
 }
 .list-w-title .date {
@@ -791,12 +791,12 @@ Sidepanel
 .list-w-title h4 {
   margin: 5px 0;
   font-size: 13px;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
 }
 /* General Sidepanel Title */
 .gn-title {
   background: #E4E4E4;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   font-size: 12px;
   margin: 0 -20px;
   padding: 4px 0 4px 20px;
@@ -910,7 +910,7 @@ Page Header
 .page-header .title {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   font-size: 20px;
   line-height: normal;
   font-weight: normal;
@@ -992,7 +992,7 @@ Presentation
 .presentation .titles h1 {
   font-size: 38px;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   margin: 30px 0 0px 0;
   color: #37363e;
 }
@@ -1481,7 +1481,7 @@ Mailbox
 }
 .changelogs .version {
   font-size: 13px;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
 }
 .changelogs .date {
   font-size: 12px;
@@ -1669,7 +1669,7 @@ Invoice
   position: relative;
   padding: 70px;
   border: 1px solid #ccc;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
 }
 .invoice .logo {
   line-height: 26px;
@@ -1782,7 +1782,7 @@ Login Pages
 .login-form form .top h1 {
   color: #37363E;
   font-size: 30px;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   font-weight: bold;
   margin-top: -14px;
 }
@@ -1839,7 +1839,7 @@ Login Pages
 }
 .error-pages h1 {
   color: #37363e;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   font-size: 28px;
 }
 .error-pages h4 {
@@ -1904,7 +1904,7 @@ Top Stats
 .topstats h3 {
   font-size: 28px;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   letter-spacing: -1px;
   line-height: normal;
   margin: 1px 0;
@@ -1958,7 +1958,7 @@ Top Stats
   display: block;
   font-size: 20px;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
 }
 .easypie canvas {
   position: absolute;
@@ -2188,7 +2188,7 @@ dd {
   line-height: inherit;
 }
 .font-title {
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
 }
 .font-w-300 {
   font-weight: 300;
@@ -2206,7 +2206,7 @@ dd {
   font-weight: 800;
 }
 .font-title-tab {
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
@@ -2867,7 +2867,7 @@ select {
   text-transform: uppercase;
   font-size: 10px;
   padding-left: 15px;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   padding-top: 5px;
 }
 .dropdown-menu li {
@@ -3121,7 +3121,7 @@ div[data-role="editor-toolbar"] {
   color: #3D464D;
 }
 .panel-title {
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   color: #58666e;
   font-size: 13px;
   font-weight: bold;
@@ -3560,7 +3560,7 @@ div[data-role="editor-toolbar"] {
   opacity: 0.6;
 }
 .modal-title {
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   font-size: 16px;
 }
 .modal-content {
@@ -3628,7 +3628,7 @@ div[data-role="editor-toolbar"] {
 }
 thead {
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   text-transform: uppercase;
   font-size: 12px;
   color: #37363e;
@@ -3691,7 +3691,7 @@ Widgets
   color: #58666e;
 }
 .widget .widget-title h2 {
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   font-size: 12px;
   margin: 0;
   font-weight: bold;
@@ -3712,7 +3712,7 @@ Widgets
   font-size: 18px;
   display: block;
   color: inherit;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   font-weight: 600;
 }
 .widget-inline-list .chart {
@@ -3772,7 +3772,7 @@ Widgets
   padding: 10px 20px;
 }
 .chart-with-stats .top-label h2 {
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   margin: 0;
   font-weight: bold;
   color: #37363e;
@@ -3785,7 +3785,7 @@ Widgets
   color: #58666e;
 }
 .chart-with-stats .title {
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   color: #58666e;
   font-weight: bold;
   position: absolute;
@@ -3995,7 +3995,7 @@ Widgets
   background: #fff;
   margin-bottom: 10px;
   border-radius: 3px;
-  font-family: 'Montserrat', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
 }
 .quick-menu .label {
   position: absolute;
@@ -4078,4 +4078,75 @@ Widgets
 .table-dic .type {
   font-size: 11px;
   opacity: 0.7;
+}
+/* Custom */
+#top {
+  position: absolute;
+}
+
+.ui-datepicker {
+  z-index: 999999 !important;
+}
+
+.floatThead-container table.table thead {
+  background-color: #fff;
+}
+
+ul.timestack-events {
+  position: relative;
+}
+
+ul.timestack-events li {
+  position: absolute !important;
+}
+
+#timeline ul.intervals {
+  margin: 50px 0 30px 0 !important;
+}
+
+ul.timestack-events li[data-color="transparent"] {
+  border: none;
+}
+
+ul.intervals li span {
+  bottom: -20px;
+  font-weight: bold;
+  left: -20px;
+  position: absolute;
+}
+
+ul.intervals li:first-child::before {
+  color: #ff0000;
+  content: "08:30";
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+ul.intervals li:last-child::before {
+  color: #ff0000;
+  content: "17:30";
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+ul.intervals li {
+  position: relative;
+}
+
+ul.timestack-events li[data-color="transparent"] span.timestack-label em.timestack-time {
+  display: none;
+}
+
+.table.table-fixed > thead > tr > th {
+  vertical-align: middle;
+}
+
+.table.table-fixed tr.info td {
+  padding: 0 !important;	
 }

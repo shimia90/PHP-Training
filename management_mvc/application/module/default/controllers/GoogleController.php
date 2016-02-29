@@ -16,6 +16,8 @@ class GoogleController extends Controller{
 	    
 	    $configPagination          			=   	array('totalItemsPerPage'  =>  5, 'pageRange'  =>  2);
 	    $this->setPagination($configPagination);
+		
+		$this->_view->rowLink 				=		$this->_model->listGoogleLink();
 	    
 	    $this->_view->pagination   			=   	new Pagination($totalItems, $this->_pagination);    
 	    //$this->_view->Items    				= 		$this->_model->listItems($this->_arrParam, null);

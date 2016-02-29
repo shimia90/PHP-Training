@@ -131,5 +131,17 @@ class Helper {
         }
         return $array_data;
     }
+	
+	public static function emptyReturn($str) {
+		if(trim($str) == '') {
+			$str = '-';
+		}
+		return $str;
+	}
+	
+	public static function isWeekend($date) {
+		$inputDate = DateTime::createFromFormat('d/m/Y', $date, new DateTimeZone("Asia/Ho_Chi_Minh"));
+		return $inputDate->format('N') >= 6;
+	}	
     
 }

@@ -16,6 +16,49 @@ class PersonalController extends Controller{
 	    
 	    $configPagination          =   array('totalItemsPerPage'  =>  5, 'pageRange'  =>  2);
 	    $this->setPagination($configPagination);
+		
+		$today          = 	date("d/m/Y");
+		if(isset($_POST['date_from']) && isset($_POST['user_name']) && isset($_POST['date_to']) && trim($_POST['date_from']) != '' && trim($_POST['date_to']) != '' && trim($_POST['user_name']) != '') {
+			$this->_view->arrayWork 		= 	$this->_model->processDateRange();
+			$this->_view->htmlWorkTime  	=	$this->_model->createWorkTime($_POST['user_name'], $_POST['date_from'], $_POST['date_to'], $this->_model->processDateRange());
+			// Create Timeline
+			$this->_view->htmlTimeline 		=	$this->_model->createTimeline($this->_model->processDateRange(), $_POST['user_name'], $_POST['date_from'], $_POST['date_to']);
+			// Create Chart
+			$this->_view->htmlHighChart 	=	$this->_model->createHighChart($_POST['user_name'], $_POST['date_from'], $_POST['date_to']);
+		}
+		
+		if(isset($_POST['date_all_from']) && isset($_POST['date_all_to']) && trim($_POST['date_all_from']) != '' && trim($_POST['date_all_to']) != '') {
+			$this->_view->arrayWork = $this->_model->processDateAllRange();
+		}
+		
+		$this->_view->selectFilter  = $this->_model->createSelectFilter(@$_POST['filter_project']);
+		
+		//
+		$dateFrom 		=	(isset($_POST['date_from'])) ? $_POST['date_from'] : $today;
+		$dateTo 		=	(isset($_POST['date_to'])) ? $_POST['date_to'] : $today;
+		$this->_view->searchForm 		=	'<form action="'.URL::createLink('default', 'personal', 'index').'" method="post" id="user_form" class="form-inline mb_10">
+												<div class="form-group"><label>Name:</label>
+													'.$this->_model->createSelectUser('user_select', '1', 'user_name', @$_POST['user_name']).'
+												</div>
+												<div class="form-group"><label>
+													From </label><span id="two-inputs"><input id="date-range200" size="20" name="date_from" value="'.$dateFrom.'"> <label>To</label> <input id="date-range201" size="20" name="date_to" value="'.$dateTo.'"></span>
+												</div>
+												<input type="hidden" name="type" value="single" />
+                                                <input type="hidden" name="page_submit" value="record" />
+												<button class="btn btn-default" type="submit"><i class="fa  fa-search"></i> Search</button>
+											</form>';
+		
+		if(isset($_POST['date_all_from']) && isset($_POST['date_all_to']) && trim($_POST['date_all_from']) != '' && trim($_POST['date_all_to'])) :
+			$this->_view->tableHead	 	= 	'<th class="text-center">Designer</th>';
+		else :
+			$this->_view->tableHead 	= 	'';
+		endif;
+		
+		$this->_view->arrayUser 		=	$this->_model->listUser();
+		
+		if(isset($_POST['date_from']) && isset($_POST['user_name']) && isset($_POST['date_to']) && trim($_POST['date_from']) != '' && trim($_POST['date_to']) != '' && trim($_POST['user_name']) != '') {
+			
+		}
 	    
 	    $this->_view->pagination   =   new Pagination($totalItems, $this->_pagination);    
 	    $this->_view->Items    = $this->_model->listItems($this->_arrParam, null);

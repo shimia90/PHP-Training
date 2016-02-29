@@ -32,6 +32,15 @@ Main Css
 /* Shortcuts Css Codes */
 @import url('shortcuts.css');
 
+/* jQuery UI */
+@import url('jquery-ui.min.css');
+
+/* jQuery UI */
+@import url('timeline.css');
+
+/* jQuery UI */
+@import url('timestack.css');
+
 /* ================================================
 Plugin Css
 ================================================ */
