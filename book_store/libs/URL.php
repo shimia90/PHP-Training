@@ -14,7 +14,8 @@ class URL {
        return $url; 
     }
 	
-	public static function redirect($link) {
+	public static function redirect($link, $module, $controller, $action, $params = null) {
+	    $link  =   $this->createLink($module, $controller, $action);
 		header("location: ". $link);
 		exit();
 	}

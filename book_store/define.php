@@ -6,6 +6,7 @@
     define('PUBLIC_PATH'        , ROOT_PATH . DS .'public' . DS);
     define('APPLICATION_PATH'   , ROOT_PATH . DS .'application' . DS); // Dinh nghia duong dan den thu muc application
 	define('MODULE_PATH'   		, APPLICATION_PATH . 'module' . DS); // Dinh nghia duong dan den thu muc module
+	define('BLOCK_PATH'   		, APPLICATION_PATH . 'block' . DS); // Dinh nghia duong dan den thu muc block
     define('TEMPLATE_PATH'      , PUBLIC_PATH . 'template' . DS);
     
     /********************** URL *************************/

@@ -72,12 +72,26 @@ class Helper {
     	return $xhtml;
     }
     
+    // Create Row - ADMIN
     public static function cmsRowForm($lblName, $input, $require = false) {
         $strRequired        =       '';
         if($require == true) {
             $strRequired  .=  '<span class="star">&nbsp;*</span>';
         }
         $xhtml      =       '<li><label>'.$lblName. $strRequired .'</label>'. $input . '</li>';
+        return $xhtml;
+    }
+    
+    // Create Row - PUBLISH
+    public static function cmsRow($lblName, $input, $submit = false) {
+        if($submit == false) {
+            $xhtml      =       '<div class="form_row">
+                				<label class="contact"><strong>'.$lblName.':</strong></label> '.$input.'
+                			</div>';
+        } else {
+            $xhtml      =       '<div class="form_row">'.$input.'</div>';
+        }
+        
         return $xhtml;
     }
     

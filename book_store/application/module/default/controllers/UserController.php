@@ -12,25 +12,18 @@ class UserController extends Controller {
         $this->_templateObj->load();
     }
     
-    /**
-     * 
-     */
-    public function indexAction() {
-         $this->getModel('admin', 'index');
-         $this->_view->data = array('PHP', 'Joomla');
-         $this->_view->render('user/index');
-    }
-    
-    /**
-     *
-     */
-    public function addAction() {
-        echo '<h3>'. __METHOD__ . '</h3>';
-    }
-    
-    public function loginAction() {
-        $this->getModel('admin', 'index');
-        $this->_view->data = array('PHP', 'Joomla');
-        $this->_view->render('user/login');
+    public function registerAction() {
+        if(isset($this->_arrParam['form']['submit'])) {
+            echo '<pre>';
+            print_r($this->_arrParam);
+            echo '</pre>';
+            if(Session::get('token') == $this->_arrParam['form']['token']) {
+                Session::delete('token');
+                URL::redirect(URL::createLink('default', 'user', 'register'));
+            } else {
+                Session::set('token', $this->_arrParam['form']['token']);
+            }
+        }
+        $this->_view->render('user/register');
     }
 }
