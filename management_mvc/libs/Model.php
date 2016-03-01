@@ -259,4 +259,11 @@ class Model{
 	    }
 	    return false;
 	}
+	
+	public function checkRow($query) {
+	    if(@mysqli_num_rows($this->connect, $this->query($query)) > 0 ) {
+	        return true;
+	    }
+        return false;
+	}
 }

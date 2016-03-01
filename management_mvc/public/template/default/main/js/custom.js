@@ -143,3 +143,21 @@ $('#timeline').timestack({
 		hour: 'HH:mm'
 	  }, 
 });
+
+/* Datepicker for Insert Google Form */
+$(document).ready(function() {
+  $('#date-picker').daterangepicker({
+        singleDatePicker: true,
+        format: 'M YYYY'
+    }, function(start, end, label) {
+  });
+});
+
+function ConfirmDelete()
+{
+  var x = confirm("Are you sure you want to delete this link?");
+  if (x)
+	  return true;
+  else
+	return false;
+}

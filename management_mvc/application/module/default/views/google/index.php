@@ -7,7 +7,12 @@ include_once (MODULE_PATH . 'default/views/sidebar.php');
 <div class="content">
 
   <!-- Start Page Header -->
-  <div class="page-header"><h1 class="title"><?php echo $this->_title; ?></h1></div>
+  <div class="page-header">
+  	<div class="row">
+    	<div class="col-md-8"><h1 class="title"><?php echo $this->_title; ?></h1></div>
+        <div class="col-md-4"><a class="btn btn-success" href="<?php echo URL::createLink('default', 'google', 'insert'); ?>&type=insert"><i class="fa fa-plus"></i> Insert</a></div>
+    </div>
+  </div>
   <!-- End Page Header -->
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTAINER -->

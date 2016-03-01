@@ -256,12 +256,116 @@ class GoogleModel extends Model {
 							 <td class="text-center">'.$arraySource[$i]['link_month'].'</td>
 							 <td class="text-center">'.$arraySource[$i]['link_year'].'</td>
 							 <td class="text-center">'.$arraySource[$i]['project_link'].'</td>
-							 <td class="text-center"><a class="btn btn-mini btn-primary" href="'.URL::createLink('default', 'google', 'edit').'?type=edit&&idLink='.$arraySource[$i]['id'].'">Edit</a> <a class="btn btn-mini btn-danger" href="'.URL::createLink('default', 'google', 'edit').'?idLink='.$arraySource[$i]['id'].'" onclick="return ConfirmDelete();">Delete</a></td>';
+							 <td class="text-center"><a class="btn btn-mini btn-primary" href="'.URL::createLink('default', 'google', 'insert').'&type=edit&idLink='.$arraySource[$i]['id'].'">Edit</a> <a class="btn btn-mini btn-danger" href="'.URL::createLink('default', 'google', 'delete').'&idLink='.$arraySource[$i]['id'].'" onclick="return ConfirmDelete();">Delete</a></td>';
 			$xhtml 	.=	'</tr>';
 			$d++;
 		}
 		return $xhtml;
 	 }
 	 
+	 public function processInsert($arrayPost) {
+		$xhtml 							=		'';
+		$arraySource 	 				=		array();
+		$arrayProject 	 				=		$this->listProject();
+		$arrayDate       				=   	explode(' ', $arrayPost['google_date']);
+		$month  		 				=		$arrayDate[0];
+		$year  			 				=		$arrayDate[1];
+		$arraySource['link'] 			=		$arrayPost['google_link'];
+		$arraySource['link_month']      =   	$month;
+        $arraySource['link_year']       =   	$year;
+        $arraySource['project_link']    =   	$arrayPost['google_project'];
+		$querySource    				=   	"SELECT * FROM `".TBL_LINK."` WHERE `link_month` = '{$month}' AND `project_link` = {$arrayPost['google_project']}";
+		$this->setTable(TBL_LINK);
+		if($this->checkRow($querySource) == true) {
+			$arrayWhere = array(
+                    array('link_month', $month, 'AND'),
+                    array('project_link', $arrayPost['google_project'], null),
+                );
+			
+			$this->update($arraySource, $arrayWhere);
+			if($databaseSource->affectedRows() > 0 ) {
+				$xhtml 	=	'<div class="kode-alert kode-alert-icon alert3">
+									<i class="fa fa-check"></i>
+									<a class="closed" href="#">×</a>
+									Update Successfully
+								  </div>';
+			}
+		} else {
+			$this->insert($arraySource, 'single');
+			if($this->affectedRows() > 0 ) {
+				$xhtml = '<div class="alert alert-success">
+							<button class="close" data-dismiss="alert"></button>
+							Insert Successful!
+						</div>';
+			}
+		}
+		
+		return $xhtml;
+	 }
 	 
+	 public function processEdit($arrayPost, $idPost) {
+		$xhtml 							=		'';
+		$arraySource 	 				=		array();
+		$arrayProject 	 				=		$this->listProject();
+		$arrayDate       				=   	explode(' ', $arrayPost['google_date']);
+		$month  		 				=		$arrayDate[0];
+		$year  			 				=		$arrayDate[1];
+		$arraySource['link'] 			=		$arrayPost['google_link'];
+		$arraySource['link_month']      =   	$month;
+        $arraySource['link_year']       =   	$year;
+        $arraySource['project_link']    =   	$arrayPost['google_project'];
+		
+		$arrayWhere = array(
+                array('id', $idPost, null)
+                );
+		$this->setTable(TBL_LINK);
+		$this->update($arraySource, $arrayWhere);
+		if($this->affectedRows() > 0 ) {
+			$xhtml = '<div class="alert alert-success">
+						<button class="close" data-dismiss="alert"></button>
+						Update successful!
+					</div>';
+		}
+		return $xhtml;
+	 }
+	 
+	 public function arrayEdit($idPost) {
+		 $arrayEdit 	=		array();
+		 $queryEdit  	=   	"SELECT * FROM `".TBL_LINK."` WHERE `id` = {$idPost}";
+         $arrayEdit  	=   	$this->fetchAll($queryEdit);
+		 return $arrayEdit;
+	 }
+	 
+	 public function createSelectProject($class, $name, $defautText = 'Select...') {
+		$xhtml 							=		'';
+		$arrayProject 	 				=		$this->listProject();
+		$xhtml 							=		'<select class="'.$class.'" name="'.$name.'">';
+			$xhtml 						.=		'<option value="">'.$defautText.'</option>';
+		for($i = 0; $i < count($arrayProject); $i++) {
+			$xhtml 						.=		'<option value="'.$arrayProject[$i]['id'].'">'.$arrayProject[$i]['project_type'].'</option>';
+		}
+		$xhtml 							.=		'</select>';
+		return $xhtml; 
+	 }
+	 
+	 public function processDelete($idLink) {
+		 $xhtml 		=		'';
+		 $arrayDelete = array(
+			$idLink
+		);
+		$this->setTable(TBL_LINK);
+		if ($this->delete($arrayDelete)) {
+			$xhtml		.=		'<div class="alert alert-success">
+									<button class="close" data-dismiss="alert"></button>
+									Delete successful!
+								</div>';
+		} else {
+			$xhtml 		.=		'<div class="alert alert-error">
+									<button class="close" data-dismiss="alert"></button>
+									Invalid ID or Delete Failed;
+								</div>';
+					}
+		
+		return $xhtml;
+	 }
 }
