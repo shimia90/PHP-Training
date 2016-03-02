@@ -4150,3 +4150,7 @@ ul.timestack-events li[data-color="transparent"] span.timestack-label em.timesta
 .table.table-fixed tr.info td {
   padding: 0 !important;	
 }
+
+.table.table-fixed {
+  background-color: #f5f5f5;	
+}

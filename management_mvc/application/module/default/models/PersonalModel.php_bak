@@ -716,13 +716,13 @@ class PersonalModel extends Model {
 			
 			foreach($arrayDataChart as $key => $value) :
 				$chartContent .= "{name: '". $key ."',";
-				$chartContent .= $value['data'] . ', color: getColor[\''.$key.'\']},';
+				$chartContent .= $value['data'] . '},';
 			endforeach;
 			$chartContent 	  .= ']';
 			
 			// Project Percent
 			foreach($arrayPieChart as $key => $value) :
-				$projectPercent .= "{ name: '".$value['project_type']."', y: ".$value['project_count'].", color: getColor['".$value['project_type']."']},";
+				$projectPercent .= "{ name: '".$value['project_type']."', y: ".$value['project_count']."},";
 			endforeach;
 			$projectPercent   .= ']}]';
 			
@@ -738,17 +738,7 @@ class PersonalModel extends Model {
 				endforeach;
 			endforeach;
 			$projectMaintenance .= ']}]';
-			$xhtml .= '<script type="text/javascript">
-							var getColor  = {
-								"Maintenance" : "#7cb5ec",
-								"Research" : "#434348",
-								"Newton" : "#90ed7d",
-								"New Coding" : "#f7a35c",
-								"Other" : "#ed561b",
-								"Domestic" : "#dddf00",
-								"FC" : "#24cbe5"
-							};
-						';
+			$xhtml .= '<script type="text/javascript">';
 				$xhtml .= '$(function () {
 						$(\'#chartContainer\').highcharts({
 							chart: {
@@ -813,17 +803,7 @@ class PersonalModel extends Model {
 					});';
 			$xhtml .= '</script>';
 			
-			$xhtml .= '<script type="text/javascript">
-						var getColor  = {
-								"Maintenance" : "#7cb5ec",
-								"Research" : "#434348",
-								"Newton" : "#90ed7d",
-								"New Coding" : "#f7a35c",
-								"Other" : "#ed561b",
-								"Domestic" : "#dddf00",
-								"FC" : "#24cbe5"
-							};
-					';
+			$xhtml .= '<script type="text/javascript">';
 				$xhtml .= '$(function () {
 						$(\'#project_chart\').highcharts({
 							chart: {

@@ -34,8 +34,11 @@ class PersonalController extends Controller{
 		$this->_view->selectFilter  = $this->_model->createSelectFilter(@$_POST['filter_project']);
 		
 		//
-		$dateFrom 		=	(isset($_POST['date_from'])) ? $_POST['date_from'] : $today;
-		$dateTo 		=	(isset($_POST['date_to'])) ? $_POST['date_to'] : $today;
+		//$dateFrom 		=	(isset($_POST['date_from'])) ? $_POST['date_from'] : $today;
+		//$dateTo 		=	(isset($_POST['date_to'])) ? $_POST['date_to'] : $today;
+		
+		$dateFrom 		=	(isset($_POST['date_all_from'])) ? $_POST['date_all_from'] : ((isset($_POST['date_from'])) ? $_POST['date_from'] : $today);
+		$dateTo 		=	(isset($_POST['date_all_to'])) ? $_POST['date_all_to'] : ((isset($_POST['date_to'])) ? $_POST['date_to'] : $today);
 		$this->_view->searchForm 		=	'<form action="'.URL::createLink('default', 'personal', 'index').'" method="post" id="user_form" class="form-inline mb_10">
 												<div class="form-group"><label>Name:</label>
 													'.$this->_model->createSelectUser('user_select', '1', 'user_name', @$_POST['user_name']).'
