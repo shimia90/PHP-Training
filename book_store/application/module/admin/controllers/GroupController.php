@@ -30,7 +30,7 @@ class GroupController extends Controller{
 	    if(isset($this->_arrParam['id'])) {
 	        $this->_view->_title   =   'User Groups : Edit';
 	        $this->_arrParam['form']  =   $this->_model->infoItem($this->_arrParam);
-	        if(empty($this->_arrParam['form'])) URL::redirect(URL::createLink('admin', 'group', 'index'));
+	        if(empty($this->_arrParam['form'])) URL::redirect('admin', 'group', 'index');
 	    }
 	    if( @$this->_arrParam['form']['token'] > 0 ) {
 	        $validate  =   new Validate($this->_arrParam['form']);
@@ -47,9 +47,9 @@ class GroupController extends Controller{
 	            // Insert to Database
 	            $id = $this->_model->saveItem($this->_arrParam, array('task' => $task));
 	            $type = $this->_arrParam['type'];
-	            if($type == 'save-close') URL::redirect(URL::createLink('admin', 'group', 'index'));
-	            if($type == 'save-new') URL::redirect(URL::createLink('admin', 'group', 'form'));
-	            if($type == 'save') URL::redirect(URL::createLink('admin', 'group', 'form', array('id' => $id)));
+	            if($type == 'save-close') URL::redirect('admin', 'group', 'index');
+	            if($type == 'save-new') URL::redirect('admin', 'group', 'form');
+	            if($type == 'save') URL::redirect('admin', 'group', 'form', array('id' => $id));
 	        }
 	    }
 	    
@@ -72,18 +72,18 @@ class GroupController extends Controller{
 	// ACTION STATUS (*)
 	public function statusAction() {
 		$this->_model->changeStatus($this->_arrParam, array('task' 	=>	'change-status'));
-		URL::redirect(URL::createLink('admin', 'group', 'index'));
+		URL::redirect('admin', 'group', 'index');
 	}
 	
 	// ACTION TRASH (*)
 	public function trashAction() {
 		$this->_model->deleteItem($this->_arrParam);
-		URL::redirect(URL::createLink('admin', 'group', 'index'));
+		URL::redirect('admin', 'group', 'index');
 	}
 	
 	// ACTION ORDERING (*)
 	public function orderingAction() {
 	    $this->_model->ordering($this->_arrParam);
-	    URL::redirect(URL::createLink('admin', 'group', 'index'));
+	    URL::redirect('admin', 'group', 'index');
 	}
 }

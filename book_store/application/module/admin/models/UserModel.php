@@ -19,8 +19,8 @@ class UserModel extends Model{
 	 */
 	public function listItems($arrParam, $option = null) {
 		$query[]  		=   "SELECT `u`.`id`, `u`.`username`, `u`.`email`, `u`.`fullname`, `u`.`created`, `u`.`created_by`, `u`.`modified`, `u`.`modified_by`, `u`.`status`, `u`.`ordering`, `g`.`name` AS `group_name`";
-		$query[]  		=   "FROM `$this->table` AS `u`, `".TBL_GROUP."` AS `g`";
-		$query[]        =   "WHERE `u`.`group_id` = `g`.`id`";
+		$query[]  		=   "FROM `$this->table` AS `u` LEFT JOIN `".TBL_GROUP."` AS `g` ON `u`.group_id = `g`.`id`";
+		$query[]        =   "WHERE `u`.`id` > 0";
 		
 		// FILTER : KEYWORD
 		if(!empty($arrParam['filter_search'])) {

@@ -727,11 +727,13 @@ class PersonalModel extends Model {
 			$projectPercent   .= ']}]';
 			
 			// Project Maintenance
+			$flagNull = 0;
 			foreach($arrayMaintenanceSum as $key => $value) :
 				foreach($value[0] as $k => $v) :
 					if($v == '0') {
-						$v = null;
-						$projectMaintenance .= "{ name: '".$k."', y: ".$v."},";	
+						$v = 0;
+						$projectMaintenance .= "{ name: '".$k."', y: ".$v."},";
+						$flagNull++;	
 					} else {
 						$projectMaintenance .= "{ name: '".$k."', y: ".$v."},";	
 					}
@@ -856,6 +858,23 @@ class PersonalModel extends Model {
 					});';
 			$xhtml .= '</script>';
 			
+			if($flagNull >= 3) {
+				$xhtml .= '<script type="text/javascript">';
+					$xhtml .= '$(function () {';
+					$xhtml .= '$(\'#project_maintenance_chart\').highcharts({
+									chart: {
+										plotBackgroundColor: null,
+										plotBorderWidth: null,
+										plotShadow: false,
+										type: \'pie\'
+									},
+									title: {
+										text: \'This User did not work on maintenance project\'
+									},
+								});
+							});';
+				$xhtml .= '</script>';
+			} else {
 			$xhtml .= '<script type="text/javascript">';
 				$xhtml .= '$(function () {
 						$(\'#project_maintenance_chart\').highcharts({
@@ -888,6 +907,7 @@ class PersonalModel extends Model {
 						});
 					});';
 			$xhtml .= '</script>';
+			}
 		 endif;
 		 return $xhtml;
 	 }

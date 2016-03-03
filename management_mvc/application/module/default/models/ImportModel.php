@@ -286,7 +286,7 @@ class ImportModel extends Model {
 		$arrayMaintenance 	= 	array();
 		array_shift($arrayData['maintenance']);
 		for ($i = 0; $i < count($arrayData['maintenance']) - 1; $i ++) {
-			if (trim($arrayData['maintenance'][$i][15]) != '' && trim($arrayData['maintenance'][$i][16]) != '' && trim($arrayData['maintenance'][$i][13]) != '') {
+			if (trim(@$arrayData['maintenance'][$i][15]) != '' && trim($arrayData['maintenance'][$i][16]) != '' && trim($arrayData['maintenance'][$i][13]) != '') {
 				if ($arrayData['maintenance'][$i][6] == '') {
 					unset($arrayData['maintenance'][$i][6]);
 					continue;

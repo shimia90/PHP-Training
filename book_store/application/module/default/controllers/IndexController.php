@@ -10,7 +10,10 @@ class IndexController extends Controller{
 	}
 	
 	public function indexAction(){
-		echo '<h3>' . __METHOD__ . '</h3>';
+		$this->_view->render('index/index');
 	}
 	
+	public function noticeAction(){
+		$this->_view->render('index/notice');
+	}
 }

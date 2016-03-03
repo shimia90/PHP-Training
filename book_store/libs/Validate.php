@@ -153,6 +153,18 @@ class Validate{
 		return $xhtml;
 	}
 	
+	public function showErrorsPublic(){
+		$xhtml = '';
+		if(!empty($this->errors)){
+			$xhtml .= '<ul class="error-public">';
+			foreach($this->errors as $key => $value){
+				$xhtml .= '<li>'.$value.' </li>';
+			}
+			$xhtml .=  '</ul>';
+		}
+		return $xhtml;
+	}
+	
 	public function isValid(){
 	 	if(count($this->errors)>0) return false;
 	 	return true;	

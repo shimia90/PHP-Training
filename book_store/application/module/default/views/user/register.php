@@ -1,11 +1,15 @@
-<?php 
+<?php
+	$dataForm 		=	@$this->arrayParams['form'];
+ 
+	// Input
     $inputSubmit    =   Helper::cmsInput('submit', 'form[submit]', 'submit', 'Register', 'register');
     $inputToken     =   Helper::cmsInput('hidden', 'form[token]', 'token', time(), '');
     
-    $rowUserName    =   Helper::cmsRow('Username:'  , Helper::cmsInput('text', 'form[username]', 'username', '', 'contact_input'));
-    $rowFullName    =   Helper::cmsRow('Fullname:'  , Helper::cmsInput('text', 'form[fullname]', 'fullname', '', 'contact_input'));
-    $rowEmail       =   Helper::cmsRow('Email:'     , Helper::cmsInput('email', 'form[email]', 'email', '', 'contact_input'));
-    $rowPassword    =   Helper::cmsRow('Password:'  , Helper::cmsInput('password', 'form[password]', 'password', '', 'contact_input'));
+	// Row
+    $rowUserName    =   Helper::cmsRow('Username'  , Helper::cmsInput('text', 'form[username]', 'username', $dataForm['username'], 'contact_input'));
+    $rowFullName    =   Helper::cmsRow('Fullname'  , Helper::cmsInput('text', 'form[fullname]', 'fullname', $dataForm['fullname'], 'contact_input'));
+    $rowEmail       =   Helper::cmsRow('Email'     , Helper::cmsInput('email', 'form[email]', 'email', $dataForm['email'], 'contact_input'));
+    $rowPassword    =   Helper::cmsRow('Password'  , Helper::cmsInput('password', 'form[password]', 'password', $dataForm['password'], 'contact_input'));
     $rowSubmit      =   Helper::cmsRow('Submit'     , $inputToken . $inputSubmit , true);
     
     $linkAction     =   URL::createLink('default', 'user', 'register');
@@ -24,6 +28,7 @@
 
 	<div class="contact_form">
 		<div class="form_subtitle">create new account</div>
+        <?php echo @$this->errors; ?>
 		<form name="adminforn" action="<?php echo $linkAction; ?>" method="post">
 			<?php echo $rowUserName . $rowFullName . $rowEmail . $rowPassword . $rowSubmit; ?>
 		</form>

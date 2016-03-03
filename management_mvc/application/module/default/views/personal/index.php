@@ -114,7 +114,7 @@ if(isset($_POST['date_all_from']) && isset($_POST['date_all_to'])) { $colSpan = 
 <div class="content">
 
   <!-- Start Page Header -->
-  <div class="page-header"><h1 class="title"><?php echo $this->_title; ?></h1></div>
+  
   <!-- End Page Header -->
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTAINER -->
@@ -123,6 +123,11 @@ if(isset($_POST['date_all_from']) && isset($_POST['date_all_to'])) { $colSpan = 
 
     <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-fixed" id="example">
     	<thead>
+        	<tr>
+            	<th colspan="<?php echo $colSpan; ?>">
+                	<h1 class="title"><?php echo $this->_title; ?></h1>
+                </th>
+            </tr>
         	<tr>
             	<th colspan="<?php echo $colSpan; ?>">
                 	<div class="row">
