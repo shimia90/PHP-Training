@@ -1,6 +1,9 @@
 <?php 
 include_once (MODULE_PATH . 'default/views/top.php');
 include_once (MODULE_PATH . 'default/views/sidebar.php');
+
+$dateFrom 	=	(isset($_POST['group_form']['date_from'])) ? $_POST['group_form']['date_from'] : date("d/m/Y");
+$dateTo 	=	(isset($_POST['group_form']['date_to'])) ? $_POST['group_form']['date_to'] : date("d/m/Y");
 ?>
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTENT -->
@@ -14,15 +17,8 @@ include_once (MODULE_PATH . 'default/views/sidebar.php');
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTAINER -->
 <div class="panel-body table-responsive margin-t-20 margin-b-20">
-	<?php
-		if(isset($_POST)) {
-			echo '<pre>';
-			print_r($_POST);
-			echo '</pre>';	
-		}
-	?>
 	<div class="panel panel-default">
-
+		
         <div class="panel-title">
           Select Date
         </div>
@@ -33,14 +29,14 @@ include_once (MODULE_PATH . 'default/views/sidebar.php');
                   <label class="form-label" for="example1">From</label>
                   <div class="input-prepend input-group">
                      <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
-                     <input type="text" value="" class="form-control active" id="date-range200" name="group_form[date_from]" /> 
+                     <input type="text" value="<?php echo $dateFrom; ?>" class="form-control active" id="date-range200" name="group_form[date_from]" /> 
                    </div>
                 </div>
                 <div class="form-group">
                   <label class="form-label" for="example2">To</label>
                   <div class="input-prepend input-group">
                      <span class="add-on input-group-addon"><i class="fa fa-calendar"></i></span>
-                     <input type="text" value="" class="form-control active" id="date-range201" name="group_form[date_to]" /> 
+                     <input type="text" value="<?php echo $dateTo; ?>" class="form-control active" id="date-range201" name="group_form[date_to]" /> 
                    </div>
                 </div>
                 <button class="btn btn-default" type="submit">Search</button>
@@ -92,12 +88,21 @@ include_once (MODULE_PATH . 'default/views/sidebar.php');
         <!-- <div class="col-lg-6 col-md-6">
         
         </div> --><!-- col-lg-6 -->
-   <!--</div> --><!-- row -->
+   <!--</div> --><!-- row --> 
+   <?php
+   		echo '<pre>';
+		print_r($this->chart);
+		echo '</pre>';
+   ?>
+   <div id="chartist-line">
+   
+   </div>
 </div>
 <!-- END CONTAINER -->
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 
 <?php include_once (MODULE_PATH . 'default/views/footer.php'); ?>
 </div>
+<?php //echo $this->chart; ?>
 <!-- End Content -->
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
