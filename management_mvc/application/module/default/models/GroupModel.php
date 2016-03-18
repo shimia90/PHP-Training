@@ -159,6 +159,11 @@ class GroupModel extends Model {
 				// date_from != date_to	
 			}
 			
+			foreach($arrayWork as $key => $value) {
+				
+				$arrayData[$value['user']][$value['work_date']] 	=	$value['real_duration'];	
+			}
+			
 			
 			for($i = 1; $i <= $numberDays; $i++) {
 				if( $i < 10 ) {
@@ -167,14 +172,25 @@ class GroupModel extends Model {
 					$strTemp 			=		 $i.'/'.$month.'/'.$year;
 				}
 				
-				foreach($arrayWork as $key => $value) {
-					if($value['work_date'] == $strTemp) {
-						$arrayData[$value['user']][$value['work_date']]	=	$value['real_duration'];
+				$arrayDays[$i] 	=	$strTemp;
+			}
+			$arrayDays		=		array_values($arrayDays);
+			
+			for($i = 0; $i < count($arrayDays); $i++) {
+				foreach($arrayData as $key => $value) {
+					if(array_key_exists($arrayDays[$i], $value)) {
+						continue;
 					} else {
-						$arrayData[$value['user']][$strTemp]	=	0;
+						$arrayData[$key][$arrayDays[$i]] 	=	0;
 					}
+					
 				}
 			}
+			
+			foreach($arrayData as $key => $value) {
+				ksort($arrayData[$key], 1);
+			}
+			
 			
 			
 			
@@ -232,6 +248,6 @@ class GroupModel extends Model {
 									</script>';
 		}
 		
-		return $arrayData;
+		return $xhtml;
 	}
 }

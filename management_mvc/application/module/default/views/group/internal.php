@@ -89,11 +89,7 @@ $dateTo 	=	(isset($_POST['group_form']['date_to'])) ? $_POST['group_form']['date
         
         </div> --><!-- col-lg-6 -->
    <!--</div> --><!-- row --> 
-   <?php
-   		echo '<pre>';
-		print_r($this->chart);
-		echo '</pre>';
-   ?>
+   
    <div id="chartist-line">
    
    </div>
@@ -103,6 +99,6 @@ $dateTo 	=	(isset($_POST['group_form']['date_to'])) ? $_POST['group_form']['date
 
 <?php include_once (MODULE_PATH . 'default/views/footer.php'); ?>
 </div>
-<?php //echo $this->chart; ?>
+<?php echo @$this->chart; ?>
 <!-- End Content -->
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
