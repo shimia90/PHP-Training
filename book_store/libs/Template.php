@@ -32,7 +32,7 @@ class Template{
 			$view->_metaName 	= $view->createMeta($arrCongif['metaName'], 'name');
 			$view->_cssFiles 	= $view->createLink($this->_folderTemplate . $arrCongif['dirCss'], $arrCongif['fileCss'], 'css');
 			$view->_jsFiles 	= $view->createLink($this->_folderTemplate . $arrCongif['dirJs'], $arrCongif['fileJs'], 'js');
-			$view->_dirImg 		= $arrCongif['dirImg'];
+			$view->_dirImg 		= TEMPLATE_URL . $this->_folderTemplate . $arrCongif['dirImg'];
 					
 			$view->setTemplatePath(TEMPLATE_PATH . $folderTemplate . $fileTemplate);
 		}
