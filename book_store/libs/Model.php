@@ -47,7 +47,7 @@ class Model{
 	
 	// DISCONNECT DATABASE
 	public function __destruct(){
-		mysqli_close($this->connect);
+		@mysqli_close($this->connect);
 	}
 	
 	// INSERT
