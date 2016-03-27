@@ -4,7 +4,7 @@
 	$linkCategories 	=		URL::createLink('default', 'category', 'index');
 	$linkMyAccount 		=		URL::createLink('default', 'user', 'index');
 	$linkRegister 		=		URL::createLink('default', 'user', 'register');
-	$linkLogin 		=		URL::createLink('default', 'user', 'login');
+	$linkLogin 		    =		URL::createLink('default', 'user', 'login');
 ?>
 <div class="header">
 	<div class="logo">
