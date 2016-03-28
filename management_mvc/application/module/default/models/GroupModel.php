@@ -158,7 +158,7 @@ class GroupModel extends Model {
 				$arrayWork 			=		$this->fetchAll($query);
 			} else {
 				// date_from != date_to	
-				$query 				=		"SELECT `work_date`, `w`.`project_type` , SUM(`real_duration`) AS `real_duration`, `u`.`fullname` AS `user` FROM `".TBL_WORK."` AS `w` INNER JOIN `".TBL_USER."` AS `u` ON `w`.`user` = `u`.id WHERE `user` IN ( SELECT `id` FROM `".TBL_USER."` WHERE `team` = '".$team."') AND STR_TO_DATE( `work_date`, '%d/%m/%Y' ) BETWEEN STR_TO_DATE( '{$arrayDate['date_from']}', '%d/%m/%Y' ) AND STR_TO_DATE( '{$arrayDate['date_to']}', '%d/%m/%Y' ) GROUP BY `user`, `work_date`";
+				$query 				=		"SELECT `work_date`, `w`.`project_type` , SUM(`real_duration`) AS `real_duration`, `u`.`fullname` AS `user` FROM `".TBL_WORK."` AS `w` INNER JOIN `".TBL_USER."` AS `u` ON `w`.`user` = `u`.id WHERE `user` IN ( SELECT `id` FROM `".TBL_USER."` WHERE `team` = '".$team."') AND STR_TO_DATE( `work_date`, '%d/%m/%Y' ) BETWEEN STR_TO_DATE( '{$arrayDate['date_from']}', '%d/%m/%Y' ) AND STR_TO_DATE( '{$arrayDate['date_to']}', '%d/%m/%Y' ) GROUP BY `user`, `work_date` ORDER `work_date` ASC";
 				$arrayWork 			=		$this->fetchAll($query);
 				
 			}
