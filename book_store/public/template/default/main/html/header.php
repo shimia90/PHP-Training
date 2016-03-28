@@ -1,5 +1,5 @@
 <?php 
-    $imageURL   		=   	TEMPLATE_URL . 'default/main/' . $this->_dirImg;
+    $imageURL   		=   	$this->_dirImg;
 	$linkHome 			=		URL::createLink('default', 'index', 'index');
 	$linkCategories 	=		URL::createLink('default', 'category', 'index');
 	$linkMyAccount 		=		URL::createLink('default', 'user', 'index');

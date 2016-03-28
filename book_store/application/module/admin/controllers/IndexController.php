@@ -51,4 +51,9 @@ class IndexController extends Controller{
 		
 		$this->_view->render('index/index');
 	}
+	
+	public function logoutAction() {
+	    Session::delete('user');
+	    URL::redirect('admin', 'index', 'login');
+	}
 }

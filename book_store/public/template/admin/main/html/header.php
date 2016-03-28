@@ -3,7 +3,8 @@
     $linkMyProfile      =   URL::createLink('admin', 'profile', 'index');
     $linkUserManager    =   URL::createLink('admin', 'user', 'index');
     $linkAddUser        =   URL::createLink('admin', 'user', 'add');
-    $linkAddGroup          =   URL::createLink('admin', 'group', 'add');
+    $linkAddGroup       =   URL::createLink('admin', 'group', 'add');
+    $linkLogout         =   URL::createLink('admin', 'index', 'logout');
 ?>
 <div id="border-top" class="h_blue">
 	<span class="title"><a href="#">Administration</a></span>
@@ -12,7 +13,7 @@
 <!-- HEADER -->
 <div id="header-box">
 	<div id="module-status">
-		<span class="no-unread-messages"><a href="#">Log out</a></span>
+		<span class="no-unread-messages"><a href="<?php echo $linkLogout; ?>">Log out</a></span>
 	</div>
 	<div id="module-menu">
 		<!-- MENU -->

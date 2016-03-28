@@ -20,7 +20,38 @@ class Bootstrap{
 	private function callMethod(){
 		$actionName = $this->_params['action'] . 'Action';
 		if(method_exists($this->_controllerObject, $actionName)==true){
-			$this->_controllerObject->$actionName();
+		    $module       =   $this->_params['module'];
+		    $controller   =   $this->_params['controller'];
+		    $action       =   $this->_params['action'];   
+		    
+		    $userInfo     =   Session::get('user');
+		    echo '<pre>';
+		    print_r($userInfo);
+		    echo '</pre>';
+		    $logged       =   ($userInfo['login'] == true && $userInfo['time'] + TIME_LOGIN >= time());
+		    $pageLogin    =   ($controller == 'index') && ($action == 'login');
+		    // MODULE ADMIN
+		    if($module == 'admin') {
+		        if($logged == true) {
+		            if($userInfo['group_acp'] == 1) {
+		                if($pageLogin == true) URL::redirect('admin', 'index', 'index');
+		                if($pageLogin == false) $this->_controllerObject->$actionName();
+		                
+		            } else {
+		                URL::redirect('default', 'index', 'notice', array('type' => 'not-permission'));
+		            }
+		        } else {
+		            Session::delete('user');
+		            
+		            if($pageLogin == true) $this->_controllerObject->$actionName();
+		            if($pageLogin == false) URL::redirect('admin', 'index', 'login');
+		        }
+		        // MODULE DEFAULT
+		    } else if($module == 'default') {
+		        $this->_controllerObject->$actionName();
+		    }
+		    
+			//$this->_controllerObject->$actionName();
 		}else{
 			$this->_error();
 		}
