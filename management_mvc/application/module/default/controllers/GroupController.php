@@ -37,7 +37,7 @@ class GroupController extends Controller {
 		 if(isset($_POST['group_form'])) {
 			$this->_view->duration 				=		$this->_model->getDuration('2', $_POST['group_form'], 'standard_duration');
 		 
-		 	$this->_view->chart 					=		$this->_model->createChart($_GET['team'], $_POST['group_form']); 
+		 	$this->_view->chart 				=		$this->_model->createChart($_GET['team'], $_POST['group_form']); 
 		 }
 		 
 		 
