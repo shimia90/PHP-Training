@@ -135,7 +135,6 @@ if(isset($_POST['date_all_from']) && isset($_POST['date_all_to'])) { $colSpan = 
                         	<?php echo $this->searchForm; ?><?php echo @$this->htmlWorkTime; ?>
                         </div>
                         <div class="col-lg-4 col-md-4">
-                        	<a class="btn btn-primary" href="<?php echo URL::createLink('default', 'import', 'index'); ?>"><i class="fa fa-upload"></i>Update Data</a>
                             <button tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="click" data-placement="left" data-container="body" data-html="true" id="PopS"
                             data-content='
                             <div id="popover-content">

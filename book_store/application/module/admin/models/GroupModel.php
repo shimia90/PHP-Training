@@ -1,7 +1,7 @@
 <?php
 class GroupModel extends Model{
     
-    private $_columns = array('id', 'name', 'group_acp', 'created', 'created_by', 'modified', 'modiefied_by', 'status', 'ordering');
+    private $_columns = array('id', 'name', 'group_acp', 'created', 'created_by', 'modified', 'modified_by', 'status', 'ordering');
     
 	/**
 	 * 
@@ -129,10 +129,14 @@ class GroupModel extends Model{
 	 * @param string $option
 	 */
 	public function saveItem($arrayParam, $option = null) {
+		$userObj 				=			Session::get('user');
+		$userInfo 				=			$userObj['info'];
+		
 	    if($option['task'] == 'add') {
 	        $arrayParam['form']['created'] = date('Y-m-d', time());
-	        $arrayParam['form']['created_by'] = 1;
+	        $arrayParam['form']['created_by'] = $userInfo['username'];
 	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
+			
 	        $this->insert($data);
 	        Session::set('message', array('class' => 'success', 'content' => 'Data was inserted successfully'));
 	        return $this->lastID();
@@ -140,8 +144,9 @@ class GroupModel extends Model{
 	    
 	    if($option['task'] == 'edit') {
 	        $arrayParam['form']['modified']        = date('Y-m-d', time());
-	        $arrayParam['form']['modified_by']     = 10;
+	        $arrayParam['form']['modified_by']     = $userInfo['username'];
 	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
+			
 	        $this->update($data, array(array('id', $arrayParam['form']['id'])));
 	        Session::set('message', array('class' => 'success', 'content' => 'Data was inserted successfully'));
 	        return $arrayParam['form']['id'];

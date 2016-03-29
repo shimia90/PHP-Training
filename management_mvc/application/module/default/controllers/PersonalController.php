@@ -27,6 +27,15 @@ class PersonalController extends Controller{
 			$this->_view->htmlHighChart 	=	$this->_model->createHighChart($_POST['user_name'], $_POST['date_from'], $_POST['date_to']);
 		}
 		
+		if(isset($_GET['user']) && isset($_GET['date_from']) && isset($_GET['date_to'])) {
+			$this->_view->arrayWork 		= 	$this->_model->processDateRange($_GET['user'], $_GET['date_from'], $_GET['date_to']);
+			$this->_view->htmlWorkTime  	=	$this->_model->createWorkTime($_GET['user'], $_GET['date_from'], $_GET['date_to'], $this->_model->processDateRange());
+			// Create Timeline
+			$this->_view->htmlTimeline 		=	$this->_model->createTimeline($this->_model->processDateRange(), $_GET['user'], $_GET['date_from'], $_GET['date_to']);
+			// Create Chart
+			$this->_view->htmlHighChart 	=	$this->_model->createHighChart($_GET['user'], $_GET['date_from'], $_GET['date_to']);
+		}
+		
 		if(isset($_POST['date_all_from']) && isset($_POST['date_all_to']) && trim($_POST['date_all_from']) != '' && trim($_POST['date_all_to']) != '') {
 			$this->_view->arrayWork = $this->_model->processDateAllRange();
 		}
@@ -39,9 +48,17 @@ class PersonalController extends Controller{
 		
 		$dateFrom 		=	(isset($_POST['date_all_from'])) ? $_POST['date_all_from'] : ((isset($_POST['date_from'])) ? $_POST['date_from'] : $today);
 		$dateTo 		=	(isset($_POST['date_all_to'])) ? $_POST['date_all_to'] : ((isset($_POST['date_to'])) ? $_POST['date_to'] : $today);
+		$userSelected 	=	'';
+		if(isset($_GET['user'])) {
+			$userSelected 	=	$_GET['user'];
+		} else if(isset($_POST['user_name'])){
+			$userSelected 	=	$_POST['user_name'];	
+		} else {
+			$userSelected 	=	'';
+		}
 		$this->_view->searchForm 		=	'<form action="'.URL::createLink('default', 'personal', 'index').'" method="post" id="user_form" class="form-inline mb_10">
 												<div class="form-group"><label>Name:</label>
-													'.$this->_model->createSelectUser('user_select', '1', 'user_name', @$_POST['user_name']).'
+													'.$this->_model->createSelectUser('user_select', '1', 'user_name', $userSelected).'
 												</div>
 												<div class="form-group"><label>
 													From </label><span id="two-inputs"><input id="date-range200" size="20" name="date_from" value="'.$dateFrom.'"> <label>To</label> <input id="date-range201" size="20" name="date_to" value="'.$dateTo.'"></span>
@@ -58,10 +75,7 @@ class PersonalController extends Controller{
 		endif;
 		
 		$this->_view->arrayUser 		=	$this->_model->listUser();
-		
-		if(isset($_POST['date_from']) && isset($_POST['user_name']) && isset($_POST['date_to']) && trim($_POST['date_from']) != '' && trim($_POST['date_to']) != '' && trim($_POST['user_name']) != '') {
-			
-		}
+
 	    
 	    $this->_view->pagination   =   new Pagination($totalItems, $this->_pagination);    
 	    $this->_view->Items    = $this->_model->listItems($this->_arrParam, null);

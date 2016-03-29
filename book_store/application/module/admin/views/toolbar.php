@@ -43,6 +43,9 @@
         case 'form':
             $strButton      =   $btnSave . $btnSaveClose . $btnSaveNew . $btnCancel;
             break;
+		case 'profile':
+            $strButton      =   $btnSave . $btnSaveClose . $btnCancel;
+            break;	
     }
 ?>
 <div id="toolbar-box">

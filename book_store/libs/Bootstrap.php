@@ -13,6 +13,8 @@ class Bootstrap{
 		if(file_exists($filePath)){
 			$this->loadExistingController($filePath, $controllerName);
 			$this->callMethod();
+		} else {
+			URL::redirect('default', 'index', 'notice', array('type' => 'not-url'));	
 		}
 	}
 	
@@ -25,26 +27,22 @@ class Bootstrap{
 		    $action       =   $this->_params['action'];   
 		    
 		    $userInfo     =   Session::get('user');
-		    echo '<pre>';
-		    print_r($userInfo);
-		    echo '</pre>';
+
 		    $logged       =   ($userInfo['login'] == true && $userInfo['time'] + TIME_LOGIN >= time());
-		    $pageLogin    =   ($controller == 'index') && ($action == 'login');
+			
 		    // MODULE ADMIN
 		    if($module == 'admin') {
 		        if($logged == true) {
 		            if($userInfo['group_acp'] == 1) {
-		                if($pageLogin == true) URL::redirect('admin', 'index', 'index');
-		                if($pageLogin == false) $this->_controllerObject->$actionName();
-		                
+		                $this->_controllerObject->$actionName();
 		            } else {
 		                URL::redirect('default', 'index', 'notice', array('type' => 'not-permission'));
 		            }
 		        } else {
 		            Session::delete('user');
-		            
-		            if($pageLogin == true) $this->_controllerObject->$actionName();
-		            if($pageLogin == false) URL::redirect('admin', 'index', 'login');
+		            require_once (MODULE_PATH . $module . DS . 'controllers' . DS . 'IndexController.php');
+		            $indexController 	=	new IndexController($this->_params);
+					$indexController->loginAction();
 		        }
 		        // MODULE DEFAULT
 		    } else if($module == 'default') {
@@ -53,7 +51,8 @@ class Bootstrap{
 		    
 			//$this->_controllerObject->$actionName();
 		}else{
-			$this->_error();
+			//$this->_error();
+			URL::redirect('default', 'index', 'notice', array('type' => 'not-url'));
 		}
 	}
 	

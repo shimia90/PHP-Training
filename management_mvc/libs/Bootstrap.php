@@ -22,7 +22,8 @@ class Bootstrap{
 		if(method_exists($this->_controllerObject, $actionName)==true){
 			$this->_controllerObject->$actionName();
 		}else{
-			$this->_error();
+			//$this->_error();
+			URL::redirect(URL::createLink('default', 'index', 'index'));
 		}
 	}
 	

@@ -55,7 +55,7 @@ class ImportController extends Controller{
 		$this->_model->importResearch();
 		$this->_model->importNewCoding();
 		$this->_model->importWorkTime(); 
-		URL::redirect(URL::createLink('default', 'personal', 'index'));
+		URL::redirect(URL::createLink('default', 'index', 'index'));
 		
 		$this->_view->render('import/index', true);
 	}

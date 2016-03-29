@@ -76,19 +76,36 @@ class PersonalModel extends Model {
 	}
 	
 	//
-	public function processDateRange() {
+	public function processDateRange($getUser = null, $getDateFrom = null, $getDateTo = null) {
 		$arrayProject 	=	$this->listProject();
-		$dateFrom       =   @trim($_POST['date_from']);
-    	$dateTo         =   @trim($_POST['date_to']);
-    	$userPost       =   @$_POST['user_name'];
+		if(!empty($getUser)) {
+			$userPost       =   $getUser;
+		} else {
+			$userPost       =   @$_POST['user_name'];
+		}
+		
+		if(!empty($getDateFrom)) {
+			$dateFrom       =   $getDateFrom;
+		} else {
+			$dateFrom       =   @$_POST['date_from'];
+		}
+		
+		if(!empty($getDateTo)) {
+			$dateTo       =   $getDateTo;
+		} else {
+			$dateTo       =   @$_POST['date_to'];
+		}
+		//$dateFrom       =   @trim($_POST['date_from']);
+    	//$dateTo         =   @trim($_POST['date_to']);
+    	//$userPost       =   @$_POST['user_name'];
 		$arrayWork 		=	array();
 		
 		if($dateFrom == $dateTo) {
-			$queryWork      =   "SELECT * FROM `".TBL_WORK."` WHERE STR_TO_DATE( `work_date`, '%d/%m/%Y' ) = STR_TO_DATE( '{$dateTo}', '%d/%m/%Y' ) AND `user` = {$_POST['user_name']} ORDER BY `work_date` ASC";
+			$queryWork      =   "SELECT * FROM `".TBL_WORK."` WHERE STR_TO_DATE( `work_date`, '%d/%m/%Y' ) = STR_TO_DATE( '{$dateTo}', '%d/%m/%Y' ) AND `user` = {$userPost} ORDER BY `work_date` ASC";
 		} else {
-			$queryWork      =   "SELECT * FROM `".TBL_WORK."` WHERE STR_TO_DATE( `work_date`, '%d/%m/%Y' ) BETWEEN STR_TO_DATE( '{$dateFrom}', '%d/%m/%Y' ) AND STR_TO_DATE( '{$dateTo}', '%d/%m/%Y' ) AND `user` = {$_POST['user_name']} ORDER BY `work_date` ASC";
-			$queryWorkOver1 =   "SELECT SUM(`real_duration`) AS `total_time`, `work_date`, `user` FROM `".TBL_WORK."` WHERE `work_date` IN (SELECT `work_date` FROM `work_time` WHERE STR_TO_DATE( `work_date`, '%d/%m/%Y' ) BETWEEN STR_TO_DATE( '{$dateFrom}', '%d/%m/%Y' ) AND STR_TO_DATE( '{$dateTo}', '%d/%m/%Y' ) AND `change` = '0' AND `user` = {$_POST['user_name']} ) AND `user` = {$_POST['user_name']} GROUP BY `work_date`";
-			$queryWorkOver2 =   "SELECT `work_time`, `work_date`, `user` FROM `".TBL_WORKTIME."` WHERE `user` = {$_POST['user_name']} AND `change` = '0' AND `work_date` IN ( SELECT `work_date` FROM `work` WHERE STR_TO_DATE( `work_date`, '%d/%m/%Y' ) BETWEEN STR_TO_DATE( '{$dateFrom}', '%d/%m/%Y' ) AND STR_TO_DATE( '{$dateTo}', '%d/%m/%Y' ) AND `user` = {$_POST['user_name']} ) GROUP BY `work_date`";
+			$queryWork      =   "SELECT * FROM `".TBL_WORK."` WHERE STR_TO_DATE( `work_date`, '%d/%m/%Y' ) BETWEEN STR_TO_DATE( '{$dateFrom}', '%d/%m/%Y' ) AND STR_TO_DATE( '{$dateTo}', '%d/%m/%Y' ) AND `user` = {$userPost} ORDER BY `work_date` ASC";
+			$queryWorkOver1 =   "SELECT SUM(`real_duration`) AS `total_time`, `work_date`, `user` FROM `".TBL_WORK."` WHERE `work_date` IN (SELECT `work_date` FROM `work_time` WHERE STR_TO_DATE( `work_date`, '%d/%m/%Y' ) BETWEEN STR_TO_DATE( '{$dateFrom}', '%d/%m/%Y' ) AND STR_TO_DATE( '{$dateTo}', '%d/%m/%Y' ) AND `change` = '0' AND `user` = {$userPost} ) AND `user` = {$userPost} GROUP BY `work_date`";
+			$queryWorkOver2 =   "SELECT `work_time`, `work_date`, `user` FROM `".TBL_WORKTIME."` WHERE `user` = {$userPost} AND `change` = '0' AND `work_date` IN ( SELECT `work_date` FROM `work` WHERE STR_TO_DATE( `work_date`, '%d/%m/%Y' ) BETWEEN STR_TO_DATE( '{$dateFrom}', '%d/%m/%Y' ) AND STR_TO_DATE( '{$dateTo}', '%d/%m/%Y' ) AND `user` = {$userPost} ) GROUP BY `work_date`";
 		}
 		
 		$arrayWork      =   $this->fetchAll($queryWork);

@@ -1,10 +1,11 @@
 <?php 
-    $linkControlPanel   =   URL::createLink('admin', 'control', 'index');
-    $linkMyProfile      =   URL::createLink('admin', 'profile', 'index');
+    $linkControlPanel   =   URL::createLink('admin', 'index', 'index');
+    $linkMyProfile      =   URL::createLink('admin', 'index', 'profile');
     $linkUserManager    =   URL::createLink('admin', 'user', 'index');
-    $linkAddUser        =   URL::createLink('admin', 'user', 'add');
-    $linkAddGroup       =   URL::createLink('admin', 'group', 'add');
+    $linkAddUser        =   URL::createLink('admin', 'user', 'form');
+    $linkAddGroup       =   URL::createLink('admin', 'group', 'form');
     $linkLogout         =   URL::createLink('admin', 'index', 'logout');
+	$linkViewSite 		=	URL::createLink('default', 'index', 'index');
 ?>
 <div id="border-top" class="h_blue">
 	<span class="title"><a href="#">Administration</a></span>
@@ -13,6 +14,7 @@
 <!-- HEADER -->
 <div id="header-box">
 	<div id="module-status">
+    	<span class="viewsite"><a href="<?php echo $linkViewSite ; ?>" target="_blank">View Site</a></span>
 		<span class="no-unread-messages"><a href="<?php echo $linkLogout; ?>">Log out</a></span>
 	</div>
 	<div id="module-menu">

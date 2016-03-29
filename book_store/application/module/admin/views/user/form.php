@@ -15,7 +15,7 @@ $slbGroup               =           Helper::cmsSelectBox('form[group_id]', 'inpu
 
 $inputID                =           '';
 $rowID                  =           '';
-if(isset($this->arrParam['id']) || $dataForm['id']) {
+if(isset($this->arrParam['id']) || @$dataForm['id']) {
     $inputID            =           Helper::cmsInput('text', 'form[id]', 'name', @$dataForm['id'], 'inputbox readonly', 40);
     $rowID              =           Helper::cmsRowForm('ID', $inputID);
 }
