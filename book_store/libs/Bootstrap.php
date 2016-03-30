@@ -39,14 +39,21 @@ class Bootstrap{
 		                URL::redirect('default', 'index', 'notice', array('type' => 'not-permission'));
 		            }
 		        } else {
-		            Session::delete('user');
-		            require_once (MODULE_PATH . $module . DS . 'controllers' . DS . 'IndexController.php');
-		            $indexController 	=	new IndexController($this->_params);
-					$indexController->loginAction();
+		            
+		            $this->callLoginAction($module);
 		        }
 		        // MODULE DEFAULT
 		    } else if($module == 'default') {
-		        $this->_controllerObject->$actionName();
+		        if($controller == 'user') {
+		            if($logged == true) {
+		                $this->_controllerObject->$actionName();
+		            } else {
+		                $this->callLoginAction($module);
+		            }
+		        } else {
+		            $this->_controllerObject->$actionName();
+		        }
+		        
 		    }
 		    
 			//$this->_controllerObject->$actionName();
@@ -68,6 +75,14 @@ class Bootstrap{
 	private function loadExistingController($filePath, $controllerName){
 		require_once $filePath;
 		$this->_controllerObject = new $controllerName($this->_params);
+	}
+	
+	// CALL ACTION LOGIN
+	private function callLoginAction($module = 'default'){
+	    Session::delete('user');
+	    require_once (MODULE_PATH . $module . DS . 'controllers' . DS . 'IndexController.php');
+        $indexController 	=	new IndexController($this->_params);
+        $indexController->loginAction();
 	}
 	
 	// ERROR CONTROLLER

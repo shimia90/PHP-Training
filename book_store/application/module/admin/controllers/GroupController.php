@@ -25,6 +25,7 @@ class GroupController extends Controller{
 	}
 	
 	// ACTION ADD & EDIT GROUP
+	/*
 	public function formAction() {
 	    $this->_view->_title   =   'User Groups : Add';
 	    if(isset($this->_arrParam['id'])) {
@@ -56,6 +57,7 @@ class GroupController extends Controller{
 	    $this->_view->arrParam     =   $this->_arrParam;
 	    $this->_view->render('group/form', true);
 	}
+	*/
 	
 	// PROCESS AJAX STATUS (*)
 	public function ajaxStatusAction() {
@@ -76,10 +78,12 @@ class GroupController extends Controller{
 	}
 	
 	// ACTION TRASH (*)
+	/*
 	public function trashAction() {
 		$this->_model->deleteItem($this->_arrParam);
 		URL::redirect('admin', 'group', 'index');
 	}
+	*/
 	
 	// ACTION ORDERING (*)
 	public function orderingAction() {

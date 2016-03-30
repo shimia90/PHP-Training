@@ -12,7 +12,7 @@
     $rowPassword    =   Helper::cmsRow('Password'  , Helper::cmsInput('password', 'form[password]', 'password', $dataForm['password'], 'contact_input'));
     $rowSubmit      =   Helper::cmsRow('Submit'     , $inputToken . $inputSubmit , true);
     
-    $linkAction     =   URL::createLink('default', 'user', 'register');
+    $linkAction     =   URL::createLink('default', 'index', 'register');
 ?>
 <div class="title">
 	<span class="title_icon"><img src="<?php echo $imageURL; ?>/bullet1.gif" /></span>Register

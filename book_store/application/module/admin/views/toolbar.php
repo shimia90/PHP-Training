@@ -38,7 +38,12 @@
     
     switch ($this->arrayParams['action']) {
         case 'index': 
-            $strButton      =   $btnNew . $btnPublish . $btnUnPublish . $btnOrdering . $btnTrash; 
+            if($controller == 'group') {
+                $strButton      =   $btnPublish . $btnUnPublish . $btnOrdering;
+            } else {
+                $strButton      =   $btnNew . $btnPublish . $btnUnPublish . $btnOrdering . $btnTrash;
+            }
+            
             break;
         case 'form':
             $strButton      =   $btnSave . $btnSaveClose . $btnSaveNew . $btnCancel;
