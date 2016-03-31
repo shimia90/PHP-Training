@@ -283,7 +283,7 @@ class GoogleModel extends Model {
                 );
 			
 			$this->update($arraySource, $arrayWhere);
-			if($databaseSource->affectedRows() > 0 ) {
+			if($this->affectedRows() > 0 ) {
 				$xhtml 	=	'<div class="kode-alert kode-alert-icon alert3">
 									<i class="fa fa-check"></i>
 									<a class="closed" href="#">×</a>

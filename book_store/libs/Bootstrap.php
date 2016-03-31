@@ -25,7 +25,8 @@ class Bootstrap{
 		    $module       =   $this->_params['module'];
 		    $controller   =   $this->_params['controller'];
 		    $action       =   $this->_params['action'];   
-		    
+		    echo $requestURL   =   $module . "-" . $controller . "-" . $action;
+			
 		    $userInfo     =   Session::get('user');
 
 		    $logged       =   ($userInfo['login'] == true && $userInfo['time'] + TIME_LOGIN >= time());
@@ -34,7 +35,12 @@ class Bootstrap{
 		    if($module == 'admin') {
 		        if($logged == true) {
 		            if($userInfo['group_acp'] == 1) {
-		                $this->_controllerObject->$actionName();
+						if(in_array($requestURL, $userInfo['info']['privilege']) == true) {
+							$this->_controllerObject->$actionName();
+						} else {
+							URL::redirect('default', 'index', 'notice', array('type' => 'not-permission'));
+						}
+		                
 		            } else {
 		                URL::redirect('default', 'index', 'notice', array('type' => 'not-permission'));
 		            }
