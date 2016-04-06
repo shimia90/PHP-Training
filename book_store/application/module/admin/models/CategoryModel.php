@@ -18,9 +18,9 @@ class CategoryModel extends Model{
 	 * @return multitype:unknown
 	 */
 	public function listItems($arrParam, $option = null) {
-		$query[]  		=   "SELECT `id`, `name`, `ordering`, `created`, `created_by`, `modified`, `modified_by`, `status`, `ordering`";
+		$query[]  		=   "SELECT `id`, `name`, `picture`, `created`, `created_by`, `modified`, `modified_by`, `status`, `ordering`";
 		$query[]  		=   "FROM `$this->table`";
-		$query[]        =   "WHERE `id` > 0";
+		//$query[]        =   "WHERE `id` > 0";
 		
 		// FILTER : KEYWORD
 		if(!empty($arrParam['filter_search'])) {
