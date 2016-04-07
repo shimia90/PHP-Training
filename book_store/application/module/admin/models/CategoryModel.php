@@ -1,7 +1,9 @@
 <?php
 class CategoryModel extends Model{
     
-    private $_columns = array('id', 'name', 'picture', 'created', 'created_by', 'modified', 'modified_by', 'status', 'ordering');
+    private $_columns 		= 		array('id', 'name', 'picture', 'created', 'created_by', 'modified', 'modified_by', 'status', 'ordering');
+	
+	private $_userInfo 		=		array();
     
 	/**
 	 * 
@@ -9,6 +11,9 @@ class CategoryModel extends Model{
     public function __construct() {
         parent::__construct();
         $this->setTable(TBL_CATEGORY);
+		
+		$userObj 			=		Session::get('user');
+		$this->_userInfo 	=		$userObj['info'];
     }
     
 	/**
@@ -59,9 +64,11 @@ class CategoryModel extends Model{
 	
 	public function changeStatus($arrayParam, $option = null) {
 	    if($option['task'] == 'change-ajax-status') {
-	        $status    =   ($arrayParam['status'] == 0) ? 1 : 0;
-	        $id        =   $arrayParam['id'];
-	        $query     =   "UPDATE `{$this->table}` SET `status` = {$status} WHERE `id` = {$id}";
+	        $status    		=   ($arrayParam['status'] == 0) ? 1 : 0;
+			$modified 		= 	date('Y-m-d', time());
+			$modified_by 	= 	$this->_userInfo	['username'];
+	        $id        		=   $arrayParam['id'];
+	        $query     		=   "UPDATE `{$this->table}` SET `status` = {$status}, `modified` = '{$modified}', `modified_by` = '{$modified_by}' WHERE `id` = {$id}";
 	        $this->query($query);
 	        
 			$result 	=	array(
@@ -75,9 +82,11 @@ class CategoryModel extends Model{
 		
 		if($option['task'] == 'change-status') {
 	        $status    =   $arrayParam['type'];
+			$modified 		= 	date('Y-m-d', time());
+			$modified_by 	= 	$this->_userInfo['username'];
 	        if(!empty($arrayParam['cid'])) {
 				$ids 		=	$this->createWhereDeleteSQL($arrayParam['cid']);
-				$query     	=   "UPDATE `{$this->table}` SET `status` = {$status} WHERE `id` IN ({$ids})";
+				$query     	=   "UPDATE `{$this->table}` SET `status` = {$status}, `modified` = '{$modified}', `modified_by` = '{$modified_by}' WHERE `id` IN ({$ids})";
 	        	$this->query($query);	
 	        	Session::set('message', array('class' => 'success', 'content' => $this->affectedRows() . ' updated successfully'));
 			} else {
@@ -114,8 +123,18 @@ class CategoryModel extends Model{
 		$userInfo 				=			$userObj['info'];
 		
 	    if($option['task'] == 'add') {
+			echo '<pre>';
+			print_r($arrayParam);
+			echo '</pre>';
+			//die();
+			
+			require_once LIBRARY_EXT_PATH . 'Upload.php';
+			$uploadObj 	=	new Upload();
+			echo '<pre>';
+			print_r($uploadObj);
+			echo '</pre>';
 	        $arrayParam['form']['created'] = date('Y-m-d', time());
-	        $arrayParam['form']['created_by'] = $userInfo['username'];
+	        $arrayParam['form']['created_by'] = $this->_userInfo['username'];
 	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
 			
 	        $this->insert($data);
@@ -125,7 +144,7 @@ class CategoryModel extends Model{
 	    
 	    if($option['task'] == 'edit') {
 	        $arrayParam['form']['modified']        = date('Y-m-d', time());
-	        $arrayParam['form']['modified_by']     = $userInfo['username'];
+	        $arrayParam['form']['modified_by']     = $this->_userInfo['username'];
 	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
 			
 	        $this->update($data, array(array('id', $arrayParam['form']['id'])));

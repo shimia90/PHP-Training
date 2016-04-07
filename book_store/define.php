@@ -3,6 +3,7 @@
     define('DS'                 , '/');
     define('ROOT_PATH'          , dirname(__FILE__)); // Dinh nghia duong dan den thu muc goc
     define('LIBRARY_PATH'       , ROOT_PATH . DS .'libs' . DS);
+	define('LIBRARY_EXT_PATH'   , LIBRARY_PATH . 'extends' . DS);
     define('PUBLIC_PATH'        , ROOT_PATH . DS .'public' . DS);
     define('APPLICATION_PATH'   , ROOT_PATH . DS .'application' . DS); // Dinh nghia duong dan den thu muc application
 	define('MODULE_PATH'   		, APPLICATION_PATH . 'module' . DS); // Dinh nghia duong dan den thu muc module

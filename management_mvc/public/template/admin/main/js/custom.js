@@ -1,9 +1,12 @@
 //
+
+
 function changeStatus(url) {
 	$.get(url, function(data){
 		var id 				=	data[0];
 		var status 			=	data[1];
-		var link 			=	data[2];
+		var linkData		=	data[2];
+		
 		var element 		=	'a#status-'+ data['id'];
 		var classRemove 	=	'publish';
 		var classAdd 		=	'unpublish';
@@ -11,7 +14,7 @@ function changeStatus(url) {
 			classRemove 	= 	'unpublish';
 			classAdd 		=	'publish';	
 		}
-		
+		alert("abc");
 		$(element).attr("href", "javascript:changeStatus('"+data['link']+"')");
 		$(element + ' span').removeClass(classRemove).addClass(classAdd);
 	}, 'json');
@@ -23,6 +26,7 @@ function changeGroupACP(url) {
 		var id 				=	data[0];
 		var group_acp 		=	data[1];
 		var link 			=	data[2];
+		
 		var element 		=	'a#group-acp-'+ data['id'];
 		var classRemove 	=	'publish';
 		var classAdd 		=	'unpublish';

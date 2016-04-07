@@ -3,7 +3,7 @@ function changeStatus(url) {
 	$.get(url, function(data){
 		var id 				=	data[0];
 		var status 			=	data[1];
-		var link 			=	data[2];
+		var link 		=	data[2];
 		var element 		=	'a#status-'+ data['id'];
 		var classRemove 	=	'publish';
 		var classAdd 		=	'unpublish';
