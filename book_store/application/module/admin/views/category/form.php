@@ -10,18 +10,24 @@ $inputToken             =           Helper::cmsInput('hidden', 'form[token]', 't
 $selectStatus           =           Helper::cmsSelectBox('form[status]', null, array('default'  =>  '- Select Status -', 1 => 'Publish', 0 => 'Unpublish'), @$dataForm['status'] , 'width: 150px;');
 $inputPicture 			=			Helper::cmsInput('file', 'picture', 'picture', '', 'inputbox', 40);
 
+
 $inputID                =           '';
 $rowID                  =           '';
+$picture 				=			'';
+$inputPictureHidden 	=			'';
 if(isset($this->arrParam['id'])) {
     $inputID            =           Helper::cmsInput('text', 'form[id]', 'name', @$dataForm['id'], 'inputbox readonly', 40);
     $rowID              =           Helper::cmsRowForm('ID', $inputID);
+	
+	$picture 			=			'<img src="'.UPLOAD_URL . 'category' . DS. '60x90-' . $dataForm['picture'].'" />';
+	$inputPictureHidden =			Helper::cmsInput('hidden', 'form[picture_hidden]', 'picture_hidden', $dataForm['picture'], 'inputbox', 40);
 }
 
 // ROW
 $rowName                =           Helper::cmsRowForm('Name', $inputName , true);
 $rowOrdering            =           Helper::cmsRowForm('Ordering', $inputOrdering);
 $rowStatus              =           Helper::cmsRowForm('Status', $selectStatus);
-$rowPicture             =           Helper::cmsRowForm('Picture', $inputPicture);
+$rowPicture             =           Helper::cmsRowForm('Picture', $inputPicture . $picture . $inputPictureHidden);
 
 $message           =   Session::get('message');
 Session::delete('message');

@@ -236,18 +236,18 @@ class Validate{
 	
 	// Validate File
 	private function validateFile($element, $options){
-			echo '<pre>';
-			print_r($options);
-			echo '</pre>';
+			
 			//die("Function die is called");
-		if(!filter_var($this->source[$element]['size'], FILTER_VALIDATE_INT, array("options"=>array("min_range"=>$options['min'],"max_range"=>$options['max'])))){
-			$this->setError($element, 'kích thước không phù hợp');
-		}
-		
-		$ext = pathinfo($this->source[$element]['name'], PATHINFO_EXTENSION);
-		if(in_array($ext, $options['extension']) == false){
-			$this->setError($element, 'phần mở rộng không phù hợp');
-		}
+			if($this->source[$element]['name'] != null) {
+				if(!filter_var($this->source[$element]['size'], FILTER_VALIDATE_INT, array("options"=>array("min_range"=>$options['min'],"max_range"=>$options['max'])))){
+					$this->setError($element, 'kích thước không phù hợp');
+				}
+				
+				$ext = pathinfo($this->source[$element]['name'], PATHINFO_EXTENSION);
+				if(in_array($ext, $options['extension']) == false){
+					$this->setError($element, 'phần mở rộng không phù hợp');
+				}
+			}
 	}
 }
 

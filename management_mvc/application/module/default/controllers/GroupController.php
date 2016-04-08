@@ -48,7 +48,11 @@ class GroupController extends Controller {
     
     public function externalAction() {
          $this->_view->_title       			=   	'External Group Management';
-		 
+
+		 if(isset($_POST['group_form']) && !empty($_POST['group_form'])) {
+			 
+			 $this->_view->tableGroup 				=		$this->_model->createTableGroup($_POST['group_form']);
+		 }
          $this->_view->render('group/external');
     }
 }

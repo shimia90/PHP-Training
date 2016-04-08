@@ -6,6 +6,7 @@
 	@$columnPost   =	$this->arrayParams['filter_column'];
 	@$orderPost    =	$this->arrayParams['filter_column_dir'];
 	$lblName 	   =	Helper::cmsLinkSort('Name', 'name', $columnPost, $orderPost);
+	$lblPicture	   =	Helper::cmsLinkSort('Picture', 'picture', $columnPost, $orderPost);
 	$lblStatus     =    Helper::cmsLinkSort('Status', 'status', $columnPost, $orderPost);
 	$lblOrdering   =    Helper::cmsLinkSort('Ordering', 'ordering', $columnPost, $orderPost);
 	$lblCreated    =    Helper::cmsLinkSort('Created', 'created', $columnPost, $orderPost);
@@ -53,6 +54,7 @@
 					<tr>
 						<th width="1%"><input type="checkbox" name="checkall-toggle" /></th>
 						<th class="title"><?php echo $lblName; ?></th>
+                        <th class="title"><?php echo $lblPicture; ?></th>
 						<th width="10%%"><?php echo $lblStatus; ?></th>
 						<th width="10%"><?php echo $lblOrdering; ?></th>
 						<th width="10%"><?php echo $lblCreated; ?></th>
@@ -81,6 +83,13 @@
 				               $id          =   $value['id'];
 				               $ckb         =   '<input type="checkbox" name="cid[]" value="'.$id.'" />';
 				               $name        =   $value['name'];
+							   $picturePath = 	UPLOAD_PATH . 'category' . DS . '60x90-' . $value['picture'];
+							   if(file_exists($picturePath) == true) {
+									$picture 	=	'<img src="'.UPLOAD_URL . 'category' . DS. '60x90-' . $value['picture'].'" />';   
+							   } else {
+								   	$picture 	=	'<img src="'.UPLOAD_URL . 'category' . DS. '60x90-default.jpg" />';   
+							   }
+							   
 				               $row         =   ($i % 2 == 0) ? 'row0' : 'row1'; 
 				               
 				               // index.php?module=admin&controller=category&action=ajaxStatus&id=2&status=0
@@ -95,6 +104,7 @@
 							echo '<tr class="'.$row.'">
 									<td class="center">'.$ckb.'</td>
 									<td><a href="'.$linkEdit.'">'.$name.'</a></td>
+									<td class="center">'.$picture.'</td>
 									<td class="center">'.$status.'</td>
 									<td class="center">'.$ordering.'</td>
 									<td class="center">'.$created.'</td>
