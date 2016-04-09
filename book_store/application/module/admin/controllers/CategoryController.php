@@ -27,16 +27,25 @@ class CategoryController extends Controller{
 	// ACTION ADD & EDIT CATEGORY
 	public function formAction() {
 	    $this->_view->_title   =   'User Category : Add';
+		if(!empty($_FILES)) {
+			$this->_arrParam['form']['picture'] 	= 	$_FILES['picture'];		
+		}
 	    if(isset($this->_arrParam['id'])) {
 	        $this->_view->_title   =   'User Category : Edit';
 	        $this->_arrParam['form']  =   $this->_model->infoItem($this->_arrParam);
 	        if(empty($this->_arrParam['form'])) URL::redirect('admin', 'category', 'index');
 	    }
 	    if( @$this->_arrParam['form']['token'] > 0 ) {
+			/*echo '<pre>';
+			print_r($this->_arrParam);
+			echo '</pre>';
+			die("Function die is called");*/
+			
 	        $validate  =   new Validate($this->_arrParam['form']);
 	        $validate->addRule('name', 'string', array('min' => 3, 'max' => 255))
 	                 ->addRule('ordering', 'int', array('min' => 1, 'max' => 100))
-	                 ->addRule('status', 'status', array('deny' => array('default')));
+	                 ->addRule('status', 'status', array('deny' => array('default')))
+					 ->addRule('picture', 'file', array('min' => 100, 'max' => 1000000, 'extension' => array('jpg', 'png')), false);
 	        $validate->run();
 	        $this->_arrParam['form'] = $validate->getResult();
 	        if($validate->isValid() == false) {

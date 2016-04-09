@@ -25,7 +25,7 @@ class Bootstrap{
 		    $module       =   $this->_params['module'];
 		    $controller   =   $this->_params['controller'];
 		    $action       =   $this->_params['action'];   
-		    echo $requestURL   =   $module . "-" . $controller . "-" . $action;
+		    $requestURL   =   $module . "-" . $controller . "-" . $action;
 			
 		    $userInfo     =   Session::get('user');
 

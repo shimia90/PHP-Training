@@ -130,6 +130,9 @@ class UserModel extends Model{
 	    }
 	    
 	    if($option['task'] == 'edit') {
+			// Khong cho thay doi username
+			unset($arrayParam['form']['username']);
+			
 	        $arrayParam['form']['modified']        = date('Y-m-d', time());
 	        $arrayParam['form']['modified_by']     = 10;
 	        if($arrayParam['form']['password'] != null) {

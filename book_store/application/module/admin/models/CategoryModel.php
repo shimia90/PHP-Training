@@ -1,7 +1,9 @@
 <?php
 class CategoryModel extends Model{
     
-    private $_columns = array('id', 'name', 'picture', 'created', 'created_by', 'modified', 'modified_by', 'status', 'ordering');
+    private $_columns 		= 		array('id', 'name', 'picture', 'created', 'created_by', 'modified', 'modified_by', 'status', 'ordering');
+	
+	private $_userInfo 		=		array();
     
 	/**
 	 * 
@@ -9,6 +11,9 @@ class CategoryModel extends Model{
     public function __construct() {
         parent::__construct();
         $this->setTable(TBL_CATEGORY);
+		
+		$userObj 			=		Session::get('user');
+		$this->_userInfo 	=		$userObj['info'];
     }
     
 	/**
@@ -18,9 +23,9 @@ class CategoryModel extends Model{
 	 * @return multitype:unknown
 	 */
 	public function listItems($arrParam, $option = null) {
-		$query[]  		=   "SELECT `id`, `name`, `ordering`, `created`, `created_by`, `modified`, `modified_by`, `status`, `ordering`";
+		$query[]  		=   "SELECT `id`, `name`, `picture`, `created`, `created_by`, `modified`, `modified_by`, `status`, `ordering`";
 		$query[]  		=   "FROM `$this->table`";
-		$query[]        =   "WHERE `id` > 0";
+		//$query[]        =   "WHERE `id` > 0";
 		
 		// FILTER : KEYWORD
 		if(!empty($arrParam['filter_search'])) {
@@ -59,9 +64,11 @@ class CategoryModel extends Model{
 	
 	public function changeStatus($arrayParam, $option = null) {
 	    if($option['task'] == 'change-ajax-status') {
-	        $status    =   ($arrayParam['status'] == 0) ? 1 : 0;
-	        $id        =   $arrayParam['id'];
-	        $query     =   "UPDATE `{$this->table}` SET `status` = {$status} WHERE `id` = {$id}";
+	        $status    		=   ($arrayParam['status'] == 0) ? 1 : 0;
+			$modified 		= 	date('Y-m-d', time());
+			$modified_by 	= 	$this->_userInfo	['username'];
+	        $id        		=   $arrayParam['id'];
+	        $query     		=   "UPDATE `{$this->table}` SET `status` = {$status}, `modified` = '{$modified}', `modified_by` = '{$modified_by}' WHERE `id` = {$id}";
 	        $this->query($query);
 	        
 			$result 	=	array(
@@ -75,9 +82,11 @@ class CategoryModel extends Model{
 		
 		if($option['task'] == 'change-status') {
 	        $status    =   $arrayParam['type'];
+			$modified 		= 	date('Y-m-d', time());
+			$modified_by 	= 	$this->_userInfo['username'];
 	        if(!empty($arrayParam['cid'])) {
 				$ids 		=	$this->createWhereDeleteSQL($arrayParam['cid']);
-				$query     	=   "UPDATE `{$this->table}` SET `status` = {$status} WHERE `id` IN ({$ids})";
+				$query     	=   "UPDATE `{$this->table}` SET `status` = {$status}, `modified` = '{$modified}', `modified_by` = '{$modified_by}' WHERE `id` IN ({$ids})";
 	        	$this->query($query);	
 	        	Session::set('message', array('class' => 'success', 'content' => $this->affectedRows() . ' updated successfully'));
 			} else {
@@ -95,8 +104,24 @@ class CategoryModel extends Model{
 		if($option == null) {
 	        if(!empty($arrayParam['cid'])) {
 				$ids 		=	$this->createWhereDeleteSQL($arrayParam['cid']);
+				//$query     	=   "DELETE FROM `{$this->table}` WHERE `id` IN ({$ids})";
+	        	//$this->query($query);	
+				
+				// Remove Image
+				$query 		=	"SELECT `id`, `picture` AS `name` FROM `{$this->table}` WHERE `id` IN ($ids)";
+				$arrImage 	=	$this->fetchPairs($query);
+				
+				require_once LIBRARY_EXT_PATH . 'Upload.php';
+				$uploadObj 	=	new Upload();
+				foreach($arrImage as $value) {
+					$uploadObj->removeFile('category', $value);	
+					$uploadObj->removeFile('category', '60x90-' . $value);
+				}
+				
+				// DELETE FROM DATABASE
 				$query     	=   "DELETE FROM `{$this->table}` WHERE `id` IN ({$ids})";
-	        	$this->query($query);	
+				$this->query($query);
+				
 	        	Session::set('message', array('class' => 'success', 'content' => $this->affectedRows() . ' items were deleted successfully'));
 			} else {
 			    Session::set('message', array('class' => 'error', 'content' => 'Please choose the item that you want to delete !!'));
@@ -112,10 +137,16 @@ class CategoryModel extends Model{
 	public function saveItem($arrayParam, $option = null) {
 		$userObj 				=			Session::get('user');
 		$userInfo 				=			$userObj['info'];
+		require_once LIBRARY_EXT_PATH . 'Upload.php';
+		$uploadObj 	=	new Upload();
 		
 	    if($option['task'] == 'add') {
-	        $arrayParam['form']['created'] = date('Y-m-d', time());
-	        $arrayParam['form']['created_by'] = $userInfo['username'];
+			
+			
+
+			$arrayParam['form']['picture'] 		=		$uploadObj->uploadFile($arrayParam['form']['picture'], 'category');
+	        $arrayParam['form']['created'] 		= 		date('Y-m-d', time());
+	        $arrayParam['form']['created_by'] 	= 		$this->_userInfo['username'];
 	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
 			
 	        $this->insert($data);
@@ -125,7 +156,16 @@ class CategoryModel extends Model{
 	    
 	    if($option['task'] == 'edit') {
 	        $arrayParam['form']['modified']        = date('Y-m-d', time());
-	        $arrayParam['form']['modified_by']     = $userInfo['username'];
+	        $arrayParam['form']['modified_by']     = $this->_userInfo['username'];
+			
+			if($arrayParam['form']['picture']['name'] == null) {
+				unset($arrayParam['form']['picture']);	
+			} else {
+				$uploadObj->removeFile('category', $arrayParam['form']['picture_hidden']);	
+				$uploadObj->removeFile('category', '60x90-' . $arrayParam['form']['picture_hidden']);
+				$arrayParam['form']['picture'] 		=		$uploadObj->uploadFile($arrayParam['form']['picture'], 'category');
+			}
+			
 	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
 			
 	        $this->update($data, array(array('id', $arrayParam['form']['id'])));

@@ -26,7 +26,7 @@
         </ul>
     </li>
     
-    <li><a href="<?php echo URL::createLink('default', 'group', 'external'); ?>"><span class="icon color6"><i class="fa fa-expand"></i></span> External Group</a></li>
+    <li class="group-external"><a href="<?php echo URL::createLink('default', 'group', 'external'); ?>"><span class="icon color6"><i class="fa fa-expand"></i></span> External Group</a></li>
     
 </ul>
 

@@ -286,4 +286,60 @@ class GroupModel extends Model {
 		
 		return $xhtml;
 	}
+	
+	public function createTableTeam($team) {
+		$xhtml 		=		'';
+		$query 		=		"SELECT * FROM `user` WHERE `team` = '{$team}'";
+		$arrayData	=		$this->fetchAll($query);
+		return $arrayData;
+	}
+	
+	public function createTableGroup($arrayDate) {
+		$xhtml 			=		'';
+		$queryTeam 		=		"SELECT DISTINCT `team` FROM `user` GROUP BY `team`";
+		$numberTeam 	= 		count($this->fetchAll($queryTeam));
+		
+		for($i = 1; $i <= $numberTeam; $i++) {
+			if($i % 2 != 0) {
+				$xhtml .= '<div class="row" style="margin-bottom: 30px;">';	
+			}
+			$xhtml .= '<div class="col-md-6">';	
+			$xhtml .= '<div class="panel-title">
+					  Team <span class="label label-warning">'.$i.'</span>
+					</div>';
+			$xhtml .= '<table class="table table-hover table-striped">
+							<thead>
+							  <tr>
+								<td>No</td>
+								<td>Group Leader</td>
+								<td>Name</td>
+								<td>Project</td>
+								<td>Standard dur</td>
+								<td>Real dur</td>
+								<td>Performance</td>
+							  </tr>
+							</thead>
+						';
+			$xhtml 	.=	'<tbody>';
+				foreach($this->createTableTeam($i) as $key => $value) {
+					$xhtml 	.=	'<tr>';
+						$xhtml 	.=		'<td>'.$key.'</td>';
+						$xhtml 	.=		'<td>'.$value['position'].'</td>';
+						$xhtml 	.=		'<td>'.$value['fullname'].'</td>';
+						$xhtml 	.=		'<td>'.$this->listProjectUser($value['id'], $arrayDate).'</td>';
+						$xhtml 	.=		'<td>'.$this->createLabelDuration($this->getDuration($value['id'], $arrayDate, 'standard_duration')).'</td>';
+						$xhtml 	.=		'<td>'.$this->createLabelDuration($this->getDuration($value['id'], $arrayDate, 'real_duration')).'</td>';
+						$xhtml 	.=		'<td>'.$this->getPerformance($this->getDuration($value['id'], $arrayDate, 'standard_duration'), $this->getDuration($value['id'], $arrayDate, 'real_duration')).'</td>';
+					$xhtml 	.=	'</tr>';
+				}
+			$xhtml 	.=	'</tbody>';
+			$xhtml .= '</table>';
+			$xhtml .= '</div>';
+			if( $i % 2 == 0) {
+				$xhtml .= '</div>';	
+			}
+		}
+		
+		return $xhtml;	
+	}
 }
