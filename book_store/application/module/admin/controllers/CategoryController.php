@@ -25,7 +25,6 @@ class CategoryController extends Controller{
 	}
 	
 	// ACTION ADD & EDIT CATEGORY
-	/*
 	public function formAction() {
 	    $this->_view->_title   =   'User Category : Add';
 	    if(isset($this->_arrParam['id'])) {
@@ -56,7 +55,7 @@ class CategoryController extends Controller{
 	    $this->_view->arrParam     =   $this->_arrParam;
 	    $this->_view->render('category/form', true);
 	}
-	*/
+	
 	
 	// PROCESS AJAX STATUS (*)
 	public function ajaxStatusAction() {
