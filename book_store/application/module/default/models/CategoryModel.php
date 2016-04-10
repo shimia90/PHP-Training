@@ -26,9 +26,7 @@ class CategoryModel extends Model{
 		$query[]  		=   "SELECT `id`, `name`, `picture`";
 		$query[]  		=   "FROM `$this->table`";
 		$query[]        =   "WHERE `status` = 1";
-		
-		
-		
+		$query[]        =   "ORDER BY `ordering` ASC";
 		
 		$query  		=   implode(" ", $query);
 		$result   		=   $this->fetchAll($query);
