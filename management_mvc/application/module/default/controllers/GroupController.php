@@ -25,11 +25,22 @@ class GroupController extends Controller {
          $this->_view->_title       			=   	'Internal Group Management';
 		 
 		 if(isset($_GET['team']) && trim($_GET['team']) != '') {
-			 if(isset($_POST['group_form']) && !empty($_POST['group_form'])) {
-				 $this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team'], $_POST['group_form']); 
+			 if(isset($_GET['date_from']) && isset($_GET['date_to'])) {
+				 $arrayDate 	=		array('date_from' => $_GET['date_from'], 'date_to' => $_GET['date_to']);
+				 
+				 $this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team'], $arrayDate); 
+				 
+				 $this->_view->duration 				=		$this->_model->getDuration('2', $arrayDate, 'standard_duration');
+			 
+				 $this->_view->chart 				=		$this->_model->createChart($_GET['team'], $arrayDate); 
 			 } else {
-				$this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team']); 
+				 if(isset($_POST['group_form']) && !empty($_POST['group_form'])) {
+					 $this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team'], $_POST['group_form']); 
+				 } else {
+					$this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team']); 
+				 } 
 			 }
+			 
 		 } else {
 			URL::redirect(URL::createLink('default', 'index', 'index')); 
 		 }

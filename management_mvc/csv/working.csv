@@ -1,0 +1,206 @@
+,NO,MCC,NAME,Type,NN,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,
+,,,,,,Tue,Wed,Thu,Fri,Sat,Sun,Mon,Tue,Wed,Thu,Fri,Sat,Sun,Mon,Tue,Wed,Thu,Fri,Sat,Sun,Mon,Tue,Wed,Thu,Fri,Sat,Sun,Mon,Tue,Wed,Thu,
+LinhHT,1,2,Hoang Thuy Linh,O,LinhHTO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LinhHT,,,,D,LinhHTD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LinhHT,,,,U,LinhHTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LinhHT,,,,SP,LinhHTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LinhHT,,,,P,LinhHTP,,,,8,,,,,,,,,,8,8,8,,,,,,,,,,,,,,,,32
+LinhHT,,,,Othr,LinhHTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TrucTTT,2,3,Tong Thi Thanh Truc,O,TrucTTTO,,,,,,,,,,,,,,,,,,,,,0.75,,,,,,,,,,,0.75
+TrucTTT,,,,D,TrucTTTD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TrucTTT,,,,U,TrucTTTU,,,,,,,,,,0.5,1.5,,,,,,,,,,,,,1.5,,,,,,,,3.5
+TrucTTT,,,,SP,TrucTTTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TrucTTT,,,,P,TrucTTTP,1.25,,,2.75,,,8,1.5,1.5,1,,,,,,,,,,,,,,,,,,,,,,16
+TrucTTT,,,,Othr,TrucTTTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DucTP,3,4,Tran Phu Duc,O,DucTPO,,,,,,,,,,,,,,,,,,,,,0.75,,,,,,,,,,,0.75
+DucTP,,,,D,DucTPD,,,,,,,,0.25,,,,,,,,,,,,,,,,,,,,,,,,0.25
+DucTP,,,,U,DucTPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DucTP,,,,SP,DucTPSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DucTP,,,,P,DucTPP,,,,,,,,,,,,,,,,,,,,,,,8,,,,,,,,1.5,9.5
+DucTP,,,,Othr,DucTPOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TriN,4,6,Nguyen Tri,O,TriNO,,,,,,,,,,,,,,,,,1.75,2.25,,,0.75,,,2.75,,,,,,,,7.5
+TriN,,,,D,TriND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TriN,,,,U,TriNU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TriN,,,,SP,TriNSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TriN,,,,P,TriNP,,,,1.5,,,8,8,8,8,8,,,,,,,,,,,,,,,,,,,,,41.5
+TriN,,,,Othr,TriNOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LinhKT,5,25,Ky Tu Linh,O,LinhKTO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.5,,,0.5
+LinhKT,,,,D,LinhKTD,,,,,,,0.25,,,,,,,,,,,,,,,,,,,,,,,,,0.25
+LinhKT,,,,U,LinhKTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LinhKT,,,,SP,LinhKTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LinhKT,,,,P,LinhKTP,,,,8,,,,,,,,,,,,,,,,,,,3.5,,,,,,,,0.75,12.25
+LinhKT,,,,Othr,LinhKTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NhaNTT,6,6,Nguyen Thi Thanh Nha,O,NhaNTTO,,,,,,,,,1.75,,,,,,,,,,,,,,,,,,,,,,,1.75
+NhaNTT,,,,D,NhaNTTD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NhaNTT,,,,U,NhaNTTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NhaNTT,,,,SP,NhaNTTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NhaNTT,,,,P,NhaNTTP,,,,,,,,,,1.75,,,,,,,,,,,,,,,,,,,,,,1.75
+NhaNTT,,,,Othr,NhaNTTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+KhangPH,7,7,Pham Hong Khang,O,KhangPHO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+KhangPH,,,,D,KhangPHD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.25,,0.25
+KhangPH,,,,U,KhangPHU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+KhangPH,,,,SP,KhangPHSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+KhangPH,,,,P,KhangPHP,,,,4.5,,,8,8,8,8,8,,,8,,,,,,,,,,,,,,,,,,52.5
+KhangPH,,,,Othr,KhangPHOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TramNTH,8,8,Nguyen Thi Hoai Tram,O,TramNTHO,,,,,,,,,,,2.5,8,,,,,,,,,,,,,,,,,,,,10.5
+TramNTH,,,,D,TramNTHD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TramNTH,,,,U,TramNTHU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TramNTH,,,,SP,TramNTHSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TramNTH,,,,P,TramNTHP,,,,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,8
+TramNTH,,,,Othr,TramNTHOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DatNVT,9,9,Nguyen Vu Tien Dat,O,DatNVTO,,2.25,3.75,4,,,2.5,1.75,3,3,3.25,8,,3,2.5,,2,,,,3,,,,,,,,,,,42
+DatNVT,,,,D,DatNVTD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DatNVT,,,,U,DatNVTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DatNVT,,,,SP,DatNVTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DatNVT,,,,P,DatNVTP,,,,,,,,,,,,,,,,,,1,,,,,4.5,8,8,,,,,,,21.5
+DatNVT,,,,Othr,DatNVTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThaoPTN,11,11,Phan Thi Ngoc Thao,O,ThaoPTNO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThaoPTN,,,,D,ThaoPTND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThaoPTN,,,,U,ThaoPTNU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThaoPTN,,,,SP,ThaoPTNSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThaoPTN,,,,P,ThaoPTNP,,,,,,,,,,,,,,,,,8,8,,,,,,,,,,,,,,16
+ThaoPTN,,,,Othr,ThaoPTNOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TrieuVTT,12,12,Vuong Thi Thuy Trieu,O,TrieuVTTO,,,,,,,,,,,,3.25,,2.25,,,,,,,,,,,,,,,,,,5.5
+TrieuVTT,,,,D,TrieuVTTD,,,,0.25,,,0.25,,0.25,,,,,,,,,,,,,0.25,0.25,,,,,,,0.25,,1.5
+TrieuVTT,,,,U,TrieuVTTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TrieuVTT,,,,SP,TrieuVTTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TrieuVTT,,,,P,TrieuVTTP,,,2.75,,,,,,,,,,,,,,,,,,,,,,6.75,,,,,,0.5,10
+TrieuVTT,,,,Othr,TrieuVTTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ManhT,13,14,Tran Duc Manh,O,ManhTO,,,,,,,,,,3,2,8,,,,,,,,,3,,,,,,,,,,,16
+ManhT,,,,D,ManhTD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ManhT,,,,U,ManhTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ManhT,,,,SP,ManhTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ManhT,,,,P,ManhTP,,,,,,,,,,,2,,,,,,,,,,,,0.75,4.5,,,,,,,,7.25
+ManhT,,,,Othr,ManhTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+BichVTN,14,15,Vu Thi Ngoc Bich,O,BichVTNO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+BichVTN,,,,D,BichVTND,,,,,,,,,,,,,,,,,,0.25,,,,0.25,0.25,,,,,,,0.25,,1
+BichVTN,,,,U,BichVTNU,,,,,,,,,,,,,,0.5,,,,,,,,0.5,,,1,,,,,,,2
+BichVTN,,,,SP,BichVTNSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+BichVTN,,,,P,BichVTNP,,,,1,,,8,8,8,8,8,,,,,,,,,,,,,,,,,,,,,41
+BichVTN,,,,Othr,BichVTNOthr,,,3.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3.5
+TuePM,15,16,Pham Minh Tue,O,TuePMO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TuePM,,,,D,TuePMD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TuePM,,,,U,TuePMU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TuePM,,,,SP,TuePMSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TuePM,,,,P,TuePMP,,,,,,,,,,,,,,,,,,,,,8,,,,,,,,,,,8
+TuePM,,,,Othr,TuePMOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NgocTT,16,17,Tram Thai Ngoc,O,NgocTTO,,,,,,,,,,,,8,,,,,,,,,,,,2.5,,,,,,,,10.5
+NgocTT,,,,D,NgocTTD,,,,,,,,,,,,,,,0.25,,,,,,,0.25,0.25,,,,,,0.25,,,1
+NgocTT,,,,U,NgocTTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NgocTT,,,,SP,NgocTTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NgocTT,,,,P,NgocTTP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NgocTT,,,,Othr,NgocTTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThuyTTN,17,18,Tran Thi Ngoc Thuy,O,ThuyTTNO,,,,,,,,,2,3,,8,,,,,,,,,,,,,,,,,,,,13
+ThuyTTN,,,,D,ThuyTTND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThuyTTN,,,,U,ThuyTTNU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThuyTTN,,,,SP,ThuyTTNSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThuyTTN,,,,P,ThuyTTNP,,,2.5,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,10.5
+ThuyTTN,,,,Othr,ThuyTTNOthr,,,3.5,,,,,,,,,,,,,,,,,,,,,,,,,,,,,3.5
+ThanhNLY,18,19,Nguyen Lac Yen Thanh,O,ThanhNLYO,,,,,,,,,1.5,1,,,,,,1,,,,,,,,,,,,,,,,3.5
+ThanhNLY,,,,D,ThanhNLYD,,,,,,,,,,,,,,,,,,,,,,,0.25,,,,,,,,,0.25
+ThanhNLY,,,,U,ThanhNLYU,,,,,,,,,,,,,,2.5,,,,,,,,,,,,,,1,,,,3.5
+ThanhNLY,,,,SP,ThanhNLYSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThanhNLY,,,,P,ThanhNLYP,,,,,,,,,,,,,,,,,,8,,,,,,,,,,,,,,8
+ThanhNLY,,,,Othr,ThanhNLYOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TrucPTT,19,20,Phan Thi Thanh Truc,O,TrucPTTO,,,,4,,,,,2,3.5,2.5,8,,1.5,2.5,,,,,,,,,,,,,,,,,24
+TrucPTT,,,,D,TrucPTTD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TrucPTT,,,,U,TrucPTTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TrucPTT,,,,SP,TrucPTTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TrucPTT,,,,P,TrucPTTP,,,,,,,8,,,,,,,,,,,3.5,,,,,,,,,,4.5,,,,16
+TrucPTT,,,,Othr,TrucPTTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NguyenLDH,20,21,Le Duc Hanh Nguyen,O,NguyenLDHO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NguyenLDH,,,,D,NguyenLDHD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NguyenLDH,,,,U,NguyenLDHU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NguyenLDH,,,,SP,NguyenLDHSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NguyenLDH,,,,P,NguyenLDHP,,,,,,,,,,,4.5,,,,,,,,,,,2,,,,,,,,,,6.5
+NguyenLDH,,,,Othr,NguyenLDHOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ManDH,21,22,Dao Hue Man,O,ManDHO,1,1,1,1,,,1,1,1,1,1,,,1,1,1,1,1,,,0.5,1.25,,,,,,,,,,15.75
+ManDH,,,,D,ManDHD,,,,,,,,,,,,,,,,,,,,,,,,,0.25,,,,,,,0.25
+ManDH,,,,U,ManDHU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.75,8,9.75
+ManDH,,,,SP,ManDHSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ManDH,,,,P,ManDHP,,,,,,,,,,,,,,,,,,,,,,,,2.25,,,,8,8,6.25,,24.5
+ManDH,,,,Othr,ManDHOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TruyenLC,22,30,Le Cong Truyen,O,TruyenLCO,,,,,,,,,,3.5,2.5,8,,,,,,,,,,,,,,,,,,,,14
+TruyenLC,,,,D,TruyenLCD,0.25,,,,,,,0.25,,,,,,,,,,,,,,,,,,,,0.25,0.25,,,1
+TruyenLC,,,,U,TruyenLCU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.75,1.75
+TruyenLC,,,,SP,TruyenLCSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TruyenLC,,,,P,TruyenLCP,1,,,,,,,,,,,,,,,,1,,,,,,0.5,,,,,,,2.75,6.25,11.5
+TruyenLC,,,,Othr,TruyenLCOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+BinhNT,23,23,Nguyen Thanh Binh,O,BinhNTO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+BinhNT,,,,D,BinhNTD,,,,,,,,,,,0.25,,,,,,,,,,,,,,,,,,,,,0.25
+BinhNT,,,,U,BinhNTU,,,,,,,,,,,,,,,,,,,,,,,,,8,,,8,8,,,24
+BinhNT,,,,SP,BinhNTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+BinhNT,,,,P,BinhNTP,,,,,,,,,,,,,,,,,,,,,8,,,,,,,,,,,8
+BinhNT,,,,Othr,BinhNTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+HuyTV,24,24,Tran Vuong Huy,O,HuyTVO,,,,,,,,2,2.5,,,8,,,,,,,,,,,,,,,,,,,,12.5
+HuyTV,,,,D,HuyTVD,,,,,,,,,,,0.25,,,,,,,,,,,0.25,,,,,,,,,,0.5
+HuyTV,,,,U,HuyTVU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+HuyTV,,,,SP,HuyTVSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+HuyTV,,,,P,HuyTVP,1,,,,,,,,1,,,,,,,,,,,,,,1.5,,4.5,,,,,,,8
+HuyTV,,,,Othr,HuyTVOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TanND,25,27,Nguyen Duy Tan,O,TanNDO,,,,4,,,2.5,2.75,3,3.5,3.25,8,,3,2.5,,2,2,,,3,,,,1.25,,,,,,,40.75
+TanND,,,,D,TanNDD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TanND,,,,U,TanNDU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TanND,,,,SP,TanNDSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TanND,,,,P,TanNDP,,,,,,,,,,,,,,,,,,,,,,,,,,,,4.5,,,,4.5
+TanND,,,,Othr,TanNDOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TienND,26,29,Nguyen Duc Tien,O,TienNDO,,,,,,,,,,,,,,,,,,,,,0.75,,,,,,,,,,,0.75
+TienND,,,,D,TienNDD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0.25,,,0.25
+TienND,,,,U,TienNDU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TienND,,,,SP,TienNDSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+TienND,,,,P,TienNDP,,,8,,,,,,,,,,,,,,,,,,,,,,,,,,,,1.75,9.75
+TienND,,,,Othr,TienNDOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+VanVTK,27,32,Vo Thi Kim Van,O,VanVTKO,,,,,,,,1.5,3,3.5,2.5,8,,2.5,,,,,,,,,,,,,,,,,,21
+VanVTK,,,,D,VanVTKD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+VanVTK,,,,U,VanVTKU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+VanVTK,,,,SP,VanVTKSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+VanVTK,,,,P,VanVTKP,,,,,,,,,,,,,,,,,,,,,,,,,,,,8,,,,8
+VanVTK,,,,Othr,VanVTKOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+VuLDN,28,33,Le Diep Nguyen Vu,O,VuLDNO,,,,,,,,,,,,8,,,,,0.75,,,,,,,,,,,,,,,8.75
+VuLDN,,,,D,VuLDND,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+VuLDN,,,,U,VuLDNU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+VuLDN,,,,SP,VuLDNSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+VuLDN,,,,P,VuLDNP,,,,,,,,,,,,,,,,,,,,,,,,8,,,,,,,,8
+VuLDN,,,,Othr,VuLDNOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DiepBNH,29,34,Bach Ngoc Hong Diep,O,DiepBNHO,,,,,,,,2.75,2.75,3,2.5,8,,,,,,,,,,,,,,,,,,,,19
+DiepBNH,,,,D,DiepBNHD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DiepBNH,,,,U,DiepBNHU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DiepBNH,,,,SP,DiepBNHSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+DiepBNH,,,,P,DiepBNHP,,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,,,8
+DiepBNH,,,,Othr,DiepBNHOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NamPQ,30,35,Pham Quang Nam,O,NamPQO,,,,,,,,,,,,8,,,1.5,,,,,,,,,,,,,,,,,9.5
+NamPQ,,,,D,NamPQD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NamPQ,,,,U,NamPQU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NamPQ,,,,SP,NamPQSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NamPQ,,,,P,NamPQP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NamPQ,,,,Othr,NamPQOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThanhNT,31,36,Nguyen Tan Thanh,O,ThanhNTO,,,,,,,,,,3,,8,,3,,,,,,,,,,,,,,,,,,14
+ThanhNT,,,,D,ThanhNTD,,,,0.25,,,,,,,,,,0.25,,,,0.25,,,0.25,,,,0.25,,,0.25,,1.5,,3
+ThanhNT,,,,U,ThanhNTU,,,,,,,,,,,,,,,1,,,,,,,3.5,8,,,,,,,8,,20.5
+ThanhNT,,,,SP,ThanhNTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+ThanhNT,,,,P,ThanhNTP,,,,,,,8,,,,,,,,,,,,,,,,,,,,,,,,,8
+ThanhNT,,,,Othr,ThanhNTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LamNTP,32,37,Nguyen Thi Phuong Lam,O,LamNTPO,,,,,,,,,2,3,2.5,8,,,,,,,,,,,,,,,,,,,,15.5
+LamNTP,,,,D,LamNTPD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LamNTP,,,,U,LamNTPU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LamNTP,,,,SP,LamNTPSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LamNTP,,,,P,LamNTPP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8,8,,16
+LamNTP,,,,Othr,LamNTPOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NgaNTT,33,38,Nguyen Thi Thuy Nga,O,NgaNTTO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NgaNTT,,,,D,NgaNTTD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NgaNTT,,,,U,NgaNTTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NgaNTT,,,,SP,NgaNTTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NgaNTT,,,,P,NgaNTTP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+NgaNTT,,,,Othr,NgaNTTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+HuyenNTT,34,39,Nguyen Thi Thuy Huyen,O,HuyenNTTO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+HuyenNTT,,,,D,HuyenNTTD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+HuyenNTT,,,,U,HuyenNTTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+HuyenNTT,,,,SP,HuyenNTTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+HuyenNTT,,,,P,HuyenNTTP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+HuyenNTT,,,,Othr,HuyenNTTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LienVT,35,40,Van Thi Lien,O,LienVTO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LienVT,,,,D,LienVTD,,,,,,,,,,,,,,,,,,,,,,,0.25,,,,,,,,,0.25
+LienVT,,,,U,LienVTU,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LienVT,,,,SP,LienVTSP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LienVT,,,,P,LienVTP,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0
+LienVT,,,,Othr,LienVTOthr,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0

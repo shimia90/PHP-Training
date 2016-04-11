@@ -11,6 +11,7 @@ class GroupModel extends Model {
 		$arrayUser 		=		$this->fetchAll($query);
 		$dateFrom 		=		(!empty($arrayDate)) ? $arrayDate['date_from'] : date("d/m/Y") ;
 		$dateTo			=		(!empty($arrayDate)) ? $arrayDate['date_to'] : date("d/m/Y") ;
+		
 		foreach($arrayUser as $key => $value) {
 			$xhtml			.=		'<tr>';
 			if($value['position'] 	==	'leader') {
@@ -324,8 +325,8 @@ class GroupModel extends Model {
 				foreach($this->createTableTeam($i) as $key => $value) {
 					$xhtml 	.=	'<tr>';
 						$xhtml 	.=		'<td>'.$key.'</td>';
-						$xhtml 	.=		'<td>'.$value['position'].'</td>';
-						$xhtml 	.=		'<td>'.$value['fullname'].'</td>';
+						$xhtml 	.=		'<td>'.ucwords($value['position']).'</td>';
+						$xhtml 	.=		'<td><a href="'.URL::createLink('default', 'group', 'internal', array('team' => $value['team'], 'date_from' => $arrayDate['date_from'], 'date_to' => $arrayDate['date_to'])).'">'.$value['fullname'].'<a/></td>';
 						$xhtml 	.=		'<td>'.$this->listProjectUser($value['id'], $arrayDate).'</td>';
 						$xhtml 	.=		'<td>'.$this->createLabelDuration($this->getDuration($value['id'], $arrayDate, 'standard_duration')).'</td>';
 						$xhtml 	.=		'<td>'.$this->createLabelDuration($this->getDuration($value['id'], $arrayDate, 'real_duration')).'</td>';

@@ -1,0 +1,702 @@
+,NO.,ORDER DATE,DIRECTOR,SITE,STATUS,MAIN DES,COMTOR,DUR(h),TRANS DUR(h),DELIVER BEFORE(h),CONFIRM TIME (h),DEADLINE,WORK DATE,DESIGN IMPORTANT,START WORK,END WORK,FIX DUR,"BREAK/
+CONFIRM","WORK
+DURATION",LAG,DES NOTES,DES1,DUR1,DES2,DUR2,DES3,DUR3,DES4,DUR4,
+1,v1603-0001,2/29/2016,Kawashima,nenryo-bunseki.com/,mail:done,LinhKT,ManDH,1,0.5,12:00,,01/03/2016,29/02/2016,,15:00,16:00,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0002,2/29/2016,Kawashima,sunshine-24.jp/,mail:done,DiepBNH,ManDH,0.5,0.5,12:00,,01/03/2016,29/02/2016,,17:00,17:30,,,0.5,0,,DiepBNH,0.5,,,,,,,1
+1,v1603-0003,2/29/2016,Tsukamoto,dan-kyousei.com/,mail:done,TrucTTT,ManDH,2,0.5,,,01/03/2016,29/02/2016,,14:30,16:30,,,2,0,,TrucTTT,2,,,,,,,1
+1,v1603-0004,2/29/2016,Ishihara,tahara-dental.com/,mail:done,DiepBNH,ManDH,2,0.5,15:00,,01/03/2016,29/02/2016,,15:00,17:00,,,2,0,,DiepBNH,2,,,,,,,1
+1,v1603-0005,2/29/2016,Sawada,nihonshikairyoujin.or.jp/,mail:done,LinhKT,ManDH,1,0,13:00,,01/03/2016,29/02/2016,,16:00,17:00,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0006,2/29/2016,Sawada,dentremoval.jp/,mail:done,TrucTTT,ManDH,1.5,0,13:30,,01/03/2016,29/02/2016,,13:00,14:30,,,1.5,0,,TrucTTT,1.5,,,,,,,1
+1,v1603-0007,2/29/2016,Ishihara,akita-shika.com/,mail:done,DiepBNH,ManDH,2,0.5,,,01/03/2016,29/02/2016,,13:00,15:00,,,2,0,,DiepBNH,2,,,,,,,1
+1,v1603-0008,2/29/2016,Kaneko,e-headspa.com/,mail:done,BichVTN,ManDH,1.5,0,12:30,,01/03/2016,01/03/2016,,9:00,10:30,,,1.5,0,,BichVTN,1.5,,,,,,,1
+1,v1603-0009,2/29/2016,Kawashima,nippon-xypex.com/,mail:done,ThanhNLY,ManDH,1,0.5,12:00,,01/03/2016,29/02/2016,,16:00,17:00,,,1,0,,ThanhNLY,1,,,,,,,1
+1,v1603-0010,2/29/2016,Ishihara,moa-clinic.com/,mail:done,VuLDN,ManDH,2,0.5,,,01/03/2016,01/03/2016,,8:30,10:30,,,2,0,,VuLDN,2,,,,,,,1
+1,v1603-0011,2/29/2016,Kaneko,kato-skating.net/,mail:done,LinhKT,ManDH,1,0,13:00,,01/03/2016,01/03/2016,,8:30,9:30,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0012,2/29/2016,Ishihara,alice-yagi.com/,mail:done,VanVTK,ManDH,2,0.5,,,01/03/2016,01/03/2016,,13:00,15:00,,,2,0,http://service.fvn-office.net/VanVTK/160301_02_bk/,VanVTK,2,,,,,,,1
+1,v1603-0013,2/29/2016,Nishitani,fc-art.com/,mail:done,VuLDN,ManDH,5,1,,,01/03/2016,01/03/2016,,10:30,16:30,,1:00,5,0,,VuLDN,5,,,,,,,1
+1,v1603-0014,2/29/2016,Suzuki,nakanokensou.jp/,mail:done,LinhKT,NguyenLDH,3,0.5,,,01/03/2016,01/03/2016,,10:30,14:00,,1:00,2.5,-0.5,,LinhKT,3,,,,,,,1
+1,v1603-0015,2/29/2016,Ariyoshi,ticketking.jp/,mail:done,TrucTTT,ManDH,6,1,,,01/03/2016,01/03/2016,,10:30,17:30,,1:00,6,0,,TrucTTT,6,,,,,,,1
+1,v1603-0016,2/29/2016,Ariyoshi,hana-n.com/,mail:done,DiepBNH,ManDH,1,0.5,,,01/03/2016,01/03/2016,,9:00,10:00,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0017,2/29/2016,Sawada,taiyo-energy.net/,mail:done,VanVTK,NguyenLDH,2.5,0,14:00,,01/03/2016,01/03/2016,,9:30,12:00,,,2.5,0,,VanVTK,2.5,,,,,,,1
+1,v1603-0018,2/29/2016,Ariyoshi,smilekobo.jp/,mail:done,BichVTN,ManDH,4,1,,,01/03/2016,01/03/2016,,11:00,16:00,,1:00,4,0,,BichVTN,4,,,,,,,1
+1,v1603-0019,2/29/2016,Yoshioka,penguin-dc.com/,mail:done,BinhNT,NguyenLDH,2,0,13:00,,01/03/2016,01/03/2016,,8:30,10:30,,,2,0,,BinhNT,2,,,,,,,1
+1,v1603-0020,2/29/2016,Yoshioka,arena-dog.com/,mail:done,TruyenLC,NguyenLDH,1,0,12:30,,01/03/2016,01/03/2016,,9:00,10:00,,,1,0,,TruyenLC,1,,,,,,,1
+1,v1603-0021,2/29/2016,Miyagi,musashinostaff.co.jp/,mail:done,VanVTK,NguyenLDH,1,0,13:00,,01/03/2016,01/03/2016,,8:30,9:30,,,1,0,,VanVTK,1,,,,,,,1
+1,v1603-0022,2/29/2016,Ariyoshi,kenfield.co.jp/,mail:done,LinhKT,ManDH,3,0.5,,,01/03/2016,01/03/2016,,14:00,16:30,,,2.5,-0.5,,LinhKT,3,,,,,,,1
+1,v1603-0023,2/29/2016,Miyagi,muyuju.com/,mail:done,DiepBNH,NguyenLDH,1,0,12:00,,01/03/2016,01/03/2016,,8:40,9:40,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0024,2/29/2016,Takeuchi,toukai-ichimura-tosou.com/,mail:done,LinhKT,NguyenLDH,1,0,12:00,,01/03/2016,01/03/2016,,9:30,10:30,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0025,2/29/2016,Takeuchi,kakashidenden.com/,mail:done,NhaNTT,NguyenLDH,1.5,0,13:00,,01/03/2016,01/03/2016,,8:30,10:00,,,1.5,0,http://service.fvn-office.net/fvn/NhaNTT/1603_0025/,NhaNTT,1.5,,,,,,,1
+1,v1603-0026,2/29/2016,Suzuki,dentaljapan.jp/,mail:done,TruyenLC,NguyenLDH,6,1,,,01/03/2016,01/03/2016,,10:00,17:00,,1:00,6,0,26 27 c?ng 1 order,TruyenLC,6,,,,,,,1
+1,v1603-0028,2/29/2016,Takeuchi,cottontail.co.jp/,mail:done,DiepBNH,NguyenLDH,1,0,13:00,,01/03/2016,01/03/2016,,9:00,10:00,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0031,3/1/2016,Nishitani,baikyaku-takara21.com,mail:done,ThanhNLY,NguyenLDH,5,1,,,01/03/2016,01/03/2016,,9:00,15:00,,1:00,5,0,http://service.fvn-office.net/fvn/thanhnly/0031/contact/,ThanhNLY,5,,,,,,,1
+1,v1603-0044,3/1/2016,Takeuchi,toukai-ichimura-tosou.com/,mail:done,LinhKT,ManDH,1,0,,,01/03/2016,01/03/2016,,16:30,17:00,,,0.5,-0.5,http://service.fvn-office.net/fvn/LinhKT/v1603-0044_toukai-ichimura-tosou.com/160301_02_bk/,LinhKT,1,,,,,,,1
+1,v1603-0027,2/29/2016,Suzuki,dentaljapan.jp/,mail:done,TruyenLC,NguyenLDH,6,1,,,02/03/2016,02/03/2016,,8:30,14:00,,1:00,4.5,-1.5,26 27 c?ng 1 order,TruyenLC,6,,,,,,,1
+1,v1603-0029,3/1/2016,Kawashima,takamasajyushi-kk.com/,mail:done,TramNTH,NguyenLDH,2,0.5,12:30,,02/03/2016,02/03/2016,,8:30,10:30,,,2,0,fmail check file :contact/fmail.tpl,TramNTH,2,,,,,,,1
+1,v1603-0030,3/1/2016,Ishihara,office-planning.info/,mail:done,BinhNT,ManDH,2,0.5,,,02/03/2016,01/03/2016,,15:00,17:00,,1:00,1,-1,,BinhNT,2,,,,,,,1
+1,v1603-0032,3/1/2016,Ariyoshi,withwatabe.jp/,mail:done,KhangPH,ManDH,6,1,,3,02/03/2016,02/03/2016,,8:30,17:30,,1:00,8,2,http://service.fvn-office.net/fvn/khangph,KhangPH,6,,,,,,,1
+1,v1603-0033,3/1/2016,Ishihara,nohara-dc.com/,mail:done,LinhKT,ManDH,2.5,0.5,,,02/03/2016,02/03/2016,,10:30,14:00,,1:00,2.5,0,,LinhKT,2.5,,,,,,,1
+1,v1603-0034,3/1/2016,Kawashima,youthinc.co.jp/,mail:done,LinhKT,ManDH,1,0.5,12:00,,02/03/2016,02/03/2016,,9:30,10:30,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0035,3/1/2016,Sawada,izumi-bousai.jp/,mail:done,VuLDN,ManDH,4,1,14:30,,02/03/2016,02/03/2016,,8:30,13:30,,1:00,4,0,,VuLDN,4,,,,,,,1
+1,v1603-0036,3/1/2016,Takeuchi,esthe-vivid.com/,mail:done,LinhKT,NguyenLDH,1,0,12:00,,02/03/2016,02/03/2016,,8:30,9:30,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0037,3/1/2016,Tanaka,insyoku-kaigyo.jp/,mail:done,NhaNTT,ManDH,1.5,0.5,,,02/03/2016,01/03/2016,,14:30,16:00,,,1.5,0,,NhaNTT,1.5,,,,,,,1
+1,v1603-0038,3/1/2016,Takeuchi,ouhara-shika.jp/,mail:done,DiepBNH,ManDH,1,0,,,02/03/2016,01/03/2016,,15:00,16:00,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0039,3/1/2016,Sawada,fcgate.com/,mail:done,ThanhNLY,ManDH,1,0,13:00,,02/03/2016,02/03/2016,,8:30,9:30,,,1,0,,ThanhNLY,1,,,,,,,1
+1,v1603-0040,3/1/2016,Suzuki,dolphin-life-project.co.jp/,mail:done,HuyTV,ManDH,3,0.5,,,02/03/2016,01/03/2016,,14:00,17:00,,,3,0,,HuyTV,3,,,,,,,1
+1,v1603-0041,3/1/2016,Sawada,oz-kaatsu.com/,mail:done,DiepBNH,ManDH,1.5,0,14:00,,02/03/2016,02/03/2016,,8:00,9:30,,,1.5,0,,DiepBNH,1.5,,,,,,,1
+1,v1603-0042,3/1/2016,Suzuki,englishschool-wing.com/,mail:done,ThanhNLY,ManDH,6,1,,,02/03/2016,02/03/2016,yes,9:30,16:30,,1:00,6,0,42 47 c?ng 1 order http://service.fvn-office.net/fvn/thanhnly/0042/news/,ThanhNLY,6,,,,,,,1
+1,v1603-0043,3/1/2016,Asano,kodama-t.co.jp/,mail:done,NhaNTT,ManDH,6,1,,,02/03/2016,02/03/2016,,8:30,15:30,,1:00,6,0,,NhaNTT,6,,,,,,,1
+1,v1603-0046,3/1/2016,Tanaka,minami-dental-umeda.com/,mail:done,VuLDN,NguyenLDH,1.5,0.5,,,02/03/2016,02/03/2016,,13:30,15:00,,,1.5,0,,VuLDN,1.5,,,,,,,1
+1,v1603-0048,3/1/2016,Ariyoshi,oniwaii4.com/test160224/,mail:done,VuLDN,NguyenLDH,3,0.5,,,02/03/2016,02/03/2016,,14:30,17:30,,,3,0,,VuLDN,3,,,,,,,1
+1,v1603-0049,3/1/2016,Ariyoshi,englishschool-wing.com/,mail:done,TramNTH,NguyenLDH,1.5,0.5,,,02/03/2016,02/03/2016,,15:00,16:00,,,1,-0.5,,TramNTH,1.5,,,,,,,1
+1,v1603-0050,3/1/2016,Miyagi,familiar-dental.net/,mail:done,BinhNT,ManDH,1,0,15:00,,02/03/2016,02/03/2016,,8:30,9:30,,,1,0,,BinhNT,1,,,,,,,1
+1,v1603-0051,3/1/2016,Ariyoshi,tsuda-dental.com/,mail:done,TramNTH,NguyenLDH,1,0.5,,,02/03/2016,02/03/2016,,16:00,16:30,,,0.5,-0.5,,TramNTH,1,,,,,,,1
+1,v1603-0052,3/1/2016,Sawada,tokyo-sjcd.com/,mail:done,BinhNT,NguyenLDH,2,0,14:00,,02/03/2016,02/03/2016,,9:30,11:30,,,2,0,,BinhNT,2,,,,,,,1
+1,v1603-0060,3/2/2016,Takeuchi,sdc-kids.com/,mail:done,BinhNT,NguyenLDH,2.5,0,,,02/03/2016,02/03/2016,,13:00,15:30,,,2.5,0,http://service.fvn-office.net/fvn/binhnt/60/index.html,BinhNT,2.5,,,,,,,1
+1,v1603-0045,3/2/2016,Ishihara,moa-clinic.com/,mail:done,BichVTN,NguyenLDH,2,0.5,,,03/03/2016,02/03/2016,,10:00,12:00,,,2,0,,BichVTN,2,,,,,,,1
+1,v1603-0047,3/1/2016,Suzuki,englishschool-wing.com/,mail:done,ThanhNLY,ManDH,6,1,17:30,,03/03/2016,03/03/2016,yes,9:00,16:00,,1:00,6,0,42 47 c?ng 1 order http://service.fvn-office.net/fvn/thanhnly/0042/news/,ThanhNLY,6,,,,,,,1
+1,v1603-0053,3/1/2016,Asano,koufukushika.jp/,mail:done,LinhKT,ManDH,5,1,,,03/03/2016,03/03/2016,,8:30,14:30,,1:00,5,0,,LinhKT,5,,,,,,,1
+1,v1603-0055,3/2/2016,Inoue,misato-matsuo-dc.com/,mail:done,LinhKT,NguyenLDH,1.5,0.5,13:00,,03/03/2016,02/03/2016,,14:00,15:30,,,1.5,0,,LinhKT,1.5,,,,,,,1
+1,v1603-0056,3/2/2016,Inoue,kannaishika.com/,mail:done,TrucTTT,ManDH,2,0.5,13:00,,03/03/2016,02/03/2016,,10:00,12:00,,,2,0,,TrucTTT,2,,,,,,,1
+1,v1603-0057,3/2/2016,Ishihara,matsukawa-dental.com,mail:done,DiepBNH,ManDH,1,0.5,,,03/03/2016,02/03/2016,,9:00,10:00,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0058,3/2/2016,Kaneko,keurig-dp.jp/,mail:done,BichVTN,NguyenLDH,2,0.5,13:00,,03/03/2016,02/03/2016,,14:00,16:00,,,2,0,,BichVTN,2,,,,,,,1
+1,v1603-0059,3/2/2016,Ishihara,matsukawa-kyousei.com/,mail:done,LinhKT,ManDH,1,0.5,,,03/03/2016,02/03/2016,,15:30,16:30,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0061,3/2/2016,Ishihara,love-shika.jp/,mail:done,DiepBNH,NguyenLDH,1,0.5,16:00,,03/03/2016,02/03/2016,,13:00,14:00,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0062,3/2/2016,Nishitani,fc-art.com/,mail:done,VuLDN,ManDH,5,1,,,03/03/2016,03/03/2016,,8:30,14:30,,1:00,5,0,,VuLDN,5,,,,,,,1
+14:30:00,v1603-0063,3/2/2016,Yoshioka,kelty-dp.jp/,mail:done,NhaNTT,ManDH,2,0,13:00,,03/03/2016,02/03/2016,,15:30,17:30,,,2,0,,NhaNTT,2,,,,,,,1
+1,v1603-0064,3/2/2016,Yoshioka,lesabeillesjapon.jp/,mail:done,NgocTT,ManDH,1,0,12:00,,03/03/2016,03/03/2016,,8:45,9:30,,,0.75,-0.25,,NgocTT,1,,,,,,,1
+1,v1603-0065,3/2/2016,Yoshioka,lacaliffa.jp/,mail:done,TruyenLC,ManDH,2,0,13:30,,03/03/2016,03/03/2016,,8:30,10:30,,,2,0,,TruyenLC,2,,,,,,,1
+1,v1603-0066,3/2/2016,Ishihara,alice-yagi.com/,mail:done,TrucTTT,ManDH,1.5,0.5,,,03/03/2016,03/03/2016,,8:30,10:00,,,1.5,0,,TrucTTT,1.5,,,,,,,1
+1,v1603-0067,3/2/2016,Takeuchi,uchiyamakaikei.jp/,mail:done,TrucTTT,ManDH,2.5,0,,,03/03/2016,02/03/2016,,13:00,15:30,,,2.5,0,,TrucTTT,2.5,,,,,,,1
+1,v1603-0068,3/2/2016,Suzuki,ohashi-inc.com/,mail:done,BinhNT,ManDH,6,1,,,03/03/2016,03/03/2016,,10:30,17:30,,1:00,6,0,68 69 l? 1 oreder,BinhNT,6,,,,,,,1
+1,v1603-0070,3/2/2016,Ariyoshi,tdhome.biz/,mail:done,LinhKT,ManDH,3.5,1,,,03/03/2016,03/03/2016,,14:30,17:30,,,3,-0.5,http://service.fvn-office.net/fvn/LinhKT/v1603-0070_tdhome.biz/160303_02_bk/fmail/,LinhKT,3.5,,,,,,,1
+1,v1603-0071,3/2/2016,Ariyoshi,fc.jc-sys.co.jp/,mail:done,DiepBNH,ManDH,2.5,0.5,,,03/03/2016,02/03/2016,,15:00,17:30,,,2.5,0,,DiepBNH,2.5,,,,,,,1
+1,v1603-0072,3/2/2016,Asano,lucent-shika.com/,mail:done,NhaNTT,ManDH,4,1,,,03/03/2016,03/03/2016,,8:30,13:30,,1:00,4,0,,NhaNTT,4,,,,,,,1
+1,v1603-0073,3/2/2016,Asano,bridge-us.jp/,mail:done,TrucTTT,ManDH,3,0.5,,,03/03/2016,03/03/2016,,14:00,17:00,,,3,0,,TrucTTT,3,,,,,,,1
+1,v1603-0074,3/2/2016,Ariyoshi,chikugo-ss.jp/test160302/,mail:done,KhangPH,NguyenLDH,4,1,,,03/03/2016,03/03/2016,,8:30,12:30,,,4,0,http://service.fvn-office.net/fvn/khangph/,KhangPH,4,,,,,,,1
+1,v1603-0075,3/2/2016,Ishihara,murai-dc.com/,mail:done,BichVTN,NguyenLDH,0.5,0.5,,,03/03/2016,03/03/2016,,13:00,13:30,,,0.5,0,,BichVTN,0.5,,,,,,,1
+1,v1603-0076,3/2/2016,Ariyoshi,p-sharakukan.com/,mail:done,TrucTTT,NguyenLDH,3,0.5,,,03/03/2016,03/03/2016,,10:00,14:00,,1:00,3,0,,TrucTTT,3,,,,,,,1
+1,v1603-0082,3/3/2016,Ariyoshi,power-package.jp/,mail:done,TramNTH,NguyenLDH,2,0.5,,,03/03/2016,03/03/2016,,8:30,10:00,,,1.5,-0.5,,TramNTH,2,,,,,,,1
+1,v1603-0083,3/3/2016,Ariyoshi,ecolifekyushu.com/,mail:done,NhaNTT,NguyenLDH,3,0.5,,,03/03/2016,03/03/2016,,13:30,16:30,,,3,0,,NhaNTT,3,,,,,,,1
+1,v1603-0084,3/3/2016,Ariyoshi,fineclub.co.jp/test160229/,mail:done,TramNTH,ManDH,2.5,0.5,,,03/03/2016,03/03/2016,,10:00,12:00,,,2,-0.5,,TramNTH,2.5,,,,,,,1
+1,v1603-0085,3/3/2016,Ariyoshi,lifetechsystem.com/,mail:done,NgocTT,NguyenLDH,3,0.5,,,03/03/2016,03/03/2016,,9:30,12:00,,,2.5,-0.5,,NgocTT,3,,,,,,,1
+1,v1603-0069,3/2/2016,Suzuki,ohashi-inc.com/,mail:done,BinhNT,ManDH,6,1,17:30,,04/03/2016,04/03/2016,,8:30,14:00,,1:00,4.5,-1.5,68 69 l? 1 oreder,BinhNT,6,,,,,,,1
+1,v1603-0077,3/3/2016,Kawashima,ikc-shonan.co.jp/,mail:done,TramNTH,ManDH,1,0.5,12:00,,04/03/2016,04/03/2016,,8:30,9:30,,,1,0,,TramNTH,1,,,,,,,1
+1,v1603-0078,3/3/2016,Inoue,sanken-mo.co.jp/,mail:done,DiepBNH,ManDH,1.5,0.5,13:00,,04/03/2016,03/03/2016,,11:00,13:30,,1:00,1.5,0,,DiepBNH,1.5,,,,,,,1
+1,v1603-0079,3/3/2016,Ishihara,miyaji-dc.smart-change.info/,mail:done,NhaNTT,ManDH,1,0.5,,,04/03/2016,03/03/2016,,16:30,17:30,,,1,0,,NhaNTT,1,,,,,,,1
+1,v1603-0080,3/3/2016,Shinozuka,tochio-dc.com/,mail:done,DiepBNH,NguyenLDH,1,0,12:00,,04/03/2016,03/03/2016,,8:30,9:30,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0081,3/3/2016,Takeuchi,gakuzo.com/,mail:done,KhangPH,ManDH,2.5,0,13:00,,04/03/2016,03/03/2016,,13:00,15:30,,,2.5,0,,KhangPH,2.5,,,,,,,1
+1,v1603-0086,3/3/2016,Takeuchi,land-fab-baikyaku.jp/,mail:done,TramNTH,ManDH,3.5,0,,,04/03/2016,03/03/2016,,13:00,16:00,,,3,-0.5,Tram down:done,TramNTH,3.5,,,,,,,1
+1,v1603-0087,3/3/2016,Takeuchi,interior-ks-works.co.jp/,mail:done,TramNTH,ManDH,1.5,0,,,04/03/2016,03/03/2016,,16:00,17:30,,,1.5,0,"Tram down:done
+Nh? comtor corfirm tr??c khi giao h?ng.",TramNTH,1.5,,,,,,,1
+1,v1603-0088,3/3/2016,Takeuchi,ks-bath-reform.jp/,mail:done,DiepBNH,ManDH,1.5,0,,,04/03/2016,03/03/2016,,9:30,11:00,,,1.5,0,"Nh? comtor corfirm tr??c khi giao h?ng.
+http://service.fvn-office.net/fvn/Diepbnh/088/index.html",DiepBNH,1.5,,,,,,,1
+1,v1603-0089,3/3/2016,Shinozuka,leaktester.co.jp/,mail:done,ThanhNLY,ManDH,2.5,0,14:00,1,04/03/2016,04/03/2016,,8:30,11:00,,,2.5,0,,ThanhNLY,2.5,,,,,,,1
+1,v1603-0090,3/3/2016,Shinozuka,leaktester-navi.jp/,mail:done,NgocTT,ManDH,1,0,14:00,,04/03/2016,04/03/2016,,9:00,10:00,,,1,0,,NgocTT,1,,,,,,,1
+1,v1603-0091,3/3/2016,Ishihara,tahara-dental.com/,mail:done,DiepBNH,ManDH,1.5,0.5,,,04/03/2016,03/03/2016,,13:00,14:30,,,1.5,0,,DiepBNH,1.5,,,,,,,1
+1,v1603-0092,3/3/2016,Inoue,shimamura-shika.jp/,mail:done,TrucTTT,NguyenLDH,1.5,0.5,12:00,,04/03/2016,04/03/2016,,8:30,10:00,,,1.5,0,,TrucTTT,1.5,,,,,,,1
+1,v1603-0093,3/3/2016,Shinozuka,arbre-dc.com/,mail:done,HuyTV,ManDH,0.5,0,13:00,,04/03/2016,03/03/2016,,14:00,14:30,,,0.5,0,,HuyTV,0.5,,,,,,,1
+1,v1603-0095,3/3/2016,Tanaka,insyoku-kaigyo.jp/,mail:done,HuyTV,ManDH,1.5,0.5,,,04/03/2016,03/03/2016,,14:30,16:00,,,1.5,0,,HuyTV,1.5,,,,,,,1
+1,v1603-0096,3/3/2016,Yoshioka,benz-gelandewagen.jp/,mail:done,KhangPH,ManDH,2.5,0,13:30,,04/03/2016,04/03/2016,,8:30,11:00,,,2.5,0,,KhangPH,2.5,,,,,,,1
+1,v1603-0097,3/3/2016,Yoshioka,funae-dc.com/,mail:done,NhaNTT,ManDH,1.5,0,15:00,,04/03/2016,04/03/2016,,8:30,10:00,,,1.5,0,http://service.fvn-office.net/fvn/NhaNTT/1603_0097,NhaNTT,1.5,,,,,,,1
+1,v1603-0098,3/3/2016,Takeuchi,chiaretta-fashion.com/,mail:done,VuLDN,ManDH,2.5,0,,,04/03/2016,03/03/2016,,15:00,17:30,,,2.5,0,,VuLDN,2.5,,,,,,,1
+1,v1603-0099,3/3/2016,Asano,nagoya-medical-herbschool.com/,mail:done,ThanhNLY,ManDH,5,1,,,04/03/2016,04/03/2016,,11:00,17:00,,1:00,5,0,,ThanhNLY,5,,,,,,,1
+1,v1603-0100,3/3/2016,Ariyoshi,tsuchiya-dc.com/,mail:done,BichVTN,ManDH,0.5,0.5,,,04/03/2016,04/03/2016,,9:00,9:30,,,0.5,0,,BichVTN,0.5,,,,,,,1
+1,v1603-0101,3/3/2016,Takeuchi,hawaiian-academy.com/,mail:done,BichVTN,ManDH,2,0,,,04/03/2016,03/03/2016,,15:00,17:00,,,2,0,http://service.fvn-office.net/BichVTN/160304_02_bk/,BichVTN,2,,,,,,,1
+1,v1603-0103,3/3/2016,Suzuki,fukuoka-vocal.com/,mail:done,LamNTP,ManDH,6,1,,,04/03/2016,04/03/2016,,8:30,15:30,,1:00,6,0,,LamNTP,6,,,,,,,1
+1,v1603-0105,3/3/2016,Ariyoshi,ticketking.jp/,mail:done,DucTP,NguyenLDH,6,1,,,04/03/2016,04/03/2016,,8:45,15:30,,1:00,5.75,-0.25,,DucTP,6,,,,,,,1
+1,v1603-0106,3/3/2016,Suzuki,englishschool-wing.com/,mail:done,NhaNTT,NguyenLDH,6,1,,,04/03/2016,04/03/2016,,10:00,17:00,,1:00,6,0,http://service.fvn-office.net/fvn/NhaNTT/1603_106/school/ohashi.html,NhaNTT,6,,,,,,,1
+1,v1603-0112,3/4/2016,Miyagi,sekine-dc.jp/,mail:done,BichVTN,NguyenLDH,3,0,,,04/03/2016,04/03/2016,,11:00,15:00,,1:00,3,0,,BichVTN,3,,,,,,,1
+1,v1603-0102,3/4/2016,Kawashima,gt-dental.jp/,mail:done,NgocTT,ManDH,1.5,0.5,12:00,,07/03/2016,04/03/2016,,14:00,15:30,,,1.5,0,,NgocTT,1.5,,,,,,,1
+1,v1603-0104,3/4/2016,Ishihara,moa-clinic.smart-change.info/,mail:done,NgocTT,ManDH,1.5,0.5,,,07/03/2016,07/03/2016,,10:45,13:45,,1:00,2,0.5,,NgocTT,1.5,,,,,,,1
+1,v1603-0107,3/4/2016,Kawashima,usui-dental.com/,mail:done,LamNTP,ManDH,1.5,0.5,12:00,2.5,07/03/2016,04/03/2016,,15:30,17:00,,,1.5,0,,LamNTP,1.5,,,,,,,1
+1,v1603-0108,3/4/2016,Takeuchi,yamamotosyoukai.com/,mail:done,NgocTT,ManDH,2,0,,,07/03/2016,04/03/2016,,15:30,16:30,,,1,-1,,NgocTT,2,,,,,,,1
+1,v1603-0110,3/4/2016,Takeuchi,ouhara-shika.jp/,mail:done,BichVTN,ManDH,1.5,0,,,07/03/2016,04/03/2016,,9:30,11:00,,,1.5,0,,BichVTN,1.5,,,,,,,1
+1,v1603-0111,3/4/2016,Inoue,indiba.co.jp/,mail:done,TrucTTT,ManDH,1,0.5,12:00,,07/03/2016,04/03/2016,,10:00,11:00,,,1,0,,TrucTTT,1,,,,,,,1
+1,v1603-0113,3/4/2016,Tsukamoto,youmecity-orange.com/test/,mail:done,NhaNTT,ManDH,4,1,,,07/03/2016,07/03/2016,,10:30,15:30,,1:00,4,0,,NhaNTT,4,,,,,,,1
+1,v1603-0114,3/4/2016,Kawashima,antena-pro.jp/,mail:done,TrucTTT,NguyenLDH,1,0.5,12:00,,07/03/2016,04/03/2016,,11:00,11:45,,,0.75,-0.25,,TrucTTT,1,,,,,,,1
+1,v1603-0115,3/4/2016,Ishihara,love-shika.jp/,mail:done,BinhNT,ManDH,1.5,0.5,,,07/03/2016,07/03/2016,,8:30,10:00,,,1.5,0,,BinhNT,1.5,,,,,,,1
+1,v1603-0116,3/4/2016,Miyagi,fos-office.com/,mail:done,TrucTTT,NguyenLDH,2.5,0,14:00,,07/03/2016,04/03/2016,,13:00,15:00,,,2,-0.5,,TrucTTT,2.5,,,,,,,1
+1,v1603-0117,3/4/2016,Kaneko,mm-dental.jp/,mail:done,NhaNTT,ManDH,2,0,13:00,,07/03/2016,07/03/2016,,8:30,10:30,,,2,0,,NhaNTT,2,,,,,,,1
+1,v1603-0118,3/4/2016,Tanaka,uratani-eng.com/,mail:done,NhaNTT,ManDH,2.5,0.5,,0.25,07/03/2016,07/03/2016,,15:30,17:30,,,2,-0.5,,NhaNTT,2.5,,,,,,,1
+1,v1603-0119,3/4/2016,Ishihara,office-planning.info/,mail:done,ThanhNLY,NguyenLDH,1.5,0.5,,,07/03/2016,07/03/2016,,9:30,11:00,,,1.5,0,,ThanhNLY,1.5,,,,,,,1
+1,v1603-0120,3/4/2016,Takeuchi,land-fab-baikyaku.jp/,mail:done,BinhNT,ManDH,3.5,0,,,07/03/2016,07/03/2016,,10:00,14:30,,1:00,3.5,0,,2/5/2016,3.5,,,,,,,1
+1,v1603-0123,3/7/2016,Miyagi,mitsuishika.com/,mail:done,LinhKT,NguyenLDH,2.5,0,15:00,1,07/03/2016,07/03/2016,,8:30,11:00,,,2.5,0,"OverNotes
+http://service.fvn-office.net/fvn/LinhKT/160307_02_bk/case/",LinhKT,2.5,,,,,,,1
+1,v1603-0126,3/7/2016,Ariyoshi,koba-pri.com/,mail:done,LinhKT,ManDH,3,0.5,,,07/03/2016,07/03/2016,,11:00,15:00,,1:00,3,0,,LinhKT,3,,,,,,,1
+1,v1603-0128,3/7/2016,Miyagi,musashinostaff.co.jp/,mail:done,DucTP,ManDH,1.5,0,16:30,,07/03/2016,07/03/2016,,13:00,14:30,,,1.5,0,,DucTP,1.5,,,,,,,1
+1,v1603-0129,3/7/2016,Ariyoshi,fudosan-baikyaku-aitem.com/,mail:done,DucTP,ManDH,2,0.5,,,07/03/2016,07/03/2016,,14:30,16:30,,,2,0,,DucTP,2,,,,,,,1
+1,v1603-0121,3/7/2016,Kaneko,top2-plc.com/,mail:done,LinhKT,ManDH,2,0,13:00,,08/03/2016,08/03/2016,,9:00,11:00,,,2,0,,LinhKT,2,,,,,,,1
+1,v1603-0122,3/7/2016,Kawashima,nippon-xypex.com/,mail:done,LinhKT,ManDH,1,0.5,12:00,0.25,08/03/2016,08/03/2016,,11:00,12:00,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0124,3/7/2016,Inoue,nishimura-ireba.com/,mail:done,BinhNT,ManDH,1,0.5,12:00,,08/03/2016,08/03/2016,,8:30,9:30,,,1,0,,BinhNT,1,,,,,,,1
+1,v1603-0125,3/7/2016,Ishihara,fukuchi-kyoto.com/,mail:done,BinhNT,ManDH,0.5,0.5,,,08/03/2016,08/03/2016,,14:30,15:00,,,0.5,0,,BinhNT,0.5,,,,,,,1
+1,v1603-0130,3/7/2016,sawada,mikami-dental.net/,mail:done,NhaNTT,NguyenLDH,2,0,17:30,0.25,08/03/2016,08/03/2016,,16:00,17:00,,,1,-1,,NhaNTT,2,,,,,,,1
+1,v1603-0131,3/7/2016,Ishihara,fujihira-dc.com/,mail:done,NhaNTT,ManDH,3,0.5,15:00,,08/03/2016,08/03/2016,,8:30,11:00,,,2.5,-0.5,http://service.fvn-office.net/fvn/NhaNTT/1603_131/,NhaNTT,3,,,,,,,1
+1,v1603-0132,3/7/2016,Kaneko,irie-dental.jp/,mail:done,TrucTTT,ManDH,2,0,12:00,,08/03/2016,08/03/2016,,8:30,10:00,,,1.5,-0.5,,TrucTTT,2,,,,,,,1
+1,v1603-0133,3/7/2016,Asano,koufukushika.jp/,mail:done,LinhKT,ManDH,3,0.5,,,08/03/2016,08/03/2016,,14:30,17:30,,,3,0,,LinhKT,3,,,,,,,1
+1,v1603-0134,3/7/2016,Inoue,pigeon-ah.com/,mail:done,TrucTTT,ManDH,1,0.5,12:00,,08/03/2016,08/03/2016,,10:00,10:30,,,0.5,-0.5,,TrucTTT,1,,,,,,,1
+1,v1603-0135,3/7/2016,Asano,lucent-shika.com/,mail:done,NhaNTT,ManDH,3,0.5,,,08/03/2016,08/03/2016,,11:00,14:30,,1:00,2.5,-0.5,,NhaNTT,3,,,,,,,1
+1,v1603-0136,3/7/2016,Asano,lucent-shika.jp/,mail:done,BinhNT,ManDH,3,0.5,,,08/03/2016,08/03/2016,,15:00,17:30,,,2.5,-0.5,,BinhNT,3,,,,,,,1
+1,v1603-0137,3/7/2016,Ariyoshi,sutekimaker.com/,mail:done,NhaNTT,ManDH,2,0.5,,,08/03/2016,08/03/2016,,14:30,16:00,,,1.5,-0.5,http://service.fvn-office.net/fvn/NhaNTT/1603_137/,NhaNTT,2,,,,,,,1
+1,v1603-0138,3/7/2016,Ishihara,fujihira-dc.smart-change.info/,mail:done,ThanhNLY,ManDH,1,0.5,15:00,,08/03/2016,08/03/2016,,10:00,11:00,,,1,0,http://fujihira-dc.smart-change.info/,ThanhNLY,1,,,,,,,1
+1,v1603-0139,3/7/2016,Ariyoshi,haraken-k.com/,mail:done,TrucTTT,ManDH,3.5,1,,,08/03/2016,08/03/2016,,10:30,14:30,,1:00,3,-0.5,,TrucTTT,3.5,,,,,,,1
+1,v1603-0140,3/7/2016,Suzuki,p-sharakukan.com/,mail:done,DucTP,ManDH,6,1,,,08/03/2016,08/03/2016,,9:30,14:30,,1:00,4,-2,,DucTP,6,,,,,,,1
+1,v1603-0142,3/7/2016,Suzuki,enagin.jp/,mail:done,BinhNT,ManDH,1.5,0.5,16:00,,08/03/2016,08/03/2016,,9:30,11:00,,,1.5,0,,BinhNT,1.5,,,,,,,1
+1,v1603-0143,3/7/2016,Suzuki,fukuoka-vocal.com/,mail:done,ThanhNLY,NguyenLDH,4,1,,,08/03/2016,08/03/2016,,11:00,15:30,,1:00,3.5,-0.5,,ThanhNLY,4,,,,,,,1
+1,v1603-0144,3/7/2016,Ariyoshi,ikenaga-kyousei.com/,mail:done,TrucTTT,NguyenLDH,2.5,0.5,,,08/03/2016,08/03/2016,,14:30,16:00,,,1.5,-1,,TrucTTT,2.5,,,,,,,1
+1,v1603-0145,3/7/2016,Ariyoshi,hello-implant.jp/,mail:done,NhaNTT,NguyenLDH,1,0.5,,,08/03/2016,08/03/2016,,17:00,17:30,,,0.5,-0.5,,NhaNTT,1,,,,,,,1
+1,v1603-0146,3/7/2016,Yoshioka,lesabeillesjapon.jp/,mail:done,LinhKT,ManDH,1.5,0,,,08/03/2016,08/03/2016,,13:00,14:30,,,1.5,0,,LinhKT,1.5,,,,,,,1
+1,v1603-0147,3/8/2016,Takeuchi,chiaretta-fashion.com/,mail:done,DucTP,NguyenLDH,1,0,11:00,,08/03/2016,08/03/2016,,8:30,9:30,,,1,0,,DucTP,1,,,,,,,1
+1,v1603-0148,3/8/2016,Takeuchi,gakuzo.com/,mail:done,DucTP,NguyenLDH,1,0,,,08/03/2016,08/03/2016,,14:30,16:00,,,1.5,0.5,,DucTP,1,,,,,,,1
+1,v1603-0149,3/8/2016,Takeuchi,7538.co.jp/,mail:done,BinhNT,ManDH,3,0,,,08/03/2016,08/03/2016,,11:00,14:30,,1:00,2.5,-0.5,http://service.fvn-office.net/fvn/binhnt/149/,BinhNT,3,,,,,,,1
+1,v1603-0150,3/8/2016,Ariyoshi,fukuoka-orange.com/,mail:done,ThanhNLY,ManDH,2,0.5,,,08/03/2016,08/03/2016,,15:30,16:30,,,1,-1,,ThanhNLY,2,,,,,,,1
+1,v1603-0154,3/8/2016,Suzuki,fujiken-house.jp/,mail:done,ThanhNLY,ManDH,1.5,0.5,,,08/03/2016,08/03/2016,,16:30,17:30,,,1,-0.5,,ThanhNLY,1.5,,,,,,,1
+1,v1603-0094,3/8/2016,Ishihara,miyabi-kobo.com/,mail:done,VanVTK,ManDH,6,1,,,09/03/2016,09/03/2016,,10:30,17:30,,,7,1,,VanVTK,6,,,,,,,1
+1,v1603-0127,3/8/2016,Ishihara,yasuda-dental.org/,mail:done,LinhKT,ManDH,3,0.5,16:00,,09/03/2016,09/03/2016,,8:30,11:30,,,3,0,,LinhKT,3,,,,,,,1
+1,v1603-0141,3/8/2016,Ishihara,love-shika.jp/,mail:done,BinhNT,ManDH,0.5,0.5,15:00,,09/03/2016,09/03/2016,,11:30,12:00,,,0.5,0,,BinhNT,0.5,,,,,,,1
+1,v1603-0151,3/8/2016,Takeuchi,nagae-paint.com/,mail:done,LinhKT,NguyenLDH,2.5,0,,,09/03/2016,09/03/2016,,13:00,15:00,,,2,-0.5,,LinhKT,2.5,,,,,,,1
+1,v1603-0152,3/8/2016,Kaneko,musasikougyou.co.jp/,mail:done,NhaNTT,ManDH,2,0,13:00,,09/03/2016,09/03/2016,,8:30,10:00,,,1.5,-0.5,,NhaNTT,2,,,,,,,1
+1,v1603-0155,3/8/2016,Kawashima,gunma-tc.jp/,mail:done,ThanhNLY,ManDH,1,0.5,12:00,,09/03/2016,09/03/2016,,8:30,9:30,,,1,0,,ThanhNLY,1,,,,,,,1
+1,v1603-0156,3/8/2016,Sawada,entremoval.jp/,mail:done,TruyenLC,ManDH,2.5,0,14:00,,09/03/2016,09/03/2016,,9:00,11:00,,,2,-0.5,,TruyenLC,2.5,,,,,,,1
+1,v1603-0157,3/8/2016,Sawada,trustdent.co.jp/,mail:done,ThanhNLY,ManDH,2.5,0,14:00,,09/03/2016,09/03/2016,,9:30,12:00,,,2.5,0,,ThanhNLY,2.5,,,,,,,1
+1,v1603-0158,3/8/2016,Ishihara,tatsumi-shika.com,mail:done,TrucTTT,ManDH,4,1,,,09/03/2016,09/03/2016,,14:00,16:00,,,2,-2,,TrucTTT,4,,,,,,,1
+1,v1603-0159,3/8/2016,Kawashima,felice-labo.com/,mail:done,BinhNT,ManDH,1.5,0.5,12:00,,09/03/2016,09/03/2016,,8:30,10:00,,,1.5,0,,BinhNT,1.5,,,,,,,1
+1,v1603-0160,3/8/2016,Ariyoshi,ykj.jp/,mail:done,NhaNTT,ManDH,2,0.5,,,09/03/2016,09/03/2016,,10:00,11:30,,,1.5,-0.5,,NhaNTT,2,,,,,,,1
+1,v1603-0161,3/8/2016,Ariyoshi,tsuchiya-dc.com/,mail:done,LinhKT,ManDH,2.5,0.5,,,09/03/2016,09/03/2016,,15:00,17:00,,,2,-0.5,,LinhKT,2.5,,,,,,,1
+1,v1603-0162,3/8/2016,Ishihara,nakamura-shika.net/,mail:done,LinhKT,ManDH,1,0.5,,,09/03/2016,09/03/2016,,17:00,17:30,,,0.5,-0.5,,LinhKT,1,,,,,,,1
+1,v1603-0163,3/8/2016,Asano,kodama-t.co.jp/,mail:done,NhaNTT,ManDH,4.5,1,,,09/03/2016,09/03/2016,,11:30,16:00,,1:00,3.5,-1,,NhaNTT,4.5,,,,,,,1
+1,v1603-0164,3/8/2016,Ariyoshi,nzl-friendship.jp/,mail:done,BinhNT,ManDH,2.5,0.5,,,09/03/2016,09/03/2016,,13:00,15:00,,,2,-0.5,,BinhNT,2.5,,,,,,,1
+1,v1603-0165,3/8/2016,Miyagi,clubsbc.com/,mail:done,DucTP,NguyenLDH,5.5,0,16:30,,09/03/2016,09/03/2016,,9:00,16:30,,1:00,6.5,1,,DucTP,5.5,,,,,,,1
+1,v1603-0166,3/8/2016,Suzuki,inabaphoto.com/,mail:done,NhaNTT,ManDH,3,0.5,,,09/03/2016,09/03/2016,,17:30,19:00,,,1.5,-1.5,,NhaNTT,3,,,,,,,1
+1,v1603-0167,3/8/2016,Inoue,stronglight.jp/,mail:done,VanVTK,NguyenLDH,1,0.5,12:00,,09/03/2016,09/03/2016,,9:30,10:30,,,1,0,,VanVTK,1,,,,,,,1
+1,v1603-0168,3/8/2016,Ishihara,kirameki-roof.com/,mail:done,TruyenLC,ManDH,2,0.5,,,09/03/2016,09/03/2016,,11:00,12:00,,,1,-1,http://service.fvn-office.net/test/truyen/168/,TruyenLC,2,,,,,,,1
+1,v1603-0169,3/8/2016,Tanaka,ohuro-coating.com/,mail:done,ThanhNLY,ManDH,1.5,0.5,,,09/03/2016,09/03/2016,,15:00,16:00,,,1,-0.5,,ThanhNLY,1.5,,,,,,,1
+1,v1603-0170,3/8/2016,Ariyoshi,hoken-lifework.com/,mail:done,ThanhNLY,ManDH,3,0.5,,,09/03/2016,09/03/2016,,13:00,15:00,,,2,-1,,ThanhNLY,3,,,,,,,1
+1,v1603-0171,3/8/2016,Asano,nagoya-medical-herbschool.com/,mail:done,TrucTTT,NguyenLDH,4.5,1,,,09/03/2016,09/03/2016,,11:00,14:00,,1:00,2,-2.5,,TrucTTT,4.5,,,,,,,1
+1,v1603-0172,3/8/2016,Ariyoshi,wired-visions.com/test160223/,mail:done,ThanhNLY,ManDH,3.5,1,,,09/03/2016,09/03/2016,,16:00,19:00,,,3,-0.5,,ThanhNLY,3.5,,,,,,,1
+1,v1603-0174,3/8/2016,Kawashima,kens-do.com/,mail:done,BinhNT,NguyenLDH,1.5,0.5,12:00,,09/03/2016,09/03/2016,,10:00,11:30,,,1.5,0,,BinhNT,1.5,,,,,,,1
+1,v1603-0175,3/8/2016,Suzuki,nakanokensou.jp/,mail:done,NhaNTT,ManDH,3.5,1,,,09/03/2016,09/03/2016,,16:00,17:30,,,1.5,-2,,NhaNTT,3.5,,,,,,,1
+1,v1603-0176,3/8/2016,Suzuki,project-world.jp/,mail:done,TruyenLC,NguyenLDH,3.5,1,,,09/03/2016,09/03/2016,,13:00,16:00,,,3,-0.5,http://service.fvn-office.net/test/truyen/176/,TruyenLC,3.5,,,,,,,1
+1,v1603-0177,3/8/2016,Ariyoshi,fineclub.co.jp/,mail:done,BinhNT,NguyenLDH,2.5,0.5,,,09/03/2016,09/03/2016,,15:00,17:30,,,2.5,0,,BinhNT,2.5,,,,,,,1
+1,v1603-0178,3/8/2016,Yoshioka,yanagisawa-dental.com/,mail:done,TrucTTT,NguyenLDH,1,0,13:00,,09/03/2016,09/03/2016,,8:30,9:00,,,0.5,-0.5,,TrucTTT,1,,,,,,,1
+1,v1603-0179,3/8/2016,Yoshioka,oakhills-dental.com,mail:done,VanVTK,NguyenLDH,1,0,13:00,,09/03/2016,09/03/2016,,8:30,9:30,,,1,0,,VanVTK,1,,,,,,,1
+1,v1603-0180,3/8/2016,Asano,bridge-us.jp/,mail:done,TrucTTT,NguyenLDH,3.5,0,11:00,,09/03/2016,09/03/2016,,9:00,11:00,,,2,-1.5,,TrucTTT,3.5,,,,,,,1
+1,v1603-0173,3/9/2016,Ishihara,matsukawa-kyousei.com/,mail:done,TrucTTT,ManDH,1.5,0.5,,,10/03/2016,10/03/2016,,10:30,11:00,,,0.5,-1,,TrucTTT,1.5,,,,,,,1
+1,v1603-0181,3/9/2016,Asano,y-becantec.jp/,mail:done,VanVTK,ManDH,4,1,,,10/03/2016,09/03/2016,,17:30,20:30,,,3,-1,http://service.fvn-office.net/fvn/Van/160310_02_bk/contact/,VanVTK,4,,,,,,,1
+1,v1603-0182,3/9/2016,Ishihara,arist.jp/,mail:done,BinhNT,ManDH,3,0.5,,,10/03/2016,10/03/2016,,14:30,17:00,,,2.5,-0.5,,BinhNT,3,,,,,,,1
+1,v1603-0183,3/9/2016,Miyagi,eco-sou.com/,mail:done,TrucTTT,ManDH,2.5,0,14:00,,10/03/2016,10/03/2016,,9:00,10:30,,,1.5,-1,,TrucTTT,2.5,,,,,,,1
+1,v1603-0184,3/9/2016,Takeuchi,cyubujuki.com/,mail:done,LinhKT,ManDH,1,0,,,10/03/2016,10/03/2016,,16:30,17:00,,,0.5,-0.5,,LinhKT,1,,,,,,,1
+1,v1603-0185,3/9/2016,Kawashima,sakura-shika.com/,mail:done,LinhKT,ManDH,1.5,0.5,12:00,,10/03/2016,10/03/2016,,8:30,9:30,,,1,-0.5,,LinhKT,1.5,,,,,,,1
+1,v1603-0186,3/9/2016,Tsukamoto,free-magazine.jp/,mail:done,LinhKT,ManDH,1,0.5,,,10/03/2016,10/03/2016,,17:00,17:30,,,0.5,-0.5,,LinhKT,1,,,,,,,1
+1,v1603-0187,3/9/2016,Tsukamoto,sp-fukuoka.net/,mail:done,BinhNT,ManDH,1,0.5,,,10/03/2016,10/03/2016,,17:00,18:00,,,1,0,,BinhNT,1,,,,,,,1
+1,v1603-0188,3/9/2016,Kaneko,minatocho-shinbi.com/,mail:done,TrucTTT,ManDH,1.5,0,12:00,,10/03/2016,10/03/2016,,8:30,9:00,,,0.5,-1,,TrucTTT,1.5,,,,,,,1
+1,v1603-0189,3/9/2016,Ishihara,nohara-dc.com/,mail:done,VanVTK,ManDH,2,0.5,,,10/03/2016,10/03/2016,,19:00,21:00,,,2,0,,VanVTK,2,,,,,,,1
+1,v1603-0190,3/9/2016,Takeuchi,chiaretta-fashion.com/,mail:done,LinhKT,ManDH,2.5,0,,,10/03/2016,10/03/2016,,9:30,11:30,,,2,-0.5,,LinhKT,2.5,,,,,,,1
+1,v1603-0191,3/9/2016,Miyagi,medialink-recruit.com/,mail:done,VanVTK,ManDH,6,0,16:00,,10/03/2016,10/03/2016,,10:00,17:00,,1:00,6,0,,VanVTK,6,,,,,,,1
+1,v1603-0192,3/9/2016,Sawada,tsys-powersolutions.com/hcb/,mail:done,BinhNT,NguyenLDH,4.5,0,15:30,,10/03/2016,10/03/2016,,9:00,14:30,,1:00,4.5,0,,BinhNT,4.5,,,,,,,1
+1,v1603-0193,3/9/2016,Miyagi,fos-office.com/,mail:done,VanVTK,ManDH,0.5,0,12:00,,10/03/2016,10/03/2016,,8:30,9:00,,,0.5,0,,VanVTK,0.5,,,,,,,1
+1,v1603-0194,3/9/2016,Ariyoshi,kitazono-ortho.com/,mail:done,TrucTTT,ManDH,2.5,0.5,,,10/03/2016,10/03/2016,,14:00,15:00,,,1,-1.5,,TrucTTT,2.5,,,,,,,1
+1,v1603-0195,3/9/2016,Takeuchi,kanekotosou.jp/,mail:done,NhaNTT,ManDH,4,0,,,10/03/2016,10/03/2016,,10:15,14:15,,1:00,3,-1,http://service.fvn-office.net/fvn/NhaNTT/1603_195/,NhaNTT,4,,,,,,,1
+1,v1603-0196,3/9/2016,Suzuki,fukuoka-vocal.com/,mail:done,NhaNTT,ManDH,6,1,,,10/03/2016,10/03/2016,,14:15,17:30,,,3.25,-2.75,,NhaNTT,6,,,,,,,1
+1,v1603-0198,3/9/2016,Kawashima,with-dc.com/,mail:done,BinhNT,ManDH,1,0.5,12:00,,10/03/2016,10/03/2016,,8:30,9:00,,,0.5,-0.5,,BinhNT,1,,,,,,,1
+1,v1603-0199,3/9/2016,Ishihara,nohara-dc.smart-change.info/,mail:done,LinhKT,ManDH,6,1,,,10/03/2016,10/03/2016,,11:30,16:30,,1:00,4,-2,http://nohara-dc.smart-change.info/,LinhKT,6,,,,,,,1
+1,v1603-0200,3/9/2016,Suzuki,haikara-fan.com/,mail:done,TrucTTT,ManDH,3.5,1,,,10/03/2016,10/03/2016,,11:00,14:00,,1:00,2,-1.5,,TrucTTT,3.5,,,,,,,1
+1,v1603-0201,3/9/2016,Lim,kyousei-guide.com/,mail:done,ThanhNLY,NguyenLDH,3,0.5,,,10/03/2016,10/03/2016,,11:20,16:00,,1:00,3.67,0.67,,ThanhNLY,3,,,,,,,1
+1,v1603-0202,3/9/2016,Lim,nakagawadent.net/,mail:done,TruyenLC,NguyenLDH,4.5,1,,,10/03/2016,10/03/2016,,13:00,17:30,,,4.5,0,,TruyenLC,4.5,,,,,,,1
+1,v1603-0203,3/9/2016,Lim,hello-shinryobu.com/,mail:done,TruyenLC,NguyenLDH,3.5,1,,,10/03/2016,10/03/2016,,17:30,21:00,,,3.5,0,,TruyenLC,3.5,,,,,,,1
+1,v1603-0204,3/9/2016,Lim,akuri-dental.com/,mail:done,ThanhNLY,NguyenLDH,3.5,1,,,10/03/2016,10/03/2016,,16:00,18:30,,,2.5,-1,,ThanhNLY,3.5,,,,,,,1
+1,v1603-0205,3/9/2016,Ariyoshi,urban-interior.co.jp/,mail:done,VanVTK,ManDH,2.5,0,,,10/03/2016,10/03/2016,,17:00,19:30,,,2.5,0,,VanVTK,2.5,,,,,,,1
+1,v1603-0206,3/9/2016,Ariyoshi,simi110.com/,mail:done,DucTP,ManDH,4,0,,,10/03/2016,10/03/2016,,13:00,18:00,,1:00,4,0,,DucTP,4,,,,,,,1
+1,v1603-0208,3/9/2016,Ishihara,kirameki-paint.com/,mail:done,TruyenLC,ManDH,2,0.5,,,10/03/2016,10/03/2016,,10:30,12:00,,,1.5,-0.5,,TruyenLC,2,,,,,,,1
+1,v1603-0210,3/9/2016,Ishihara,kirameki-roof.com/,mail:done,DatNVT,ManDH,1,0.5,,,10/03/2016,10/03/2016,,17:00,18:00,,,1,0,,DatNVT,1,,,,,,,1
+1,v1603-0211,3/9/2016,Ishihara,sakioka-dental.com/,mail:done,TrucTTT,ManDH,2,0.5,,,10/03/2016,10/03/2016,,15:00,17:00,,,2,0,http://service.fvn-office.net/fvn/TrucTTT/211/,TrucTTT,2,,,,,,,1
+1,v1603-0212,3/9/2016,Ishihara,twin-dental.jp/,mail:done,VanVTK,ManDH,1,0.5,15:00,,10/03/2016,10/03/2016,,9:00,10:00,,,1,0,,VanVTK,1,,,,,,,1
+1,v1603-0213,3/9/2016,Sawada,viper-security.jp/,mail:done,ThanhNLY,NguyenLDH,3.5,0,15:00,,10/03/2016,10/03/2016,,8:30,11:20,,,2.83,-0.67,,ThanhNLY,3.5,,,,,,,1
+1,v1603-0214,3/9/2016,Yoshioka,silver-lace.jp/,mail:done,TruyenLC,NguyenLDH,2,0,13:30,,10/03/2016,10/03/2016,,9:00,10:30,,,1.5,-0.5,,TruyenLC,2,,,,,,,1
+1,v1603-0197,3/9/2016,Takeuchi,uchiyamakaikei.jp/,mail:done,LinhKT,ManDH,2.5,0,,,11/03/2016,11/03/2016,,13:30,15:30,,,2,-0.5,http://service.fvn-office.net/fvn/LinhKT/v1603-0197/160311_02_bk/,LinhKT,2.5,,,,,,,1
+1,v1603-0207,3/9/2016,Takeuchi,nagae-paint.com/,mail:done,TrucTTT,NguyenLDH,1,0,,,11/03/2016,11/03/2016,,15:00,15:30,,,0.5,-0.5,,TrucTTT,1,,,,,,,1
+1,v1603-0209,3/9/2016,Takeuchi,sdc-kids.smart-change.info/,mail:done,LinhKT,ManDH,2.5,0,,,11/03/2016,11/03/2016,,15:30,17:30,,,2,-0.5,http://service.fvn-office.net/fvn/LinhKT/v1603-0209_sdc-kids.smart-change.info/160311_02_bk/160302.html,LinhKT,2.5,,,,,,,1
+1,v1603-0215,3/9/2016,Takeuchi,marutakesangyou.com/,mail:done,ThanhNLY,ManDH,3,0,,,11/03/2016,11/03/2016,,10:15,14:00,,1:00,2.75,-0.25,,ThanhNLY,3,,,,,,,1
+1,v1603-0216,3/9/2016,Miyagi,fudousan-souzoku.net/,mail:done,TrucTTT,ManDH,4,0,14:00,,11/03/2016,11/03/2016,,8:30,12:00,,,3.5,-0.5,http://service.fvn-office.net/fvn/TrucTTT/216/,TrucTTT,4,,,,,,,1
+1,v1603-0217,3/9/2016,Sawada,aokidental.com/,mail:done,LinhKT,ManDH,2.5,0,13:30,,11/03/2016,11/03/2016,,10:30,13:30,,1:00,2,-0.5,,LinhKT,2.5,,,,,,,1
+1,v1603-0219,3/9/2016,Kaneko,pacific-chemical.com/,mail:done,VanVTK,ManDH,1.5,0,12:00,,11/03/2016,11/03/2016,,10:00,11:30,,,1.5,0,,VanVTK,1.5,,,,,,,1
+1,v1603-0220,3/9/2016,Kaneko,asunaro-shika.jp/,mail:done,LinhKT,ManDH,1,0,12:30,,11/03/2016,11/03/2016,,8:30,9:30,,,1,0,,LinhKT,1,,,,,,,1
+m,v1603-0221,3/9/2016,Asano,silk-house.jp/,mail:done,NhaNTT,ManDH,5.5,0,,,11/03/2016,11/03/2016,,10:00,15:00,,1:00,4,-1.5,,NhaNTT,5.5,,,,,,,1
+1,v1603-0222,3/9/2016,Suzuki,nakanokensou.jp/,mail:done,TruyenLC,ManDH,6,1,,,11/03/2016,11/03/2016,,8:30,17:30,,1:00,8,2,,TruyenLC,6,,,,,,,1
+1,v1603-0227,3/9/2016,Ariyoshi,the-presents.jp/,mail:done,NhaNTT,ManDH,3,1,,,11/03/2016,11/03/2016,,15:00,17:30,,,2.5,-0.5,,NhaNTT,3,,,,,,,1
+1,v1603-0228,3/9/2016,Inoue,mihara-dental.jp/,mail:done,LinhKT,ManDH,1,0,12:00,,11/03/2016,11/03/2016,,9:30,10:30,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0229,3/9/2016,Kawashima,nippon-xypex.com/,mail:done,NhaNTT,ManDH,1.5,0.5,12:00,,11/03/2016,11/03/2016,,8:30,10:00,,,1.5,0,,NhaNTT,1.5,,,,,,,1
+1,v1603-0230,3/9/2016,Ariyoshi,saga-imamura.jp/,mail:done,TrucTTT,ManDH,2,0.5,,,11/03/2016,11/03/2016,,14:00,15:00,,,1,-1,http://service.fvn-office.net/fvn/TrucTTT/230/,TrucTTT,2,,,,,,,1
+1,v1603-0231,3/9/2016,Ariyoshi,ellegance.jp/,mail:done,TrucTTT,ManDH,2.5,0,,,11/03/2016,11/03/2016,,13:00,14:00,,,1,-1.5,,TrucTTT,2.5,,,,,,,1
+1,v1603-0232,3/9/2016,Ariyoshi,casa-tua.jp/test160218/,mail:done,ThanhNLY,ManDH,3,0,,,11/03/2016,11/03/2016,,14:00,17:30,,,3.5,0.5,,ThanhNLY,3,,,,,,,1
+1,v1603-0233,3/9/2016,Ariyoshi,kosuke-dc.com/,mail:done,VanVTK,ManDH,2,0,,,11/03/2016,11/03/2016,,15:00,17:00,,,2,0,,VanVTK,2,,,,,,,1
+1,v1603-0234,3/9/2016,Takeuchi,cyubujuki.com/,mail:done,DucTP,ManDH,1.5,0,12:00,,11/03/2016,11/03/2016,,9:30,10:00,,,0.5,-1,,DucTP,1.5,,,,,,,1
+1,v1603-0235,3/9/2016,Ariyoshi,tna-hiroshima.com/test160301/,mail:done,VanVTK,ManDH,2.5,0,,,11/03/2016,11/03/2016,,11:30,15:00,,1:00,2.5,0,,VanVTK,2.5,,,,,,,1
+1,v1603-0236,3/9/2016,Suzuki,ohashi-inc.com/,mail:done,BinhNT,NguyenLDH,6,1,,,11/03/2016,11/03/2016,,10:30,16:30,,1:00,5,-1,http://service.fvn-office.net/fvn/binhnt/236/news2/cate_en/,BinhNT,6,,,,,,,1
+1,v1603-0237,3/9/2016,Yoshioka,yanagisawa-dental.com/,mail:done,BinhNT,NguyenLDH,2,0,13:30,,11/03/2016,11/03/2016,,8:30,10:30,,,2,0,,BinhNT,2,,,,,,,1
+1,v1603-0238,3/10/2016,Yoshioka,oakhills-dental.com/,mail:done,ThanhNLY,NguyenLDH,2,0,13:30,,11/03/2016,11/03/2016,,8:30,10:15,,,1.75,-0.25,,ThanhNLY,2,,,,,,,1
+1,v1603-0239,3/9/2016,Yoshioka,ecosmart-fire.jp/,mail:done,VanVTK,NguyenLDH,1.5,0,13:00,,11/03/2016,11/03/2016,,8:30,10:00,,,1.5,0,,VanVTK,1.5,,,,,,,1
+1,v1603-0241,3/11/2016,Miyagi,ginza-moc.com/,mail:done,TrucTTT,NguyenLDH,1.5,0,,,11/03/2016,11/03/2016,,15:30,16:00,,,0.5,-1,,TrucTTT,1.5,,,,,,,1
+1,v1603-0223,3/9/2016,Suzuki,nakanokensou.jp/,mail:done,TruyenLC,ManDH,6,1,,,14/03/2016,11/03/2016,,17:30,20:00,,1:00,1.5,-4.5,http://service.fvn-office.net/test/truyen/222/,TruyenLC,6,,,,,,,1
+1,v1603-0240,3/11/2016,Ishihara,door-amamori.jp/,mail:done,ThanhNLY,ManDH,2,0.5,,,14/03/2016,14/03/2016,,16:00,17:00,,,1,-1,,ThanhNLY,2,,,,,,,1
+1,v1603-0242,3/11/2016,Tsukamoto,fukuoka-orange.com/,mail:done,ThanhNLY,ManDH,5,1,,,14/03/2016,14/03/2016,,11:00,16:00,,1:00,4,-1,,ThanhNLY,5,,,,,,,1
+1,v1603-0243,3/11/2016,Inoue,daiwa-co.com/,mail:done,LinhKT,ManDH,1,0,13:00,,14/03/2016,14/03/2016,,10:00,10:30,,,0.5,-0.5,,LinhKT,1,,,,,,,1
+1,v1603-0244,3/11/2016,Takeuchi,chiaretta-fashion.com/,mail:done,LinhKT,ManDH,2,0,13:00,,14/03/2016,14/03/2016,,8:30,10:00,,,1.5,-0.5,,LinhKT,2,,,,,,,1
+1,v1603-0245,3/11/2016,Shinozuka,hama-den.co.jp/,mail:done,BinhNT,ManDH,1,0,12:00,,14/03/2016,14/03/2016,,9:30,10:30,,,1,0,,BinhNT,1,,,,,,,1
+1,v1603-0246,3/11/2016,Inoue,antena-pro.jp/,mail:done,BinhNT,NguyenLDH,1,0,13:00,,14/03/2016,14/03/2016,,8:30,9:30,,,1,0,,BinhNT,1,,,,,,,1
+1,v1603-0247,3/11/2016,Suzuki,fujiken-house.jp/,mail:done,BinhNT,NguyenLDH,6,1,,,14/03/2016,14/03/2016,yes,13:30,17:30,,,4,-2,"chia ra 2 order, 247 v? 248, giao h?ng 15/03",BinhNT,6,,,,,,,1
+1,v1603-0249,3/11/2016,Ariyoshi,nakashima-shika.net/,mail:done,LinhKT,ManDH,2.5,0,,,14/03/2016,14/03/2016,,10:30,13:30,,1:00,2,-0.5,,LinhKT,2.5,,,,,,,1
+1,v1603-0250,3/11/2016,Ariyoshi,kumaken.com/,mail:done,LinhKT,ManDH,2.5,0,,,14/03/2016,14/03/2016,,13:30,15:30,,,2,-0.5,,LinhKT,2.5,,,,,,,1
+1,v1603-0251,3/11/2016,Ariyoshi,fudosan-baikyaku-aitem.com/,mail:done,LinhKT,ManDH,2,0,,,14/03/2016,14/03/2016,,15:30,17:30,,,2,0,,LinhKT,2,,,,,,,1
+1,v1603-0252,3/11/2016,Ishihara,economy-kaigyo.com/,mail:done,TrucTTT,ManDH,7,1,,,14/03/2016,14/03/2016,,11:00,17:30,,1:00,5.5,-1.5,,TrucTTT,7,,,,,,,1
+1,v1603-0253,3/11/2016,Ariyoshi,hoken-library.com/test160122/,mail:done,NhaNTT,NguyenLDH,3,0.5,,,14/03/2016,14/03/2016,,14:00,16:30,, ,2.5,-0.5,,NhaNTT,3,,,,,,,1
+1,v1603-0254,3/9/2016,Shinozuka,sannou-kids.com/,mail:done,DucTP,NguyenLDH,1.5,0,13:00,,14/03/2016,14/03/2016,,8:30,10:00,,,1.5,0,,DucTP,1.5,,,,,,,1
+1,v1603-0255,3/9/2016,Shinozuka,sannou-dc.com/,mail:done,VanVTK,NguyenLDH,1,0,13:00,,14/03/2016,14/03/2016,,8:30,9:30,,,1,0,,VanVTK,1,,,,,,,1
+1,v1603-0256,3/9/2016,Takeuchi,land-fab-baikyaku.jp/,mail:done,NhaNTT,NguyenLDH,5,0,14:00,,14/03/2016,14/03/2016,,8:30,14:00,,1:00,4.5,-0.5,,NhaNTT,5,,,,,,,1
+1,v1603-0257,3/9/2016,Kaneko,miyabi-dental.jp/,mail:done,TrucTTT,NguyenLDH,3,0,13:00,,14/03/2016,14/03/2016,,8:30,11:00,,,2.5,-0.5,,TrucTTT,3,,,,,,,1
+1,v1603-0263,3/14/2016,Takeuchi,marutakesangyou.com/,mail:done,NhaNTT,NguyenLDH,1,0,,,14/03/2016,14/03/2016,,16:00,17:30,,,1.5,0.5,,NhaNTT,1,,,,,,,1
+1,v1603-0264,3/14/2016,Miyagi,corfe.jp/,mail:done,VanVTK,ManDH,3.5,0,,,14/03/2016,14/03/2016,,17:00,20:30,,,3.5,0,,VanVTK,3.5,,,,,,,1
+1,v1603-0268,3/14/2016,Suzuki,fukuoka-vocal.com/,mail:done,BinhNT,ManDH,1,0,,,14/03/2016,14/03/2016,,11:30,13:30,,1:00,1,0,,BinhNT,1,,,,,,,1
+1,v1603-0269,3/14/2016,Suzuki,tout-couleur.com/,mail:done,BinhNT,ManDH,1,0.5,,,14/03/2016,14/03/2016,,10:30,11:00,,,0.5,-0.5,,BinhNT,1,,,,,,,1
+1,v1603-0224,3/9/2016,Suzuki,nakanokensou.jp/,mail:done,TruyenLC,ManDH,6,1,,,15/03/2016,12/03/2016,,8:30,17:30,,1:00,8,2,http://service.fvn-office.net/test/truyen/222/,TruyenLC,6,,,,,,,1
+1,v1603-0248,3/11/2016,Suzuki,fujiken-house.jp/,mail:done,BinhNT,NguyenLDH,6,1,17:30,,15/03/2016,15/03/2016,yes,10:30,16:00,,1:00,4.5,-1.5,"chia ra 2 order, 247 v? 248, giao h?ng 15/03",BinhNT,6,,,,,,,1
+1,v1603-0258,3/9/2016,Asano,koufukushika.jp/,mail:done,LinhKT,NguyenLDH,6,0,,,15/03/2016,15/03/2016,,10:00,16:00,,1:00,5,-1,,LinhKT,6,,,,,,,1
+1,v1603-0259,3/14/2016,Kawashima,jonantray.com/,mail:done,LinhKT,ManDH,1.5,0.5,12:00,,15/03/2016,15/03/2016,,8:30,9:30,,,1,-0.5,,LinhKT,1.5,,,,,,,1
+1,v1603-0260,3/14/2016,Tanaka,kanbara-koumuten.jp/,mail:done,ThanhNLY,ManDH,1.5,0.5,,,15/03/2016,15/03/2016,,14:15,15:00,,,0.75,-0.75,,ThanhNLY,1.5,,,,,,,1
+1,v1603-0261,3/14/2016,Kawashima,gt-dental.jp/,mail:done,LinhKT,NguyenLDH,1,0.5,12:00,,15/03/2016,15/03/2016,,9:30,10:00,,,0.5,-0.5,,LinhKT,1,,,,,,,1
+1,v1603-0262,3/14/2016,Ishihara,kuki-do.com/,mail:done,NhaNTT,ManDH,1,0.5,,,15/03/2016,15/03/2016,,13:30,14:00,,,0.5,-0.5,,NhaNTT,1,,,,,,,1
+1,v1603-0265,3/14/2016,Kawashima,willgreen.jp/,mail:done,ThanhNLY,ManDH,1.5,0.5,12:00,,15/03/2016,15/03/2016,,8:30,9:40,,,1.17,-0.33,,ThanhNLY,1.5,,,,,,,1
+1,v1603-0266,3/14/2016,Sawada,tsuruoka-do.com/,mail:done,NgocTT,ManDH,4,0,14:00,,15/03/2016,15/03/2016,,10:30,14:00,,,3.5,-0.5,,NgocTT,4,,,,,,,1
+1,v1603-0267,3/14/2016,Kaneko,asiageo.co.jp/,mail:done,TriN,ManDH,2.5,0,12:30,,15/03/2016,15/03/2016,,9:40,11:30,,,1.83,-0.67,,TriN,2.5,,,,,,,1
+1,v1603-0270,3/14/2016,Sawada,f-gol.jp/,mail:done,NhaNTT,ManDH,5,1,15:00,,15/03/2016,15/03/2016,,8:30,13:30,,1:00,4,-1,http://service.fvn-office.net/fvn/NhaNTT/1603_270/,NhaNTT,5,,,,,,,1
+1,v1603-0271,3/14/2016,Tanaka,sp-market-plus.com/,mail:done,TrucTTT,ManDH,1,0.5,,,15/03/2016,15/03/2016,,9:00,9:30,,,0.5,-0.5,,TrucTTT,1,,,,,,,1
+1,v1603-0272,3/14/2016,Asano,silk-house.jp/,mail:done,TrucTTT,ManDH,7,0,,,15/03/2016,15/03/2016,,9:30,15:00,,1:00,4.5,-2.5,,TrucTTT,7,,,,,,,1
+1,v1603-0273,3/14/2016,Kawashima,kowa-meister.com/,mail:done,BinhNT,ManDH,2,0,12:00,,15/03/2016,15/03/2016,,8:30,10:30,,,2,0,,BinhNT,2,,,,,,,1
+1,v1603-0274,3/14/2016,Takeuchi,nagae-paint.com/,mail:done,KhangPH,ManDH,1.5,0,,,15/03/2016,15/03/2016,,16:00,17:30,,,1.5,0,,KhangPH,1.5,,,,,,,1
+1,v1603-0275,3/14/2016,Ariyoshi,motorblood.jp/,mail:done,NhaNTT,NguyenLDH,3,0.5,,,15/03/2016,15/03/2016,,14:00,16:00,,,2,-1,,NhaNTT,3,,,,,,,1
+1,v1603-0276,3/14/2016,Takeuchi,land-fab-baikyaku.jp/,mail:done,KhangPH,NguyenLDH,6,0,17:00,,15/03/2016,15/03/2016,,8:30,15:30,,1:00,6,0,,KhangPH,6,,,,,,,1
+1,v1603-0277,3/14/2016,Tsukamoto,bridalvideo.jp/,mail:done,ThanhNLY,NguyenLDH,4,1,,,15/03/2016,15/03/2016,,9:40,14:15,,1:00,3.58,-0.42,,ThanhNLY,4,,,,,,,1
+1,v1603-0278,3/14/2016,Ariyoshi,earth-act-support.jp/,mail:done,VanVTK,NguyenLDH,4.5,0,,,15/03/2016,15/03/2016,,15:00,18:00,,,3,-1.5,giao tr??c 11h ng?y 15/3,VanVTK,4.5,,,,,,,1
+1,v1603-0279,3/14/2016,Takeuchi,gllabo.com/,mail:done,VanVTK,NguyenLDH,1.5,0,11:00,,15/03/2016,15/03/2016,,8:30,10:00,,,1.5,0,,VanVTK,1.5,,,,,,,1
+1,v1603-0281,3/14/2016,Lim,saito-dentalclinic.net/,mail:done,VanVTK,NguyenLDH,2.5,0.5,13:00,,15/03/2016,15/03/2016,,10:00,13:30,,1:00,2.5,0,,VanVTK,2.5,,,,,,,1
+1,v1603-0282,3/14/2016,Miyagi,ginza-moc.com/sp/,mail:done,BichVTN,NguyenLDH,2,0,16:00,,15/03/2016,15/03/2016,,13:00,15:00,,,2,0,,BichVTN,2,,,,,,,1
+1,v1603-0283,3/14/2016,Yoshioka,kento-dc.com/,mail:done,DucTP,NguyenLDH,4,0,14:30,,15/03/2016,15/03/2016,,8:30,14:00,,,5.5,1.5,,DucTP,4,,,,,,,1
+1,v1603-0284,3/14/2016,Yoshioka,kento-happysmile.com/,mail:done,TrucTTT,NguyenLDH,1.5,0,13:00,,15/03/2016,15/03/2016,,8:30,9:00,,,0.5,-1,,TrucTTT,1.5,,,,,,,1
+1,v1603-0287,3/15/2016,Ariyoshi,ecolifekyushu.com/,mail:done,TrucTTT,ManDH,2.5,0,,,15/03/2016,15/03/2016,,15:00,16:30,,,1.5,-1,,TrucTTT,2.5,,,,,,,1
+1,v1603-0289,3/15/2016,Ariyoshi,koba-pri.com/test160308/,mail:done,NhaNTT,NguyenLDH,2.5,0,,,15/03/2016,15/03/2016,,16:00,17:30,,,1.5,-1,,NhaNTT,2.5,,,,,,,1
+1,v1603-0291,3/15/2016,Ariyoshi,onoshika.com/,mail:done,LinhKT,NguyenLDH,1.5,0,,,15/03/2016,15/03/2016,,16:30,17:30,,,1,-0.5,,LinhKT,1.5,,,,,,,1
+1,v1603-0293,3/15/2016,Ariyoshi,oita-implant.com/,mail:done,BinhNT,ManDH,1.5,0.5,,,15/03/2016,15/03/2016,,16:00,17:30,,,1.5,0,,BinhNT,1.5,,,,,,,1
+1,v1603-0294,3/15/2016,Ariyoshi,kiri-tansu.jp/,mail:done,TrucTTT,NguyenLDH,2,0,,,15/03/2016,15/03/2016,,16:30,17:30,,,1,-1,,TrucTTT,2,,,,,,,1
+1,v1603-0295,3/15/2016,Suzuki,project-world.jp/,mail:done,ThanhNLY,ManDH,3.5,1,,,15/03/2016,15/03/2016,,15:00,17:30,,,2.5,-1,,ThanhNLY,3.5,,,,,,,1
+1,v1603-0301,3/15/2016,Suzuki,fukuoka-orange.com/,mail:done,ThanhNLY,ManDH,1,0,,,15/03/2016,14/03/2016,,17:00,18:00,,,1,0,th?m c?ng s? cho 242,ThanhNLY,1,,,,,,,1
+1,v1603-0303,3/15/2016,Kawashima,jonantray.com/,mail:done,LinhKT,NguyenLDH,1,0.5,,,15/03/2016,15/03/2016,,16:00,16:30,,,0.5,-0.5,th?m c?ng s? cho 259,LinhKT,1,,,,,,,1
+1,v1603-0225,3/9/2016,Suzuki,nakanokensou.jp/,mail:done,TruyenLC,ManDH,6,1,,,16/03/2016,15/03/2016,,8:30,17:30,,1:00,8,2,http://service.fvn-office.net/test/truyen/222/,TruyenLC,6,,,,,,,1
+1,v1603-0280,3/15/2016,Ishihara,miyabi-kobo.com/,mail:done,VanVTK,ManDH,6,1,,,16/03/2016,16/03/2016,,13:00,18:00,,,5,-1,,VanVTK,6,,,,,,,1
+1,v1603-0285,3/15/2016,Kawashima,st-dental.jp/,mail:done,LinhKT,ManDH,1.5,0.5,12:00,,16/03/2016,16/03/2016,,8:30,9:30,,,1,-0.5,,LinhKT,1.5,,,,,,,1
+1,v1603-0286,3/15/2016,Shinozuka,hama-den.co.jp/,mail:done,LinhKT,ManDH,1,0,12:00,,16/03/2016,16/03/2016,,9:30,10:30,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0288,3/15/2016,Kaneko,bianca-salon.com/,mail:done,LinhKT,ManDH,2,0,12:00,,16/03/2016,16/03/2016,,10:30,12:00,,,1.5,-0.5, ,LinhKT,2,,,,,,,1
+1,v1603-0290,3/15/2016,Yoshioka,garden-dc.jp/,mail:done,ThanhNLY,ManDH,1.5,0,13:30,,16/03/2016,16/03/2016,,10:00,11:30,,,1.5,0,,ThanhNLY,1.5,,,,,,,1
+1,v1603-0292,3/15/2016,Takeuchi,uchiyamakaikei.jp/,mail:done,DucTP,ManDH,1,0,,,16/03/2016,16/03/2016,,14:00,15:00,,,1,0,,DucTP,1,,,,,,,1
+1,v1603-0296,3/15/2016,Inoue,mm-dental.jp/,mail:done,BinhNT,NguyenLDH,1.5,0,13:00,,16/03/2016,16/03/2016,,8:30,10:00,,,1.5,0,,BinhNT,1.5,,,,,,,1
+1,v1603-0297,3/15/2016,Sawada,foryourgoodsmile.com/,mail:done,BinhNT,NguyenLDH,2,0,13:00,,16/03/2016,16/03/2016,,10:00,12:00,,,2,0,,BinhNT,2,,,,,,,1
+1,v1603-0298,3/15/2016,Ishihara,economy-kaigyo.com/,mail:done,KhangPH,ManDH,1,0.5,15:00,,16/03/2016,16/03/2016,,8:30,9:30,,,1,0,,KhangPH,1,,,,,,,1
+1,v1603-0299,3/15/2016,Miyagi,himawaridc.jp/,mail:done,VanVTK,ManDH,3.5,0,15:30,,16/03/2016,16/03/2016,,8:30,13:00,,1:00,3.5,0,,VanVTK,3.5,,,,,,,1
+1,v1603-0300,3/15/2016,Takeuchi,cyubujuki.com/,mail:done,LinhKT,ManDH,2,0,,,16/03/2016,16/03/2016,,13:00,14:30,,,1.5,-0.5,,LinhKT,2,,,,,,,1
+1,v1603-0302,3/15/2016,Takeuchi,sakyoyama-dc.com/,mail:done,NhaNTT,ManDH,1.5,0,,,16/03/2016,16/03/2016,,11:00,12:00,,,1,-0.5,,NhaNTT,1.5,,,,,,,1
+1,v1603-0304,3/15/2016,Takeuchi,woman-travel.com/,mail:done,DucTP,ManDH,2,0,,,16/03/2016,16/03/2016,,11:00,14:00,,1:00,2,0,,DucTP,2,,,,,,,1
+1,v1603-0305,3/15/2016,Ariyoshi,apzero.co.jp/,mail:done,ThanhNLY,ManDH,2,0.5,,,16/03/2016,16/03/2016,,11:30,14:00,,,2.5,0.5,,ThanhNLY,2,,,,,,,1
+1,v1603-0306,3/15/2016,Ishihara,okada8241.net/,mail:done,LinhKT,ManDH,4,1,,,16/03/2016,16/03/2016,,14:30,17:30,,,3,-1,,LinhKT,4,,,,,,,1
+1,v1603-0307,3/15/2016,Ariyoshi,do-ishikawa.com/,mail:done,ThanhNLY,ManDH,1.5,0.5,,,16/03/2016,16/03/2016,,14:00,15:00,,,1,-0.5,,ThanhNLY,1.5,,,,,,,1
+1,v1603-0308,3/15/2016,Suzuki,artsystem-fuk.jp/,mail:done,TrucTTT,ManDH,7.5,1.5,,,16/03/2016,16/03/2016,,11:00,18:00,,1:00,6,-1.5,http://service.fvn-office.net/fvn/TrucTTT/v308/fmail/fmail.cgi,TrucTTT,7.5,,,,,,,1
+1,v1603-0309,3/15/2016,Ariyoshi,kosuke-dc.com/test160314/,mail:done,KhangPH,ManDH,1,0.5,,,16/03/2016,16/03/2016,,16:30,17:30,,,1,0,,KhangPH,1,,,,,,,1
+1,v1603-0310,3/15/2016,Inoue,sato-ext.jp/,mail:done,TrucTTT,NguyenLDH,3,0,13:00,,16/03/2016,16/03/2016,,8:30,11:00,,,2.5,-0.5,,TrucTTT,3,,,,,,,1
+1,v1603-0311,3/15/2016,Ariyoshi,three-keys.jp/test160205/,mail:done,NhaNTT,ManDH,5,1,,,16/03/2016,16/03/2016,,13:00,17:30,,,4.5,-0.5,http://service.fvn-office.net/fvn/NhaNTT/1603_311/blog/,NhaNTT,5,,,,,,,1
+1,v1603-0312,3/15/2016,Kawashima,yamagatadc.com/,mail:done,NhaNTT,NguyenLDH,3,0.5,13:30,,16/03/2016,16/03/2016,,8:30,11:00,,,2.5,-0.5,,NhaNTT,3,,,,,,,1
+1,v1603-0314,3/15/2016,Ariyoshi,general-cs.com/,mail:done,ThanhNLY,NguyenLDH,4.5,1,,,16/03/2016,16/03/2016,,15:00,18:30,,,3.5,-1,,ThanhNLY,4.5,,,,,,,1
+1,v1603-0315,3/15/2016,Sawada,jksurf.jp/,mail:done,KhangPH,NguyenLDH,5.5,0,15:30,,16/03/2016,16/03/2016,,9:30,16:00,,1:00,5.5,0,,KhangPH,5.5,,,,,,,1
+1,v1603-0316,3/15/2016,Ariyoshi,taiyo-jiku.co.jp/,mail:done,BinhNT,NguyenLDH,3,0.5,,,16/03/2016,16/03/2016,,14:00,15:00,,,1,-2,,BinhNT,3,,,,,,,1
+1,v1603-0317,3/15/2016,Ariyoshi,tsuda-dental.com/,mail:done,KhangPH,ManDH,1,0.5,,,16/03/2016,16/03/2016,,16:00,17:00,,,1,0,,KhangPH,1,,,,,,,1
+1,v1603-0318,3/15/2016,Tanaka,dental-platz.com/,mail:done,BinhNT,NguyenLDH,1,0.5,,,16/03/2016,16/03/2016,,13:00,14:00,,,1,0,,BinhNT,1,,,,,,,1
+1,v1603-0325,3/16/2016,Suzuki,fukuoka-vocal.com/,mail:done,BinhNT,NguyenLDH,3,0.5,,,16/03/2016,16/03/2016,,15:00,17:30,,,2.5,-0.5,http://service.fvn-office.net/fvn/binhnt/325/fmail/fmail.cgi,BinhNT,3,,,,,,,1
+1,v1603-0330,3/16/2016,Suzuki,fujiken-house.jp/,mail:done,DucTP,ManDH,1,0.5,,,16/03/2016,16/03/2016,,16:00,16:15,,,0.25,-0.75,,DucTP,1,,,,,,,1
+1,v1603-0336,3/16/2016,Ariyoshi,three-keys.jp/test160205/,mail:done,NhaNTT,ManDH,2,0.5,,,16/03/2016,17/03/2016,,8:30,10:00,,,1.5,-0.5,th?m c?ng s?,NhaNTT,2,,,,,,,1
+1,v1603-0226,3/9/2016,Suzuki,nakanokensou.jp/,mail:done,TruyenLC,ManDH,6,1,,,17/03/2016,16/03/2016,,14:00,17:30,,,3.5,-2.5,http://service.fvn-office.net/test/truyen/222/,TruyenLC,6,,,,,,,1
+1,v1603-0313,3/16/2016,Ishihara,fujihira-dc.com/,mail:done,ThanhNLY,NguyenLDH,6,1,,,17/03/2016,17/03/2016,,10:15,17:15,,1:00,6,0,,ThanhNLY,6,,,,,,,1
+1,v1603-0319,3/16/2016,Kawashima,tkdo-w.jp/,mail:done,DucTP,ManDH,0.5,0.5,12:00,,17/03/2016,17/03/2016,,9:00,9:30,,,0.5,0,,DucTP,0.5,,,,,,,1
+1,v1603-0320,3/16/2016,Ishihara,nakagawa-shikaiin.net/,mail:done,DucTP,ManDH,0.5,0.5,,,17/03/2016,17/03/2016,,10:30,11:00,,,0.5,0,,DucTP,0.5,,,,,,,1
+1,v1603-0321,3/16/2016,Kawashima,tkdo.jp/,mail:done,DucTP,ManDH,0.5,0.5,12:00,,17/03/2016,17/03/2016,,9:30,10:00,,,0.5,0,,DucTP,0.5,,,,,,,1
+1,v1603-0322,3/16/2016,Ishihara,nakagawa-shikaiin.smart-change.info/,mail:done,DucTP,ManDH,0.5,0.5,,,17/03/2016,17/03/2016,,11:00,11:30,,,0.5,0,,DucTP,0.5,,,,,,,1
+1,v1603-0323,3/16/2016,Kawashima,sankeisha.net/,mail:done,DucTP,ManDH,0.5,0,12:00,,17/03/2016,17/03/2016,,10:00,10:30,,,0.5,0,,DucTP,0.5,,,,,,,1
+1,v1603-0324,3/16/2016,Asano,bridge-sp.com/,mail:done,TrucTTT,ManDH,5,1,13:00,,17/03/2016,17/03/2016,,10:00,12:00,,,2,-3,,TrucTTT,5,,,,,,,1
+1,v1603-0326,3/16/2016,Takeuchi,chiaretta-fashion.com/,mail:done,LinhKT,ManDH,4.5,0,,,17/03/2016,17/03/2016,,14:00,17:30,,,3.5,-1,http://service.fvn-office.net/fvn/LinhKT/v1603-0326_chiaretta-fashion.com/160317_02_bk/fmail/fmail.cgi,LinhKT,4.5,,,,,,,1
+1,v1603-0327,3/16/2016,Inoue,furukawa-dc.com/,mail:done,LinhKT,ManDH,1.5,0,13:00,,17/03/2016,17/03/2016,,8:30,9:30,,,1,-0.5,,LinhKT,1.5,,,,,,,1
+1,v1603-0328,3/16/2016,Sawada,katsumata-dental.jp/,mail:done,LinhKT,ManDH,2,0,14:00,,17/03/2016,17/03/2016,,9:30,11:00,,,1.5,-0.5,,LinhKT,2,,,,,,,1
+1,v1603-0329,3/16/2016,Kaneko,cocoro-yamatodc.com/,mail:done,VuLDN,ManDH,2.5,0,12:30,,17/03/2016,17/03/2016,,8:30,11:00,,,2.5,0,,VuLDN,2.5,,,,,,,1
+1,v1603-0331,3/16/2016,Takeuchi,titan-next21.com/,mail:done,BinhNT,ManDH,1,0,,,17/03/2016,17/03/2016,,8:30,9:00,,,0.5,-0.5,,LinhKT,2,,,,,,,1
+1,v1603-0332,3/16/2016,Ariyoshi,oniwaii4.com/,mail:done,LinhKT,ManDH,2.5,0.5,,,17/03/2016,17/03/2016,,11:00,14:00,,1:00,2,-0.5,,LinhKT,2.5,,,,,,,1
+1,v1603-0333,3/16/2016,Sawada,dairiseki-cleaning.com/,mail:done,TrucTTT,ManDH,1.5,0,13:00,,17/03/2016,17/03/2016,,8:30,10:00,,,1.5,0,,TrucTTT,1.5,,,,,,,1
+1,v1603-0334,3/16/2016,Takeuchi,plumber-ohta.com/,mail:done,TrucTTT,ManDH,2.5,0,,,17/03/2016,17/03/2016,,13:00,15:00,,,2,-0.5,,TrucTTT,2.5,,,,,,,1
+1,v1603-0335,3/16/2016,Kawashima,irie-dental.jp/,mail:done,TrucTTT,ManDH,1,0.5,12:00,,17/03/2016,17/03/2016,,10:00,11:00,,,1,0,,TrucTTT,1,,,,,,,1
+1,v1603-0337,3/16/2016,Ariyoshi,tdhome.biz/,mail:done,NhaNTT,ManDH,3,1,,,17/03/2016,17/03/2016,,10:00,13:30,,1:00,2.5,-0.5,http://service.fvn-office.net/fvn/NhaNTT/1603_337/fmail/,NhaNTT,3,,,,,,,1
+1,v1603-0338,3/16/2016,Ishihara,fujihira-dc.com/,mail:done,KhangPH,ManDH,2,0.5,,,17/03/2016,17/03/2016,,15:30,17:30,,,2,0,http://fujihira-dc.smart-change.info/,KhangPH,2,,,,,,,1
+1,v1603-0339,3/16/2016,Sawada,jksurf.jp/,mail:done,KhangPH,ManDH,4,0,15:00,,17/03/2016,17/03/2016,,10:30,15:30,,1:00,4,0,,KhangPH,4,,,,,,,1
+1,v1603-0340,3/16/2016,Shinozuka,kaitai-senya.com/,mail:done,KhangPH,ManDH,2,0,14:00,,17/03/2016,17/03/2016,,8:30,10:30,,,2,0,,KhangPH,2,,,,,,,1
+1,v1603-0341,3/16/2016,Ariyoshi,chics-fukuoka.com/,mail:done,NhaNTT,ManDH,1.5,0.5,,,17/03/2016,17/03/2016,,13:30,15:00,,,1.5,0,,NhaNTT,1.5,,,,,,,1
+1,v1603-0342,3/16/2016,Ariyoshi,i-aiai.co.jp/,mail:done,DucTP,ManDH,1.5,0.5,,,17/03/2016,17/03/2016,,11:30,14:00,,,2.5,1,,DucTP,1.5,,,,,,,1
+1,v1603-0343,3/16/2016,Suzuki,englishschool-wing.com/,mail:done,BinhNT,ManDH,6,1,,,17/03/2016,17/03/2016,,11:00,17:30,,1:00,5.5,-0.5,"chia ra 2 order 343, 344, giao h?ng 18/03",BinhNT,6,,,,,,,1
+1,v1603-0345,3/16/2016,Shinozuka,aoba-shika.net/,mail:done,BinhNT,ManDH,2,0,13:00,,17/03/2016,17/03/2016,,9:00,11:00,,,2,0,t? down,BinhNT,2,,,,,,,1
+1,v1603-0346,3/16/2016,Ariyoshi,ee-stepup.com/,mail:done,DiepBNH,ManDH,2,0.5,,,17/03/2016,17/03/2016,,9:30,11:30,,,2,0,,DiepBNH,2,,,,,,,1
+1,v1603-0347,3/16/2016,Miyagi,canalworks.jp/,mail:done,TruyenLC,ManDH,4,0,16:00,,17/03/2016,17/03/2016,,9:30,14:00,,1:00,3.5,-0.5,,TruyenLC,4,,,,,,,1
+1,v1603-0348,3/16/2016,Ariyoshi,easy-english.jp/,mail:done,NhaNTT,ManDH,2.5,0.5,,,17/03/2016,17/03/2016,,15:00,17:30,,,2.5,0,,NhaNTT,2.5,,,,,,,1
+1,v1603-0349,3/16/2016,Lim,makuri-dental.com/,mail:done,ThanhNLY,ManDH,2,0.5,14:00,,17/03/2016,17/03/2016,,8:30,10:15,,,1.75,-0.25,,ThanhNLY,2,,,,,,,1
+1,v1603-0350,3/16/2016,Yoshioka,nfa-g.com/,mail:done,DiepBNH,ManDH,1,0,13:30,,17/03/2016,17/03/2016,,8:30,9:30,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0358,3/17/2016,Ariyoshi,the-presents.jp/test160314/,mail:done,DucTP,NguyenLDH,1.5,0.5,,,17/03/2016,17/03/2016,,14:00,15:30,,,1.5,0,,DucTP,1.5,,,,,,,1
+1,v1603-0359,3/17/2016,Suzuki,ohashi-inc.com/,mail:done,TrucTTT,NguyenLDH,3,0.5,,,17/03/2016,17/03/2016,,15:00,17:30,,,2.5,-0.5,,TrucTTT,3,,,,,,,1
+1,v1603-0360,3/17/2016,Miyagi,medialink-recruit.com/,mail:done,DatNVT,NguyenLDH,3,0,,,17/03/2016,17/03/2016,,10:00,14:00,,,4,1,,DatNVT,3,,,,,,,1
+1,v1603-0361,3/17/2016,Ariyoshi,fukuoka-sjcd.com/,mail:done,DucTP,NguyenLDH,2,0.5,,,17/03/2016,17/03/2016,,15:30,17:30,,,2,0,,DucTP,2,,,,,,,1
+1,v1603-0362,3/17/2016,Ariyoshi,onoshika.com/,mail:done,DiepBNH,NguyenLDH,2.5,0.5,,,17/03/2016,17/03/2016,,13:00,15:30,,,2.5,0,,DiepBNH,2.5,,,,,,,1
+1,v1603-0363,3/17/2016,Ariyoshi,oita-implant.com/,mail:done,DiepBNH,NguyenLDH,2.5,0.5,,,17/03/2016,17/03/2016,,14:30,17:00,,,2.5,0,,DiepBNH,2.5,,,,,,,1
+1,v1603-0344,3/16/2016,Suzuki,englishschool-wing.com/,mail:done,BinhNT,ManDH,6,1,17:30,,18/03/2016,18/03/2016,,10:00,16:30,,1:00,5.5,-0.5,"chia ra 2 order 343, 344, giao h?ng 18/03
+http://service.fvn-office.net/fvn/binhnt/343/school/ohashi.html",BinhNT,6,,,,,,,1
+1,v1603-0351,3/16/2016,Ishihara,jacacon-container.com/,mail:done,DiepBNH,ManDH,0.5,0.5,,,18/03/2016,18/03/2016,,9:00,9:30,,,0.5,0,,DiepBNH,0.5,,,,,,,1
+1,v1603-0352,3/16/2016,Ishihara,jacacon-trunkroom.com/,mail:done,DiepBNH,ManDH,0.5,0.5,,,18/03/2016,18/03/2016,,9:30,10:00,,,0.5,0,,DiepBNH,0.5,,,,,,,1
+1,v1603-0353,3/17/2016,Takeuchi,woman-travel.com/,mail:done,TramNTH,ManDH,2,0,,,18/03/2016,18/03/2016,,13:00,14:00,,,1,-1,,TramNTH,2,,,,,,,1
+1,v1603-0355,3/17/2016,Ishihara,kirameki-paint.com/,mail:done,TramNTH,ManDH,3,0.5,15:00,,18/03/2016,18/03/2016,,9:30,12:00,,,2.5,-0.5,,TramNTH,3,,,,,,,1
+1,v1603-0357,3/17/2016,Ishihara,economy-kaigyo.com/,mail:done,LinhKT,ManDH,0.5,0.5,,,18/03/2016,18/03/2016,,17:00,17:30,,,0.5,0,,LinhKT,0.5,,,,,,,1
+1,v1603-0364,3/17/2016,Inoue,sato-ext.jp/,mail:done,LinhKT,NguyenLDH,1,0,13:00,,18/03/2016,18/03/2016,,8:30,9:30,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0365,3/17/2016,Asano,k-koko.com/,mail:done,LinhKT,NguyenLDH,3.5,1,,,18/03/2016,18/03/2016,,13:30,17:00,,,3.5,0,,LinhKT,3.5,,,,,,,1
+1,v1603-0366,3/17/2016,Miyagi,domm8199.com/,mail:done,DiepBNH,ManDH,2.5,0,14:00,,18/03/2016,18/03/2016,,8:30,11:00,,,2.5,0,,DiepBNH,2.5,,,,,,,1
+1,v1603-0367,3/17/2016,Kawashima,wasoushashin.com/,mail:done,KhangPH,ManDH,1,0,12:00,,18/03/2016,18/03/2016,,8:30,9:30,,,1,0,,KhangPH,1,,,,,,,1
+1,v1603-0368,3/17/2016,Inoue,alpha-inter.co.jp/,mail:done,DiepBNH,ManDH,1.5,0,12:00,,18/03/2016,18/03/2016,,9:30,12:00,,,2.5,1,info/download.html,DiepBNH,1.5,,,,,,,1
+1,v1603-0369,3/17/2016,Kaneko,fcgate.com/,mail:done,TrucTTT,ManDH,4,0,14:30,,18/03/2016,18/03/2016,,8:30,11:30,,,3,-1,http://service.fvn-office.net/fvn/TrucTTT/369/column/,TrucTTT,4,,,,,,,1
+1,v1603-0370,3/17/2016,Sawada,chocotto-reform.com/,mail:done,LinhKT,ManDH,3,0,14:00,,18/03/2016,18/03/2016,,9:30,13:30,,1:00,3,0,,LinhKT,3,,,,,,,1
+1,v1603-0371,3/17/2016,Kaneko,mshika.com/,mail:done,TramNTH,ManDH,1.5,0,12:00,,18/03/2016,18/03/2016,,8:30,9:30,,,1,-0.5,,TramNTH,1.5,,,,,,,1
+1,v1603-0372,3/17/2016,Miyagi,hfujimotoshikanobuto.jp/,mail:done,DiepBNH,ManDH,0.5,0,16:30,,18/03/2016,18/03/2016,,10:00,10:30,,,0.5,0,,DiepBNH,0.5,,,,,,,1
+1,v1603-0373,3/17/2016,Sawada,ecohouse-neo.com/,mail:done,BinhNT,ManDH,1.5,0,13:30,,18/03/2016,18/03/2016,,8:30,10:00,,,1.5,0,,BinhNT,1.5,,,,,,,1
+1,v1603-0374,3/17/2016,Ishihara,okada8241.net/,mail:done,BinhNT,ManDH,1,0.5,,,18/03/2016,18/03/2016,,16:30,17:30,,,1,0,,BinhNT,1,,,,,,,1
+1,v1603-0375,3/17/2016,Suzuki,nakanokensou.jp/,mail:done,TruyenLC,ManDH,4,1,10:00,,18/03/2016,17/03/2016,,13:30,17:30,,,4,0,th?m c?ng s? cho 0222,TruyenLC,4,,,,,,,1
+1,v1603-0376,3/17/2016,Miyagi,nailcraft.co.jp/,mail:done,KhangPH,NguyenLDH,3,0,16:00,,18/03/2016,18/03/2016,,10:00,14:00,,1:00,3,0,,KhangPH,3,,,,,,,1
+1,v1603-0377,3/17/2016,Ariyoshi,body77.jp/,mail:done,TramNTH,ManDH,4,1,,,18/03/2016,18/03/2016,,14:00,17:00,,,3,-1,,TramNTH,4,,,,,,,1
+,v1603-0378,3/17/2016,Lim,nakagawadent.net/,mail:done,KhangPH,NguyenLDH,4.5,1,17:00,,18/03/2016,18/03/2016,,13:30,18:00,,,4.5,0,,,,,,,,,,
+1,v1603-0379,3/17/2016,Ariyoshi,ticketking.jp/,mail:done,TrucTTT,ManDH,6,1,,,18/03/2016,18/03/2016,,11:00,17:30,,1:00,5.5,-0.5,,TrucTTT,6,,,,,,,1
+1,v1603-0380,3/17/2016,Takeuchi,land-fab-baikyaku.jp/,mail:done,NhaNTT,NguyenLDH,5,0,15:00,,18/03/2016,18/03/2016,,8:30,13:30,,1:00,4,-1,,NhaNTT,5,,,,,,,1
+1,v1603-0381,3/17/2016,Suzuki,p-sharakukan.com/,mail:done,DucTP,NguyenLDH,6,1,,,18/03/2016,18/03/2016,,9:00,16:00,,1:00,6,0,"g?m order 381, 382, 383, giao h?ng v?o 22/03",DucTP,6,,,,,,,1
+1,v1603-0384,3/17/2016,Yoshioka,lacaliffa.jp/,mail:done,DucTP,NguyenLDH,3,0,15:00,,18/03/2016,18/03/2016,,8:30,12:00,,,3.5,0.5,,DucTP,3,,,,,,,1
+1,v1603-0385,3/17/2016,Suzuki,itr-audition.com/,mail:done,HuyTV,NguyenLDH,3,0.5,16:00,,18/03/2016,18/03/2016,,13:00,16:00,,,3,0,http://service.fvn-office.net/fvn/huytv/Maint/itr-audition.com/,HuyTV,3,,,,,,,1
+1,v1603-0386,3/17/2016,Suzuki,bmove-oem.com/,mail:done,NhaNTT,ManDH,6,1,,,18/03/2016,18/03/2016,,13:30,17:30,,,4,-2,c?ng v?i 387,NhaNTT,6,,,,,,,1
+1,v1603-0391,3/18/2016,Ariyoshi,iemoto-dc.com/,mail:done,HuyTV,NguyenLDH,3,0.5,,,18/03/2016,18/03/2016,,14:30,17:30,,,3,0,,HuyTV,3,,,,,,,1
+1,v1603-0393,3/18/2016,Ariyoshi,wired-visions.com/test160310/,mail:done,DiepBNH,NguyenLDH,2,0.5,,,18/03/2016,18/03/2016,,13:00,15:00,,,2,0,,DiepBNH,2,,,,,,,1
+1,v1603-0399,3/18/2016,Kaneko,mshika.com/,mail:done,TramNTH,ManDH,1,0,,,18/03/2016,18/03/2016,,17:00,17:30,,,0.5,-0.5,them cong so 371,TramNTH,1,,,,,,,1
+1,v1603-0356,3/18/2016,Ishihara,miyabi-kobo.com/,mail:done,HuyTV,NguyenLDH,3,0.5,,,21/03/2016,21/03/2016,,10:30,14:30,,1:00,3,0,,HuyTV,3,,,,,,,1
+1,v1603-0382,3/17/2016,Suzuki,p-sharakukan.com/,mail:done,DucTP,NguyenLDH,6,1,,,21/03/2016,21/03/2016,,8:30,17:30,,,9,3,"g?m order 381, 382, 383, giao h?ng v?o 22/03",DucTP,6,,,,,,,1
+1,v1603-0387,3/17/2016,Suzuki,bmove-oem.com/,mail:done,NhaNTT,ManDH,6,1,,,21/03/2016,21/03/2016,,10:00,17:00,,1:00,6,0,c?ng order v?i 386,NhaNTT,6,,,,,,,1
+1,v1603-0388,3/18/2016,Miyagi,iwashitashika.com/,mail:done,DiepBNH,ManDH,4,0,,,21/03/2016,21/03/2016,,9:30,14:30,,1:00,4,0,,DiepBNH,4,,,,,,,1
+1,v1603-0389,3/18/2016,Inoue,tama-dc.net/,mail:done,LinhKT,ManDH,1,0,12:00,,21/03/2016,21/03/2016,,8:30,9:30,,,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0390,3/18/2016,Miyagi,volante-vip.jp/,mail:done,DiepBNH,ManDH,1,0,,,21/03/2016,21/03/2016,,8:30,9:30,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0392,3/18/2016,Miyagi,egao-kyousei.com/,mail:done,LinhKT,ManDH,1.5,0,,,21/03/2016,21/03/2016,,9:30,11:00,,,1.5,0,,LinhKT,1.5,,,,,,,1
+1,v1603-0395,3/18/2016,Miyagi,nippon-xypex.com/,mail:done,LinhKT,ManDH,1.5,0,,,21/03/2016,21/03/2016,,11:00,13:30,,,2.5,1,,LinhKT,1.5,,,,,,,1
+1,v1603-0398,3/18/2016,Miyagi,nihon-kodomo.jp/,mail:done,VuLDN,ManDH,3,0,,,21/03/2016,21/03/2016,,9:00,13:00,,1:00,3,0,,VuLDN,3,,,,,,,1
+1,v1603-0400,3/18/2016,Tanaka,implant-tokushima.jp/,mail:done,LinhKT,NguyenLDH,1.5,0.5,,,21/03/2016,21/03/2016,,13:30,15:00,,,1.5,0,,LinhKT,1.5,,,,,,,1
+1,v1603-0401,3/18/2016,Kawashima,weltec.jp/,mail:done,HuyTV,ManDH,2,0.5,,,21/03/2016,21/03/2016,,8:30,10:30,,,2,0,http://service.fvn-office.net/fvn/huytv/Maint/weltec.jp/,HuyTV,2,,,,,,,1
+1,v1603-0402,3/18/2016,Yoshioka,yamagatadc.com/,mail:done,NhaNTT,ManDH,1.5,0,,,21/03/2016,21/03/2016,,8:30,10:00,,,1.5,0,,NhaNTT,1.5,,,,,,,1
+1,v1603-0403,3/18/2016,Ishihara,ha-narabi.jp/,mail:done,LinhKT,NguyenLDH,1.5,0.5,,,21/03/2016,21/03/2016,,15:00,16:30,,,1.5,0,,LinhKT,1.5,,,,,,,1
+1,v1603-0404,3/18/2016,Ariyoshi,pcaid119.jp/,mail:done,KhangPH,ManDH,4.5,1,,,21/03/2016,22/03/2016,,8:30,14:30,,1:00,5,0.5,http://service.fvn-office.net/fvn/khangph/area-list/area/,KhangPH,4.5,,,,,,,1
+1,v1603-0405,3/18/2016,Ariyoshi,ps-kimura.jp/,mail:done,ThanhNLY,ManDH,0.5,0.5,,,21/03/2016,21/03/2016,,9:00,9:30,,,0.5,0,,ThanhNLY,0.5,,,,,,,1
+1,v1603-0406,3/18/2016,Ariyoshi,tout-couleur.com/,mail:done,TramNTH,ManDH,3,0.5,,,21/03/2016,21/03/2016,,8:30,11:30,,,3,0,"http://service.fvn-office.net/fvn/TramNTH/0406/
+ko co folder tiny v? blog n?n ko canh dc height ch? canh t??ng ??i so v?i site ?ang ch?y ",TramNTH,3,,,,,,,1
+1,v1603-0408,3/18/2016,Ishihara,kuremoto-namba.com/,mail:done,TrucTTT,ManDH,1,0.5,,,21/03/2016,21/03/2016,,8:30,9:30,,,1,0,,TrucTTT,1,,,,,,,1
+1,v1603-0410,3/18/2016,Miyagi,himawaridc.jp/,mail:done,ThanhNLY,NguyenLDH,0.5,0,,,21/03/2016,21/03/2016,,9:30,10:00,,,0.5,0,,ThanhNLY,0.5,,,,,,,1
+1,v1603-0411,3/18/2016,Suzuki,englishschool-wing.com/,mail:done,TrucTTT,ManDH,5,1,,,21/03/2016,21/03/2016,,9:30,15:30,,1:00,5,0,http://service.fvn-office.net/fvn/TrucTTT/411/fmail/,TrucTTT,5,,,,,,,1
+1,v1603-0412,3/18/2016,Suzuki,dolphin-life-project.co.jp/,mail:done,KhangPH,ManDH,3.5,1,,,21/03/2016,21/03/2016,,14:00,17:30,,,3.5,0,http://service.fvn-office.net/fvn/khangph/412/fmail/fmail.cgi,KhangPH,3.5,,,,,,,1
+1,v1603-0354,3/17/2016,Ishihara,kirameki-roof.com/,mail:done,LinhKT,ManDH,3,0.5,,,22/03/2016,22/03/2016,,8:30,11:30,,,3,0,,LinhKT,3,,,,,,,1
+1,v1603-0383,3/17/2016,Suzuki,p-sharakukan.com/,mail:done,DucTP,NguyenLDH,6,1,17:30,,22/03/2016,22/03/2016,,8:30,16:30,,,8,2,"g?m order 381, 382, 383, giao h?ng v?o 22/03
+http://service.fvn-office.net/fvn/ducdemo/381/fmail/",DucTP,6,,,,,,,1
+1,v1603-0394,3/18/2016,Kaneko,fujikawa-shika.com/,mail:done,ThanhNLY,ManDH,5,0,13:00,,22/03/2016,21/03/2016,,11:00,16:00,,,5,0,,ThanhNLY,5,,,,,,,1
+1,v1603-0396,3/18/2016,Kaneko,pacific-chemical.com/,mail:done,DiepBNH,ManDH,0.5,0,12:00,,22/03/2016,22/03/2016,,8:30,9:00,,,0.5,0,,DiepBNH,0.5,,,,,,,1
+1,v1603-0397,3/18/2016,Kaneko,ennami-shika.com/,mail:done,TramNTH,ManDH,1,0,12:30,,22/03/2016,21/03/2016,,11:30,13:30,,1:00,1,0,,TramNTH,1,,,,,,,1
+1,v1603-0409,3/22/2016,Sawada,tsys-powersolutions.com/hcb/,mail:done,TrucTTT,ManDH,2,0,,,22/03/2016,22/03/2016,,8:30,10:30,,,2,0,,TrucTTT,2,,,,,,,1
+1,v1603-0413,3/21/2016,Asano,hikarikensou.jp/,mail:done,HuyTV,ManDH,3,0,,,22/03/2016,21/03/2016,,14:30,17:30,,,3,0,,HuyTV,3,,,,,,,1
+1,v1603-0414,3/22/2016,Ariyoshi,ykj.jp/test160310/,mail:done,TramNTH,HuyenNTT,1.5,0.5,,,22/03/2016,22/03/2016,,10:00,11:30,,,1.5,0,,TramNTH,1.5,,,,,,,1
+1,v1603-0415,3/22/2016,Miyagi,corfe.jp/,mail:done,ThanhNLY,ManDH,1,0,,,22/03/2016,22/03/2016,,10:00,11:00,,,1,0,,ThanhNLY,1,,,,,,,1
+1,v1603-0417,3/22/2016,Ariyoshi,morinomiyakanada-dc.com/,mail:done,TramNTH,ManDH,1.5,0.5,,,22/03/2016,22/03/2016,,8:30,10:00,,,1.5,0,,TramNTH,1.5,,,,,,,1
+1,v1603-0418,3/22/2016,Takeuchi,chiaretta-fashion.com/,mail:done,BinhNT,NguyenLDH,1.5,0,,,22/03/2016,22/03/2016,,10:00,11:30,,,1.5,0,http://service.fvn-office.net/fvn/binhnt/418/flow.html,BinhNT,1.5,,,,,,,1
+1,v1603-0407,3/22/2016,Ishihara,kuki-do.com/,mail:done,LinhKT,ManDH,0.5,0.5,15:00,,23/03/2016,22/03/2016,,13:00,13:30,,,0.5,0,,LinhKT,0.5,,,,,,,1
+1,v1603-0416,3/22/2016,Kawashima,tkdo-w.jp/,mail:done,TramNTH,HuyenNTT,1,0,12:00,,23/03/2016,22/03/2016,,11:30,13:30,,1:00,1,0,,TramNTH,1,,,,,,,1
+1,v1603-0419,3/22/2016,Kawashima,tkdo.jp/,mail:done,TramNTH,ManDH,1,0,12:00,,23/03/2016,22/03/2016,,13:30,14:30,,,1,0,,TramNTH,1,,,,,,,1
+1,v1603-0420,3/22/2016,Ishihara,alice-yagi.com/,mail:done,LinhKT,ManDH,0.5,0.5,,,23/03/2016,22/03/2016,,13:30,14:00,,,0.5,0,,LinhKT,0.5,,,,,,,1
+1,v1603-0421,3/22/2016,Ishihara,nikken-dl.jp/,mail:done,DiepBNH,ManDH,2,0.5,,,23/03/2016,22/03/2016,,14:00,16:00,,,2,0,,DiepBNH,2,,,,,,,1
+1,v1603-0423,3/22/2016,Sawada,lcd-module.jp/,mail:done,ThanhNLY,ManDH,3.5,0,14:00,,23/03/2016,22/03/2016,,13:00,16:30,,,3.5,0,,ThanhNLY,3.5,,,,,,,1
+1,v1603-0425,3/22/2016,Takeuchi,kato-dental-clinic.jp/,mail:done,DiepBNH,ManDH,1.5,0,,,23/03/2016,22/03/2016,,13:00,14:30,,,1.5,0,,DiepBNH,1.5,,,,,,,1
+1,v1603-0427,3/22/2016,Asano,kodama-t.co.jp/,mail:done,ThanhNLY,ManDH,6,1,,,23/03/2016,23/03/2016,,9:00,16:00,,1:00,6,0,,ThanhNLY,6,,,,,,,1
+1,v1603-0428,3/22/2016,Sawada,f-gol.jp/,mail:done,LinhKT,ManDH,1,0,13:00,,23/03/2016,22/03/2016,,14:00,15:00,,,1,0,http://service.fvn-office.net/fvn/LinhKT/v1603-0428_f-gol.jp/160323_02_bk/example/,LinhKT,1,,,,,,,1
+1,v1603-0429,3/22/2016,Nishitani,tennis-school.jp/,mail:done,TramNTH,ManDH,5,1,,,23/03/2016,23/03/2016,,13:00,17:30,,,4.5,-0.5,http://service.fvn-office.net/fvn/TramNTH/0429/,TramNTH,5,,,,,,,1
+1,v1603-0431,3/22/2016,Sawada,leaktester-navi.jp/,mail:done,BinhNT,ManDH,1.5,0,13:30,,23/03/2016,22/03/2016,,15:00,16:30,,,1.5,0,,BinhNT,1.5,,,,,,,1
+1,v1603-0432,3/22/2016,Kaneko,kowa-meister.com/,mail:done,TramNTH,ManDH,2.5,0,13:00,,23/03/2016,23/03/2016,,9:00,11:00,,,2,-0.5,,KhangPH,3.5,,,,,,,1
+1,v1603-0433,3/22/2016,Kaneko,leaktester.co.jp/,mail:done,KhangPH,NguyenLDH,3.5,0,15:00,,23/03/2016,23/03/2016,,8:30,12:00,,,3.5,0,,KhangPH,3.5,,,,,,,1
+1,v1603-0434,3/22/2016,Tsukamoto,fukuoka-orange.com/,mail:done,LinhKT,ManDH,2,0.5,,,23/03/2016,23/03/2016,,13:00,15:00,,,2,0,,LinhKT,2,,,,,,,1
+1,v1603-0435,3/22/2016,Inoue,igumi-dc.com/,mail:done,TramNTH,ManDH,1,0,13:00,,23/03/2016,23/03/2016,,8:30,9:00,,,0.5,-0.5,,TramNTH,1,,,,,,,1
+1,v1603-0436,3/22/2016,Ariyoshi,tsuda-dental.com/,mail:done,LinhKT,ManDH,2,0.5,,,23/03/2016,23/03/2016,,15:00,17:00,,,2,0,,LinhKT,2,,,,,,,1
+1,v1603-0437,3/22/2016,Nishitani,easy-english.jp/,mail:done,NhaNTT,HuyenNTT,1.5,0.5,,,23/03/2016,22/03/2016,,10:00,11:30,,,1.5,0,,NhaNTT,1.5,,,,,,,1
+1,v1603-0438,3/22/2016,Nishitani,ee-stepup.com/,mail:done,TienND,ManDH,1,0.5,,,23/03/2016,23/03/2016,,8:30,9:30,,,1,0,,TienND,1,,,,,,,1
+1,v1603-0439,3/22/2016,Yoshioka,nfa-g.com/,mail:done,DiepBNH,HuyenNTT,1,0,13:00,,23/03/2016,22/03/2016,,16:30,17:30,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0440,3/22/2016,Takeuchi,lucent-shika.com/,mail:done,NhaNTT,HuyenNTT,1.5,0,,,23/03/2016,22/03/2016,,8:30,10:00,,,1.5,0,,NhaNTT,1.5,,,,,,,1
+1,v1603-0441,3/22/2016,Takeuchi,lucent-shika.com/,mail:done,BinhNT,NguyenLDH,3,0.5,,,23/03/2016,23/03/2016,,10:00,14:00,,1:00,3,0,,BinhNT,3,,,,,,,1
+1,v1603-0442,3/22/2016,Ariyoshi,asakawa-hikkoshi.com/,mail:done,BinhNT,HuyenNTT,2,0.5,,,23/03/2016,23/03/2016,,14:00,16:00,,,2,0,,BinhNT,2,,,,,,,1
+1,v1603-0443,3/22/2016,Tanaka,kawata-dental.jp/,mail:done,NamPQ,HuyenNTT,1.5,0.5,14:00,,23/03/2016,23/03/2016,,8:30,10:00,,,1.5,0,,NamPQ,1.5,,,,,,,1
+1,v1603-0444,3/22/2016,Takeuchi,chiaretta-fashion.com/,mail:done,NamPQ,HuyenNTT,2,0,,,23/03/2016,23/03/2016,,10:00,12:00,,,2,0,http://service.fvn-office.net/fvn/Nampq/2016/mainternance/160323_02_bk/,NamPQ,2,,,,,,,1
+1,v1603-0449,3/23/2016,Suzuki,earth-act-support.jp/,mail:done,NhaNTT,NguyenLDH,3,0.5,,,23/03/2016,23/03/2016,,10:00,14:00,,1:00,3,0,,NhaNTT,3,,,,,,,1
+1,v1603-0451,3/23/2016,Kawashima,tkdo-w.jp/,mail:done,TramNTH,ManDH,0.5,0,,,23/03/2016,23/03/2016,,11:00,11:15,,,0.25,-0.25,,TramNTH,0.5,,,,,,,1
+1,v1603-0452,3/23/2016,Kawashima,tkdo.jp/,mail:done,TramNTH,ManDH,0.5,0,,,23/03/2016,23/03/2016,,11:15,11:30,,,0.25,-0.25,,TramNTH,0.5,,,,,,,1
+1,v1603-0468,3/23/2016,Ariyoshi,ykj.jp/,mail:done,TramNTH,ManDH,1,0,,,23/03/2016,23/03/2016,,11:30,12:00,,,0.5,-0.5,th?m c?ng s? 414,TramNTH,1,,,,,,,1
+1,v1603-0430,3/23/2016,Ishihara,kanno-dc.com/,mail:done,TramNTH,HuyenNTT,1.5,0.5,,,24/03/2016,24/03/2016,,16:30,17:30,,,1,-0.5,,TramNTH,1.5,,,,,,,1
+1,v1603-0445,3/23/2016,Takeuchi,plumber-ohta.com/,mail:done,TrucTTT,NguyenLDH,3,0,,,24/03/2016,23/03/2016,,8:30,11:30,,,3,0,,TrucTTT,3,,,,,,,1
+1,v1603-0446,3/23/2016,Kawashima,heart-dc.com/ ,mail:done,KhangPH,HuyenNTT,2,0.5,13:00,,24/03/2016,24/03/2016,,8:30,10:30,,,2,0,,KhangPH,2,,,,,,,1
+1,v1603-0447,3/23/2016,Inoue,tabo-shika.com/,mail:done,TramNTH,NguyenLDH,2.5,0,13:00,,24/03/2016,24/03/2016,,8:30,11:00,,,2.5,0,,TramNTH,2.5,,,,,,,1
+1,v1603-0448,3/23/2016,Takeuchi,sakyoyama-dc.smart-change.info/,mail:done,BichVTN,NguyenLDH,2,0,,,24/03/2016,23/03/2016,,16:00,17:30,,,1.5,-0.5,,BichVTN,2,,,,,,,1
+1,v1603-0450,3/23/2016,Ishihara,onishi-shika.jp/,mail:done,HuyTV,HuyenNTT,2,0.5,,,24/03/2016,23/03/2016,,13:00,15:00,,,2,0,,HuyTV,2,,,,,,,1
+1,v1603-0453,3/23/2016,Shinozuka,star-shika.com/,mail:done,ThanhNLY,ManDH,5,0,15:00,,24/03/2016,24/03/2016,,9:00,15:00,,1:00,5,0,,ThanhNLY,5,,,,,,,1
+1,v1603-0454,3/23/2016,Ishihara,fujihira-dc.com/ ,mail:done,HuyTV,HuyenNTT,1,0.5,,,24/03/2016,23/03/2016,,16:00,17:00,,,1,0,,HuyTV,1,,,,,,,1
+1,v1603-0455,3/23/2016,Sawada,hatudenki-rental.com/,mail:done,BinhNT,ManDH,3,0,14:00,,24/03/2016,24/03/2016,,8:30,11:30,,,3,0,,BinhNT,3,,,,,,,1
+1,v1603-0456,3/23/2016,Takeuchi,cyubujuki.com/ ,mail:done,TramNTH,HuyenNTT,3.5,0,,,24/03/2016,24/03/2016,,14:00,16:30,,,2.5,-1,,TramNTH,3.5,,,,,,,1
+1,v1603-0457,3/23/2016,Tanaka,kanbara-koumuten.jp/,mail:done,LinhKT,HuyenNTT,6,1,,,24/03/2016,24/03/2016,,8:30,15:00,,1:00,5.5,-0.5,,LinhKT,6,,,,,,,1
+1,v1603-0458,3/23/2016,Ariyoshi,ticketking.jp/ ,mail:done,NhaNTT,HuyenNTT,6,1,,,24/03/2016,24/03/2016,,11:00,17:30,,1:00,5.5,-0.5,,NhaNTT,6,,,,,,,1
+1,v1603-0459,3/23/2016,Takeuchi,dental-stage.jp/,mail:done,HuyTV,HuyenNTT,3,0,,,24/03/2016,23/03/2016,,13:00,16:00,,,3,0,,HuyTV,3,,,,,,,1
+1,v1603-0460,3/23/2016,Suzuki,nakanokensou.jp/,mail:done,TrucTTT,NguyenLDH,6,1,,,24/03/2016,24/03/2016,,8:30,15:30,,1:00,6,0,"g?m 460, 461, 462,463 giao h?ng trong ng?y 29/3",TrucTTT,6,,,,,,,1
+1,v1603-0464,3/23/2016,Takeuchi,ouhara-shika.jp/ ,mail:done,TramNTH,HuyenNTT,1.5,0,,,24/03/2016,24/03/2016,,13:00,14:00,,,1,-0.5,,TramNTH,1.5,,,,,,,1
+1,v1603-0465,3/23/2016,Ariyoshi,itr-audition.com/,mail:done,BinhNT,ManDH,2.5,0.5,,,24/03/2016,24/03/2016,,13:00,15:30,,,2.5,0,,BinhNT,2.5,,,,,,,1
+1,v1603-0466,3/23/2016,Asano,silk-house.jp/ ,mail:done,NhaNTT,ManDH,4,1,,,24/03/2016,23/03/2016,,8:30,13:30,,1:00,4,0,,NhaNTT,4,,,,,,,1
+1,v1603-0467,3/23/2016,Ariyoshi,zekkenyasan.co.jp/ ,mail:done,TramNTH,ManDH,1,0.5,,,24/03/2016,24/03/2016,,11:00,12:00,,,1,0,,TramNTH,1,,,,,,,1
+1,v1603-0469,3/23/2016,Shinozuka,daigo-kensetu.co.jp/,mail:done,NhaNTT,ManDH,2.5,0,13:00,,24/03/2016,24/03/2016,,8:30,11:00,,,2.5,0,,NhaNTT,2.5,,,,,,,1
+1,v1603-0470,3/23/2016,Ariyoshi,kitazono-ortho.com/,mail:done,BichVTN,ManDH,1.5,0.5,,,24/03/2016,24/03/2016,,9:00,9:30,,,0.5,-1,,BichVTN,1.5,,,,,,,1
+1,v1603-0471,3/23/2016,Ishihara,nishokan.com/,mail:done,BichVTN,ManDH,0.5,0.5,,,24/03/2016,24/03/2016,,9:30,10:00,,,0.5,0,,BichVTN,0.5,,,,,,,1
+1,v1603-0472,3/23/2016,Ariyoshi,tdhome.biz/,mail:done,HuyTV,ManDH,2,0.5,,,24/03/2016,24/03/2016,,9:00,11:00,,,2,0,,HuyTV,2,,,,,,,1
+1,v1603-0474,3/23/2016,Suzuki,fukuoka-vocal.com/ ,mail:done,BichVTN,NguyenLDH,6,1,,,24/03/2016,24/03/2016,,10:30,17:30,,1:00,1,-5,http://service.fvn-office.net/BichVTN/160324_02_bk/fmail/,BichVTN,6,,,,,,,1
+1,v1603-0475,3/23/2016,Ariyoshi,fukuoka-sjcd.com/ ,mail:done,ThanhNLY,NguyenLDH,2,0.5,,,24/03/2016,24/03/2016,,15:00,17:00,,,2,0,,ThanhNLY,2,,,,,,,1
+1,v1603-0476,3/23/2016,Sawada,kanagawa-kyouseishika-ikai.jp/,mail:done,TrucPTT,ManDH,1,0,13:00,,24/03/2016,24/03/2016,,8:30,9:30,,,1,0,,TrucPTT,1,,,,,,,1
+1,v1603-0477,3/23/2016,Tanaka,takashishika.com/ ,mail:done,LamNTP,ManDH,2.5,0.5,,,24/03/2016,24/03/2016,,8:30,11:00,,,2.5,0,,LamNTP,2.5,,,,,,,1
+1,v1603-0478,3/23/2016,Suzuki,fukuoka-sougi.com/,mail:done,ThanhNT,ManDH,3.5,1,14:00,,24/03/2016,24/03/2016,,9:30,12:00,,,2.5,-1,,ThanhNT,3.5,,,,,,,1
+1,v1603-0479,3/23/2016,Suzuki,englishschool-wing.com/ ,mail:done,ThuyTTN,ManDH,6.5,1.5,giao s?m,,24/03/2016,24/03/2016,,9:00,16:30,,1:00,6.5,0,http://service.fvn-office.net/fvn/thuyttn/160324_02_bk/,ThuyTTN,6.5,,,,,,,1
+1,v1603-0480,3/23/2016,Yoshioka,morikage-dc.com/,mail:done,TrucPTT,NguyenLDH,1,0,13:00,,24/03/2016,24/03/2016,,9:30,10:30,,,1,0,,TrucPTT,1,,,,,,,1
+1,v1603-0426,3/24/2016,Ishihara,hasegawa-e-dc.com/,mail:done,ThuyTTN,HuyenNTT,3,0.5,15:00,,25/03/2016,25/03/2016,,9:00,12:00,,,3,0,,ThuyTTN,3,,,,,,,1
+1,v1603-0461,3/23/2016,Suzuki,nakanokensou.jp/,mail:done,TrucTTT,NguyenLDH,6,1,,,25/03/2016,25/03/2016,,8:30,15:30,,1:00,6,0,"g?m 460, 461, 462,463 giao h?ng trong ng?y 29/3",TrucTTT,6,,,,,,,1
+1,v1603-0473,3/24/2016,Ishihara,kuremoto-namba.com/,mail:done,VanVTK,HuyenNTT,6,1,,,25/03/2016,25/03/2016,,9:00,16:00,,1:00,6,0,,VanVTK,6,,,,,,,1
+1,v1603-0481,3/24/2016,Shinozuka,shinkawasaki-dc.com/,mail:done,LamNTP,HuyenNTT,1.5,0,,,25/03/2016,24/03/2016,,11:00,13:30,,1:00,1.5,0,,LamNTP,1.5,,,,,,,1
+1,v1603-0482,3/24/2016,Nishitani,tennis-school.jp ,mail:done,LamNTP,ManDH,5,1,,,25/03/2016,25/03/2016,,14:30,17:30,,,3,-2,,LamNTP,5,,,,,,,1
+1,v1603-0483,3/24/2016,Kaneko,bianca-salon.com/ ,mail:done,ThanhNLY,HuyenNTT,1,0,12:00,,25/03/2016,24/03/2016,,17:00,17:40,,,0.67,-0.33,,ThanhNLY,1,,,,,,,1
+1,v1603-0484,3/24/2016,Takeuchi,kato-dental-clinic.jp/,mail:done,TrucPTT,HuyenNTT,2,0,,,25/03/2016,25/03/2016,,8:30,10:20,,,1.83,-0.17,,TrucPTT,2,,,,,,,1
+1,v1603-0485,3/24/2016,Ishihara,shigeshita-dc.com/,mail:done,LinhKT,HuyenNTT,1,0.5,,,25/03/2016,25/03/2016,,17:00,17:30,,,0.5,-0.5,,LinhKT,1,,,,,,,1
+1,v1603-0486,3/24/2016,Inoue,nakamaru-dental.jp/,mail:done,HuyTV,ManDH,1.5,0,13:00,,25/03/2016,24/03/2016,,14:00,15:30,,,1.5,0,,HuyTV,1.5,,,,,,,1
+1,v1603-0487,3/24/2016,Sawada,paravie.net/ ,mail:done,LamNTP,ManDH,2,0,13:30,,25/03/2016,24/03/2016,,13:30,15:30,,,2,0,,LamNTP,2,,,,,,,1
+1,v1603-0488,3/24/2016,Takeuchi,laundry-support.jp/ ,mail:done,LinhKT,ManDH,3,0,,,25/03/2016,24/03/2016,,15:00,17:30,,,2.5,-0.5,http://service.fvn-office.net/fvn/LinhKT/v1603-0488_laundry-support.jp/fmail/fmail.cgi,LinhKT,3,,,,,,,1
+1,v1603-0490,3/24/2016,Ariyoshi,kensington-english.com/ ,mail:done,LinhKT,ManDH,2,0.5,,,25/03/2016,25/03/2016,,13:00,14:30,,,1.5,-0.5,,LinhKT,2,,,,,,,1
+1,v1603-0491,3/24/2016,Takeuchi,hula-coop.org/ ,mail:done,LinhKT,NguyenLDH,2.5,0,,,25/03/2016,25/03/2016,,14:30,16:30,,,2,-0.5,,LinhKT,2.5,,,,,,,1
+1,v1603-0492,3/24/2016,Suzuki,fujiken-house.jp/ ,mail:done,NhaNTT,NguyenLDH,3.5,1,,,25/03/2016,25/03/2016,,10:00,14:30,,1:00,3.5,0,,NhaNTT,3.5,,,,,,,1
+1,v1603-0493,3/24/2016,Kawashima,akidental.com/ ,mail:done,LinhKT,ManDH,3.5,1,13:00,,25/03/2016,25/03/2016,,8:30,12:00:00,,,3.5,0,,LinhKT,3.5,,,,,,,1
+1,v1603-0494,3/24/2016,Ariyoshi,megane-story.com/ ,mail:done,LamNTP,ManDH,2,0.5,,,25/03/2016,24/03/2016,,15:30,17:30,,,2,0,,LamNTP,2,,,,,,,1
+1,v1603-0495,3/24/2016,Inoue,fukashi.co.jp/ ,mail:done,TramNTH,ManDH,1,0,13:00,,25/03/2016,25/03/2016,,8:30,9:30,,,1,0,,TramNTH,1,,,,,,,1
+1,v1603-0496,3/24/2016,Ariyoshi,ellegance.jp/,mail:done,TramNTH,ManDH,1.5,0.5,,,25/03/2016,25/03/2016,,9:30,11:00,,,1.5,0,,TramNTH,1.5,,,,,,,1
+1,v1603-0497,3/24/2016,Shinozuka,kento-dc.com/,mail:done,BichVTN,NguyenLDH,5,0,15:00,,25/03/2016,25/03/2016,,8:30,14:30,,1:00,5,0,,BichVTN,5,,,,,,,1
+1,v1603-0498,3/24/2016,Suzuki,inspa-fukuoka.com/ ,mail:done,ThanhNLY,NguyenLDH,6,1,,,25/03/2016,25/03/2016,,9:00,16:00,,1:00,6,0,"chia 2 order 498, 499 giao ng?y 28/3",ThanhNLY,6,,,,,,,1
+1,v1603-0500,3/24/2016,Suzuki,globalreach.jp/,mail:done,HuyTV,ManDH,3,0.5,,,25/03/2016,25/03/2016,,9:00,12:00,,,3,0,,HuyTV,3,,,,,,,1
+1,v1603-0502,3/24/2016,Suzuki,sola-web.com/ ,mail:done,VuLDN,ManDH,6,1,,,25/03/2016,25/03/2016,,8:30,15:30,,1:00,6,0,"g?m 3 order 502,503,504, giao ng?y 29/03 OverNotes",VuLDN,6,,,,,,,1
+1,v1603-0505,3/24/2016,Shinozuka,hama-den.jp/,mail:done,NhaNTT,NguyenLDH,1.5,0,12:00,,25/03/2016,25/03/2016,,8:30,10:00,,,1.5,0,,NhaNTT,1.5,,,,,,,1
+1,v1603-0506,3/24/2016,Shinozuka,hama-den.co.jp/,mail:done,KhangPH,NguyenLDH,0.5,0,12:00,,25/03/2016,25/03/2016,,8:30,9:00,,,0.5,0,,KhangPH,0.5,,,,,,,1
+1,v1603-0516,3/25/2016,Ariyoshi,ykj.jp/ ,mail:done,ThuyTTN,ManDH,1,0.5,,,25/03/2016,25/03/2016,,13:00,14:00,,,1,0,,ThuyTTN,1,,,,,,,1
+1,v1603-0526,3/25/2016,Kawashima,akidental.com/,mail:done,LinhKT,,0.5,0,,,25/03/2016,25/03/2016,,16:30,17:00,,,0.5,0,th?m c?ng s? cho 493,LinhKT,0.5,,,,,,,1
+1,v1603-0462,3/23/2016,Suzuki,nakanokensou.jp/,mail:done,TrucTTT,NguyenLDH,6,1,,,28/03/2016,28/03/2016,,13:00,17:30,,,4.5,-1.5,"g?m 460, 461, 462,463 giao h?ng trong ng?y 29/3",TrucTTT,6,,,,,,,1
+1,v1603-0499,3/24/2016,Suzuki,inspa-fukuoka.com/,mail:done,ThanhNLY,NguyenLDH,6,1,,,28/03/2016,28/03/2016,,9:30,16:30,,1:00,6,0,"chia 2 order 498, 499 giao ng?y 28/3
+http://service.fvn-office.net/fvn/thanhnly/0498/",ThanhNLY,6,,,,,,,1
+1,v1603-0501,3/24/2016,Takeuchi,plumber-ohta.com/,mail:done,TramNTH,HuyenNTT,1.5,0,,,28/03/2016,25/03/2016,,11:00,13:30,,1:00,1.5,0,Confirm tr??c khi giao h?ng,TramNTH,1.5,,,,,,,1
+1,v1603-0503,3/24/2016,Suzuki,sola-web.com/ ,mail:done,VuLDN,ManDH,6,1,,,28/03/2016,28/03/2016,,8:30,15:30,,1:00,6,0,"g?m 3 order 502,503,504, giao ng?y 29/03 OverNotes",VuLDN,6,,,,,,,1
+1,v1603-0507,3/24/2016,Suzuki,ohashi-inc.com/ ,mail:done,TrucPTT,HuyenNTT,3,0.5,14:00,,28/03/2016,28/03/2016,,8:30,11:30,,,3,0,,TrucPTT,3,,,,,,,1
+1,v1603-0508,3/25/2016,Kawashima,balio-color.com/,mail:done,LamNTP,HuyenNTT,0.5,0.5,12:00,,28/03/2016,25/03/2016,,13:00,13:30,,,0.5,0,,LamNTP,0.5,,,,,,,1
+1,v1603-0511,3/25/2016,Inoue,domm8199.com/ ,mail:done,TramNTH,HuyenNTT,1,0,13:00,,28/03/2016,25/03/2016,,13:30,14:30,,,1,0,,TramNTH,1,,,,,,,1
+1,v1603-0512,3/25/2016,Kawashima,golfacademy.jp/ ,mail:done,ThuyTTN,HuyenNTT,1,0.5,12:00,,28/03/2016,25/03/2016,,14:00,15:00,,,1,0,,ThuyTTN,1,,,,,,,1
+1,v1603-0514,3/25/2016,Sawada,ecosmart-fire.jp/ ,mail:done,TramNTH,HuyenNTT,2,0,13:30,,28/03/2016,25/03/2016,,14:30,16:00,,,1.5,-0.5,,TramNTH,2,,,,,,,1
+1,v1603-0515,3/25/2016,Inoue,taro-shika.com/ ,mail:done,LinhKT,HuyenNTT,0.5,0,12:00,,28/03/2016,28/03/2016,,8:30,9:00,,,0.5,0,,LinhKT,0.5,,,,,,,1
+1,v1603-0517,3/25/2016,Kaneko,aozora-shika.or.jp/,mail:done,TrucPTT,HuyenNTT,2,0,12:00,,28/03/2016,25/03/2016,,13:00,15:00,,,2,0,,TrucPTT,2,,,,,,,1
+1,v1603-0518,3/25/2016,Miyagi,design-interior.jp/ ,mail:done,ThanhNT,ManDH,4,0,15:00,,28/03/2016,28/03/2016,,9:00,14:00,1:00,,6,2,,ThanhNT,4,,,,,,,1
+1,v1603-0520,3/25/2016,Tanaka,takashishika.com/ ,mail:done,NhaNTT,ManDH,2,0.5,,,28/03/2016,25/03/2016,,14:30,16:30,,,2,0,,NhaNTT,2,,,,,,,1
+1,v1603-0521,3/25/2016,Miyagi,zenseryoho.com/ ,mail:done,BichVTN,ManDH,0.5,0,13:00,,28/03/2016,25/03/2016,,15:00,15:30,,,0.5,0,,BichVTN,0.5,,,,,,,1
+1,v1603-0519,3/25/2016,Ariyoshi,smg-spyder.jp/ ,mail:done,TrucTTT,HuyenNTT,4,1,,,28/03/2016,28/03/2016,,8:30,12:00,,,3.5,-0.5,http://service.fvn-office.net/fvn/TrucTTT/519/,TrucTTT,4,,,,,,,1
+1,v1603-0522,3/25/2016,Ariyoshi,shinbishikakyokai.com/ ,mail:done,TramNTH,HuyenNTT,2,0.5,,,28/03/2016,28/03/2016,,8:30,10:00,,,1.5,-0.5,,TramNTH,2,,,,,,,1
+1,v1603-0523,3/25/2016,Ariyoshi,hp-ns.net/,mail:done,TramNTH,HuyenNTT,2,0.5,,,28/03/2016,25/03/2016,,16:00,17:30,,,1.5,-0.5,,TramNTH,2,,,,,,,1
+1,v1603-0510,3/25/2016,Ishihara,kuremoto-namba.com/ ,mail:done,LinhKT,HuyenNTT,6,1,,,28/03/2016,28/03/2016,,11:00,17:30,,1:00,5.5,-0.5,,LinhKT,6,,,,,,,1
+1,v1603-0524,3/25/2016,Ariyoshi,toniguy-ito.com/,mail:done,TramNTH,HuyenNTT,2.5,0.5,,,28/03/2016,28/03/2016,,13:00,15:00,,,2,-0.5,,TramNTH,2.5,,,,,,,1
+1,v1603-0527,3/25/2016,Ariyoshi,kosuke-dc.com/ ,mail:done,NhaNTT,HuyenNTT,1,0.5,,,28/03/2016,28/03/2016,,11:00,12:00,,,1,0,,NhaNTT,1,,,,,,,1
+1,v1603-0528,3/25/2016,Miyagi,shinwabiso.jp/ ,mail:done,NhaNTT,HuyenNTT,2.5,0,16:30,,28/03/2016,28/03/2016,,8:30,11:00,,,2.5,0,http://service.fvn-office.net/fvn/NhaNTT/1603_528/evidence/post-7/,NhaNTT,2.5,,,,,,,1
+1,v1603-0529,3/25/2016,Ariyoshi,tout-couleur.com/ ,mail:done,TramNTH,NguyenLDH,2.5,0.5,,,28/03/2016,28/03/2016,,10:00,12:00,,,2,-0.5,,TramNTH,2.5,,,,,,,1
+1,v1603-0509,3/25/2016,Suzuki,ticketking.jp/ ,mail:done,DucTP,NguyenLDH,6,1,,,28/03/2016,28/03/2016,,9:00,16:30,,,7.5,1.5,,DucTP,6,,,,,,,1
+1,v1603-0531,3/28/2016,Lim,nakamaru-dental.jp/,mail:done,KhangPH,NguyenLDH,4,1,17:30,,28/03/2016,28/03/2016,,8:30,12:30,,,4,0,,KhangPH,4,,,,,,,1
+1,v1603-0532,3/28/2016,Ariyoshi,arakawa-paint.com/ ,mail:done,LinhKT,NguyenLDH,2,0.5,,,28/03/2016,28/03/2016,,9:00,11:00,,,2,0,,LinhKT,2,,,,,,,1
+1,v1603-0538,3/28/2016,Ariyoshi,kensington-english.com/,mail:done,TramNTH,NguyenLDH,1,0.5,,,28/03/2016,28/03/2016,,15:00,16:00,,,1,0,,TramNTH,1,,,,,,,1
+1,v1603-0541,3/28/2016,Ariyoshi,arakawa-paint.com/,mail:done,LinhKT,NguyenLDH,3,0.5,,,28/03/2016,29/03/2016,,8:30,11:30,,,3,0,giao tr??c 12h 29/3,LinhKT,3,,,,,,,1
+1,v1603-0463,3/23/2016,Suzuki,nakanokensou.jp/,mail:done,TrucTTT,NguyenLDH,6,1,,,29/03/2016,29/03/2016,,8:30,15:30,,1:00,6,0,"g?m 460, 461, 462,463 giao h?ng trong ng?y 29/3",TrucTTT,6,,,,,,,1
+1,v1603-0504,3/24/2016,Ariyoshi,ellegance.jp/ ,mail:done,VuLDN,ManDH,6,0.5,,,29/03/2016,29/03/2016,,8:30,15:30,,1:00,6,0,"g?m 3 order 502,503,504, giao ng?y 29/03 OverNotes
+Link check 
+http://service.fvn-office.net/fvn/vuldn/v1603-0502_sola-web.com/column/",VuLDN,6,,,,,,,1
+1,v1603-0513,3/25/2016,Takeuchi,cyubujuki.com/ ,mail:done,NgocTT,ManDH,2.5,0,,,29/03/2016,25/03/2016,,13:30,16:00,,,2.5,0,http://service.fvn-office.net/fvn/NgocTT/160329_02_bk/,NgocTT,2.5,,,,,,,1
+1,v1603-0530,3/25/2016,Takeuchi,land-fab-baikyaku.jp/ ,mail:done,KhangPH,HuyenNTT,3,0,,,29/03/2016,29/03/2016,,8:30,11:30,,,3,0,,KhangPH,3,,,,,,,1
+1,v1603-0533,3/28/2016,Kawashima,e-headspa.com/ ,mail:done,NhaNTT,HuyenNTT,1,0,12:00,,29/03/2016,29/03/2016,,13:00,14:00,,,1,0,,NhaNTT,1,,,,,,,1
+1,v1603-0534,3/28/2016,Asano,nohara-dental.net/ ,mail:done,HuyTV,HuyenNTT,5,1,,,29/03/2016,28/03/2016,,10:30,16:30,,1:00,5,0,http://service.fvn-office.net/fvn/huytv/Maint/1603/noharadental.net/,HuyTV,5,,,,,,,1
+1,v1603-0535,3/28/2016,Takeuchi,laundry-support.jp/ ,mail:done,TramNTH,HuyenNTT,1.5,0,,,29/03/2016,28/03/2016,,16:00,17:30,,,1.5,0,http://service.fvn-office.net/fvn/TramNTH/0535/fmail/,TramNTH,1.5,,,,,,,1
+1,v1603-0537,3/28/2016,Asano,lukura.jp/,mail:done,TramNTH,HuyenNTT,5,1,,,29/03/2016,29/03/2016,,8:30,13:30,,1:00,4,-1,,TramNTH,5,,,,,,,1
+1,v1603-0539,3/28/2016,Asano,nagoya-medical-herbschool.com/,mail:done,NhaNTT,HuyenNTT,4,0,,,29/03/2016,28/03/2016,,13:30,17:30,,,4,0,,NhaNTT,4,,,,,,,1
+1,v1603-0536,3/28/2016,Sawada,syoubou-kousin.com/ ,mail:done,HuyTV,NguyenLDH,3.5,0,14:30,,29/03/2016,29/03/2016,,8:30,12:00,,,3.5,0,,HuyTV,3.5,,,,,,,1
+1,v1603-0543,3/28/2016,Ishihara,office-planning.info/,mail:done,BichVTN,HuyenNTT,1,0.5,,,29/03/2016,29/03/2016,,15:30,16:30,,,1,0,,BichVTN,1,,,,,,,1
+1,v1603-0544,3/28/2016,Tsukamoto,bali-in.net/ ,mail:done,HuyTV,HuyenNTT,5,1,,,29/03/2016,29/03/2016,,11:30,17:30,,1:00,5,0,,HuyTV,5,,,,,,,1
+1,v1603-0545,3/28/2016,Ariyoshi,haraken-k.com/test160309/,mail:done,TramNTH,HuyenNTT,2.5,0.5,,,29/03/2016,29/03/2016,,13:30,15:00,,,1.5,-1,,TramNTH,2.5,,,,,,,1
+1,v1603-0547,3/28/2016,Ishihara,kirameki-paint.com/,mail:done,NamPQ,HuyenNTT,0.5,0.5,,,29/03/2016,29/03/2016,,8:30,9:00,,,0.5,0,,NamPQ,0.5,,,,,,,1
+1,v1603-0548,3/28/2016,Tanaka,yukawashika-418.com/ ,mail:done,BichVTN,HuyenNTT,1,0.5,,,29/03/2016,29/03/2016,,16:30,17:30,,,1,0,,BichVTN,1,,,,,,,1
+,v1603-0549,3/28/2016,Ariyoshi,ios-co.net/ ,mail:done,TienND,NguyenLDH,2,0.5,,,29/03/2016,29/03/2016,,9:00,10:30,,,1.5,-0.5,,,,,,,,,,1
+1,v1603-0550,3/28/2016,Ishihara,kirameki-roof.com/ ,mail:done,VanVTK,NguyenLDH,0.5,0.5,,,29/03/2016,29/03/2016,,11:00,11:30,,,0.5,0,,VanVTK,0.5,,,,,,,1
+1,v1603-0551,3/28/2016,Yoshioka,sekine-dc.jp/ ,mail:done,VanVTK,NguyenLDH,2.5,0,13:30,,29/03/2016,29/03/2016,,8:30,11:00,,,2.5,0,,VanVTK,2.5,,,,,,,1
+1,v1603-0554,3/28/2016,Suzuki,seeznail.com/ ,mail:done,LinhKT,NguyenLDH,2,0.5,,,29/03/2016,29/03/2016,,13:30,15:30,,,2,0,,LinhKT,2,,,,,,,1
+1,v1603-0546,3/28/2016,Ishihara,kuremoto-namba.com/ ,mail:done,LinhKT,NguyenLDH,1,0.5,,,29/03/2016,29/03/2016,,11:30,13:30,,1:00,1,0,,LinhKT,1,,,,,,,1
+1,v1603-0552,3/28/2016,Yoshioka,bianca-salon.com/ ,mail:done,BichVTN,NguyenLDH,2.5,0,14:00,,29/03/2016,29/03/2016,,8:30,11:00,,,2.5,0,,BichVTN,2.5,,,,,,,1
+1,v1603-0553,3/28/2016,Kaneko,leaktester.co.jp/ ,mail:done,TienND,NguyenLDH,1.5,0,12:30,,29/03/2016,28/03/2016,,16:00,17:15,,,1.25,-0.25,,TienND,1.5,,,,,,,1
+1,v1603-0558,3/28/2016,Ariyoshi,higuchi-family.com/,mail:done,NamPQ,NguyenLDH,3,1,,,29/03/2016,29/03/2016,,9:00,12:00,,,3,0,,NamPQ,3,,,,,,,1
+1,v1603-0563,3/28/2016,Ariyoshi,technos-sr.com/ ,mail:done,TramNTH,NguyenLDH,3,0.5,,,29/03/2016,29/03/2016,,15:00,17:30,,,2.5,-0.5,,TramNTH,3,,,,,,,1
+1,v1603-0564,3/28/2016,Tanaka,nishio-gou.info/,mail:done,LinhKT,NguyenLDH,3,0.5,,,29/03/2016,29/03/2016,,15:30,18:00,,,2.5,-0.5,http://service.fvn-office.net/fvn/LinhKT/v1603-0564_nishio-gou.info/160329_02_bk/,LinhKT,3,,,,,,,1
+1,v1603-0555,3/28/2016,Suzuki,kenfield.co.jp/ ,mail:done,VanVTK,NguyenLDH,3.5,1,,,29/03/2016,29/03/2016,,11:30,16:00,,1:00,3.5,0,http://service.fvn-office.net/fvn/VanVTK/1603/kenfield.co/,VanVTK,3.5,,,,,,,1
+1,v1603-0556,3/28/2016,Suzuki,ticketking.jp/,mail:done,NhaNTT,NguyenLDH,6,1,,,29/03/2016,29/03/2016,,8:30,15:30,,1:00,6,0,,NhaNTT,6,,,,,,,1
+1,v1603-0560,3/28/2016,Tanaka,apex-eng.co.jp/,mail:done,NamPQ,NguyenLDH,4.5,0.5,,,29/03/2016,29/03/2016,,13:00,17:00,,,4,-0.5,http://service.fvn-office.net/fvn/Nampq/2016/mainternance/160329_02_bk/,NamPQ,4.5,,,,,,,1
+1,v1603-0561,3/28/2016,Ariyoshi,morinomiyakanada-dc.com/ ,mail:done,TienND,NguyenLDH,1.5,0.5,,,29/03/2016,29/03/2016,,13:00,14:30,,,1.5,0,,TienND,1.5,,,,,,,1
+1,v1603-0542,3/28/2016,Suzuki,p-sharakukan.com/,mail:done,DiepBNH,NguyenLDH,2,0.5,,,29/03/2016,29/03/2016,,8:30,10:30,,,2,0,,DiepBNH,2,,,,,,,1
+1,v1603-0525,3/25/2016,Takeuchi,chiaretta-fashion.com/ ,mail:done,TramNTH,HuyenNTT,5,0,,,30/03/2016,30/03/2016,,8:30,13:30,,1:00,4,-1,,TramNTH,5,,,,,,,1
+1,v1603-0559,3/28/2016,Takeuchi,katochubo.co.jp/ ,mail:done,TramNTH,HuyenNTT,1.5,0,,,30/03/2016,30/03/2016,,13:30,14:30,,,1,-0.5,,TramNTH,1.5,,,,,,,1
+1,v1603-0566,3/29/2016,Kawashima,sadayama-dc.com/,mail:done,ThanhNLY,HuyenNTT,1.5,0.5,12:00,,30/03/2016,29/03/2016,,16:00,17:30,,,1.5,0,,ThanhNLY,1.5,,,,,,,1
+1,v1603-0567,3/29/2016,Nishitani,pcaid119.jp/,mail:done,VuLDN,HuyenNTT,2,0.5,,,30/03/2016,30/03/2016,,8:30,10:30,,,2,0,http://service.fvn-office.net/fvn/vuldn/0567/column/,VuLDN,2,,,,,,,1
+1,v1603-0568,3/29/2016,Kawashima,kens-do.com/ ,mail:done,DiepBNH,HuyenNTT,1,0.5,12:00,,30/03/2016,29/03/2016,,16:00,17:00,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0569,3/29/2016,Nishitani,sac-s.net/ ,mail:done,DiepBNH,HuyenNTT,1,0,,,30/03/2016,29/03/2016,,10:30,11:30,,,1,0,,DiepBNH,1,,,,,,,1
+1,v1603-0570,3/29/2016,Nishitani,aisika.com/ ,mail:done,ThanhNLY,HuyenNTT,1.5,0,,,30/03/2016,30/03/2016,,13:00,14:30,,,1.5,0,,ThanhNLY,1.5,,,,,,,1
+1,v1603-0573,3/29/2016,Miyagi,sartoria-rosso.jp/ ,mail:done,VuLDN,HuyenNTT,2.5,0,14:30,,30/03/2016,29/03/2016,,15:00,17:30,,,2.5,0,,VuLDN,2.5,,,,,,,1
+1,v1603-0574,3/29/2016,Kawashima,dent-shin.com/ ,mail:done,LinhKT,HuyenNTT,1.5,0.5,12:00,,30/03/2016,30/03/2016,,8:30,10:00,,,1.5,0,,LinhKT,1.5,,,,,,,1
+1,v1603-0575,3/29/2016,Takeuchi,laundry-support.jp/,mail:done,NamPQ,NguyenLDH,3,0,,,30/03/2016,30/03/2016,,8:30,11:30,,,3,0,http://service.fvn-office.net/fvn/Nampq/2016/mainternance/160330_02_bk/,NamPQ,3,,,,,,,1
+1,v1603-0576,3/29/2016,Kaneko,ing-cdbukuro.com/,mail:done,HuyTV,NguyenLDH,2,0,12:30,,30/03/2016,30/03/2016,,8:30,10:30,,,2,0,,HuyTV,2,,,,,,,1
+1,v1603-0578,3/29/2016,Sawada,jksurf.jp/ ,mail:done,HuyTV,NguyenLDH,2,0,13:30,,30/03/2016,30/03/2016,,10:30,13:30,1:00,,4,2,,HuyTV,2,,,,,,,1
+1,v1603-0572,3/29/2016,Ishihara,kuremoto-namba.com/,mail:done,TienND,HuyenNTT,4,1,,,30/03/2016,30/03/2016,,10:00,14:30,,1:00,3.5,-0.5,,TienND,4,,,,,,,1
+1,v1603-0580,3/29/2016,Ishihara,yoshio-nakagawa.com/,mail:done,LinhKT,HuyenNTT,1.5,0.5,,,30/03/2016,30/03/2016,,10:00,11:30,,,1.5,0,,LinhKT,1.5,,,,,,,1
+1,v1603-0581,3/29/2016,Tanaka,kazokuso-kobe.com/,mail:done,NhaNTT,HuyenNTT,2,0.5,,,30/03/2016,30/03/2016,,11:00,14:00,,1:00,2,0,,NhaNTT,2,,,,,,,1
+1,v1603-0582,3/29/2016,Miyagi,dr-body.jp/,mail:done,NhaNTT,NguyenLDH,2.5,0,15:00,,30/03/2016,30/03/2016,,8:30,11:00,,,2.5,0,,NhaNTT,2.5,,,,,,,1
+1,v1603-0583,3/29/2016,Miyagi,dr-body-academy.jp/,mail:done,BichVTN,NguyenLDH,2,0,15:00,,30/03/2016,30/03/2016,,8:30,10:30,,,2,0,,BichVTN,2,,,,,,,1
+1,v1603-0584,3/29/2016,Ishihara,minami-dental-umeda.com/,mail:done,TienND,NguyenLDH,1.5,0.5,,,30/03/2016,30/03/2016,,9:00,10:00,,,1,-0.5,,TienND,1.5,,,,,,,1
+1,v1603-0585,3/29/2016,Ariyoshi,ticketking.jp/,mail:done,KhangPH,NguyenLDH,6,1,,,30/03/2016,30/03/2016,,8:30,15:30,,1:00,6,0,"http://www.ticketking.jp/html/user_data/shin_pri.php
+http://www.ticketking.jp/html/user_data/shinkansen_roundtrip_ticket_top.php
+http://www.ticketking.jp/html/user_data/39.php",KhangPH,6,,,,,,,1
+1,v1603-0586,3/29/2016,Ariyoshi,mdc59.com/,mail:done,VuLDN,NguyenLDH,3.5,1,,,30/03/2016,30/03/2016,,13:00,16:30,,,3.5,0,http://service.fvn-office.net/fvn/vuldn/586/blog/,VuLDN,3.5,,,,,,,1
+1,v1603-0557,3/29/2016,Takeuchi,cottontail.co.jp/,mail:done,TramNTH,NguyenLDH,1,0,,,30/03/2016,30/03/2016,,14:30,15:00,,,0.5,-0.5,,TramNTH,1,,,,,,,1
+1,v1603-0562,3/29/2016,Takeuchi,sakyoyama-dc.com/,mail:done,TramNTH,NguyenLDH,1.5,0,,,30/03/2016,30/03/2016,,15:00,16:00,,,1,-0.5,,TramNTH,1.5,,,,,,,1
+1,v1603-0540,3/29/2016,Asano,koufukushika.jp/,mail:done,TramNTH,NguyenLDH,3,0.5,,,30/03/2016,30/03/2016,,16:00,17:30,,,1.5,-1.5,,TramNTH,3,,,,,,,1
+1,v1603-0565,3/29/2016,Asano,k-koko.smart-change.info,mail:done,NamPQ,NguyenLDH,3,0.5,,,30/03/2016,30/03/2016,,11:30,15:30,,1:00,3,0,,NamPQ,3,,,,,,,1
+,v1603-0587,3/30/2016,Ariyoshi,magicenglish07.com/ ,mail:done,TienND,NguyenLDH,1,0.5,,,30/03/2016,30/03/2016,,15:30,16:30,,,1,0,,,,,,,,,,
+,v1603-0591,3/30/2016,Miyagi,soundbusters.co.jp/,mail:done,LinhKT,NguyenLDH,3,0,,,30/03/2016,30/03/2016,,15:00,17:30,,,2.5,-0.5,http://service.fvn-office.net/fvn/LinhKT/v1603-0591_soundbusters.co.jp/160330_02_bk/,,,,,,,,,
+,v1603-0592,3/30/2016,Ariyoshi,eishinkai.jp/,mail:done,LinhKT,NguyenLDH,3,0.5,,,30/03/2016,30/03/2016,,11:30,15:00,,1:00,2.5,-0.5,,,,,,,,,,
+,v1603-0596,3/30/2016,Ariyoshi,ogawashika.com/,mail:done,TrucTTT,NguyenLDH,1,0.5,,,30/03/2016,30/03/2016,,11:00,12:00,,,1,0,,,,,,,,,,
+,v1603-0599,3/30/2016,Ariyoshi,koubou-yu.com/,mail:done,ThanhNLY,NguyenLDH,6,1,,,30/03/2016,30/03/2016,,14:30,17:30,,,3,-3,"giao tr??c 12h ng?y 31/03
+http://service.fvn-office.net/fvn/thanhnly/599/",,,,,,,,,
+,v1603-0597,3/30/2016,Inoue,supply-dental.co.jp/,mail:done,VuLDN,HuyenNTT,3,0,13:00,,31/03/2016,31/03/2016,,8:30,11:30,,,3,0,,,,,,,,,,
+1,v1603-0579,3/30/2016,Shinozuka,star-shika.com/ ,mail:done,VuLDN,HuyenNTT,1.5,0,12:00,,31/03/2016,30/03/2016,,10:30,12:00,,,1.5,0,,VuLDN,1.5,,,,,,,1
+,v1603-0588,3/30/2016,Kawashima,http://www.e-headspa.com/,mail:done,BinhNT,HuyenNTT,0.5,0,12:00,,31/03/2016,30/03/2016,,13:00,13:30,,,0.5,0,,,,,,,,,,
+,v1603-0589,3/30/2016,Takeuchi,land-fab-baikyaku.jp/,mail:done,BinhNT,HuyenNTT,1.5,0,,,31/03/2016,30/03/2016,,13:30,15:00,,,1.5,0,,,,,,,,,,
+,v1603-0590,3/30/2016,Ishihara,hasegawa-e-dc.com/ ,mail:done,DiepBNH,HuyenNTT,0.5,0.5,,,31/03/2016,30/03/2016,,8:30,9:00,,,0.5,0,,,,,,,,,,
+,v1603-0594,3/30/2016,Ishihara,okazaki-do.com/,mail:done,DiepBNH,HuyenNTT,0.5,0.5,,,31/03/2016,30/03/2016,,9:30,10:00,,,0.5,0,,,,,,,,,,
+,v1603-0593,3/30/2016,Yoshioka,sanyor.net/ ,mail:done,DiepBNH,HuyenNTT,1.5,0,13:00,,31/03/2016,30/03/2016,,10:00,11:30,,,1.5,0,,,,,,,,,,
+,v1603-0595,3/30/2016,Kawashima,wax-depilation.com,mail:done,HuyTV,HuyenNTT,1.5,0.5,12:00,,31/03/2016,30/03/2016,,13:30,15:00,,,1.5,0,,,,,,,,,,
+,v1603-0600,3/30/2016,Takeuchi,heiwatosou.net/ ,mail:done,TramNTH,HuyenNTT,8,0,,,31/03/2016,31/03/2016,,8:30,17:30,,1:00,8,0,,,,,,,,,,
+,v1603-0601,3/30/2016,Kawashima,mitsuyasu-kids.com/,mail:done,DiepBNH,HuyenNTT,0.5,0.5,12:00,,31/03/2016,30/03/2016,,11:30,12:00,,,0.5,0,,,,,,,,,,
+1,v1603-0571,3/30/2016,Sawada,http://www.kwes.co.jp/,mail:done,BichVTN,NguyenLDH,3.5,0,12:30,,31/03/2016,31/03/2016,,8:30,12:00,,,3.5,0,,BichVTN,3.5,,,,,,,1
+,v1603-0602,3/30/2016,Kawashima,mitsuyasu-shika.com/,mail:done,DiepBNH,HuyenNTT,0.5,0.5,12:00,,31/03/2016,30/03/2016,,17:00,17:30,,,0.5,0,,,,,,,,,,
+,v1603-0603,3/30/2016,Suzuki,ecolifekyushu.com/ ,mail:done,HuyTV,HuyenNTT,3,0.5,15:00,,31/03/2016,30/03/2016,,14:30,17:30,,,3,0,,,,,,,,,,
+,v1603-0605,3/30/2016,Tsukamoto,ikenaga-kyousei.com/,mail:done,DiepBNH,HuyenNTT,4,1,,,31/03/2016,30/03/2016,,13:00,17:00,,,4,0,,,,,,,,,,
+,v1603-0604,3/30/2016,Suzuki,ticketking.jp/,mail:done,NhaNTT,NguyenLDH,6,1,,,31/03/2016,31/03/2016,,8:30,15:30,,1:00,6,0,,,,,,,,,,
+,v1603-0606,3/30/2016,Ariyoshi,irie-oralsurg.com/,mail:done,DiepBNH,NguyenLDH,6,1,,,31/03/2016,31/03/2016,,8:30,15:30,,1:00,6,0,,,,,,,,,,
+,v1603-0607,3/30/2016,Ariyoshi,jyosuidori-kogadental.com/,mail:done,VuLDN,NguyenLDH,3,1,,,31/03/2016,31/03/2016,,11:30,15:30,,1:00,3,0,,,,,,,,,,
+,v1603-0609,3/31/2016,Ariyoshi,ykj.jp/,mail:done,TrucTTT,NguyenLDH,1,0.5,,,31/03/2016,31/03/2016,,9:30,10:30,,,1,0,,,,,,,,,,
+,v1603-0611,3/31/2016,Ariyoshi,the-presents.jp/,mail:done,LinhKT,HuyenNTT,5,1,,,31/03/2016,31/03/2016,,9:30,15:30,,1:00,5,0,,,,,,,,,,
+,v1603-0612,3/31/2016,Suzuki,mirecreation.jp/,mail:done,ThanhNLY,HuyenNTT,3,0.5,,,31/03/2016,31/03/2016,,13:00,16:00,,,3,0,,,,,,,,,,
+,v1603-0614,3/31/2016,Ariyoshi,ryokusaien.net/,mail:done,TrucTTT,NguyenLDH,4,1,,,31/03/2016,31/03/2016,,13:00,17:00,,,4,0,http://service.fvn-office.net/fvn/TrucTTT/614/column/,,,,,,,,,
+,v1603-0613,3/31/2016,Suzuki,nakanokensou.jp/,mail:done,KhangPH,NguyenLDH,1.5,0.5,,,31/03/2016,31/03/2016,,13:00,14:30,,,1.5,0,,,,,,,,,,
+,v1603-0610,3/31/2016,Miyagi,ys-endo.com/,mail:done,BinhNT,NguyenLDH,2,0,,,31/03/2016,31/03/2016,,13:00,15:00,,,2,0,,,,,,,,,,
+,v1603-0615,3/31/2016,Ariyoshi,tosu-motomachishika.com/,mail:done,BichVTN,HuyenNTT,2,0.5,,,31/03/2016,31/03/2016,,15:00,17:00,,,2,0,,,,,,,,,,
+,v1603-0616,3/31/2016,Ariyoshi,hana-n.com/test160302/,mail:done,VanVTK,HuyenNTT,1,0.5,,,31/03/2016,31/03/2016,,16:30,17:30,,,1,0,,,,,,,,,,
+1,v1603-0054,,,,,,,,,,,,,,,,,,0,0,,0,0,,,,,,,0
+1,v1603-0109,,,,,,,,,,,,,,,,,,0,0,,0,0,,,,,,,0
+1,v1603-0153,,,,,,,,,,,,,,,,,,0,0,,0,0,,,,,,,0
+1,v1603-0218,,,,,,,,,,,,,,,,,,0,0,,0,0,,,,,,,0
+1,v1603-0422,,,,,,,,,,,,,,,,,,0,0,,0,0,,,,,,,0
+1,v1603-0424,,,,,,,,,,,,,,,,,,0,0,,0,0,,,,,,,0
+1,v1603-0489,,,,,,,,,,,,,,,,,,0,0,,0,0,,,,,,,0
+1,v1603-0577,,,,,,,,,,,,,,,,,,0,0,,0,0,,,,,,,0
+,v1603-0598,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0608,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0617,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+1,v1604-0001,3/29/2016,Takeuchi,wedding-vivid.com/ ,trans:done,ThanhNLY,NguyenLDH,2,0,,,01/04/2016,,,,,,,0,-2,,ThanhNLY,2,,,,,,,1
+1,v1604-0002,3/31/2016,Asano,silk-house.jp/,mail:done,VuLDN,,3,0,11:00,,01/04/2016,01/04/2016,,8:30,11:30,,,3,0,,VuLDN,3,,,,,,,1
+1,v1604-0003,3/31/2016,Ishihara,minami-dental-umeda.com/,working,TramNTH,HuyenNTT,1.5,0.5,,,01/04/2016,01/04/2016,,11:00,12:00,,,1,-0.5,,TramNTH,1.5,,,,,,,1
+1,v1604-0004,3/31/2016,Sawada,izumi-bousai.jp/,mail:done,TramNTH,HuyenNTT,2.5,0,13:30,,01/04/2016,01/04/2016,,9:30,11:00,,,1.5,-1,http://service.fvn-office.net/fvn/TramNTH/0004/contact/,TramNTH,2.5,,,,,,,1
+1,v1604-0005,3/31/2016,Takeuchi,uratakenchiku-kobo.com/,check1:done,HuyTV,HuyenNTT,3,0,,,01/04/2016,31/03/2016,,9:00,12:00,,,3,0,http://service.fvn-office.net/fvn/huytv/Maint/1604/uratakenchiku/column/,HuyTV,3,,,,,,,1
+1,v1604-0006,3/31/2016,Inoue,funae-dc.com/ ,mail:done,LamNTP,HuyenNTT,3,0.5,13:00,,01/04/2016,31/03/2016,,13:00,16:00,,,3,0,,LamNTP,3,,,,,,,1
+1,v1604-0008,3/31/2016,Tanaka,kanbara-koumuten.jp/,work:done,LinhKT,HuyenNTT,0.25,0.5,,,01/04/2016,31/03/2016,,9:25,9:30,,,0.08,-0.17,,LinhKT,0.25,,,,,,,1
+1,v1604-0009,3/31/2016,Takeuchi,plumber-ohta.com/ ,work:done,LinhKT,HuyenNTT,2,0,,,01/04/2016,31/03/2016,,15:30,17:30,,,2,0,,LinhKT,2,,,,,,,1
+1,v1604-0010,3/31/2016,Takeuchi,chiaretta-fashion.com/,mail:done,TramNTH,HuyenNTT,2,0,12:00,,01/04/2016,01/04/2016,,8:30,9:30,,,1,-1,"confirm tr??c khi giao h?ng
+l?y hçnh confirm,jpg g?i FJP",TramNTH,2,,,,,,,1
+1,v1604-0011,3/31/2016,Miyagi,tezuka-dc.com/ ,check2:done,ThuyTTN,HuyenNTT,3,0,14:00,,01/04/2016,31/03/2016,,14:00,17:00,,,3,0,,ThuyTTN,3,,,,,,,1
+1,v1604-0012,3/31/2016,Kaneko,jpda.dental/,mail:done,TrucPTT,HuyenNTT,2.5,0,12:30,,01/04/2016,31/03/2016,,14:00,16:30,,,2.5,0,http://service.fvn-office.net/fvn/TrucPTT_panda/0012/,TrucPTT,2.5,,,,,,,1
+1,v1604-0013,3/31/2016,Ishihara,ishiyama-shika.com/,check1:done,LamNTP,HuyenNTT,1,0.5,,,01/04/2016,01/04/2016,,8:30,9:30,,,1,0,,LamNTP,1,,,,,,,1
+,v1603-0630,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0631,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0632,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0633,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0634,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0635,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0636,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0637,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0638,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0639,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0640,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0641,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0642,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0643,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0644,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0645,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0646,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0647,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0648,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0649,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0650,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0651,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0652,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0653,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0654,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0655,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0656,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0657,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0658,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0659,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0660,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0661,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0662,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0663,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0664,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0665,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0666,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0667,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0668,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0669,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0670,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0671,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0672,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0673,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0674,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0675,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0676,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0677,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0678,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0679,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0680,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0681,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0682,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0683,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0684,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0685,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,
+,v1603-0686,,,,,,,,,,,,,,,,,,0,0,,,,,,,,,,

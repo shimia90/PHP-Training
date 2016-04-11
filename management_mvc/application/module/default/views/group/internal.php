@@ -4,6 +4,7 @@ include_once (MODULE_PATH . 'default/views/sidebar.php');
 
 $dateFrom 	=	(isset($_POST['group_form']['date_from'])) ? $_POST['group_form']['date_from'] : date("d/m/Y");
 $dateTo 	=	(isset($_POST['group_form']['date_to'])) ? $_POST['group_form']['date_to'] : date("d/m/Y");
+
 ?>
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTENT -->
