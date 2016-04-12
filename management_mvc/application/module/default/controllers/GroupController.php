@@ -24,8 +24,18 @@ class GroupController extends Controller {
 	public function internalAction() {
          $this->_view->_title       			=   	'Internal Group Management';
 		 
+		 
+		 
 		 if(isset($_GET['team']) && trim($_GET['team']) != '') {
-			 if(isset($_GET['date_from']) && isset($_GET['date_to'])) {
+			 if(!isset($_GET['date_from']) && !isset($_GET['date_to'])) {
+			 	 $arrayDefault 		=		array('date_from' => date("d/m/Y"), 'date_to' => date("d/m/Y"));
+		 
+				 $this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team'], $arrayDefault); 
+						 
+				 $this->_view->duration 		=		$this->_model->getDuration('2', $arrayDefault, 'standard_duration');
+					 
+				 $this->_view->chart 			=		$this->_model->createChart($_GET['team'], $arrayDefault); 
+			 } else if(isset($_GET['date_from']) && isset($_GET['date_to'])) {
 				 $arrayDate 	=		array('date_from' => $_GET['date_from'], 'date_to' => $_GET['date_to']);
 				 
 				 $this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team'], $arrayDate); 
@@ -63,6 +73,10 @@ class GroupController extends Controller {
 		 if(isset($_POST['group_form']) && !empty($_POST['group_form'])) {
 			 
 			 $this->_view->tableGroup 				=		$this->_model->createTableGroup($_POST['group_form']);
+		 } else {
+			$arrayDefault 						=		array('date_from' => date("d/m/Y"), 'date_to' => date("d/m/Y"));
+			
+			$this->_view->tableGroup 			=		$this->_model->createTableGroup($arrayDefault); 
 		 }
          $this->_view->render('group/external');
     }

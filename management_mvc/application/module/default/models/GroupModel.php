@@ -148,27 +148,37 @@ class GroupModel extends Model {
 		return $inputDate->format('N') >= 6;
 	}
 	
-	public function excludeWeekend() {
+	public function excludeWeekend($month, $year) {
 		$workdays = array();
 		$type = CAL_GREGORIAN;
-		$month = date('n'); // Month ID, 1 through to 12.
-		$year = date('Y'); // Year in 4 digit 2009 format.
+		//$month = date('n'); // Month ID, 1 through to 12.
+		//$year = date('Y'); // Year in 4 digit 2009 format.
 		$day_count = cal_days_in_month($type, $month, $year); // Get the amount of days
 		
 		//loop through all days
 		for ($i = 1; $i <= $day_count; $i++) {
 		
-				$date = $year.'/'.$month.'/'.$i; //format date
-				$get_name = date('l', strtotime($date)); //get week day
-				$day_name = substr($get_name, 0, 3); // Trim day name to 3 chars
+				//$date = $year.'/'.$month.'/'.$i; //format date
+				
+				if($i < 10) {
+					$date = '0'.$i.'/'.$month.'/'.$year;
+				} else {
+					$date =  $i.'/'.$month.'/'.$year;	
+				}
+				//$get_name = date('d/m/Y', strtotime($date)); //get week day
+				//$day_name = substr($get_name, 0, 3); // Trim day name to 3 chars
 		
 				//if not a weekend add day to array
-				if($day_name != 'Sun' && $day_name != 'Sat'){
+				/*if($day_name != 'Sun' && $day_name != 'Sat'){
 					$workdays[] = $i;
+				}*/
+				if($this->isWeekend($date) != 1) {
+					$workdays[]	= $i;
 				}
 		
 		}
 		return $workdays;
+		//return $day_count;
 	}
 	
 	public function createChart($team, $arrayDate = null) {
@@ -185,7 +195,7 @@ class GroupModel extends Model {
 				$month 				=		$arrayPostDate[1];
 				$year 				=		$arrayPostDate[2];
 				//$numberDays 		= 		cal_days_in_month(CAL_GREGORIAN, $month, $year);
-				$numberDays 		=		$this->excludeWeekend();
+				$numberDays 		=		$this->excludeWeekend($month, $year);
 				
 				for($i = 0; $i< count($numberDays); $i++) {
                 
@@ -205,6 +215,8 @@ class GroupModel extends Model {
 				
 				$arrayData[$value['user']][$value['work_date']] 	=	$value['real_duration'];	
 			}
+			
+			//echo $strDays;
 			
 			
 			for($i = 0; $i < count($numberDays); $i++) {
@@ -247,6 +259,8 @@ class GroupModel extends Model {
 				$strData 	.=		"]},";
 			}
 			$strData 	.=	']';
+			
+			
 
 			$xhtml 		.=		'<script type="text/javascript">
 									$(document).ready(function(e) {
