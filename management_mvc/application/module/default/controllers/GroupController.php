@@ -27,7 +27,9 @@ class GroupController extends Controller {
 		 
 		 
 		 if(isset($_GET['team']) && trim($_GET['team']) != '') {
-			 if(!isset($_GET['date_from']) && !isset($_GET['date_to'])) {
+			 if(isset($_POST['group_form']) && !empty($_POST['group_form'])) {
+				 $this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team'], $_POST['group_form']); 
+			 } else if(!isset($_GET['date_from']) && !isset($_GET['date_to'])) {
 			 	 $arrayDefault 		=		array('date_from' => date("d/m/Y"), 'date_to' => date("d/m/Y"));
 		 
 				 $this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team'], $arrayDefault); 
@@ -44,11 +46,8 @@ class GroupController extends Controller {
 			 
 				 $this->_view->chart 				=		$this->_model->createChart($_GET['team'], $arrayDate); 
 			 } else {
-				 if(isset($_POST['group_form']) && !empty($_POST['group_form'])) {
-					 $this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team'], $_POST['group_form']); 
-				 } else {
-					$this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team']); 
-				 } 
+
+				 $this->_view->colUser 			=		$this->_model->listTeamUser($_GET['team']); 
 			 }
 			 
 		 } else {

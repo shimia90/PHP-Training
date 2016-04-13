@@ -312,6 +312,9 @@ class GroupModel extends Model {
 	public function createTableGroup($arrayDate) {
 		$xhtml 			=		'';
 		$queryTeam 		=		"SELECT DISTINCT `team` FROM `user` GROUP BY `team`";
+		$sumStandard 	=		0;
+		$sumReal 		=		0;
+		$avgPerformance = 		0;
 		$numberTeam 	= 		count($this->fetchAll($queryTeam));
 		
 		for($i = 1; $i <= $numberTeam; $i++) {
@@ -336,6 +339,7 @@ class GroupModel extends Model {
 							</thead>
 						';
 			$xhtml 	.=	'<tbody>';
+			$j 		 =	0;
 				foreach($this->createTableTeam($i) as $key => $value) {
 					$xhtml 	.=	'<tr>';
 						$xhtml 	.=		'<td>'.$key.'</td>';
@@ -346,13 +350,27 @@ class GroupModel extends Model {
 						$xhtml 	.=		'<td>'.$this->createLabelDuration($this->getDuration($value['id'], $arrayDate, 'real_duration')).'</td>';
 						$xhtml 	.=		'<td>'.$this->getPerformance($this->getDuration($value['id'], $arrayDate, 'standard_duration'), $this->getDuration($value['id'], $arrayDate, 'real_duration')).'</td>';
 					$xhtml 	.=	'</tr>';
+					$sumStandard	+=	$this->getDuration($value['id'], $arrayDate, 'standard_duration');
+					$sumReal		+=	$this->getDuration($value['id'], $arrayDate, 'real_duration');
+					$avgPerformance += 	$this->getPerformance($this->getDuration($value['id'], $arrayDate, 'standard_duration'), $this->getDuration($value['id'], $arrayDate, 'real_duration'));
+			$j++;
 				}
+			$xhtml  .=	'<tr>
+							<td colspan="4" class="text-center text-bold">Sum</td>
+							<td>'.$this->createLabelDuration($sumStandard).'</td>
+							<td>'.$this->createLabelDuration($sumReal).'</td>
+							<td>'.(round($avgPerformance / $j, 2)).'%</td>
+						</tr>';
 			$xhtml 	.=	'</tbody>';
 			$xhtml .= '</table>';
 			$xhtml .= '</div>';
 			if( $i % 2 == 0) {
 				$xhtml .= '</div>';	
 			}
+			$sumStandard 	=		0;
+			$sumReal 		=		0;
+			$avgPerformance = 		0;
+			$j				=		0;
 		}
 		
 		return $xhtml;	

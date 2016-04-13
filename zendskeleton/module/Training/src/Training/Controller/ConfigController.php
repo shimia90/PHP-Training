@@ -2,6 +2,8 @@
 
 namespace Training\Controller;
 
+use Zend\Config\Processor\Filter;
+
 use Zend\View\Model\ViewModel;
 
 use Zend\Mvc\Controller\AbstractActionController;
@@ -12,7 +14,7 @@ class ConfigController extends AbstractActionController {
 		echo __METHOD__;
 		
 		$configArray 		=	array(
-			'website' 		=>	'www.zend.vn',
+			'website' 		=>	'<h3>www.zend.vn</h3>',
 			'account'		=>	array(
 				'email'		=>	'zend2@zend.vn',
 				'password'	=>	'123456',
@@ -35,11 +37,46 @@ class ConfigController extends AbstractActionController {
 		echo '</pre>';*/
 		
 		// 03 Zend\Config\Processor\ thuc hien mot so hanh dong tren doi tuong Zend\Config\Config
-		define('MYCONST', 'This is a constant');
+		/*define('MYCONST', 'This is a constant');
 		$processor	=	new \Zend\Config\Processor\Constant();
 		
 		$config 	=	new \Zend\Config\Config(array('const' => 'MYCONST'), true);
 		
+		$processor->process($config);*/
+		
+		/*echo '<pre>';
+		print_r($configArray);
+		echo '</pre>';*/
+		
+		// Zend\Config\Processor\Filter
+		
+		$config 	=	new \Zend\Config\Config($configArray, true);
+		$filter 	=	new \Zend\Filter\StringToUpper();
+		$processor 	=	new \Zend\Config\Processor\Filter($filter);
+		$processor->process($config);
+		
+		
+		
+		echo '<br />' . $config->account->content;
+		
+		// Zend\Config\Processor\Queue
+		// FIFO logic (First In, First Out)
+		$config 			=	new \Zend\Config\Config($configArray, true);
+		$filterUpper 		=	new \Zend\Filter\StringToUpper();
+		$filterStripTags 	=	new \Zend\Filter\StripTags();
+		$processorUpper 	=	new \Zend\Config\Processor\Filter($filterUpper);
+		$processStripTags 	=	new \Zend\Config\Processor\Filter($filterStripTags);
+		
+		$queue 				=	new \Zend\Config\Processor\Queue();
+		$queue->insert($processorUpper);
+		$queue->insert($processStripTags);
+		$queue->process($config);
+		
+		// Zend\Config\Processor\Token
+		$config 			=	new \Zend\Config\Config(array('token' 	=>	'Token value: TOKEN'), true);
+		$processor 			=	new \Zend\Config\Processor\Token();
+		
+		$processor->addToken('TOKEN', 'Hello');
 		$processor->process($config);
 		
 		echo '<pre>';
@@ -60,6 +97,27 @@ class ConfigController extends AbstractActionController {
 		// Method 2: 
 		return false;
 		
+	}
+	
+	public function index2Action() {
+		
+		$reader 	=	new \Zend\Config\Reader\Ini();
+		// Cau hinh
+		$reader->setNestSeparator('-');
+		$data 		=	$reader->fromFile(__DIR__ . '/../../../config/ini/module.config.ini', true);
+		
+		$config 	=	new \Zend\Config\Config(array(), true);
+		$config->production							=		array();
+		$config->production->website				=		'www.zend.vn';
+		$config->production->account				=		array();
+		$config->production->account->email			=		'zend2@zend.vn';
+		$config->production->account->port			=		465;
+		
+		$writer 	=	new \Zend\Config\Writer\Ini();
+		$writer->setNestSeparator('-');
+		$writer->toFile(__DIR__ . '/../../../config/ini/config.ini', $config);
+		
+		return false;	
 	}
 		
 }
