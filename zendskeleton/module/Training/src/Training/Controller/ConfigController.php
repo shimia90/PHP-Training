@@ -6,6 +6,10 @@ use Zend\Config\Processor\Filter;
 
 use Zend\View\Model\ViewModel;
 
+use Zend\Config\Config as ZCConfig;
+
+use Zend\Config\Processor\Token as ZCPToken;
+
 use Zend\Mvc\Controller\AbstractActionController;
 
 class ConfigController extends AbstractActionController {
@@ -73,8 +77,8 @@ class ConfigController extends AbstractActionController {
 		$queue->process($config);
 		
 		// Zend\Config\Processor\Token
-		$config 			=	new \Zend\Config\Config(array('token' 	=>	'Token value: TOKEN'), true);
-		$processor 			=	new \Zend\Config\Processor\Token();
+		$config 			=	new ZCConfig(array('token' 	=>	'Token value: TOKEN'), true);
+		$processor 			=	new ZCPToken();
 		
 		$processor->addToken('TOKEN', 'Hello');
 		$processor->process($config);
@@ -116,6 +120,32 @@ class ConfigController extends AbstractActionController {
 		$writer 	=	new \Zend\Config\Writer\Ini();
 		$writer->setNestSeparator('-');
 		$writer->toFile(__DIR__ . '/../../../config/ini/config.ini', $config);
+		
+		//return false;	
+	}
+	
+	public function index3Action() {
+		
+		echo '<h3>'.__METHOD__.'</h3>';
+		
+		// Doc tap tin XML
+		/*$reader 	=	new \Zend\Config\Reader\Xml();
+		$data 		=	$reader->fromFile(__DIR__ . '/../../../config/xml/config.xml');
+		
+		// Ghi tap tin XML
+		$config 	=	new \Zend\Config\Config(array(), true);
+		$config->production 						=		array();
+		$config->production->website				=		'www.zend.vn';
+		$config->production->account				=		array();
+		$config->production->account->email			=		'zend2@zend.vn';
+		$config->production->account->port			=		465;
+		
+		$writer 	=	new \Zend\Config\Writer\Xml();
+		$writer->toFile(__DIR__ . '/../../../config/xml/config2.xml', $config);*/
+		
+		
+		
+		
 		
 		return false;	
 	}
