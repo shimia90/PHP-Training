@@ -1,8 +1,8 @@
 <?php 
 include_once (MODULE_PATH . 'default/views/top.php');
 include_once (MODULE_PATH . 'default/views/sidebar.php');
-
 ?>
+111111111111111111
 <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTENT -->
 <div class="content">
@@ -22,7 +22,7 @@ include_once (MODULE_PATH . 'default/views/sidebar.php');
             </div>
         
             <div class="panel-body">
-              <?php echo $this->_result; ?>
+              <?php echo @$this->_result; ?>
               <form class="fieldset-form" name="insertUser[]" action="<?php echo URL::createLink('default', 'user', 'insert'); ?>" method="post">
                 <fieldset>
                   <legend>Insert User</legend>
@@ -36,7 +36,12 @@ include_once (MODULE_PATH . 'default/views/sidebar.php');
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="team">Team</label>
-                    <input id="team" type="text" data-required="1" class="form-control" name="insertUser[team]" placeholder="Team" value="" />
+                    <select class="form-control" name="insertUser[team]" id="team">
+                    	<option value="">Select Team</option>
+                        <?php foreach($this->arrayTeam as $key => $value) :?>
+                        <option value="<?php echo $value['team_number']; ?>"><?php echo $value['team_name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="position">Position</label>

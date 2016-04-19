@@ -12,7 +12,7 @@ if(!empty($this->_arrayUser)) {
 		$fullname 	=		$value['fullname'];
 		$team	 	=		$value['team'];
 		$position 	=		$value['position'];
-	}	
+	}
 }
 ?>
 <!-- //////////////////////////////////////////////////////////////////////////// --> 
@@ -52,7 +52,12 @@ if(!empty($this->_arrayUser)) {
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="team">Team</label>
-                    <input id="team" type="text" data-required="1" class="form-control" name="editUser[team]" placeholder="Team" value="<?php echo $team; ?>" />
+                  	<select class="form-control" name="editUser[team]" id="team">
+                    	<option value="">Select Team</option>
+                        <?php foreach($this->arrayTeam as $key => $value) : ?>
+                        	<option value="<?php echo $value['team_number']; ?>" <?php if($team == $value['team_name']) echo 'selected="selected"'; ?>><?php echo $value['team_name']; ?></option>
+                        <?php endforeach; ?>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="position">Position</label>

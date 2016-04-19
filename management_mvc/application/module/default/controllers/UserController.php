@@ -27,31 +27,38 @@ class UserController extends Controller{
 	
 	// INSERT USER
 	public function insertAction() {
-		$this->_view->_title       			=   	'Insert User';	
+		$this->_view->_title       			=   	'Insert User';
+		$this->_view->arrayTeam         =       $this->_model->listTeam();
 		if(isset($_POST['insertUser'])) {
+		    
+		    
 			$this->_view->_result 			=		$this->_model->processInsert($_POST['insertUser']);
 		}
 		$this->_view->render('user/insert', true);
 	}
 	
 	public function editAction() {
-		$this->_view->_title       			=   	'Edit User';	
+		$this->_view->_title       			=   	'Edit User';
+		$this->_view->arrayTeam               =       $this->_model->listTeam();
 		if(isset($_GET['id'])) {
 			$this->_view->_arrayUser 		=		$this->_model->arrayEdit($_GET['id']);
 		}
 		
 		if(isset($_POST['editUser']) && isset($_GET['id'])) {
-			$this->_view->_result 			=		$this->_model->processEdit($_POST['editUser'], $_GET['id']);	
+			$this->_view->_result 			=		$this->_model->processEdit($_POST['editUser'], $_GET['id']);
+			URL::redirect(URL::createLink('default', 'user', 'edit', array('id' => $_GET['id'])));
 		}
 		$this->_view->render('user/edit', true);
 	}
 	
 	public function deleteAction() {
-		$this->_view->_title       			=   	'Delete | Google Link';	
+		$this->_view->_title       			=   	'Delete | User';	
 		$this->_view->message 				=		'';
 		if (isset($_GET['id'])) {
 			$this->_view->message 			=		$this->_model->processDelete($_GET['id']);
 		}
 		$this->_view->render('user/delete', true);
 	}
+	
+	
 }

@@ -1,7 +1,7 @@
 <?php
-class UserModel extends Model {
+class TeamModel extends Model {
     
-    private $_columns = array('id', 'nickname', 'fullname', 'team', 'position');
+    private $_columns = array('id', 'team_name', 'team_number');
     
 	/**
 	 * 
@@ -19,7 +19,7 @@ class UserModel extends Model {
 	 */
 	public function listItems($arrParam, $option = null) {
 		$this->setTable(TBL_USER);
-		$query[]  		=   "SELECT `id`, `nickname`, `fullname`, `team`, `position`";
+		$query[]  		=   "SELECT `id`, `team_name`, `team_number`";
 		$query[]  		=   "FROM `$this->table`";
 		$query[]        =   "WHERE `id` > 0";
 		
@@ -62,15 +62,11 @@ class UserModel extends Model {
 		return $result;
 	}
 	
-	// Return Array User
-	public function listUser() {
-		$query 			=		"SELECT * FROM `".TBL_USER."`";
-		$arrayUser 		=		$this->fetchAll($query);
-		
-		foreach($arrayUser as $key => $value) {
-		    $arrayUser[$key]['team']  =   $this->convertTeam($value['team']);
-		}
-		return $arrayUser;
+	// Return Array Team
+	public function listTeam() {
+		$query 			=		"SELECT * FROM `".TBL_TEAM."`";
+		$arrayTeam 		=		$this->fetchAll($query);
+		return $arrayTeam;
 	}
 	
 	// Return Array Project
@@ -270,7 +266,7 @@ class UserModel extends Model {
 	 
 	 public function processInsert($arrayPost) {
 		$xhtml 							=		'';
-		$this->setTable(TBL_USER);
+		$this->setTable(TBL_TEAM);
 		$this->insert($arrayPost, 'single');
 		if($this->affectedRows() > 0 ) {
 			$xhtml = '<div class="alert alert-success">
@@ -288,7 +284,7 @@ class UserModel extends Model {
 		$arrayWhere = array(
                 array('id', $idPost, null)
                 );
-		$this->setTable(TBL_USER);
+		$this->setTable(TBL_TEAM);
 		$this->update($arrayPost, $arrayWhere);
 		if($this->affectedRows() > 0 ) {
 			$xhtml = '<div class="alert alert-success">
@@ -301,11 +297,8 @@ class UserModel extends Model {
 	 
 	 public function arrayEdit($idPost) {
 		 $arrayEdit 	=		array();
-		 $queryEdit  	=   	"SELECT * FROM `".TBL_USER."` WHERE `id` = {$idPost}";
+		 $queryEdit  	=   	"SELECT * FROM `".TBL_TEAM."` WHERE `id` = {$idPost}";
          $arrayEdit  	=   	$this->fetchAll($queryEdit);
-         foreach($arrayEdit as $key => $value) {
-             $arrayEdit[$key]['team']  =   $this->convertTeam($value['team']);
-         }
 		 return $arrayEdit;
 	 }
 	 
@@ -326,7 +319,7 @@ class UserModel extends Model {
 		 $arrayDelete = array(
 			$idLink
 		);
-		$this->setTable(TBL_USER);
+		$this->setTable(TBL_TEAM);
 		if ($this->delete($arrayDelete)) {
 			$xhtml		.=		'<div class="alert alert-success">
 									<button class="close" data-dismiss="alert"></button>
@@ -340,22 +333,5 @@ class UserModel extends Model {
 					}
 		
 		return $xhtml;
-	 }
-	 
-	 public function listTeam() {
-	       $arrayTeam      =       array();
-	       $query          =       "SELECT * FROM `".TBL_TEAM."`";
-	       $arrayTeam      =       $this->fetchAll($query);
-	       return $arrayTeam;
-	 }
-	 
-	 public function convertTeam($teamNumber) {
-	     $arrayTeamName   =   array();
-	     $xhtml           =   '';
-	     $query           =   "SELECT `team_name` FROM `".TBL_TEAM."` WHERE `team_number` = '".$teamNumber."'";
-	     $arrayTeamName   =   $this->fetchAll($query);
-	    
-	     $xhtml           =   $arrayTeamName[0]['team_name']; 
-	     return $xhtml;
 	 }
 }
