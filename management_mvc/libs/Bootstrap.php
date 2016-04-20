@@ -13,11 +13,13 @@ class Bootstrap{
 		if(file_exists($filePath)){
 			$this->loadExistingController($filePath, $controllerName);
 			$this->callMethod();
+		} else {
+		    
 		}
 	}
 	
 	// CALL METHOD
-	private function callMethod(){
+	/* private function callMethod(){
 		$actionName = $this->_params['action'] . 'Action';
 		if(method_exists($this->_controllerObject, $actionName)==true){
 			$this->_controllerObject->$actionName();
@@ -25,6 +27,42 @@ class Bootstrap{
 			//$this->_error();
 			URL::redirect(URL::createLink('default', 'index', 'index'));
 		}
+	} */
+	
+	// CALL METHOD
+	private function callMethod() {
+	    $actionName = $this->_params['action'] . 'Action';
+	    if(method_exists($this->_controllerObject, $actionName)==true){
+	        $module       =   $this->_params['module'];
+	        $controller   =   $this->_params['controller'];
+	        $action       =   $this->_params['action'];
+	        $requestURL   =   $module . "-" . $controller . "-" . $action;
+	        	
+	        $userInfo     =   Session::get('user');
+	
+	        $logged       =   ($userInfo['login'] == true && $userInfo['time'] + TIME_LOGIN >= time());
+	        	
+	        // MODULE ADMIN
+	        if($logged == true) {
+	            $this->_controllerObject->$actionName();
+		       
+	        } else {
+	            $this->callLoginAction();
+	        }
+	
+	        //$this->_controllerObject->$actionName();
+	    }else{
+	        //$this->_error();
+	        URL::redirect('default', 'index', 'notice', array('type' => 'not-url'));
+	    }
+	}
+	
+	// CALL ACTION LOGIN
+	private function callLoginAction($module = 'default'){
+	    Session::delete('user');
+	    require_once (MODULE_PATH . $module . DS . 'controllers' . DS . 'LoginController.php');
+	    $indexController 	=	new LoginController($this->_params);
+	    $indexController->indexAction();
 	}
 	
 	// SET PARAMS

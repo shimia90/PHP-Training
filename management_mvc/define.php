@@ -30,3 +30,5 @@
 	define ('TBL_PROJECT'       , 'project_type');
 	define ('TBL_TEAM'          , 'team');
 	define ('TBL_CATEGORY'      , 'category');
+	
+	define ('TIME_LOGIN'		, 3600);

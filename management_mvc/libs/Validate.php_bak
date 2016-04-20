@@ -141,32 +141,14 @@ class Validate{
 		}
 	}
 	
-	public function showErrors($showList = true){
+	public function showErrors(){
 		$xhtml = '';
 		if(!empty($this->errors)){
-			if($showList == true) {
-			    $xhtml .= '<dl id="system-message"><dt class="error">Error</dt><dd class="error message"><ul>';
-			    foreach($this->errors as $key => $value){
-			        $xhtml .= '<li>'.$value.' </li>';
-			    }
-			    $xhtml .=  '</ul></dd></dl>';
-			} else {
-			    foreach($this->errors as $key => $value){
-			        $xhtml .= '<p>'.$value.'</p>';
-			    }
-			}
-		}
-		return $xhtml;
-	}
-	
-	public function showErrorsPublic(){
-		$xhtml = '';
-		if(!empty($this->errors)){
-			$xhtml .= '<ul class="error-public">';
+			$xhtml .= '<dl id="system-message"><dt class="error">Error</dt><dd class="error message"><ul>';
 			foreach($this->errors as $key => $value){
 				$xhtml .= '<li>'.$value.' </li>';
 			}
-			$xhtml .=  '</ul>';
+			$xhtml .=  '</ul></dd></dl>';
 		}
 		return $xhtml;
 	}
@@ -179,7 +161,7 @@ class Validate{
 	// Validate Status
 	private function validateStatus($element, $options){
 	    if(in_array($this->source[$element], $options['deny']) == true) {
-	        $this->setError($element, 'Vui lÃ²ng chá»�n giÃ¡ trá»‹ khÃ¡c giÃ¡ trá»‹ máº·c Ä‘á»‹nh');
+	        $this->setError($element, 'Vui lòng chọn giá trị khác giá trị mặc định');
 	    }
 	}
 	
@@ -226,8 +208,7 @@ class Validate{
 
 		$query	  = $options['query'];
 		if($database->isExist($query) == false){
-			//$this->setError($element, 'record is not exist');
-			$this->setError($element, 'Not Correct');
+			$this->setError($element, 'record is not exist');
 		}
 	}
 	
@@ -243,18 +224,15 @@ class Validate{
 	
 	// Validate File
 	private function validateFile($element, $options){
-			
-			//die("Function die is called");
-			if($this->source[$element]['name'] != null) {
-				if(!filter_var($this->source[$element]['size'], FILTER_VALIDATE_INT, array("options"=>array("min_range"=>$options['min'],"max_range"=>$options['max'])))){
-					$this->setError($element, 'kÃ­ch thÆ°á»›c khÃ´ng phÃ¹ há»£p');
-				}
-				
-				$ext = pathinfo($this->source[$element]['name'], PATHINFO_EXTENSION);
-				if(in_array($ext, $options['extension']) == false){
-					$this->setError($element, 'pháº§n má»Ÿ rá»™ng khÃ´ng phÃ¹ há»£p');
-				}
-			}
+
+		if(!filter_var($this->source[$element]['size'], FILTER_VALIDATE_INT, array("options"=>array("min_range"=>$options['min'],"max_range"=>$options['max'])))){
+			$this->setError($element, 'kích thước không phù hợp');
+		}
+		
+		$ext = pathinfo($this->source[$element]['name'], PATHINFO_EXTENSION);
+		if(in_array($ext, $options['entension']) == false){
+			$this->setError($element, 'phần mở rộng không phù hợp');
+		}
 	}
 }
 

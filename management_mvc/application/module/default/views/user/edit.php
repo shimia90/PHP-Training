@@ -1,17 +1,21 @@
 <?php 
 include_once (MODULE_PATH . 'default/views/top.php');
 include_once (MODULE_PATH . 'default/views/sidebar.php');
-$nickname 	=	'';
-$fullname 	=	'';
-$team 		=	'';
-$position 	=	'';
+$nickname 	        =	'';
+$fullname 	        =	'';
+$team 		        =	'';
+$position 	        =	'';
+$password           =   '';
+$admin_control      =   0;
 if(!empty($this->_arrayUser)) {
 	foreach($this->_arrayUser as $key => $value) {
-		$id 		=		$value['id'];
-		$nickname 	=		$value['nickname'];
-		$fullname 	=		$value['fullname'];
-		$team	 	=		$value['team'];
-		$position 	=		$value['position'];
+		$id 		      =		  $value['id'];
+		$nickname 	      =		  $value['nickname'];
+		$fullname 	      =		  $value['fullname'];
+		$team	 	      =		  $value['team'];
+		$position 	      =		  $value['position'];
+		$password         =       $value['password'];
+		$admin_control    =       $value['admin_control'];
 	}
 }
 ?>
@@ -40,15 +44,27 @@ if(!empty($this->_arrayUser)) {
                   <legend>Insert User</legend>
                   <div class="form-group">
                     <label class="form-label" for="id">ID</label>
-                    <input id="id" type="text" data-required="1" class="form-control" name="editUser[id]" placeholder="ID" value="<?php echo $id; ?>" />
+                    <input id="id" type="text" data-required="1" class="form-control" readonly="readonly" name="editUser[id]" placeholder="ID" value="<?php echo $id; ?>" />
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="nickname">Username</label>
                     <input id="nickname" type="text" data-required="1" class="form-control" name="editUser[nickname]" placeholder="User Name" value="<?php echo $nickname; ?>" />
                   </div>
                   <div class="form-group">
-                     <label class="form-label" for="example10">Full Name</label>
+                     <label class="form-label" for="fullname">Full Name</label>
                      <input id="fullname" type="text" data-required="1" class="form-control" name="editUser[fullname]" placeholder="Full Name" value="<?php echo $fullname; ?>" />
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" for="password">Password</label>
+                     <input id="password" type="password" data-required="1" class="form-control" name="editUser[password]" placeholder="Password" value="<?php echo $password; ?>" />
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" for="admin_control">Admin Control</label>
+                     <select class="form-control" name="editUser[admin_control]" id="admin_control">
+                     	<option value="">Select Permission</option>
+                        <option value="0" <?php if($admin_control == 0) echo 'selected="selected"'; ?>>Read</option>
+                        <option value="1" <?php if($admin_control == 1) echo 'selected="selected"'; ?>>Edit</option>
+                     </select>
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="team">Team</label>
@@ -65,6 +81,7 @@ if(!empty($this->_arrayUser)) {
                     	<option value="">Select Position</option>
                         <option value="leader" <?php if($position == 'leader') echo 'selected="selected"';  ?>>Leader</option>
                         <option value="member" <?php if($position == 'member') echo 'selected="selected"';  ?>>Member</option>
+                        <option value="manager" <?php if($position == 'manager') echo 'selected="selected"';  ?>>Manager</option>
                     </select>
                   </div>
                   <button class="btn btn-success" type="submit"><i class="fa fa-check-square-o"></i> Submit</button>

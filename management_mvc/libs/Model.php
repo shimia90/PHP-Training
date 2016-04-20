@@ -214,6 +214,7 @@ class Model{
 		$result = array();
 		if(!empty($query)){
 			$resultQuery = $this->query($query);
+			
 			if(mysqli_num_rows($resultQuery) > 0){
 				$result = mysqli_fetch_assoc($resultQuery);
 			}

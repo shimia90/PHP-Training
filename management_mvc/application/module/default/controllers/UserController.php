@@ -30,8 +30,13 @@ class UserController extends Controller{
 		$this->_view->_title       			=   	'Insert User';
 		$this->_view->arrayTeam         =       $this->_model->listTeam();
 		if(isset($_POST['insertUser'])) {
-		    
-		    
+
+		    foreach($_POST['insertUser'] as $key => $value) {
+		        if($key == 'password') {
+		            $_POST['insertUser']['password']      =       md5($value);
+		        }
+		    }
+
 			$this->_view->_result 			=		$this->_model->processInsert($_POST['insertUser']);
 		}
 		$this->_view->render('user/insert', true);
@@ -45,6 +50,12 @@ class UserController extends Controller{
 		}
 		
 		if(isset($_POST['editUser']) && isset($_GET['id'])) {
+		    
+		    foreach ($_POST['editUser'] as $key => $value) {
+		        if($key == 'password') {
+		            $_POST['editUser']['password']    =   md5($value);
+		        }
+		    }
 			$this->_view->_result 			=		$this->_model->processEdit($_POST['editUser'], $_GET['id']);
 			URL::redirect(URL::createLink('default', 'user', 'edit', array('id' => $_GET['id'])));
 		}

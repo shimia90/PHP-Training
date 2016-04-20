@@ -2,7 +2,6 @@
 include_once (MODULE_PATH . 'default/views/top.php');
 include_once (MODULE_PATH . 'default/views/sidebar.php');
 ?>
-111111111111111111
 <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTENT -->
 <div class="content">
@@ -31,8 +30,20 @@ include_once (MODULE_PATH . 'default/views/sidebar.php');
                     <input id="nickname" type="text" data-required="1" class="form-control" name="insertUser[nickname]" placeholder="User Name" value="" />
                   </div>
                   <div class="form-group">
-                     <label class="form-label" for="example10">Full Name</label>
+                     <label class="form-label" for="fullname">Full Name</label>
                      <input id="fullname" type="text" data-required="1" class="form-control" name="insertUser[fullname]" placeholder="Full Name" value="" />
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" for="password">Password</label>
+                     <input id="password" type="password" data-required="1" class="form-control" name="insertUser[password]" placeholder="Password" value="" />
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label" for="admin_control">Admin Control</label>
+                     <select class="form-control" name="insertUser[admin_control]" id="admin_control">
+                     	<option value="">Select Permission</option>
+                        <option value="0">Read</option>
+                        <option value="1">Edit</option>
+                     </select>
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="team">Team</label>
@@ -49,6 +60,7 @@ include_once (MODULE_PATH . 'default/views/sidebar.php');
                     	<option value="">Select Position</option>
                         <option value="leader">Leader</option>
                         <option value="member">Member</option>
+                        <option value="manager">Manager</option>
                     </select>
                   </div>
                   <button class="btn btn-success" type="submit"><i class="fa fa-check-square-o"></i> Submit</button>
