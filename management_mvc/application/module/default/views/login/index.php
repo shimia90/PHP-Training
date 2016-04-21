@@ -1,8 +1,9 @@
 <div class="login-form">
+	<?php if(!empty($this->errors)) : ?>
 	<div class="kode-alert alert6">
 		<a class="closed" href="#"><i class="fa fa-close"></i></a> <?php echo @$this->errors; ?>
 	</div>
-	
+	<?php endif; ?>
 	<form action="<?php echo URL::createLink('default', 'login', 'index'); ?>" method="post" name="loginForm[]">
 		<div class="top">
 			<h1>Login</h1>

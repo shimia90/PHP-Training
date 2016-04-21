@@ -29,7 +29,10 @@ class BookController extends Controller{
 	// ACTION ADD & EDIT BOOK
 	public function formAction() {
 	    $this->_view->_title   =   'Book : Add';
-	    $this->_view->slbGroup     =   $this->_model->itemInSelectBox($this->_arrParam);
+	    $this->_view->slbCategory     =   $this->_model->itemInSelectBox($this->_arrParam);
+	    if(!empty($_FILES)) {
+	        $this->_arrParam['form']['picture'] 	= 	$_FILES['picture'];
+	    }
 	    if(isset($this->_arrParam['id'])) {
 	        $this->_view->_title   =   'Book : Edit';
 	        $this->_arrParam['form']  =   $this->_model->infoItem($this->_arrParam);
@@ -45,9 +48,13 @@ class BookController extends Controller{
 	        $validate  =   new Validate($this->_arrParam['form']);
 	        
 	        $validate->addRule('name', 'string', array('min' => 1, 'max' => 255))
+	                 ->addRule('picture', 'file', array('min' => 100, 'max' => 1000000, 'extension' => array('jpg', 'png')), false)
 	                 ->addRule('ordering', 'int', array('min' => 1, 'max' => 100))
 	                 ->addRule('status', 'status', array('deny' => array('default')))
-	                 ->addRule('group_id', 'status', array('deny' => array('default')));
+	                 ->addRule('special', 'status', array('deny' => array('default')))
+	                 ->addRule('category_id', 'status', array('deny' => array('default')))
+	                 ->addRule('sale_off', 'int', array('min' => 0, 'max' => 100))
+	                 ->addRule('price', 'int', array('min' => 1000, 'max' => 1000000));
 	        $validate->run();
 	        $this->_arrParam['form'] = $validate->getResult();
 	        if($validate->isValid() == false) {
@@ -57,20 +64,26 @@ class BookController extends Controller{
 	            // Insert to Database
 	            $id = $this->_model->saveItem($this->_arrParam, array('task' => $task));
 	            $type = $this->_arrParam['type'];
-	            if($type == 'save-close') URL::redirect('admin', 'user', 'index');
-	            if($type == 'save-new') URL::redirect('admin', 'user', 'form');
-	            if($type == 'save') URL::redirect('admin', 'user', 'form', array('id' => $id));
+	            if($type == 'save-close') URL::redirect('admin', 'book', 'index');
+	            if($type == 'save-new') URL::redirect('admin', 'book', 'form');
+	            if($type == 'save') URL::redirect('admin', 'book', 'form', array('id' => $id));
 	        }
 	    }
 	    
 	    $this->_view->arrParam     =   $this->_arrParam;
-	    $this->_view->render('user/form', true);
+	    $this->_view->render('book/form', true);
 	}
 	
 	// PROCESS AJAX STATUS (*)
 	public function ajaxStatusAction() {
 	     $result   		=	   	$this->_model->changeStatus($this->_arrParam, array('task' => 'change-ajax-status'));
 	     echo json_encode($result);
+	}
+	
+	// PROCESS AJAX SPECIAL (*)
+	public function ajaxSpecialAction() {
+	    $result   		=	   	$this->_model->changeStatus($this->_arrParam, array('task' => 'change-ajax-special'));
+	    echo json_encode($result);
 	}
 	
 	// ACTION STATUS (*)

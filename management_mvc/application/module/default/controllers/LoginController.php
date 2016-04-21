@@ -45,4 +45,9 @@ class LoginController extends Controller{
 		$this->_view->render('login/index', true);
 	}
 	
+	public function logoutAction() {
+	    Session::delete('user');
+	    URL::redirect(URL::createLink('default', 'login', 'index'));
+	}
+	
 }

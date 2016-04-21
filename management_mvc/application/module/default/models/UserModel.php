@@ -352,10 +352,12 @@ class UserModel extends Model {
 	 public function convertTeam($teamNumber) {
 	     $arrayTeamName   =   array();
 	     $xhtml           =   '';
-	     $query           =   "SELECT `team_name` FROM `".TBL_TEAM."` WHERE `team_number` = '".$teamNumber."'";
-	     $arrayTeamName   =   $this->fetchAll($query);
-	    
-	     $xhtml           =   $arrayTeamName[0]['team_name']; 
+	     if(!empty($teamNumber)) {
+    	     $query           =   "SELECT `team_name` FROM `".TBL_TEAM."` WHERE `team_number` = '".$teamNumber."'";
+    	     $arrayTeamName   =   $this->fetchAll($query);
+    	    
+    	     $xhtml           =   $arrayTeamName[0]['team_name']; 
+	     }
 	     return $xhtml;
 	 }
 }

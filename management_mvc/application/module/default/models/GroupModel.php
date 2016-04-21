@@ -311,7 +311,7 @@ class GroupModel extends Model {
 	
 	public function createTableGroup($arrayDate) {
 		$xhtml 			=		'';
-		$queryTeam 		=		"SELECT DISTINCT `team` FROM `user` GROUP BY `team`";
+		$queryTeam 		=		"SELECT DISTINCT `team` FROM `user` WHERE `team` != '' GROUP BY `team`"; // "SELECT DISTINCT `team` FROM `user` GROUP BY `team`"
 		$sumStandard 	=		0;
 		$sumReal 		=		0;
 		$avgPerformance = 		0;

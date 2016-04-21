@@ -17,6 +17,24 @@ function changeStatus(url) {
 	}, 'json');
 }
 
+function changeSpecial(url) {
+	$.get(url, function(data){
+		var id 				=	data[0];
+		var status 			=	data[1];
+		var link 			=	data[2];
+		var element 		=	'a#special-'+ data['id'];
+		var classRemove 	=	'publish';
+		var classAdd 		=	'unpublish';
+		if(data['special'] == 1) {
+			classRemove 	= 	'unpublish';
+			classAdd 		=	'publish';	
+		}
+		
+		$(element).attr("href", "javascript:changeSpecial('"+data['link']+"')");
+		$(element + ' span').removeClass(classRemove).addClass(classAdd);
+	}, 'json');
+}
+
 //
 function changeGroupACP(url) {
 	$.get(url, function(data){
@@ -74,6 +92,10 @@ $(document).ready(function(e) {
     });
     
     $("#filter-bar select[name=filter_state]").change(function(){
+    	$('#adminForm').submit();
+    });
+    
+    $("#filter-bar select[name=filter_special]").change(function(){
     	$('#adminForm').submit();
     });
     

@@ -30,6 +30,15 @@ class Helper {
                         </a>';
         return $xhtml;
     }
+    
+    // Create Icon Special
+    public static function cmsSpecial($specialValue, $link, $id) {
+        $strSpecial  =   ($specialValue == 0) ? 'unpublish' : 'publish';
+        $xhtml      =   '<a href="javascript:changeSpecial(\''.$link.'\');" class="jgrid" id="special-'.$id.'">
+                        	<span class="state '.$strSpecial.'"></span>
+                        </a>';
+        return $xhtml;
+    }
 	
 	// Create Icon Group ACP
     public static function cmsGroupACP($groupAcpValue, $link, $id) {

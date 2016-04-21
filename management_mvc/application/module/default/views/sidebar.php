@@ -1,12 +1,17 @@
 <!-- //////////////////////////////////////////////////////////////////////////// --> 
+<?php 
+    $permission     =   (isset($_SESSION['user']) && $_SESSION['user']['info']['admin_control'] == true) ? true : false;
+?>
 <!-- START SIDEBAR -->
 <div id="main-menu" class="sidebar clearfix">
 <ul class="sidebar-panel nav">
 	<li class="sidetitle">MAIN</li>
     <li class="index-index"><a href="<?php echo URL::createLink('default', 'index', 'index'); ?>"><span class="icon color5"><i class="fa fa-home"></i></span>Dashboard</a></li>
+	<?php if($permission == true) : ?>
 	<li class="google-index"><a href="<?php echo URL::createLink('default', 'google', 'index'); ?>"><span class="icon color6"><i class="fa fa-external-link"></i></span>Google Link</a></li>
     <li class="user-index"><a href="<?php echo URL::createLink('default', 'user', 'index'); ?>"><span class="icon color6"><i class="fa fa-user-md"></i></span>User Management</a></li>
     <li class="team-index"><a href="<?php echo URL::createLink('default', 'team', 'index'); ?>"><span class="icon color6"><i class="fa fa-gears"></i></span>Team</a></li>
+	<?php endif; ?>
 </ul>
 <ul class="sidebar-panel nav">
   <li class="sidetitle">PERSONAL</li>

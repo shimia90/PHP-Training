@@ -14,7 +14,7 @@ class Bootstrap{
 			$this->loadExistingController($filePath, $controllerName);
 			$this->callMethod();
 		} else {
-		    
+		    URL::redirect(URL::createLink('default', 'error', 'index', array('type' => 'not-url')));
 		}
 	}
 	
@@ -53,7 +53,7 @@ class Bootstrap{
 	        //$this->_controllerObject->$actionName();
 	    }else{
 	        //$this->_error();
-	        URL::redirect('default', 'index', 'notice', array('type' => 'not-url'));
+	        URL::redirect(URL::createLink('default', 'error', 'index', array('type' => 'not-url')));
 	    }
 	}
 	

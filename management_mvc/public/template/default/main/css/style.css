@@ -111,7 +111,8 @@
   color: #399bff;
 }
 body {
-  background: #3d464d;
+  /* background: #3d464d; */
+  background: #fefefe;
   color: #58666e;
   margin: 0;
   line-height: 1.7em;

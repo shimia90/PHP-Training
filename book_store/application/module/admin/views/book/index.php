@@ -11,6 +11,7 @@
 	$lblSaleOff    =	Helper::cmsLinkSort('Sale Off', 'sale_off', $columnPost, $orderPost);
 	$lblCategory   =	Helper::cmsLinkSort('Category', 'category_id', $columnPost, $orderPost);
 	$lblStatus     =    Helper::cmsLinkSort('Status', 'status', $columnPost, $orderPost);
+	$lblSpecial    =    Helper::cmsLinkSort('Special', 'special', $columnPost, $orderPost);
 	$lblOrdering   =    Helper::cmsLinkSort('Ordering', 'ordering', $columnPost, $orderPost);
 	$lblCreated    =    Helper::cmsLinkSort('Created', 'created', $columnPost, $orderPost);
 	$lblCreatedBy  =    Helper::cmsLinkSort('Created By', 'created_by', $columnPost, $orderPost);
@@ -21,6 +22,10 @@
 	// SELECT BOX 
 	$arrStatus                 =   array('default' => '- Select Status -', '1' => 'Publish', '0' => 'Unpublish' );
 	$selectBoxStatus           =   Helper::cmsSelectBox('filter_state', 'inputbox', $arrStatus, @$this->arrayParams['filter_state']);
+	
+	// SELECT SPECIAL
+	$arrSpecial                =   array('default' => '- Select Special -', '1' => 'Yes', '0' => 'No' );
+	$selectBoxSpecial          =   Helper::cmsSelectBox('filter_special', 'inputbox', $arrSpecial, @$this->arrayParams['filter_special']);
 	
 	// SELECT CATEGORY
 	$selectBoxCategory         =   Helper::cmsSelectBox('filter_category_id', 'inputbox', $this->slbCategory, @$this->arrayParams['filter_category_id']);
@@ -49,7 +54,7 @@
 
 				</div>
 				<div class="filter-select fltrt">
-					<?php echo $selectBoxStatus . $selectBoxCategory; ?>
+					<?php echo $selectBoxStatus . $selectBoxSpecial . $selectBoxCategory; ?>
 				</div>
 			</fieldset>
 			<div class="clr"></div>
@@ -65,6 +70,7 @@
 						<th class="4%"><?php echo $lblSaleOff; ?></th>
 						<th class="10%"><?php echo $lblCategory; ?></th>
 						<th width="6%"><?php echo $lblStatus; ?></th>
+						<th width="6%"><?php echo $lblSpecial; ?></th>
 						<th width="6%"><?php echo $lblOrdering; ?></th>
 						<th width="8%"><?php echo $lblCreated; ?></th>
 						<th width="10%"><?php echo $lblCreatedBy; ?></th>
@@ -89,6 +95,7 @@
 				        if(!empty($this->Items)) :
 				            $i  = 0;
 				            foreach($this->Items as $key => $value) :
+				               
 				               $id              =   $value['id'];
 				               $ckb             =   '<input type="checkbox" name="cid[]" value="'.$id.'" />';
 				               $name            =   $value['name'];
@@ -105,6 +112,7 @@
 				               
 				               // index.php?module=admin&controller=group&action=ajaxStatus&id=2&status=0
 				               $status      =   Helper::cmsStatus($value['status'], URL::createLink('admin', 'book', 'ajaxStatus', array('id' => $id, 'status' => $value['status'])), $id);
+				               $special     =   Helper::cmsSpecial($value['special'], URL::createLink('admin', 'book', 'ajaxSpecial', array('id' => $id, 'special' => $value['special'])), $id);
 				               $ordering    =   '<input type="text" name="order['.$id.']" size="5" value="'.$value['ordering'].'" class="text-area-order">';
 				               $created     =   Helper::formatDate('d-m-Y', $value['created']);
 				               $created_by  =   $value['created_by'];
@@ -120,6 +128,7 @@
 	                                <td class="center">'.$saleoff.'</td>
 	                                <td class="center">'.$categoryName.'</td>
 									<td class="center">'.$status.'</td>
+					                <td class="center">'.$special.'</td>
 									<td class="center">'.$ordering.'</td>
 									<td class="center">'.$created.'</td>
 									<td class="center">'.$created_by.'</td>

@@ -1,39 +1,39 @@
 <?php 
 
     // New Button
-    $linkNew        =   URL::createLink('admin', 'user', 'form');
+    $linkNew        =   URL::createLink('admin', 'book', 'form');
     $btnNew         =   Helper::cmsButton('New', 'toolbar-popup-new', $linkNew, 'icon-32-new');
     
     // Publish
-    $linkPublish    =   URL::createLink('admin', 'user', 'status', array('type' 	=>		1));
+    $linkPublish    =   URL::createLink('admin', 'book', 'status', array('type' 	=>		1));
     $btnPublish     =   Helper::cmsButton('Publish', 'toolbar-publish', $linkPublish, 'icon-32-publish', 'submit');
     
     // Unpublish
-    $linkUnPublish  =   URL::createLink('admin', 'user', 'status', array('type' 	=>		0));
+    $linkUnPublish  =   URL::createLink('admin', 'book', 'status', array('type' 	=>		0));
     $btnUnPublish   =   Helper::cmsButton('Unpublish', 'toolbar-unpublish', $linkUnPublish, 'icon-32-unpublish', 'submit');
 	
 	// Ordering
-    $linkOrdering  	=   URL::createLink('admin', 'user', 'ordering', array('type' 	=>		0));
+    $linkOrdering  	=   URL::createLink('admin', 'book', 'ordering', array('type' 	=>		0));
     $btnOrdering   	=   Helper::cmsButton('Ordering', 'toolbar-checkin', $linkOrdering, 'icon-32-checkin', 'submit');
     
     // Trash
-    $linkTrash      =   URL::createLink('admin', 'user', 'trash');
+    $linkTrash      =   URL::createLink('admin', 'book', 'trash');
     $btnTrash       =   Helper::cmsButton('Trash', 'toolbar-trash', $linkTrash, 'icon-32-trash', 'submit');
     
     // Save
-    $linkSave       =   URL::createLink('admin', 'user', 'form', array('type' => 'save'));
+    $linkSave       =   URL::createLink('admin', 'book', 'form', array('type' => 'save'));
     $btnSave        =   Helper::cmsButton('Save', 'toolbar-apply', $linkSave, 'icon-32-apply', 'submit');
     
     // Save & Close
-    $linkSaveClose  =   URL::createLink('admin', 'user', 'form', array('type' => 'save-close'));
+    $linkSaveClose  =   URL::createLink('admin', 'book', 'form', array('type' => 'save-close'));
     $btnSaveClose   =   Helper::cmsButton('Save & Close', 'toolbar-save', $linkSaveClose, 'icon-32-save', 'submit');
     
     // Save & New
-    $linkSaveNew    =   URL::createLink('admin', 'user', 'form', array('type' => 'save-new'));
+    $linkSaveNew    =   URL::createLink('admin', 'book', 'form', array('type' => 'save-new'));
     $btnSaveNew     =   Helper::cmsButton('Save & New', 'toolbar-save-new', $linkSaveNew, 'icon-32-save-new', 'submit');
     
     // Cancel
-    $linkCancel     =   URL::createLink('admin', 'user', 'index');
+    $linkCancel     =   URL::createLink('admin', 'book', 'index');
     $btnCancel      =   Helper::cmsButton('Cancel', 'toolbar-cancel', $linkCancel, 'icon-32-cancel');
     
     switch ($this->arrayParams['action']) {
