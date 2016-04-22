@@ -144,9 +144,14 @@ class BookModel extends Model{
 	 * @param string $option
 	 */
 	public function saveItem($arrayParam, $option = null) {
+	    require_once LIBRARY_EXT_PATH . 'Upload.php';
+	    $uploadObj 	=	new Upload();
 	    if($option['task'] == 'add') {
-	        $arrayParam['form']['created'] = date('Y-m-d', time());
-	        $arrayParam['form']['created_by'] = 1;
+	        $arrayParam['form']['picture'] 		   =		   $uploadObj->uploadFile($arrayParam['form']['picture'], 'book' , 98, 150);
+	        $arrayParam['form']['created']         =           date('Y-m-d', time());
+	        $arrayParam['form']['created_by']      =           1;
+	        $arrayParam['form']['description']     =           mysqli_real_escape_string($this->connect, $arrayParam['form']['description']);
+	        $arrayParam['form']['name']            =           mysqli_real_escape_string($this->connect, $arrayParam['form']['name']);
 
 	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
 	        $this->insert($data);
@@ -160,6 +165,16 @@ class BookModel extends Model{
 			
 	        $arrayParam['form']['modified']        = date('Y-m-d', time());
 	        $arrayParam['form']['modified_by']     = 10;
+	        $arrayParam['form']['description']     =           mysqli_real_escape_string($this->connect, $arrayParam['form']['description']);
+	        $arrayParam['form']['name']            =           mysqli_real_escape_string($this->connect, $arrayParam['form']['name']);
+	        
+	        if($arrayParam['form']['picture']['name'] == null) {
+	            unset($arrayParam['form']['picture']);
+	        } else {
+	            $uploadObj->removeFile('book', $arrayParam['form']['picture_hidden']);
+	            $uploadObj->removeFile('book', '98x150-' . $arrayParam['form']['picture_hidden']);
+	            $arrayParam['form']['picture'] 		=		$uploadObj->uploadFile($arrayParam['form']['picture'], 'book' , 98, 150);
+	        }
 
 	        $data = array_intersect_key($arrayParam['form'], array_flip($this->_columns));
 	        $this->update($data, array(array('id', $arrayParam['form']['id'])));
@@ -236,7 +251,7 @@ class BookModel extends Model{
 	  */
 	 public function infoItem($arrayParam, $option = null) {
 	     if($option == null) {
-	         $query[]              =   "SELECT `id`,`description`, `name`, `price`, `special`, `sale_off`, `category_id`, `status`, `ordering`";
+	         $query[]              =   "SELECT `id`,`description`, `picture`, `name`, `price`, `special`, `sale_off`, `category_id`, `status`, `ordering`";
 	         $query[]              =   "FROM `$this->table`";
 	         $query[]              =   "WHERE `id` = '{$arrayParam['id']}'";
 	         $query                =   implode(' ', $query);

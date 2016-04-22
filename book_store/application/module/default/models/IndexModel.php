@@ -56,4 +56,24 @@ class IndexModel extends Model{
 	        return $result;
 	    }
 	}
+	
+	/**
+	 *
+	 * @param unknown $arrParam
+	 * @param string $option
+	 * @return multitype:unknown
+	 */
+	public function listItems($arrParam, $option = null) {
+	    if($option['task'] == 'book-special') {
+	        $query[]  		=   "SELECT `id`, `name`, `picture`, `description`";
+	        $query[]  		=   "FROM `".TBL_BOOK."`";
+	        $query[]        =   "WHERE `status` = 1 AND `special` = 1";
+	        $query[]        =   "ORDER BY `ordering` ASC";
+	        $query[]        =   "LIMIT 2,0";
+	
+	        $query  		=   implode(" ", $query);
+	        $result   		=   $this->fetchAll($query);
+	        return $result;
+	    }
+	}
 }

@@ -2,7 +2,7 @@
 require_once SCRIPT_PATH . 'PhpThumb' . DS . 'ThumbLib.inc.php';
 class Upload {
 	
-	public function uploadFile($fileObj, $folderUpload, $options = null) {
+	public function uploadFile($fileObj, $folderUpload, $width =  60, $height = 60, $options = null) {
 		if($options == null) {
 			/*echo '<pre>';
 			print_r($fileObj);
@@ -14,8 +14,8 @@ class Upload {
 				@copy($fileObj['tmp_name'], $uploadDir . $fileName);
 				
 				$thumb 			=	PhpThumbFactory::create($uploadDir . $fileName);
-				$thumb->adaptiveResize(60, 90);
-				$thumb->save($uploadDir . '60x90-' . $fileName); // 60x90-abcdef.png;
+				$thumb->adaptiveResize($width, $height);
+				$thumb->save($uploadDir . $width . 'x' . $height . '-' . $fileName); // 60x90-abcdef.png;
 			}
 		}
 		return $fileName;

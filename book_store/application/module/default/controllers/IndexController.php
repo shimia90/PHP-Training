@@ -10,6 +10,14 @@ class IndexController extends Controller{
 	}
 	
 	public function indexAction(){
+	    
+	    $this->_view->_title                =   'Book Store';
+	    
+        $this->_view->_SpecialBooks         =   $this->_model->listItems($this->_arrParam, array('task' => 'book-special'));
+        echo '<pre>';
+        print_r($this->_view->_SpecialBooks);
+        echo '</pre>';
+	    
 		$this->_view->render('index/index');
 	}
 	
@@ -28,7 +36,7 @@ class IndexController extends Controller{
 	        	
 	        $queryUserName     =   "SELECT `id` FROM `".TBL_USER."` WHERE `username` = '{$this->_arrParam['form']['username']}'";
 	        $queryEmail        =   "SELECT `email` FROM `".TBL_USER."` WHERE `email` = '{$this->_arrParam['form']['email']}'";
-	        $validate  =   new Validate($this->_arrParam['form']);
+	        $validate          =   new Validate($this->_arrParam['form']);
 	         
 	        $validate->addRule('username', 'string-notExistRecord', array('database' => $this->_model, 'query' => $queryUserName, 'min' => 3, 'max' => 25))
 	        ->addRule('email', 'email-notExistRecord', array('database' => $this->_model, 'query' => $queryEmail))

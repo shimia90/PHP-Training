@@ -229,23 +229,41 @@ class GroupModel extends Model {
 				$arrayDays[$i] 	=	$strTemp;
 			}
 			$arrayDays		=		array_values($arrayDays);
+			echo '<pre>';
+			print_r($arrayDays);
+			echo '</pre>';
+			
+			echo '<pre>';
+			print_r($arrayData);
+			echo '</pre>';
+			
+			
 			
 			for($i = 0; $i < count($arrayDays); $i++) {
 				foreach($arrayData as $key => $value) {
+				    foreach($value as $k => $v) {
+				        if($this->isWeekend($k) == true) {
+				            $arrayDays[$i+1] = $k;
+				        } else {
+				            continue;
+				        }
+				    }
 					if(array_key_exists($arrayDays[$i], $value)) {
 						continue;
 					} else {
 						$arrayData[$key][$arrayDays[$i]] 	=	0;
 					}
-					
 				}
 			}
 			
-			
+			echo '<pre>';
+			print_r($arrayDays);
+			echo '</pre>';
 			
 			foreach($arrayData as $key => $value) {
 				ksort($arrayData[$key], 1);
 			}
+			
 			
 			$strData 	=	'[';
 			foreach($arrayData as $key => $value) {
@@ -261,7 +279,8 @@ class GroupModel extends Model {
 			$strData 	.=	']';
 			
 			
-
+            echo $strDays . '<br />';
+            echo $strData;
 			$xhtml 		.=		'<script type="text/javascript">
 									$(document).ready(function(e) {
 										$(function () {

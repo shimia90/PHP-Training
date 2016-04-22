@@ -26,7 +26,7 @@ if(isset($this->arrParam['id']) || @$dataForm['id']) {
 	$inputUserName      =           Helper::cmsInput('text', 'form[username]', 'username', @$dataForm['username'], 'inputbox readonly', 40);
     $rowID              =           Helper::cmsRowForm('ID', $inputID);
     
-    @$picture 			=			'<img src="'.UPLOAD_URL . 'category' . DS. '60x90-' . $dataForm['picture'].'" />';
+    @$picture 			=			'<img src="'.UPLOAD_URL . 'book' . DS. '98x150-' . $dataForm['picture'].'" />';
     @$inputPictureHidden =			Helper::cmsInput('hidden', 'form[picture_hidden]', 'picture_hidden', $dataForm['picture'], 'inputbox', 40);
 }
 
@@ -50,7 +50,7 @@ $strMessage        =   Helper::cmsMessage($message);
 <div id="element-box">
 	<div class="m">
 		<form action="#" method="post" name="adminForm" id="adminForm"
-			class="form-validate">
+			class="form-validate" enctype="multipart/form-data">
 			<!-- FORM LEFT -->
 			<div class="width-100 fltlft">
 				<fieldset class="adminform">

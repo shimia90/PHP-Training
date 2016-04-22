@@ -99,9 +99,9 @@
 				               $id              =   $value['id'];
 				               $ckb             =   '<input type="checkbox" name="cid[]" value="'.$id.'" />';
 				               $name            =   $value['name'];
-				               $picturePath = 	UPLOAD_PATH . 'book' . DS . '60x90-' . $value['picture'];
+				               $picturePath     = 	UPLOAD_PATH . 'book' . DS . '98x150-' . $value['picture'];
 				               if(file_exists($picturePath) == true) {
-				                   $picture 	=	'<img src="'.UPLOAD_URL . 'book' . DS. '60x90-' . $value['picture'].'" />';
+				                   $picture 	=	'<img src="'.UPLOAD_URL . 'book' . DS. '98x150-' . $value['picture'].'" width="60" height="90" />';
 				               } else {
 				                   $picture 	=	'<img src="'.UPLOAD_URL . 'book' . DS. '60x90-default.jpg" />';
 				               }

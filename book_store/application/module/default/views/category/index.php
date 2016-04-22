@@ -2,7 +2,7 @@
 $xhtml      =   '';
 if(!empty($this->Items)) {
     foreach($this->Items as $key => $value) {
-        $link       =    '#';
+        $link       =    URL::createLink('default', 'book', 'list', array('category_id'  =>  $value['id']));
         $name       =    $value['name'];
         $picturePath = 	UPLOAD_PATH . 'category' . DS . '60x90-' . $value['picture'];
         if(file_exists($picturePath) == true) {

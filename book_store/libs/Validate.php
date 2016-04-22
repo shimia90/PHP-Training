@@ -173,7 +173,7 @@ class Validate{
 	// Validate Status
 	private function validateStatus($element, $options){
 	    if(in_array($this->source[$element], $options['deny']) == true) {
-	        $this->setError($element, 'Vui lÃ²ng chá»�n giÃ¡ trá»‹ khÃ¡c giÃ¡ trá»‹ máº·c Ä‘á»‹nh');
+	        $this->setError($element, 'Please input a value that is not default value');
 	    }
 	}
 	
@@ -239,14 +239,13 @@ class Validate{
 			
 			//die("Function die is called");
 			if($this->source[$element]['name'] != null) {
-			    die("Function die is called");
 				if(!filter_var($this->source[$element]['size'], FILTER_VALIDATE_INT, array("options"=>array("min_range"=>$options['min'],"max_range"=>$options['max'])))){
-					$this->setError($element, 'kÃ­ch thÆ°á»›c khÃ´ng phÃ¹ há»£p');
+					$this->setError($element, 'Size of file not match');
 				}
 				
 				$ext = pathinfo($this->source[$element]['name'], PATHINFO_EXTENSION);
 				if(in_array($ext, $options['extension']) == false){
-					$this->setError($element, 'pháº§n má»Ÿ rá»™ng khÃ´ng phÃ¹ há»£p');
+					$this->setError($element, 'Extension of file not match');
 				}
 			}
 	}
