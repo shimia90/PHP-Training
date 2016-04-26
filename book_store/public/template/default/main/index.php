@@ -17,9 +17,9 @@
 			<!--end of left content-->
 
 			<div class="right_content">
-				<?php include BLOCK_PATH . 'language.php'; ?>
+				<?php include_once BLOCK_PATH . 'language.php'; ?>
 
-				<?php include BLOCK_PATH . 'cart.php'; ?>
+				<?php include_once BLOCK_PATH . 'cart.php'; ?>
 
 				<?php include BLOCK_PATH . 'promotion.php'; ?>
 

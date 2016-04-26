@@ -205,7 +205,7 @@ class GroupModel extends Model {
                         $strDays .= "'".$i ."'";
                     }*/
 					
-					//$strDays .= "'".$numberDays[$i ]."', ";
+					$strDays .= "'".$numberDays[$i ]."', ";
 				}
 				$query 				=		"SELECT `work_date`, SUM(`real_duration`) AS `real_duration`, `u`.`fullname` AS `user` FROM `".TBL_WORK."` AS `w` INNER JOIN `".TBL_USER."` AS `u` ON `w`.`user` = `u`.id WHERE `user` IN ( SELECT `id` FROM `".TBL_USER."` WHERE `team` = '".$team."') AND `work_date` LIKE '%/{$month}/{$year}' GROUP BY `user`, `work_date`";
 				// SELECT `work_date`, SUM(`real_duration`) AS `real_duration`, `u`.`fullname` AS `user` FROM `work` AS `w` INNER JOIN `user` AS `u` ON `w`.`user` = `u`.id WHERE `user` IN ( SELECT `id` FROM `user` WHERE `team` = '1') AND `work_date` LIKE '%/02/2016' GROUP BY `user`, `work_date`
@@ -230,14 +230,21 @@ class GroupModel extends Model {
 			}
 			$arrayDays		=		array_values($arrayDays);
 			
+			
 			for($i = 0; $i < count($arrayDays); $i++) {
 				foreach($arrayData as $key => $value) {
+				    foreach($value as $k => $v) {
+				        if($this->isWeekend($k) == true) {
+				            $arrayDays[$i+1] = $k;
+				        } else {
+				            continue;
+				        }
+				    }
 					if(array_key_exists($arrayDays[$i], $value)) {
 						continue;
 					} else {
 						$arrayData[$key][$arrayDays[$i]] 	=	0;
 					}
-					
 				}
 			}
 			
@@ -246,6 +253,7 @@ class GroupModel extends Model {
 			foreach($arrayData as $key => $value) {
 				ksort($arrayData[$key], 1);
 			}
+			
 			
 			$strData 	=	'[';
 			foreach($arrayData as $key => $value) {
@@ -261,16 +269,8 @@ class GroupModel extends Model {
 			$strData 	.=	']';
 			
 			
-			$strDays = '';
-			foreach($arrayData as $key => $value) {
-			    foreach($value as $k => $v) {
-			        
-			        $dayArray     =   explode('/', $k);
-			        $strDays     .= "'".$dayArray[0]."', ";
-			    }
-
-			}
-			
+            echo $strDays . '<br />';
+            echo $strData;
 			$xhtml 		.=		'<script type="text/javascript">
 									$(document).ready(function(e) {
 										$(function () {

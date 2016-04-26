@@ -153,9 +153,9 @@ $(document).ready(function() {
   });
 });
 
-function ConfirmDelete()
+function ConfirmDelete(text = "Are you sure you want to delete this link?")
 {
-  var x = confirm("Are you sure you want to delete this link?");
+  var x = confirm(text);
   if (x)
 	  return true;
   else
@@ -179,3 +179,21 @@ $(document).ready(function(e) {
 	}
 	$("#main-menu ul.nav li." + classSelect + " > a").addClass('active');
 });
+
+function removePersonalRow(url) {
+	$.get(url, function(data){
+		var idData 	=	data[0];
+		var success = 	data[1];
+		var x = confirm("Are you sure you want to delete this row ?");
+		if(x == true) {
+			if(success == 1) {
+				$(".alert4.kode-alert").after('<div class="kode-alert kode-alert-icon kode-alert-click alert3"> <i class="fa fa-check"></i>This row is removed successfully !!</div>');
+				$("tr#"+idData).remove();
+			}
+		} else {
+			return false;
+		}
+		
+		//
+	}, 'json');
+}

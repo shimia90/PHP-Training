@@ -19,6 +19,13 @@ class BookController extends Controller{
 		$this->_view->render('book/list', true);
 		
 		
+		
+	}
+	
+	public function detailAction() {
+	    $this->_view->_title           =   'Detail Book';
+	    
+	    $this->_view->render('book/detail', true);
 	}
 	
 

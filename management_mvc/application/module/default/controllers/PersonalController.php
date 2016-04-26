@@ -144,4 +144,12 @@ class PersonalController extends Controller{
 	    $this->_model->ordering($this->_arrParam);
 	    URL::redirect(URL::createLink('admin', 'group', 'index'));
 	}
+	
+	public function deleteAction() {
+	    if(isset($_GET['id'])) {
+	        $result    =   $this->_model->deletePersonal($_GET['id']);
+	        echo json_encode($result);
+	    }
+	    //$result    =   $this->_model
+	}
 }

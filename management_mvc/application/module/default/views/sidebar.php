@@ -1,6 +1,6 @@
 <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <?php 
-    $permission     =   (isset($_SESSION['user']) && $_SESSION['user']['info']['admin_control'] == true) ? true : false;
+    @$permission     =   (isset($_SESSION['user']) && $_SESSION['user']['info']['admin_control'] == true) ? true : false;
 ?>
 <!-- START SIDEBAR -->
 <div id="main-menu" class="sidebar clearfix">

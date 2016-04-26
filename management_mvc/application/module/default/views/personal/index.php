@@ -3,6 +3,7 @@ include_once (MODULE_PATH . 'default/views/top.php');
 include_once (MODULE_PATH . 'default/views/sidebar.php');
 $xhtml 				= 		'';
 $colSpan 			= 		'15';
+$permission         =       ($_SESSION['user']['admin_control'] == true) ? true : false;
 if(!empty($this->arrayWork)) {
 	$divider 			= 		'';
 	$totalStandard      =       0;
@@ -11,6 +12,7 @@ if(!empty($this->arrayWork)) {
 	$totalPerformance   =       0;
 	$countArrayWork 	=		count($this->arrayWork);
 	$tdDesigner = '';
+	$deleteRow          =      '';
 	foreach($this->arrayWork as $key => $value) {
 			foreach($this->arrayUser as $k => $v) :
 			  if($value['user'] == $v['id']) {
@@ -39,7 +41,11 @@ if(!empty($this->arrayWork)) {
 				$tdDesigner = '';
 			endif;
 			
-			$xhtml 	.=	'<tr class="gradeX">';	
+			if($permission == true) {
+			    $deleteRow   =   '<div class="checkbox margin-t-0"><input class="rm_personal" type="checkbox" id="row_personal'.$value['id'].'" onClick="javascript:removePersonalRow(\''.URL::createLink('default', 'personal', 'delete', array('id' => $value['id'])).'\')"><label for="row_personal'.$value['id'].'"></label></div>';
+			} 
+			
+			$xhtml 	.=	'<tr class="gradeX" id="row_'.$value['id'].'">';	
 				$xhtml  .=	'<td>'.$value['work_date'].'</td>
 							 <td class="text-center">'.($key+1).'</td>'.$tdDesigner.'
 							 <td class="text-center">'.Helper::emptyReturn($value['project_type']).'</td>
@@ -55,11 +61,12 @@ if(!empty($this->arrayWork)) {
 							 <td class="text-center">'.Helper::emptyReturn($value['end']).'</td>
 							 <td class="text-center">'.(Helper::emptyReturn($value['performance']) * 100).'%</td>
 							 <td class="text-center">'.Helper::emptyReturn($value['note']).'</td>
+							 <td class="text-center">'.$deleteRow.'</td>    
 							 ';
 			$xhtml  .=	'</tr>';
 			if(($key+1) < $countArrayWork) {
 				 if($this->arrayWork[$key]['work_date'] != $this->arrayWork[$key+1]['work_date']) {
-					 $divider = '<tr class="info"><td class="text-center padding-0" colspan="16">&nbsp;</td></tr>';
+					 $divider = '<tr class="info"><td class="text-center padding-0" colspan="17">&nbsp;</td></tr>';
 				 } else {
 					 $divider = '';
 				 }
@@ -85,7 +92,7 @@ if(!empty($this->arrayWork)) {
 					   		<td></td>
 					   		<td class="text-center"><b>Average</b></td>
 							<td class="text-center"><span class="label '.$statusClass.'">'.@round(($totalPerformance / $j * 100), 2).'%</span></td>
-							<td colspan="2"></td>
+							<td colspan="3"></td>
 						</tr>';
 		endif;
 		//
@@ -98,7 +105,7 @@ if(!empty($this->arrayWork)) {
 							<td></td>
 						    <td class="text-center"><b>Average</b></td>
 						    <td class="text-center"><span class="label label-info">'.@round(($totalPerformance / $j * 100), 2).'%</span></td>
-						    <td colspan="2"></td>
+						    <td colspan="3"></td>
 					   </tr>';
 		endif;
 } else {
@@ -107,7 +114,7 @@ if(!empty($this->arrayWork)) {
 					    	<td class="text-center" colspan="'.$colSpan.'"><strong>No Records</strong></td>
 					   </tr>';	
 }
-if(isset($_POST['date_all_from']) && isset($_POST['date_all_to'])) { $colSpan = '16'; } else { $colSpan = '15'; }
+if(isset($_POST['date_all_from']) && isset($_POST['date_all_to'])) { $colSpan = '17'; } else { $colSpan = '16'; }
 ?>
  <!-- //////////////////////////////////////////////////////////////////////////// --> 
 <!-- START CONTENT -->
@@ -186,6 +193,7 @@ if(isset($_POST['date_all_from']) && isset($_POST['date_all_to'])) { $colSpan = 
                 <th class="text-center">End</th>
                 <th class="text-center">Performance</th>
                 <th class="text-center">Note</th>
+                <th class="text-center"><i class="fa fa-trash"></i></th>
             </tr>
         </thead>
         <tbody>

@@ -9,7 +9,7 @@
 
     <!-- Start App Logo -->
     <div class="applogo">
-      <a href="index.html" class="logo">Freesale</a>
+      <a href="<?php echo URL::createLink('default', 'index', 'index')?>" class="logo">Freesale</a>
     </div>
     <!-- End App Logo -->
 

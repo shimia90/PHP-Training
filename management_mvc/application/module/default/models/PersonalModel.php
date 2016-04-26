@@ -428,12 +428,12 @@ class PersonalModel extends Model {
 					//Create Alert
 					if($postFrom == $postTo) {
 						if($dayRealDur > $workingDayTotal) {
-							$xhtml .= '<div class="kode-alert kode-alert-icon kode-alert-click alert5"><i class="fa fa-warning"></i><a class="closed" href="#">×</a> The real time duration on <strong>'.$value['work_date'].'</strong> didnt input correctly, please check !!!</div>';
+							$xhtml .= '<div class="kode-alert kode-alert-icon kode-alert-click alert5"><i class="fa fa-warning"></i><a class="closed" href="#">x</a> The real time duration on <strong>'.$value['work_date'].'</strong> didnt input correctly, please check !!!</div>';
 						}
 					} else {
 						if(!empty($resultOverload)) {
 							foreach($resultOverload['work_date'] as $key => $value) {
-								$xhtml .= '<div class="kode-alert kode-alert-icon kode-alert-click alert5"><i class="fa fa-warning"></i><a class="closed" href="#">×</a> The real time duration on <strong>'.$value.'</strong> didnt input correctly, please check !!!</div>';
+								$xhtml .= '<div class="kode-alert kode-alert-icon kode-alert-click alert5"><i class="fa fa-warning"></i><a class="closed" href="#">x</a> The real time duration on <strong>'.$value.'</strong> didnt input correctly, please check !!!</div>';
 							}
 						}
 					}
@@ -517,7 +517,7 @@ class PersonalModel extends Model {
 								//Create Alert
 								if($dayRealDur > $workingDayTotal) {
 									if($flagAbort == false) {
-										$xhtml .= '<div class="alert_wrapper"><div class="kode-alert kode-alert-icon kode-alert-click alert5"><i class="fa fa-warning"></i><a class="closed" href="#">×</a> The real time duration on <strong>'. $value['work_date'] .'</strong> didnt input correctly, please check !!!</div></div>';
+										$xhtml .= '<div class="alert_wrapper"><div class="kode-alert kode-alert-icon kode-alert-click alert5"><i class="fa fa-warning"></i><a class="closed" href="#">x</a> The real time duration on <strong>'. $value['work_date'] .'</strong> didnt input correctly, please check !!!</div></div>';
 									}
 								}				
 			 }
@@ -927,5 +927,14 @@ class PersonalModel extends Model {
 			}
 		 endif;
 		 return $xhtml;
+	 }
+	 
+	 public function deletePersonal($id) {
+	     if(isset($id)) {
+	             //$ids 		=	$this->createWhereDeleteSQL($id);
+	             $query     	=   "DELETE FROM `".TBL_WORK."` WHERE `id` IN ({$id})";
+	             $this->query($query);
+	             return array('id' => $id, 'success' => true);
+	     }
 	 }
 }
