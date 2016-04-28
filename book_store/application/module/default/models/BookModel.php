@@ -34,6 +34,23 @@ class BookModel extends Model{
     		$result   		=   $this->fetchAll($query);
     		return $result;
 	    }
+	    
+	    if($option['task'] == 'book-relate') {
+	        
+	        $bookID         =   $arrParam['book_id'];
+	        $queryCate      =   "SELECT `category_id` FROM `".TBL_BOOK."` WHERE `id` = '$bookID'";
+	        $resultCate     =   $this->fetchRow($queryCate);
+	        $catID          =   $resultCate['category_id'];
+	        
+	        $query[]  		=   "SELECT `id`, `name`, `picture`";
+	        $query[]  		=   "FROM `$this->table`";
+	        $query[]        =   "WHERE `status` = 1 AND `category_id` = '$catID' AND `id` <> '$bookID'";
+	        $query[]        =   "ORDER BY `ordering` ASC";
+	    
+	        $query  		=   implode(" ", $query);
+	        $result   		=   $this->fetchAll($query);
+	        return $result;
+	    }
 	}
 	
 	/**
@@ -50,6 +67,13 @@ class BookModel extends Model{
 	        $query                =   implode(' ', $query);
 	        $result               =   $this->fetchRow($query);
 	        return $result['name'];
+	    }
+	    
+	    if($option['task'] == 'book-info') {
+
+	        $query                =    "SELECT `id`, `name`, `price`, `sale_off`, `picture`, `description` FROM `".TBL_BOOK."` WHERE `id` = '".$arrayParam['book_id']."'";
+	        $result               =    $this->fetchRow($query);
+	        return $result;
 	    }
 	}
 	

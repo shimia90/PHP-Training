@@ -10,4 +10,21 @@ $(document).ready(function(e) {
 	var classSelect 		=	controller + "-" + action;
 	console.log(classSelect);
 	$("#menu ul li." + classSelect).addClass('selected');
+	
+	$(".fancybox").fancybox();
+
+	$("a.tab1").click(function(){
+		$("div#tab1").css('display', 'block');
+		$("div#tab2").css('display', 'none');
+		$("a.tab2").removeClass('active');
+		$("a.tab1").addClass('active');
+		return false;
+	});
+	$("a.tab2").click(function(){
+		$("div#tab2").css('display', 'block');
+		$("div#tab1").css('display', 'none');
+		$("a.tab1").removeClass('active');
+		$("a.tab2").addClass('active');
+		return false;
+	});
 });

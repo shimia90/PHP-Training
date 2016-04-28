@@ -104,6 +104,12 @@ color:#990000;
 span.red{
 color:#990000;
 }
+
+span.red-through {
+	color: #990000;
+	text-decoration: line-through;
+}
+
 .price{
 font-size:14px;
 padding:0 0 0 15px;

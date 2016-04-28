@@ -22,8 +22,12 @@ class BookController extends Controller{
 		
 	}
 	
+	// ACTION: DETAIL BOOK
 	public function detailAction() {
-	    $this->_view->_title           =   'Detail Book';
+	    $this->_view->_title           =   'Info Book';
+	    $this->_view->bookInfo         =   $this->_model->infoItem($this->_arrParam, array('task' => 'book-info'));
+	    
+	    $this->_view->bookRelate       =   $this->_model->listItems($this->_arrParam, array('task' => 'book-relate'));
 	    
 	    $this->_view->render('book/detail', true);
 	}

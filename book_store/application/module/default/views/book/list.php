@@ -2,13 +2,16 @@
 $xhtml      =   '';
 if(!empty($this->Items)) {
     foreach($this->Items as $key => $value) {
-        $link           =    '#';
+        $link           =    URL::createLink('default', 'book', 'detail', array('book_id' => $value['id']));
         $name           =    $value['name'];
         $description    =    substr($value['description'], 0, 200);
         
-        $picturePath = 	UPLOAD_PATH . 'book' . DS . '98x150-' . $value['picture'];
+        $picturePath    = 	 UPLOAD_PATH . 'book' . DS . '98x150-' . $value['picture'];
+        $pictureFull    =    '';   
+        
         if(file_exists($picturePath) == true) {
-            $picture 	=	'<img class="thumb" src="'.UPLOAD_URL . 'book' . DS. '98x150-' . $value['picture'].'" />';
+            $picture 	      =   	'<img class="thumb" src="'.UPLOAD_URL . 'book' . DS. '98x150-' . $value['picture'].'" />';
+            $pictureFull 	  =	    '<img class="thumb" src="'.UPLOAD_URL . 'book' . DS . $value['picture'].'" />';
         } else {
             $picture 	=	'<img class="thumb" src="'.UPLOAD_URL . 'book' . DS. '98x150-default.jpg" />';
         }   

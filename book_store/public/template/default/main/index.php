@@ -20,10 +20,12 @@
 				<?php include_once BLOCK_PATH . 'language.php'; ?>
 
 				<?php include_once BLOCK_PATH . 'cart.php'; ?>
+				
+				<?php include_once BLOCK_PATH . 'category.php'; ?>
 
-				<?php include BLOCK_PATH . 'promotion.php'; ?>
+				<?php include_once BLOCK_PATH . 'promotion.php'; ?>
 
-				<?php include BLOCK_PATH . 'category.php'; ?>
+				
 			</div>
 			<!--end of right content-->
 			
