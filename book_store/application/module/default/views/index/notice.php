@@ -1,15 +1,16 @@
 <?php
 
 	$message	= '';
-	switch ($this->arrParam['type']){
+	
+	switch ($this->arrayParams['type']){
 		case 'register-success':
-			$message	= 'Tài khoản của bạn đã được tạo thành công. Xin vui lòng chờ kích hoạt từ người quản trị!';
+			$message	= 'Your account has been registerd successful !';
 			break;
 		case 'not-permission':
-			$message	= 'Bạn không có quyền truy cập vào chức năng đó!';
+			$message	= 'You dont have permission to enter this role';
 			break;
 		case 'not-url':
-			$message	= 'Đường dẫn không hợp lệ!';
+			$message	= 'This link not exist';
 			break;
 	}
 ?>

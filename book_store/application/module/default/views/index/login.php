@@ -12,13 +12,13 @@
 	$linkAction		= URL::createLink('default', 'index', 'login');
 ?>
 <div class="title">
-	<span class="title_icon"><img src="<?php echo $imageURL;?>/bullet1.gif"/></span>Đăng nhập
+	<span class="title_icon"><img src="<?php echo $imageURL;?>/bullet1.gif"/></span>Login
 </div>
 
 <div class="feat_prod_box_details">
 	<div class="contact_form">
 		<div class="form_subtitle">login</div>
-		<?php echo $this->errors;?>
+		<?php echo @$this->errors;?>
 		<form name="adminform" action="<?php echo $linkAction?>" method="POST">
 			<?php echo $rowEmail . $rowPassword .  $rowSubmit;?>
 		</form>

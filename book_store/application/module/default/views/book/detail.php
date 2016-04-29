@@ -1,6 +1,8 @@
 <?php 
     $bookInfo       =   $this->bookInfo;
     $name           =   $bookInfo['name'];
+    
+    
     $picturePath    = 	UPLOAD_PATH . 'book' . DS . '98x150-' . $bookInfo['picture'];
     $pictureFull    =    '';
     if(file_exists($picturePath) == true) {
@@ -12,12 +14,18 @@
     
     $description    =   substr($bookInfo['description'], 0, 400);
     
+    $priceReal      =   0;
+    
     if($bookInfo['sale_off'] > 0) {
-        $price  =   '<span class="red-through">'.number_format($bookInfo['price']).'</span> ';
-		$price  .=	'<span class="red">'.number_format(((100 - $bookInfo['sale_off']) * $bookInfo['price']/100)).'</span>';
+        $priceReal  =   (100 - $bookInfo['sale_off']) * $bookInfo['price']/100;
+        $price      =   '<span class="red-through">'.number_format($bookInfo['price']).'</span> ';
+		$price     .=	'<span class="red">'.number_format($priceReal).'</span>';
     } else {
-        $price  =   '<span class="red">'.number_format($bookInfo['price']).'</span>';
+        $priceReal  =   $bookInfo['price'];
+        $price      =   '<span class="red">'.number_format($priceReal).'</span>';
     }
+    
+    $linkOrder      =   URL::createLink('default', 'user', 'order', array('book_id' => $bookInfo['id'], 'price' => $priceReal ));
 ?>
 <!-- TITLE -->
 <div class="title">
@@ -69,7 +77,7 @@
 				<strong>PRICE: </strong>
 				<?php echo $price; ?>
 			</div>
-			<a href="#" class="more"><img src="<?php echo $imageURL; ?>/order_now.gif" /></a>
+			<a href="<?php echo $linkOrder; ?>" class="more"><img src="<?php echo $imageURL; ?>/order_now.gif" /></a>
 			<div class="clear"></div>
 		</div>
 		<div class="box_bottom"></div>

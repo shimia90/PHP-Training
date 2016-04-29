@@ -64,8 +64,8 @@ class IndexController extends Controller{
 		}
 	
 		$this->_view->_title 		= 'Login';
-	
-		if($this->_arrParam['form']['token'] > 0){
+	    
+		if(@$this->_arrParam['form']['token'] > 0){
 			$validate	= new Validate($this->_arrParam['form']);
 			$email		= $this->_arrParam['form']['email'];
 			$password	= md5($this->_arrParam['form']['password']);

@@ -15,10 +15,11 @@
 
 	$listCats	= $model->fetchAll($query);
 	
+	
 	echo $cateID;
 	
 	$xhtml		= '';
-	if(!empty($listCats)){
+	if(!empty($listCats)) {
 		foreach($listCats as $key => $value){
 			$link	= URL::createLink('default', 'book', 'list', array('category_id' => $value['id']));
 			$name	 = $value['name'];

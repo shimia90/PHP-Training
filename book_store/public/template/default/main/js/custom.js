@@ -28,3 +28,9 @@ $(document).ready(function(e) {
 		return false;
 	});
 });
+
+
+function submitForm(url) {
+	$("#adminForm").attr('action', url);
+	$("#adminForm").submit();
+}
